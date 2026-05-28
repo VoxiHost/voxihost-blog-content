@@ -1,0 +1,7 @@
+## Node.js Dependencies
+node_modules/
+
+## Internal Team Automation (not for public contributors)
+scripts/
+package.json
+package-lock.json
