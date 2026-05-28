@@ -23,6 +23,8 @@ This repository contains only **Markdown source files and images**. You don't ne
 This table lists all published blog posts, their raw Markdown source files, and their FrontPage engine ZIP packages.
 
 <!-- START_PUBLISHED_POSTS -->
+| Article | 🇬🇧 EN Source | 🇬🇧 EN ZIP | 🇵🇱 PL Source | 🇵🇱 PL ZIP |
+| :--- | :---: | :---: | :---: | :---: |
 | How to Configure firewalld on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide | [Source](src/published/en/configure-firewalld-centos-rhel/configure-firewalld-centos-rhel.md) | [ZIP](dist/en/configure-firewalld-centos-rhel-package.zip) | [Source](src/published/pl/konfiguracja-firewalld-centos-rhel/konfiguracja-firewalld-centos-rhel.md) | [ZIP](dist/pl/konfiguracja-firewalld-centos-rhel-package.zip) |
 | How to Configure UFW Firewall on Ubuntu & Debian: The Complete Server Guide | [Source](src/published/en/configure-ufw-ubuntu-debian/configure-ufw-ubuntu-debian.md) | [ZIP](dist/en/configure-ufw-ubuntu-debian-package.zip) | [Source](src/published/pl/konfiguracja-ufw-ubuntu-debian/konfiguracja-ufw-ubuntu-debian.md) | [ZIP](dist/pl/konfiguracja-ufw-ubuntu-debian-package.zip) |
 | How to Create a Sudo User on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide | [Source](src/published/en/add-sudo-user-centos/add-sudo-user-centos.md) | [ZIP](dist/en/add-sudo-user-centos-package.zip) | [Source](src/published/pl/jak-dodac-uzytkownika-sudo-centos/jak-dodac-uzytkownika-sudo-centos.md) | [ZIP](dist/pl/jak-dodac-uzytkownika-sudo-centos-package.zip) |
