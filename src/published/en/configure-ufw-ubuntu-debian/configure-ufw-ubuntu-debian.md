@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/configure-ufw-ubuntu-debian/og-image.png
+image: /assets/images/blog/en/configure-ufw-ubuntu-debian/og-image.png
 title: 'How to Configure UFW Firewall on Ubuntu & Debian: The Complete Server Guide'
 description: A complete beginner-friendly guide to setting up and configuring the Uncomplicated Firewall (UFW) on Ubuntu and Debian servers. Learn to allow SSH, block traffic, and secure your VPS.
 date: '2026-03-25'
@@ -57,7 +57,7 @@ On Ubuntu and Debian, the standard tool for managing the firewall is **UFW** (Un
 ## Step 1: Install UFW (If Necessary)
 
 Check if it's there:
-{% image "/assets/images/blog/configure-ufw-ubuntu-debian/H1.png", "Running sudo ufw status on Ubuntu to check if UFW firewall is installed and active", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-ufw-ubuntu-debian/H1.png", "Running sudo ufw status on Ubuntu to check if UFW firewall is installed and active", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 sudo ufw status
 ```
@@ -72,7 +72,7 @@ sudo apt install ufw -y
 
 Before we start opening ports, we need to establish the baseline rules. The most secure baseline is to block everything coming in, and allow everything going out.
 
-{% image "/assets/images/blog/configure-ufw-ubuntu-debian/H2.png", "Setting UFW default policy to deny incoming and allow outgoing on Ubuntu Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-ufw-ubuntu-debian/H2.png", "Setting UFW default policy to deny incoming and allow outgoing on Ubuntu Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw default deny incoming
@@ -87,7 +87,7 @@ Once UFW is enabled, these commands ensure that nobody can connect to your serve
 
 You must explicitly allow SSH traffic first. 
 
-{% image "/assets/images/blog/configure-ufw-ubuntu-debian/H3.png", "Running sudo ufw allow ssh on Ubuntu to allow SSH connections on port 22 before enabling firewall", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-ufw-ubuntu-debian/H3.png", "Running sudo ufw allow ssh on Ubuntu to allow SSH connections on port 22 before enabling firewall", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw allow ssh
@@ -104,7 +104,7 @@ sudo ufw allow 2222/tcp
 Now open the ports for whatever else your server is hosting. Most services have names UFW recognizes, but you can always use the port numbers directly.
 
 For a web server (HTTP / HTTPS):
-{% image "/assets/images/blog/configure-ufw-ubuntu-debian/H4.png", "Allowing HTTP port 80 and HTTPS port 443 through UFW firewall on Debian/Ubuntu server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-ufw-ubuntu-debian/H4.png", "Allowing HTTP port 80 and HTTPS port 443 through UFW firewall on Debian/Ubuntu server", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 sudo ufw allow http
 sudo ufw allow https
@@ -128,7 +128,7 @@ sudo ufw allow from 203.0.113.50 to any port 3306
 
 With your SSH port safely allowed, it's time to turn the firewall on:
 
-{% image "/assets/images/blog/configure-ufw-ubuntu-debian/H5.png", "Running sudo ufw enable to activate the UFW firewall on Ubuntu with active rules", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-ufw-ubuntu-debian/H5.png", "Running sudo ufw enable to activate the UFW firewall on Ubuntu with active rules", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw enable
@@ -138,7 +138,7 @@ You'll see a warning: `Command may disrupt existing ssh connections. Proceed wit
 
 Because you opened the SSH port in Step 3, your connection will stay alive. Check the status to see your active rules:
 
-{% image "/assets/images/blog/configure-ufw-ubuntu-debian/H6.png", "Running sudo ufw status verbose showing active firewall rules for SSH, HTTP, and HTTPS on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-ufw-ubuntu-debian/H6.png", "Running sudo ufw status verbose showing active firewall rules for SSH, HTTP, and HTTPS on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw status verbose
@@ -148,7 +148,7 @@ sudo ufw status verbose
 
 If you make a mistake or no longer need a port open, you can delete a rule. The easiest way is to view the rules as a numbered list:
 
-{% image "/assets/images/blog/configure-ufw-ubuntu-debian/H7.png", "Running sudo ufw status numbered on Ubuntu to list firewall rules with numbers for deletion", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-ufw-ubuntu-debian/H7.png", "Running sudo ufw status numbered on Ubuntu to list firewall rules with numbers for deletion", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw status numbered
@@ -156,7 +156,7 @@ sudo ufw status numbered
 
 Find the number next to the rule you want to remove, and delete it:
 
-{% image "/assets/images/blog/configure-ufw-ubuntu-debian/H8.png", "Running sudo ufw delete 3 to remove a specific UFW firewall rule by number on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-ufw-ubuntu-debian/H8.png", "Running sudo ufw delete 3 to remove a specific UFW firewall rule by number on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw delete 3

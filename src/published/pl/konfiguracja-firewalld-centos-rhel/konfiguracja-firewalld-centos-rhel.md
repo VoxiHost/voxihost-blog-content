@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/konfiguracja-firewalld-centos-rhel/og-image.png
+image: /assets/images/blog/pl/konfiguracja-firewalld-centos-rhel/og-image.png
 title: 'Jak skonfigurować firewalld na AlmaLinux, CentOS, Rocky Linux i Fedora: Kompletny przewodnik serwera'
 description: Kompletny przewodnik krok po kroku do konfiguracji firewalld na serwerach AlmaLinux, CentOS Stream, Rocky Linux i Fedora. Naucz się zarządzać strefami, otwierać porty, listować usługi i zabezpieczać swój VPS.
 date: '2026-03-25'
@@ -59,7 +59,7 @@ Dla standardowego serwera WWW lub VPS jest jednak równie łatwy do skonfigurowa
 
 Na większości dystrybucji rodziny RHEL, `firewalld` jest domyślnie zainstalowany ale może nie działać.
 
-{% image "/assets/images/blog/konfiguracja-firewalld-centos-rhel/H1.png", "Uruchamianie sudo systemctl enable --now firewalld na AlmaLinux lub Rocky Linux aby uruchomić i włączyć usługę firewalld przy starcie systemu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-firewalld-centos-rhel/H1.png", "Uruchamianie sudo systemctl enable --now firewalld na AlmaLinux lub Rocky Linux aby uruchomić i włączyć usługę firewalld przy starcie systemu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl enable --now firewalld
@@ -79,7 +79,7 @@ sudo systemctl enable --now firewalld
 
 Sprawdź w której strefie znajduje się twój główny interfejs sieciowy:
 
-{% image "/assets/images/blog/konfiguracja-firewalld-centos-rhel/H2.png", "Uruchamianie sudo firewall-cmd --get-active-zones na AlmaLinux aby wyświetlić które strefy firewalld są aktywne i które interfejsy są do nich przypisane", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-firewalld-centos-rhel/H2.png", "Uruchamianie sudo firewall-cmd --get-active-zones na AlmaLinux aby wyświetlić które strefy firewalld są aktywne i które interfejsy są do nich przypisane", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --get-active-zones
@@ -97,7 +97,7 @@ Potwierdza to, że twoje aktywne połączenie internetowe (`eth0`) używa strefy
 
 Zanim zaczniesz dodawać reguły, zobacz co jest już otwarte:
 
-{% image "/assets/images/blog/konfiguracja-firewalld-centos-rhel/H3.png", "Uruchamianie sudo firewall-cmd --list-all na AlmaLinux aby wyświetlić wszystkie aktualnie aktywne reguły zapory i otwarte usługi w strefie publicznej", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-firewalld-centos-rhel/H3.png", "Uruchamianie sudo firewall-cmd --list-all na AlmaLinux aby wyświetlić wszystkie aktualnie aktywne reguły zapory i otwarte usługi w strefie publicznej", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --list-all
@@ -111,7 +111,7 @@ Najczystszym sposobem użycia firewalld jest zezwalanie na predefiniowane **usł
 
 Na przykład, aby otworzyć serwer na ruch WWW HTTP i HTTPS:
 
-{% image "/assets/images/blog/konfiguracja-firewalld-centos-rhel/H4.png", "Uruchamianie sudo firewall-cmd --permanent --add-service=http aby trwale zezwolić na ruch HTTP przez firewalld na AlmaLinux lub Rocky Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-firewalld-centos-rhel/H4.png", "Uruchamianie sudo firewall-cmd --permanent --add-service=http aby trwale zezwolić na ruch HTTP przez firewalld na AlmaLinux lub Rocky Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --permanent --add-service=http
@@ -140,7 +140,7 @@ sudo firewall-cmd --permanent --remove-port=3000/tcp
 
 Ponieważ użyłeś flagi `--permanent` w Kroku 4, żadne z twoich nowych reguł jeszcze nie działa aktywnie. Istnieją tylko na dysku. Aby przesłać zapisane reguły do aktywnego stanu zapory, musisz przeładować:
 
-{% image "/assets/images/blog/konfiguracja-firewalld-centos-rhel/H5.png", "Uruchamianie sudo firewall-cmd --reload na AlmaLinux aby zastosować trwałe zmiany reguł zapory bez restartowania serwera", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-firewalld-centos-rhel/H5.png", "Uruchamianie sudo firewall-cmd --reload na AlmaLinux aby zastosować trwałe zmiany reguł zapory bez restartowania serwera", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --reload
@@ -148,7 +148,7 @@ sudo firewall-cmd --reload
 
 Na koniec uruchom `--list-all` ponownie aby zweryfikować, że twoje nowe polityki są na miejscu:
 
-{% image "/assets/images/blog/konfiguracja-firewalld-centos-rhel/H6.png", "Uruchamianie sudo firewall-cmd --list-all po przeładowaniu na AlmaLinux aby potwierdzić że nowe reguły HTTP i HTTPS są teraz aktywne", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-firewalld-centos-rhel/H6.png", "Uruchamianie sudo firewall-cmd --list-all po przeładowaniu na AlmaLinux aby potwierdzić że nowe reguły HTTP i HTTPS są teraz aktywne", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --list-all

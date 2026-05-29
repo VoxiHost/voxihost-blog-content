@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/update-fedora/og-image.png
+image: /assets/images/blog/en/update-fedora/og-image.png
 title: 'How to Update Fedora 43 & Newer: The Complete Server Guide'
 description: A complete step-by-step guide to updating Fedora 43 and newer servers using dnf5. Covers dnf5 upgrade, autoremove, reboot detection, and automatic updates for production VPS environments.
 date: '2026-03-25'
@@ -57,7 +57,7 @@ Before we start: if you are deploying a fresh server with a premium provider lik
 
 To update a Fedora 43 server, you run:
 
-{% image "/assets/images/blog/update-fedora/H1.png", "Running sudo dnf5 upgrade on Fedora 43 - terminal output showing packages being updated", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-fedora/H1.png", "Running sudo dnf5 upgrade on Fedora 43 - terminal output showing packages being updated", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 upgrade -y
@@ -67,7 +67,7 @@ This checks for available updates, downloads them, and installs them in one pass
 
 If you want to see what would change before committing:
 
-{% image "/assets/images/blog/update-fedora/H2.png", "Running dnf5 check-upgrade on Fedora to preview available package updates without installing", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-fedora/H2.png", "Running dnf5 check-upgrade on Fedora to preview available package updates without installing", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 check-upgrade
@@ -97,7 +97,7 @@ That shows you what would be removed. Add `--remove` to actually do it. Be caref
 
 Fedora doesn't write a `reboot-required` file like Ubuntu does. Instead, use:
 
-{% image "/assets/images/blog/update-fedora/H3.png", "Running sudo needs-restarting -r on Fedora to check if a reboot is needed after kernel update", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-fedora/H3.png", "Running sudo needs-restarting -r on Fedora to check if a reboot is needed after kernel update", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo needs-restarting -r
@@ -105,7 +105,7 @@ sudo needs-restarting -r
 
 **Exit code 1** means a reboot is needed (usually a kernel update). **Exit code 0** means you're fine. If the tool isn't installed:
 
-{% image "/assets/images/blog/update-fedora/H4.png", "Installing dnf-utils on Fedora with sudo dnf5 install dnf-utils to get needs-restarting", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-fedora/H4.png", "Installing dnf-utils on Fedora with sudo dnf5 install dnf-utils to get needs-restarting", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 install dnf-utils -y
@@ -123,7 +123,7 @@ This is particularly useful on Fedora, where kernel updates are frequent. Restar
 
 For servers that sit in the background without regular manual attention:
 
-{% image "/assets/images/blog/update-fedora/H5.png", "Installing dnf-automatic package on Fedora for automatic unattended security updates", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-fedora/H5.png", "Installing dnf-automatic package on Fedora for automatic unattended security updates", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 install dnf-automatic -y
@@ -131,7 +131,7 @@ sudo dnf5 install dnf-automatic -y
 
 The config file controls what gets updated automatically:
 
-{% image "/assets/images/blog/update-fedora/H6.png", "Editing /etc/dnf/automatic.conf on Fedora to configure unattended updates with nano", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-fedora/H6.png", "Editing /etc/dnf/automatic.conf on Fedora to configure unattended updates with nano", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/dnf/automatic.conf
@@ -185,7 +185,7 @@ Then check `needs-restarting -r`. Two minutes of work, system stays current.
 
 Fedora moves to a new release every six months, and each release is supported for about 13 months. When it's time to move from 43 to 44:
 
-{% image "/assets/images/blog/update-fedora/H7.png", "Running sudo dnf5 system-upgrade download --releasever=43 to start Fedora version upgrade", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-fedora/H7.png", "Running sudo dnf5 system-upgrade download --releasever=43 to start Fedora version upgrade", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 system-upgrade download --releasever=44

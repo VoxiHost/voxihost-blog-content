@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/secure-ssh-ubuntu-debian/og-image.png
+image: /assets/images/blog/en/secure-ssh-ubuntu-debian/og-image.png
 title: 'How to Secure SSH on Ubuntu & Debian: The Complete Server Guide'
 description: A complete guide to hardening SSH on Ubuntu and Debian servers. Disable root login, set up key-based authentication, change the default port, configure ufw, and lock down your VPS against brute-force attacks.
 date: '2026-03-25'
@@ -61,7 +61,7 @@ The single most effective change you can make. Password logins can be brute-forc
 
 On your **local machine**, generate a key pair:
 
-{% image "/assets/images/blog/secure-ssh-ubuntu-debian/H1.png", "Running ssh-keygen -t ed25519 -C \"your-server-label\" to generate a new SSH key pair", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-ssh-ubuntu-debian/H1.png", "Running ssh-keygen -t ed25519 -C \"your-server-label\" to generate a new SSH key pair", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ssh-keygen -t ed25519 -C "your-server-label"
@@ -71,7 +71,7 @@ Use `ed25519`,  it's faster and more secure than the older RSA algorithm. When p
 
 Copy the public key to the server. Replace `youruser` with your actual sudo username:
 
-{% image "/assets/images/blog/secure-ssh-ubuntu-debian/H2.png", "Running ssh-copy-id -i ~/.ssh/id_ed25519.pub youruser@your-server-ip to copy the public key to the server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-ssh-ubuntu-debian/H2.png", "Running ssh-copy-id -i ~/.ssh/id_ed25519.pub youruser@your-server-ip to copy the public key to the server", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ssh-copy-id -i ~/.ssh/id_ed25519.pub youruser@your-server-ip
@@ -81,7 +81,7 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub youruser@your-server-ip
 
 Optional: add an entry to `~/.ssh/config` on your local machine for quick access:
 
-{% image "/assets/images/blog/secure-ssh-ubuntu-debian/H3.png", "Fast connection to the server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-ssh-ubuntu-debian/H3.png", "Fast connection to the server", "(max-width: 768px) 100vw, 800px" %}
 
 ```
 Host myserver
@@ -90,7 +90,7 @@ Host myserver
     IdentityFile ~/.ssh/id_ed25519
 ```
 
-{% image "/assets/images/blog/secure-ssh-ubuntu-debian/H4.png", "Fast connection to the server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-ssh-ubuntu-debian/H4.png", "Fast connection to the server", "(max-width: 768px) 100vw, 800px" %}
 
 After this, `ssh myserver` is all you need to type.
 
@@ -101,7 +101,7 @@ SSH in as your sudo user from this point forward. Direct root login is a securit
 
 Open the SSH daemon config:
 
-{% image "/assets/images/blog/secure-ssh-ubuntu-debian/H5.png", "Disabling root login in sshd_config", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-ssh-ubuntu-debian/H5.png", "Disabling root login in sshd_config", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/ssh/sshd_config

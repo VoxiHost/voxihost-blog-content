@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-zaktualizowac-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/jak-zaktualizowac-ubuntu-debian/og-image.png
 title: 'Jak aktualizować Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik krok po kroku do aktualizacji serwerów Ubuntu i Debian Linux. Obejmuje apt update, apt upgrade, aktualizacje jądra, automatyczne aktualizacje i najlepsze praktyki dla środowisk produkcyjnych VPS.
 date: '2026-03-24'
@@ -61,7 +61,7 @@ Zanim zaczniemy: jeśli wdrażasz świeży serwer z premium dostawcą jak **<spa
 
 Zanim zaktualizujesz cokolwiek, odśwież lokalny indeks pakietów. To nie instaluje nic, tylko sprawdza jakie aktualizacje są faktycznie dostępne:
 
-{% image "/assets/images/blog/jak-zaktualizowac-ubuntu-debian/H1.png", "Uruchamianie sudo apt update na Ubuntu lub Debian w celu odświeżenia indeksu pakietów i sprawdzenia dostępnych aktualizacji", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-ubuntu-debian/H1.png", "Uruchamianie sudo apt update na Ubuntu lub Debian w celu odświeżenia indeksu pakietów i sprawdzenia dostępnych aktualizacji", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt update
@@ -69,7 +69,7 @@ sudo apt update
 
 Następnie zainstaluj je:
 
-{% image "/assets/images/blog/jak-zaktualizowac-ubuntu-debian/H2.png", "Uruchamianie sudo apt upgrade -y na Ubuntu lub Debian w celu zainstalowania wszystkich dostępnych aktualizacji pakietów z zaktualizowanego indeksu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-ubuntu-debian/H2.png", "Uruchamianie sudo apt upgrade -y na Ubuntu lub Debian w celu zainstalowania wszystkich dostępnych aktualizacji pakietów z zaktualizowanego indeksu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt upgrade -y
@@ -95,7 +95,7 @@ To polecenie może instalować nowe pakiety lub usuwać te w konflikcie, aby roz
 
 Po aktualizacjach, stare pakiety mogą zostać na systemie jako osierocone. `apt autoremove` usuwa je bezpiecznie:
 
-{% image "/assets/images/blog/jak-zaktualizowac-ubuntu-debian/H3.png", "Uruchamianie sudo apt autoremove -y na Ubuntu lub Debian w celu usunięcia starych pakietów zależności które nie są już potrzebne po aktualizacjach", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-ubuntu-debian/H3.png", "Uruchamianie sudo apt autoremove -y na Ubuntu lub Debian w celu usunięcia starych pakietów zależności które nie są już potrzebne po aktualizacjach", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt autoremove -y
@@ -107,7 +107,7 @@ To polecenie usuwa pakiety które nie są już potrzebne przez żaden inny zains
 
 Aktualizacje jądra wymagają restartu systemu. Ubuntu i Debian tworzą plik wskaźnika gdy restart jest wymagany:
 
-{% image "/assets/images/blog/jak-zaktualizowac-ubuntu-debian/H4.png", "Sprawdzanie pliku /var/run/reboot-required na Ubuntu w celu określenia czy restart systemu jest wymagany po aktualizacji jądra", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-ubuntu-debian/H4.png", "Sprawdzanie pliku /var/run/reboot-required na Ubuntu w celu określenia czy restart systemu jest wymagany po aktualizacji jądra", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 cat /var/run/reboot-required
@@ -146,7 +146,7 @@ Połącz je, pozwól im działać, sprawdź czy restart jest potrzebny, gotowe.
 
 Jeśli chcesz przejść z Ubuntu 22.04 na 24.04:
 
-{% image "/assets/images/blog/jak-zaktualizowac-ubuntu-debian/H5.png", "Uruchamianie sudo do-release-upgrade na Ubuntu w celu aktualizacji z jednej głównej wersji do następnej, na przykład 22.04 do 24.04", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-ubuntu-debian/H5.png", "Uruchamianie sudo do-release-upgrade na Ubuntu w celu aktualizacji z jednej głównej wersji do następnej, na przykład 22.04 do 24.04", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo do-release-upgrade

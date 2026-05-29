@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/update-centos-rhel/og-image.png
+image: /assets/images/blog/en/update-centos-rhel/og-image.png
 title: 'How to Update AlmaLinux, CentOS Stream & Rocky Linux: The Complete Server Guide'
 description: A complete step-by-step guide to updating AlmaLinux 9/10, CentOS Stream 9/10, and Rocky Linux 9/10 servers. Covers dnf update, autoremove, reboot detection, and dnf-automatic for production VPS environments.
 date: '2026-03-25'
@@ -59,7 +59,7 @@ Before we start: if you are deploying a fresh server with a premium provider lik
 
 Unlike `apt`, which splits "refresh index" and "install updates" into two separate commands, `dnf update` does both in one shot. It fetches the latest metadata and installs whatever's new:
 
-{% image "/assets/images/blog/update-centos-rhel/H1.png", "Running sudo dnf update -y on AlmaLinux 9 - terminal output", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-centos-rhel/H1.png", "Running sudo dnf update -y on AlmaLinux 9 - terminal output", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf update -y
@@ -69,7 +69,7 @@ That's genuinely all you need for routine maintenance. The **`-y` flag skips con
 
 If you want to check what would be updated before actually running it:
 
-{% image "/assets/images/blog/update-centos-rhel/H2.png", "Running sudo dnf check-update on Rocky Linux to preview available updates", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-centos-rhel/H2.png", "Running sudo dnf check-update on Rocky Linux to preview available updates", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf check-update
@@ -83,7 +83,7 @@ One note on naming: `dnf upgrade` is an alias for `dnf update`. They're identica
 
 After updates, old packages tend to accumulate. Dependencies that were pulled in for something that's since been updated, libraries nothing uses anymore. Clean those up with:
 
-{% image "/assets/images/blog/update-centos-rhel/H3.png", "Running sudo dnf autoremove on CentOS Stream to remove unused packages", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-centos-rhel/H3.png", "Running sudo dnf autoremove on CentOS Stream to remove unused packages", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf autoremove -y
@@ -95,7 +95,7 @@ Same concept as `apt autoremove`. Not critical to run every time, but worth doin
 
 Kernel updates don't take effect until you reboot. Unlike Debian-based systems that leave a `/var/run/reboot-required` file, RHEL-family distros use a tool called `needs-restarting`:
 
-{% image "/assets/images/blog/update-centos-rhel/H4.png", "Running sudo needs-restarting -r on AlmaLinux to check if a reboot is required after kernel update", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-centos-rhel/H4.png", "Running sudo needs-restarting -r on AlmaLinux to check if a reboot is required after kernel update", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo needs-restarting -r
@@ -103,7 +103,7 @@ sudo needs-restarting -r
 
 If the command exits with **code 1** and tells you a reboot is required, you need one. If it exits cleanly with **code 0**, you're fine. This tool is part of the `dnf-utils` package, if it's not installed:
 
-{% image "/assets/images/blog/update-centos-rhel/H5.png", "Installing dnf-utils package with sudo dnf install dnf-utils on Rocky Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-centos-rhel/H5.png", "Installing dnf-utils package with sudo dnf install dnf-utils on Rocky Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install dnf-utils -y
@@ -121,7 +121,7 @@ This lists services that have loaded outdated libraries. Restarting those indivi
 
 For servers you don't log into daily, automatic security updates are a practical safety net. Install the package:
 
-{% image "/assets/images/blog/update-centos-rhel/H6.png", "Installing dnf-automatic for unattended updates on AlmaLinux 9", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-centos-rhel/H6.png", "Installing dnf-automatic for unattended updates on AlmaLinux 9", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install dnf-automatic -y
@@ -135,7 +135,7 @@ sudo nano /etc/dnf/automatic.conf
 
 If missing package `nano` install it first:
 
-{% image "/assets/images/blog/update-centos-rhel/H7.png", "Installing nano editor with sudo dnf install nano -y on CentOS Stream", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-centos-rhel/H7.png", "Installing nano editor with sudo dnf install nano -y on CentOS Stream", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install nano -y
@@ -202,7 +202,7 @@ sudo ausearch -m avc -ts recent
 
 If missing command `ausearch` install it first:
 
-{% image "/assets/images/blog/update-centos-rhel/H8.png", "Installing setroubleshoot-server to diagnose SELinux access denials on AlmaLinux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-centos-rhel/H8.png", "Installing setroubleshoot-server to diagnose SELinux access denials on AlmaLinux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install setroubleshoot-server -y

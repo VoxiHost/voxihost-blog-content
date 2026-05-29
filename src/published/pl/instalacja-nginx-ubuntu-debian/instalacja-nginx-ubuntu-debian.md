@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/instalacja-nginx-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/instalacja-nginx-ubuntu-debian/og-image.png
 title: 'Jak zainstalować Nginx na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik krok po kroku do instalacji Nginx na serwerach Ubuntu i Debian. Naucz się instalować serwer WWW, konfigurować UFW, zarządzać procesem Nginx i konfigurować swój pierwszy blok serwera.
 date: '2026-03-25'
@@ -64,7 +64,7 @@ sudo apt update
 
 Teraz zainstaluj Nginx:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H1.png", "Uruchamianie sudo apt install nginx -y na Ubuntu aby zainstalować serwer WWW Nginx z apt", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H1.png", "Uruchamianie sudo apt install nginx -y na Ubuntu aby zainstalować serwer WWW Nginx z apt", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install nginx -y
@@ -78,7 +78,7 @@ Jeśli włączyłeś zaporę UFW (jak mocno zalecamy w naszym [Przewodniku Konfi
 
 Podczas instalacji, Nginx rejestruje się z UFW aby dostarczyć kilka automatycznych profili aplikacji. Możesz je zobaczyć wpisując:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H2.png", "Uruchamianie sudo ufw app list na Ubuntu aby wyświetlić dostępne profile aplikacji zapory Nginx", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H2.png", "Uruchamianie sudo ufw app list na Ubuntu aby wyświetlić dostępne profile aplikacji zapory Nginx", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw app list
@@ -99,7 +99,7 @@ Available applications:
 
 Dla ogromnej większości przypadków, ostatecznie będziesz chciał certyfikat SSL, więc najlepiej zezwolić na oba od razu:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H3.png", "Uruchamianie sudo ufw allow 'Nginx Full' aby otworzyć port HTTP 80 i HTTPS 443 przez UFW na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H3.png", "Uruchamianie sudo ufw allow 'Nginx Full' aby otworzyć port HTTP 80 i HTTPS 443 przez UFW na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw allow 'Nginx Full'
@@ -117,7 +117,7 @@ W tym momencie, twój serwer WWW jest w pełni operacyjny. Aby to zweryfikować,
 
 Jeśli nie znasz publicznego adresu IP swojego serwera, możesz go znaleźć uruchamiając:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H4.png", "Uruchamianie curl -4 icanhazip.com na Ubuntu aby pobrać publiczny adres IP serwera", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H4.png", "Uruchamianie curl -4 icanhazip.com na Ubuntu aby pobrać publiczny adres IP serwera", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 curl -4 icanhazip.com
@@ -125,7 +125,7 @@ curl -4 icanhazip.com
 
 Wpisz ten adres IP w przeglądarce: `http://your_server_ip`
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H5.png", "Domyślna strona powitalna Nginx w przeglądarce potwierdzająca pomyślną instalację na serwerze Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H5.png", "Domyślna strona powitalna Nginx w przeglądarce potwierdzająca pomyślną instalację na serwerze Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 Powinieneś zobaczyć domyślną stronę lądowania **"Welcome to nginx!"**. To potwierdza że oprogramowanie działa poprawnie i że twoja zapora zezwala na ruch.
 
@@ -135,7 +135,7 @@ Teraz gdy masz swój serwer WWW uruchomiony i działający, musisz wiedzieć jak
 
 Aby zatrzymać serwer WWW:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H6.png", "Uruchamianie sudo systemctl stop nginx aby zatrzymać proces serwera WWW Nginx na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H6.png", "Uruchamianie sudo systemctl stop nginx aby zatrzymać proces serwera WWW Nginx na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl stop nginx
@@ -143,7 +143,7 @@ sudo systemctl stop nginx
 
 Aby uruchomić serwer WWW gdy jest zatrzymany:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H7.png", "Uruchamianie sudo systemctl start nginx aby uruchomić serwer WWW Nginx na Ubuntu lub Debian", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H7.png", "Uruchamianie sudo systemctl start nginx aby uruchomić serwer WWW Nginx na Ubuntu lub Debian", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl start nginx
@@ -151,7 +151,7 @@ sudo systemctl start nginx
 
 Aby zatrzymać a następnie całkowicie zrestartować usługę:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H8.png", "Uruchamianie sudo systemctl restart nginx aby całkowicie zrestartować Nginx i zastosować nową konfigurację na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H8.png", "Uruchamianie sudo systemctl restart nginx aby całkowicie zrestartować Nginx i zastosować nową konfigurację na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl restart nginx
@@ -159,7 +159,7 @@ sudo systemctl restart nginx
 
 Jeśli tylko dokonałeś zmian konfiguracyjnych (jak dodanie nowej domeny), Nginx może przeładować bez rozłączania aktywnych połączeń. To jest polecenie którego będziesz używać najczęściej:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H9.png", "Uruchamianie sudo systemctl reload nginx aby przeładować konfigurację Nginx bez przerywania aktywnych połączeń", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H9.png", "Uruchamianie sudo systemctl reload nginx aby przeładować konfigurację Nginx bez przerywania aktywnych połączeń", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl reload nginx
@@ -175,7 +175,7 @@ Dla tego przykładu, użyjemy `your_domain.com`.
 
 ### 1. Utwórz katalog dla swojej domeny
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H10.png", "Uruchamianie sudo mkdir -p aby utworzyć nowy katalog główny dokumentów strony internetowej w /var/www na Ubuntu z Nginx", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H10.png", "Uruchamianie sudo mkdir -p aby utworzyć nowy katalog główny dokumentów strony internetowej w /var/www na Ubuntu z Nginx", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo mkdir -p /var/www/your_domain.com/html
@@ -190,7 +190,7 @@ sudo chown -R $USER:$USER /var/www/your_domain.com/html
 
 ### 3. Utwórz przykładową stronę index.html
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H11.png", "Tworzenie przykładowej strony testowej index.html za pomocą edytora nano wewnątrz /var/www dla Nginx na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H11.png", "Tworzenie przykładowej strony testowej index.html za pomocą edytora nano wewnątrz /var/www dla Nginx na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 nano /var/www/your_domain.com/html/index.html
@@ -213,7 +213,7 @@ Zapisz i zamknij plik.
 
 Teraz musimy powiedzieć Nginx aby serwował ten folder gdy ktoś odwiedza `your_domain.com`. Utwórz nowy plik konfiguracyjny w katalogu `sites-available`:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H12.png", "Tworzenie nowego pliku konfiguracyjnego bloku serwera Nginx dla niestandardowej domeny w sites-available na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H12.png", "Tworzenie nowego pliku konfiguracyjnego bloku serwera Nginx dla niestandardowej domeny w sites-available na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/nginx/sites-available/your_domain.com
@@ -241,7 +241,7 @@ Zapisz i zamknij plik.
 
 Nginx ignoruje pliki w `sites-available` chyba że mają dowiązanie symboliczne umieszczone w katalogu `sites-enabled`. Utwórz to dowiązanie teraz:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H13.png", "Uruchamianie sudo ln -s aby utworzyć dowiązanie symboliczne z sites-available do sites-enabled aby aktywować wirtualny host Nginx", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H13.png", "Uruchamianie sudo ln -s aby utworzyć dowiązanie symboliczne z sites-available do sites-enabled aby aktywować wirtualny host Nginx", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/your_domain.com /etc/nginx/sites-enabled/
@@ -251,7 +251,7 @@ sudo ln -s /etc/nginx/sites-available/your_domain.com /etc/nginx/sites-enabled/
 
 Przed restartem Nginx, zawsze testuj konfigurację aby upewnić się że nie ma błędów składni:
 
-{% image "/assets/images/blog/instalacja-nginx-ubuntu-debian/H14.png", "Uruchamianie sudo nginx -t aby przetestować składnię konfiguracji Nginx przed przeładowaniem serwera WWW na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-nginx-ubuntu-debian/H14.png", "Uruchamianie sudo nginx -t aby przetestować składnię konfiguracji Nginx przed przeładowaniem serwera WWW na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nginx -t

@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/instalacja-lemp-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/instalacja-lemp-ubuntu-debian/og-image.png
 title: Jak skonfigurować stos LEMP (Linux, Nginx, MariaDB, PHP) na Ubuntu i Debian
 description: Kompletny przewodnik krok po kroku do instalacji nowoczesnego stosu LEMP (Linux, Nginx, MariaDB, PHP) na świeżym serwerze Ubuntu lub Debian.
 date: '2026-03-25'
@@ -69,7 +69,7 @@ sudo apt upgrade -y
 
 Teraz zainstaluj serwer WWW Nginx (pakiet nosi się `nginx` na systemach Debian/Ubuntu):
 
-{% image "/assets/images/blog/instalacja-lemp-ubuntu-debian/H1.png", "Uruchamianie sudo apt install nginx -y na Ubuntu lub Debian aby rozpocząć instalację stosu LEMP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lemp-ubuntu-debian/H1.png", "Uruchamianie sudo apt install nginx -y na Ubuntu lub Debian aby rozpocząć instalację stosu LEMP", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install nginx -y
@@ -89,7 +89,7 @@ Teraz gdy masz serwer WWW, potrzebujesz systemu bazy danych do przechowywania i 
 
 Zainstaluj serwer MariaDB:
 
-{% image "/assets/images/blog/instalacja-lemp-ubuntu-debian/H2.png", "Uruchamianie sudo apt install mariadb-server mariadb-client -y na Ubuntu lub Debian aby zainstalować MariaDB jako część stosu LEMP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lemp-ubuntu-debian/H2.png", "Uruchamianie sudo apt install mariadb-server mariadb-client -y na Ubuntu lub Debian aby zainstalować MariaDB jako część stosu LEMP", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install mariadb-server mariadb-client -y
@@ -97,7 +97,7 @@ sudo apt install mariadb-server mariadb-client -y
 
 Po zakończeniu instalacji, baza danych działa ale jest całkowicie niezabezpieczona. Musisz ją zablokować używając wbudowany skrypt bezpieczeństwa:
 
-{% image "/assets/images/blog/instalacja-lemp-ubuntu-debian/H3.png", "Uruchamianie sudo mysql_secure_installation na Ubuntu aby zabezpieczyć instalację MariaDB usuwając użytkowników anonimowych, wyłączając zdalne logowanie root i przeładowując tabele uprawnień", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lemp-ubuntu-debian/H3.png", "Uruchamianie sudo mysql_secure_installation na Ubuntu aby zabezpieczyć instalację MariaDB usuwając użytkowników anonimowych, wyłączając zdalne logowanie root i przeładowując tabele uprawnień", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo mysql_secure_installation
@@ -118,7 +118,7 @@ Nginx jest niesamowicie szybki w serwowaniu statycznych plików (HTML, obrazy, C
 
 Zainstaluj PHP8 z FPM i rozszerzeniem MySQL:
 
-{% image "/assets/images/blog/instalacja-lemp-ubuntu-debian/H4.png", "Uruchamianie sudo apt install php-fpm php-mysql -y na Ubuntu lub Debian aby zainstalować PHP8 z FPM i rozszerzenie MySQL jako część stosu LEMP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lemp-ubuntu-debian/H4.png", "Uruchamianie sudo apt install php-fpm php-mysql -y na Ubuntu lub Debian aby zainstalować PHP8 z FPM i rozszerzenie MySQL jako część stosu LEMP", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install php-fpm php-mysql -y
@@ -132,7 +132,7 @@ Musimy jawnie powiedzieć Nginx jak obsługiwać pliki PHP. Zrobimy to edytując
 
 Otwórz domyślną konfigurację bloku serwera w edytorze nano:
 
-{% image "/assets/images/blog/instalacja-lemp-ubuntu-debian/H5.png", "Tworzenie nowego pliku konfiguracyjnego bloku serwera Nginx w sites-available dla niestandardowej domeny w konfiguracji stosu LEMP na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lemp-ubuntu-debian/H5.png", "Tworzenie nowego pliku konfiguracyjnego bloku serwera Nginx w sites-available dla niestandardowej domeny w konfiguracji stosu LEMP na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/nginx/sites-available/default
@@ -160,7 +160,7 @@ Zapisz plik i wyjdź.
 
 Przetestuj konfigurację Nginx pod kątem błędów składni przed włączeniem strony:
 
-{% image "/assets/images/blog/instalacja-lemp-ubuntu-debian/H6.png", "Uruchamianie sudo nginx -t aby przetestować konfigurację bloku serwera Nginx pod kątem błędów składni przed włączeniem strony LEMP na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lemp-ubuntu-debian/H6.png", "Uruchamianie sudo nginx -t aby przetestować konfigurację bloku serwera Nginx pod kątem błędów składni przed włączeniem strony LEMP na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nginx -t
@@ -178,7 +178,7 @@ Aby udowodnić że Nginx pomyślnie przekazuje pliki PHP do PHP-FPM, stworzymy k
 
 Utwórz nowy plik w głównym katalogu WWW:
 
-{% image "/assets/images/blog/instalacja-lemp-ubuntu-debian/H7.png", "Tworzenie pliku testowego info.php w /var/www/html za pomocą edytora nano w celu zweryfikowania komunikacji między Nginx a PHP-FPM w konfiguracji stosu LEMP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lemp-ubuntu-debian/H7.png", "Tworzenie pliku testowego info.php w /var/www/html za pomocą edytora nano w celu zweryfikowania komunikacji między Nginx a PHP-FPM w konfiguracji stosu LEMP", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /var/www/html/info.php
@@ -196,7 +196,7 @@ Zapisz plik i wyjdź.
 
 Otwórz przeglądarkę i nawiguj do: `http://your_server_ip/info.php`
 
-{% image "/assets/images/blog/instalacja-lemp-ubuntu-debian/H8.png", "Strona phpinfo() wyświetlająca się w przeglądarce potwierdzająca że Nginx i PHP-FPM komunikują się poprawnie w konfiguracji stosu LEMP na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lemp-ubuntu-debian/H8.png", "Strona phpinfo() wyświetlająca się w przeglądarce potwierdzająca że Nginx i PHP-FPM komunikują się poprawnie w konfiguracji stosu LEMP na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 Powinieneś zobaczyć ogromną, szczegółową tabelę fioletowo-szarą opisującą dokładną konfigurację twojego serwera. To dowód że twój kompletny stos LEMP działa idealnie!
 

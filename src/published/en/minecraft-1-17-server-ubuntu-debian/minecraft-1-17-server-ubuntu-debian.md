@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/minecraft-1-17-server-ubuntu-debian/og-image.png
+image: /assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/og-image.png
 title: How to Setup a Minecraft Vanilla 1.17.1 Server (Java 16) on Ubuntu/Debian
 description: Instructions for installing a Minecraft 1.17.1 server on Ubuntu/Debian using the specific Java 16 runtime.
 date: '2026-04-23'
@@ -82,7 +82,7 @@ sudo apt update
 sudo apt install openjdk-16-jre-headless -y
 ```
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H1.png", "Terminal output showing the installation of OpenJDK on an Ubuntu/Debian system", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H1.png", "Terminal output showing the installation of OpenJDK on an Ubuntu/Debian system", "(max-width: 768px) 100vw, 800px" %}
 
 
 **Option B: Install Java 17 (Fallback)**
@@ -95,7 +95,7 @@ sudo apt install openjdk-17-jre-headless -y
 
 For security, never run your server as root. If you are new to Linux permissions, check our guide on [How to Create and Manage Users on Ubuntu/Debian](/blog/add-sudo-user-ubuntu/).
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H2.png", "Creating a dedicated 'minecraft' user for secure server hosting", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H2.png", "Creating a dedicated 'minecraft' user for secure server hosting", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo adduser --disabled-password --gecos "" minecraft
@@ -107,7 +107,7 @@ mkdir server && cd server
 
 Looking for a different version? You can find direct Mojang download links for all releases in our [Minecraft Server Download Archive](/blog/minecraft-server-download-links/).
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H3.png", "Downloading the Minecraft 1.17.1 server.jar from Mojang servers using wget", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H3.png", "Downloading the Minecraft 1.17.1 server.jar from Mojang servers using wget", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 wget https://piston-data.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
@@ -115,7 +115,7 @@ wget https://piston-data.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf2022619
 
 ## Step 4: Accept the EULA
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H4.png", "First launch of the 1.17.1 JAR to generate configuration files and accept the EULA", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H4.png", "First launch of the 1.17.1 JAR to generate configuration files and accept the EULA", "(max-width: 768px) 100vw, 800px" %}
 
 Run the server once to generate the required configuration files:
 
@@ -133,7 +133,7 @@ sed -i 's/eula=false/eula=true/' eula.txt
 
 Paste the following (Aikar's Flags optimized for G1GC):
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H5.png", "Using the nano editor to create and configure the start.sh launch script", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H5.png", "Using the nano editor to create and configure the start.sh launch script", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 nano start.sh
@@ -145,7 +145,7 @@ In the editor, paste:
 java -Xmx4G -Xms4G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikar.for.v1.20=false -jar server.jar nogui
 ```
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H6.png", "Setting executable permissions on the start.sh script", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H6.png", "Setting executable permissions on the start.sh script", "(max-width: 768px) 100vw, 800px" %}
 
 Make it executable:
 ```bash
@@ -158,7 +158,7 @@ Before setting up the automatic background service, you should run the server ma
 
 **1. Start the server manually**
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H7.png", "Starting the Minecraft 1.17.1 server manually to access the console", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H7.png", "Starting the Minecraft 1.17.1 server manually to access the console", "(max-width: 768px) 100vw, 800px" %}
 
 Run the launch script you just created:
 ```bash
@@ -167,7 +167,7 @@ Run the launch script you just created:
 
 **2. Grant Administrator (OP) rights**
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H8.png", "Using the op command in the console to grant administrator privileges", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H8.png", "Using the op command in the console to grant administrator privileges", "(max-width: 768px) 100vw, 800px" %}
 
 Once the server has finished loading (you see the "Done!" message), type your command directly into the console:
 ```text
@@ -176,7 +176,7 @@ op your_minecraft_username
 
 **3. Stop the server**
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H9.png", "Executing the stop command to safely shut down the server process", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H9.png", "Executing the stop command to safely shut down the server process", "(max-width: 768px) 100vw, 800px" %}
 
 To save the world data and prepare for background hosting, type:
 ```text
@@ -193,7 +193,7 @@ Exit the `minecraft` user back to your root/sudo account:
 exit
 ```
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H10.png", "Creating the minecraft.service file for professional background hosting", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H10.png", "Creating the minecraft.service file for professional background hosting", "(max-width: 768px) 100vw, 800px" %}
 
 Create the service file:
 ```bash
@@ -217,7 +217,7 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-{% image "/assets/images/blog/minecraft-1-17-server-ubuntu-debian/H11.png", "Enabling and starting the minecraft systemd service in terminal", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/H11.png", "Enabling and starting the minecraft systemd service in terminal", "(max-width: 768px) 100vw, 800px" %}
 
 Enable and start your server:
 ```bash

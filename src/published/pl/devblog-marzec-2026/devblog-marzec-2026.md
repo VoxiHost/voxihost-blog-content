@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/devblog-marzec-2026/og-image.png
+image: /assets/images/blog/pl/devblog-marzec-2026/og-image.png
 title: 'Marzec 2026: VoxiHost DevBlog'
 description: To był intensywny miesiąc w VoxiHost! W tym DevBlogu opisujemy wdrożenie konsoli VNC, wsparcie dla 7 nowych dystrybucji Linux oraz logowanie przez Google.
 date: '2026-04-01'
@@ -30,7 +30,7 @@ Od niskopoziomowego dostępu do serwera po ogromne rozszerzenie listy wspieranyc
 
 Jedna z najbardziej wyczekiwanych funkcji jest już dostępna: **wsparcie dla konsoli VNC** bezpośrednio w Twoim panelu zarządzania.
 
-{% image "/assets/images/blog/devblog-marzec-2026/vnc-support.png", "Panel VoxiHost pokazujący nową integrację konsoli VNC do zdalnego zarządzania serwerami VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/devblog-marzec-2026/vnc-support.png", "Panel VoxiHost pokazujący nową integrację konsoli VNC do zdalnego zarządzania serwerami VPS", "(max-width: 768px) 100vw, 800px" %}
 
 Wiemy, jak frustrująca może być utrata dostępu do serwera z powodu błędu w konfiguracji firewallu lub uszkodzenia pliku konfiguracyjnego SSH. Dzięki nowemu wsparciu VNC, możesz uzyskać dostęp do swojego VPS na „poziomie sprzętowym” przez przeglądarkę. Oznacza to, że możesz rozwiązywać problemy z bootowaniem, poprawiać ustawienia sieciowe lub zarządzać serwerem, nawet jeśli SSH jest całkowicie niedostępne.
 
@@ -44,7 +44,7 @@ Wierzymy w wolność wyboru środowiska, które najlepiej pasuje do Twojego prze
 *   **CentOS Stream 9 & 10**
 *   **Fedora 43** (Dla tych, którzy potrzebują absolutnie najnowszych pakietów)
 
-{% image "/assets/images/blog/devblog-marzec-2026/new-distributions.png", "Wybór nowych dystrybucji Linux dostępnych do instalacji jednym kliknięciem na VoxiHost VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/devblog-marzec-2026/new-distributions.png", "Wybór nowych dystrybucji Linux dostępnych do instalacji jednym kliknięciem na VoxiHost VPS", "(max-width: 768px) 100vw, 800px" %}
 
 Wszystkie te dystrybucje są już dostępne jako **instalacja jednym kliknięciem** we wszystkich naszych planach [Premium](/pl/premium-vps/) oraz [Budget](/pl/budget-vps/) VPS.
 
@@ -52,9 +52,9 @@ Wszystkie te dystrybucje są już dostępne jako **instalacja jednym kliknięcie
 
 Bezpieczeństwo i wygoda nie muszą się wykluczać. Aby ułatwić Ci życie, wdrożyliśmy **wsparcie dla Google OAuth**.
 
-{% image "/assets/images/blog/devblog-marzec-2026/google-login.png", "Strona logowania Google przekierowująca do panelu VoxiHost", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/devblog-marzec-2026/google-login.png", "Strona logowania Google przekierowująca do panelu VoxiHost", "(max-width: 768px) 100vw, 800px" %}
 
-{% image "/assets/images/blog/devblog-marzec-2026/google-select.png", "Panel logowania VoxiHost prezentujący nową funkcję 'Zaloguj z Google'", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/devblog-marzec-2026/google-select.png", "Panel logowania VoxiHost prezentujący nową funkcję 'Zaloguj z Google'", "(max-width: 768px) 100vw, 800px" %}
 
 Możesz teraz powiązać swoje konto Google z <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> i logować się jednym kliknięciem. To nie tylko przyspiesza dostęp do panelu, ale pozwala również wykorzystać zaawansowane uwierzytelnianie wieloskładnikowe (MFA) od Google, aby jeszcze lepiej chronić Twoje usługi hostingowe.
 
@@ -62,7 +62,7 @@ Możesz teraz powiązać swoje konto Google z <span class="text-white">Voxi</spa
 
 Transparentność to jedna z naszych kluczowych wartości. Odświeżyliśmy sekcję recenzji i zintegrowaliśmy ją bezpośrednio z platformą **Trustpilot**. Możesz teraz zobaczyć autentyczne opinie naszych użytkowników wraz z bezpośrednimi linkami do oryginałów.
 
-{% image "/assets/images/blog/devblog-marzec-2026/trustpilot-reviews.png", "Sekcja opinii VoxiHost prezentująca integrację z serwisem Trustpilot", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/devblog-marzec-2026/trustpilot-reviews.png", "Sekcja opinii VoxiHost prezentująca integrację z serwisem Trustpilot", "(max-width: 768px) 100vw, 800px" %}
 
 Chcemy, abyś przed wydaniem choćby złotówki dokładnie wiedział, czego spodziewać się po naszym sprzęcie i wsparciu technicznym.
 

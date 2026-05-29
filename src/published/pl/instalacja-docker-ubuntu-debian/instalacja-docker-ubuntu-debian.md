@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/instalacja-docker-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/instalacja-docker-ubuntu-debian/og-image.png
 title: 'Jak zainstalować Docker na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik krok po kroku do instalacji najnowszego Docker Engine i Docker Compose na serwerach Ubuntu i Debian poprawnie używając oficjalnego repozytorium Docker.
 date: '2026-03-25'
@@ -56,7 +56,7 @@ Podczas gdy Ubuntu i Debian zawierają wersję Dockera w swoich domyślnych repo
 
 Przed dodaniem nowego zewnętrznego repozytorium, zaktualizuj swój indeks pakietów i upewnij się że masz niezbędne pakiety podstawowe wymagane przez HTTPS.
 
-{% image "/assets/images/blog/instalacja-docker-ubuntu-debian/H1.png", "Uruchamianie sudo apt update i instalowanie ca-certificates curl gnupg wymagań dla Dockera na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-docker-ubuntu-debian/H1.png", "Uruchamianie sudo apt update i instalowanie ca-certificates curl gnupg wymagań dla Dockera na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt update
@@ -69,7 +69,7 @@ Aby zapewnić że oprogramowanie które pobierasz nie zostało naruszone, `apt` 
 
 Utwórz katalog (może już istnieć):
 
-{% image "/assets/images/blog/instalacja-docker-ubuntu-debian/H2.png", "Uruchamianie sudo install -m 0755 -d /etc/apt/keyrings aby utworzyć katalog pierścieni kluczy GPG dla Dockera na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-docker-ubuntu-debian/H2.png", "Uruchamianie sudo install -m 0755 -d /etc/apt/keyrings aby utworzyć katalog pierścieni kluczy GPG dla Dockera na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -77,7 +77,7 @@ sudo install -m 0755 -d /etc/apt/keyrings
 
 Pobierz i zapisz klucz:
 
-{% image "/assets/images/blog/instalacja-docker-ubuntu-debian/H3.png", "Pobieranie i dodawanie oficjalnego klucza GPG Docker do /etc/apt/keyrings na Ubuntu używając curl i gpg", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-docker-ubuntu-debian/H3.png", "Pobieranie i dodawanie oficjalnego klucza GPG Docker do /etc/apt/keyrings na Ubuntu używając curl i gpg", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -86,7 +86,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 
 Na koniec, dostosuj uprawnienia tak aby `apt` mogło czytać klucz podczas aktualizacji:
 
-{% image "/assets/images/blog/instalacja-docker-ubuntu-debian/H4.png", "Uruchamianie sudo chmod a+r aby ustawić uprawnienia odczytu na pliku pierścienia kluczy GPG Docker na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-docker-ubuntu-debian/H4.png", "Uruchamianie sudo chmod a+r aby ustawić uprawnienia odczytu na pliku pierścienia kluczy GPG Docker na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
@@ -98,7 +98,7 @@ Teraz gdy system ufa pakietom przychodzącym z Docker, musisz powiedzieć `apt` 
 
 Skopiuj i wklej cały ten blok kodu do swojego terminala i naciśnij Enter. Automatycznie wykrywa architekturę twojego systemu (jak `amd64` lub `arm64`) i nazwę kodową i tworzy plik dla ciebie:
 
-{% image "/assets/images/blog/instalacja-docker-ubuntu-debian/H5.png", "Dodawanie oficjalnego repozytorium apt Docker CE do /etc/apt/sources.list.d na Ubuntu lub Debian", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-docker-ubuntu-debian/H5.png", "Dodawanie oficjalnego repozytorium apt Docker CE do /etc/apt/sources.list.d na Ubuntu lub Debian", "(max-width: 768px) 100vw, 800px" %}
 
 *(Dla Ubuntu)*
 
@@ -129,7 +129,7 @@ Na koniec możesz zainstalować najnowszą stabilną wersję Dockera czysto.
 
 To polecenie instaluje podstawowy silnik Docker (`docker-ce`), klient wiersza poleceń (`docker-ce-cli`), runtime (`containerd.io`) i kluczowe wtyczki jak **Docker Compose V2** (`docker-compose-plugin`).
 
-{% image "/assets/images/blog/instalacja-docker-ubuntu-debian/H6.png", "Uruchamianie sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-docker-ubuntu-debian/H6.png", "Uruchamianie sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
@@ -141,7 +141,7 @@ Demon Docker automatycznie zaczyna działać natychmiast po zakończeniu instala
 
 Aby potwierdzić że cały silnik działa, możesz pobrać i uruchomić oficjalny obraz testowy Docker. Uruchamia on mały kontener, drukuje wiadomość potwierdzenia do twojego terminala i potem wyłącza się.
 
-{% image "/assets/images/blog/instalacja-docker-ubuntu-debian/H7.png", "Uruchamianie sudo docker run hello-world na Ubuntu aby zweryfikować że instalacja Docker Engine działa", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-docker-ubuntu-debian/H7.png", "Uruchamianie sudo docker run hello-world na Ubuntu aby zweryfikować że instalacja Docker Engine działa", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo docker run hello-world

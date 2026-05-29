@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/serwer-minecraft-linki-do-pobrania/og-image.png
+image: /assets/images/blog/pl/serwer-minecraft-linki-do-pobrania/og-image.png
 title: Archiwum linków do pobrania serwerów Minecraft Vanilla Java
 description: Kompletna lista bezpośrednich linków od Mojang do każdej głównej wersji serwera Minecraft Vanilla, od 1.7.10 aż po najnowsze snapshoty.
 date: '2026-04-22'

@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/konfiguracja-fail2ban-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/konfiguracja-fail2ban-ubuntu-debian/og-image.png
 title: 'Jak skonfigurować fail2ban na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik do instalacji i konfiguracji fail2ban na serwerach Ubuntu i Debian. Chroń SSH i usługi WWW przed atakami siłowymi z automatycznym banowaniem IP, niestandardowymi więzieniami i integracją z ufw.
 date: '2026-03-25'
@@ -57,7 +57,7 @@ fail2ban jest często nie instalowany domyślnie na świeżych obrazach Linuksa,
 
 Jeśli nie jest jeszcze zainstalowany:
 
-{% image "/assets/images/blog/konfiguracja-fail2ban-ubuntu-debian/H1.png", "Uruchamianie sudo apt install fail2ban -y na Ubuntu lub Debian aby zainstalować fail2ban z repozytorium apt", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-fail2ban-ubuntu-debian/H1.png", "Uruchamianie sudo apt install fail2ban -y na Ubuntu lub Debian aby zainstalować fail2ban z repozytorium apt", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt update
@@ -66,7 +66,7 @@ sudo apt install fail2ban -y
 
 Po zainstalowaniu, usługa uruchamia się automatycznie. Zweryfikuj:
 
-{% image "/assets/images/blog/konfiguracja-fail2ban-ubuntu-debian/H2.png", "Uruchamianie sudo systemctl status fail2ban na Ubuntu aby zweryfikować że usługa fail2ban jest aktywna i działająca", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-fail2ban-ubuntu-debian/H2.png", "Uruchamianie sudo systemctl status fail2ban na Ubuntu aby zweryfikować że usługa fail2ban jest aktywna i działająca", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status fail2ban
@@ -149,7 +149,7 @@ sudo systemctl restart fail2ban
 
 Sprawdź status więzienia SSH:
 
-{% image "/assets/images/blog/konfiguracja-fail2ban-ubuntu-debian/H3.png", "Uruchamianie sudo fail2ban-client status sshd na Ubuntu aby sprawdzić ile adresów IP jest zbanowanych w więzieniu SSH", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-fail2ban-ubuntu-debian/H3.png", "Uruchamianie sudo fail2ban-client status sshd na Ubuntu aby sprawdzić ile adresów IP jest zbanowanych w więzieniu SSH", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo fail2ban-client status sshd

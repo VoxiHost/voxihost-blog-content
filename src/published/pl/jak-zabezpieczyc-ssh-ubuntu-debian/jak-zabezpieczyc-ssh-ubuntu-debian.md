@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-zabezpieczyc-ssh-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/jak-zabezpieczyc-ssh-ubuntu-debian/og-image.png
 title: 'Jak zabezpieczyć SSH na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik do utwardzania SSH na serwerach Ubuntu i Debian. Wyłącz logowanie root, skonfiguruj uwierzytelnianie oparte na kluczach, zmień domyślny port, skonfiguruj ufw i zablokuj swój VPS przed atakami siłowymi.
 date: '2026-03-25'
@@ -61,7 +61,7 @@ Jedna najskuteczniejsza zmiana jaką możesz zrobić. Logowania hasłowe mogą b
 
 Na swojej **maszynie lokalnej**, wygeneruj parę kluczy:
 
-{% image "/assets/images/blog/jak-zabezpieczyc-ssh-ubuntu-debian/H1.png", "Uruchamianie ssh-keygen -t ed25519 -C \"your-server-label\" aby wygenerować nową parę kluczy SSH", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zabezpieczyc-ssh-ubuntu-debian/H1.png", "Uruchamianie ssh-keygen -t ed25519 -C \"your-server-label\" aby wygenerować nową parę kluczy SSH", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ssh-keygen -t ed25519 -C "your-server-label"
@@ -71,7 +71,7 @@ Użyj `ed25519`, jest szybszy i bezpieczniejszy od starszego algorytmu RSA. Gdy 
 
 Skopiuj klucz publiczny na serwer. Zastąp `youruser` swoim rzeczywistym nazwą użytkownika sudo:
 
-{% image "/assets/images/blog/jak-zabezpieczyc-ssh-ubuntu-debian/H2.png", "Uruchamianie ssh-copy-id -i ~/.ssh/id_ed25519.pub youruser@your-server-ip aby skopiować klucz publiczny na serwer", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zabezpieczyc-ssh-ubuntu-debian/H2.png", "Uruchamianie ssh-copy-id -i ~/.ssh/id_ed25519.pub youruser@your-server-ip aby skopiować klucz publiczny na serwer", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ssh-copy-id -i ~/.ssh/id_ed25519.pub youruser@your-server-ip
@@ -81,7 +81,7 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub youruser@your-server-ip
 
 Opcjonalnie: dodaj wpis do `~/.ssh/config` na swojej maszynie lokalnej dla szybkiego dostępu:
 
-{% image "/assets/images/blog/jak-zabezpieczyc-ssh-ubuntu-debian/H3.png", "Szybkie połączenie z serwerem", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zabezpieczyc-ssh-ubuntu-debian/H3.png", "Szybkie połączenie z serwerem", "(max-width: 768px) 100vw, 800px" %}
 
 ```
 Host myserver
@@ -90,7 +90,7 @@ Host myserver
     IdentityFile ~/.ssh/id_ed25519
 ```
 
-{% image "/assets/images/blog/jak-zabezpieczyc-ssh-ubuntu-debian/H4.png", "Szybkie połączenie z serwerem", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zabezpieczyc-ssh-ubuntu-debian/H4.png", "Szybkie połączenie z serwerem", "(max-width: 768px) 100vw, 800px" %}
 
 Po tym, `ssh myserver` to wszystko co musisz wpisać.
 
@@ -100,7 +100,7 @@ Loguj się przez SSH jako swój użytkownik sudo od tego momentu. Bezpośrednie 
 
 Otwórz konfigurację demona SSH:
 
-{% image "/assets/images/blog/jak-zabezpieczyc-ssh-ubuntu-debian/H5.png", "Wyłączanie logowania root w sshd_config", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zabezpieczyc-ssh-ubuntu-debian/H5.png", "Wyłączanie logowania root w sshd_config", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/ssh/sshd_config

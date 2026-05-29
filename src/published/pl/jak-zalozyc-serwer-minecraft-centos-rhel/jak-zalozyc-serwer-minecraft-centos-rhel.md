@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-zalozyc-serwer-minecraft-centos-rhel/og-image.png
+image: /assets/images/blog/pl/jak-zalozyc-serwer-minecraft-centos-rhel/og-image.png
 title: Jak postawić serwer Minecraft Java Edition na AlmaLinux, CentOS, Rocky Linux i Fedorze
 description: Kompletny poradnik hostowania serwera Minecraft Java Edition na systemach RHEL-based. Dowiedz się, jak zainstalować i skonfigurować odpowiednie środowisko Java dla każdej wersji.
 date: '2026-04-23'

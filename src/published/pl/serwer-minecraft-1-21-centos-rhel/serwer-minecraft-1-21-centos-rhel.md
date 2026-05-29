@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/serwer-minecraft-1-21-centos-rhel/og-image.png
+image: /assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/og-image.png
 title: Jak postawić serwer Minecraft Vanilla 1.21.1 (Java 21) na AlmaLinux, CentOS, Rocky Linux i Fedorze
 description: Poradnik krok po kroku dotyczący instalacji najnowszego serwera Minecraft 1.21.1 Vanilla na AlmaLinux, Rocky Linux lub CentOS z użyciem Java 21.
 date: '2026-04-23'
@@ -78,7 +78,7 @@ W **<span class="text-white">Voxi</span><span class="text-amber-300">Host</span>
 
 Przed instalacją czegokolwiek upewnij się, że system jest aktualny - skorzystaj z naszego [Poradnika aktualizacji systemu](/pl/blog/jak-zaktualizowac-centos-rhel/). Następnie zainstaluj pakiet OpenJDK bez interfejsu graficznego:
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H1.png", "Terminal przedstawiający instalację OpenJDK 21 na systemie Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H1.png", "Terminal przedstawiający instalację OpenJDK 21 na systemie Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf check-update
@@ -89,7 +89,7 @@ sudo dnf install java-21-openjdk-headless wget -y
 
 Dla bezpieczeństwa nigdy nie uruchamiaj serwera jako root. Jeśli dopiero zaczynasz z uprawnieniami w Linuksie, zapoznaj się z naszym poradnikiem [Tworzenia i zarządzania użytkownikami na AlmaLinux/Rocky](/pl/blog/jak-dodac-uzytkownika-sudo-centos/).
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H2.png", "Tworzenie dedykowanego użytkownika 'minecraft' do bezpiecznego hostowania serwera 1.21", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H2.png", "Tworzenie dedykowanego użytkownika 'minecraft' do bezpiecznego hostowania serwera 1.21", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo useradd -m -r -s /bin/bash minecraft
@@ -101,7 +101,7 @@ mkdir server && cd server
 
 Szukasz innej nowoczesnej wersji? Bezpośrednie linki do pobrania od Mojang dla wszystkich wydań znajdziesz w naszym [Archiwum linków do serwerów Minecraft](/pl/blog/serwer-minecraft-linki-do-pobrania/).
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H3.png", "Pobieranie oficjalnego pliku Minecraft 1.21.1 server.jar za pomocą wget", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H3.png", "Pobieranie oficjalnego pliku Minecraft 1.21.1 server.jar za pomocą wget", "(max-width: 768px) 100vw, 800px" %}
 
 Pobierz oficjalny plik `server.jar` od Mojang dla wersji 1.21.1:
 
@@ -111,7 +111,7 @@ wget https://piston-data.mojang.com/v1/objects/59353fb40c36d304f2035d51e7d6e6baa
 
 ## Krok 4: Akceptacja EULA
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H4.png", "Pierwsze uruchomienie pliku JAR 1.21.1 w celu wygenerowania plików konfiguracyjnych i akceptacji EULA", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H4.png", "Pierwsze uruchomienie pliku JAR 1.21.1 w celu wygenerowania plików konfiguracyjnych i akceptacji EULA", "(max-width: 768px) 100vw, 800px" %}
 
 Uruchom serwer raz, aby wygenerować wymagane pliki konfiguracyjne:
 
@@ -129,7 +129,7 @@ sed -i 's/eula=false/eula=true/' eula.txt
 
 Utwórz plik `start.sh` do zarządzania przydziałem RAM:
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H5.png", "Używanie edytora nano do tworzenia i konfigurowania skryptu startowego start.sh", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H5.png", "Używanie edytora nano do tworzenia i konfigurowania skryptu startowego start.sh", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 nano start.sh
@@ -143,7 +143,7 @@ java -Xmx6G -Xms6G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis
 
 Nadaj uprawnienia do wykonywania:
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H6.png", "Nadawanie uprawnień do wykonywania skryptowi start.sh", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H6.png", "Nadawanie uprawnień do wykonywania skryptowi start.sh", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 chmod +x start.sh
 ```
@@ -154,7 +154,7 @@ Przed skonfigurowaniem usługi działającej w tle powinieneś uruchomić serwer
 
 **1. Ręczne uruchomienie serwera**
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H7.png", "Ręczne uruchamianie serwera Minecraft 1.21.1 w celu uzyskania dostępu do konsoli", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H7.png", "Ręczne uruchamianie serwera Minecraft 1.21.1 w celu uzyskania dostępu do konsoli", "(max-width: 768px) 100vw, 800px" %}
 Uruchom właśnie utworzony skrypt startowy:
 ```bash
 ./start.sh
@@ -162,7 +162,7 @@ Uruchom właśnie utworzony skrypt startowy:
 
 **2. Nadanie uprawnień administratora (OP)**
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H8.png", "Nadawanie uprawnień OP przez konsolę serwera", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H8.png", "Nadawanie uprawnień OP przez konsolę serwera", "(max-width: 768px) 100vw, 800px" %}
 Gdy serwer zakończy ładowanie (zobaczysz komunikat „Done!"), wpisz bezpośrednio w konsoli:
 ```text
 op twoja_nazwa_gracza_minecraft
@@ -170,7 +170,7 @@ op twoja_nazwa_gracza_minecraft
 
 **3. Zatrzymanie serwera**
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H9.png", "Bezpieczne wyłączanie serwera Minecraft 1.21.1", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H9.png", "Bezpieczne wyłączanie serwera Minecraft 1.21.1", "(max-width: 768px) 100vw, 800px" %}
 Aby zapisać dane świata i przygotować serwer do działania w tle, wpisz:
 ```text
 stop
@@ -188,7 +188,7 @@ exit
 
 Utwórz plik usługi:
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H10.png", "Tworzenie pliku usługi minecraft.service dla systemd", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H10.png", "Tworzenie pliku usługi minecraft.service dla systemd", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 sudo nano /etc/systemd/system/minecraft.service
 ```
@@ -212,7 +212,7 @@ WantedBy=multi-user.target
 
 Włącz i uruchom serwer:
 
-{% image "/assets/images/blog/serwer-minecraft-1-21-centos-rhel/H11.png", "Włączanie i uruchamianie usługi minecraft w systemd", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/H11.png", "Włączanie i uruchamianie usługi minecraft w systemd", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable minecraft

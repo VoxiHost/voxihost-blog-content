@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/hourly-vps-launch/og-image.png
+image: /assets/images/blog/pl/hourly-vps-launch/og-image.png
 title: 'Nowość: Hosting VPS na godziny - Elastyczność, której potrzebujesz'
 description: Wprowadzamy nową ofertę Hourly VPS! Dowiedz się, jak rozliczanie godzinowe, ceny od 0,03 PLN/h oraz specjalny kod promocyjny DEPLOYMENT zrewolucjonizują Twoją pracę.
 date: '2026-04-10'
@@ -25,7 +25,7 @@ W **<span class="text-white">Voxi</span><span class="text-amber-300">Host</span>
 
 Niezależnie od tego, czy potrzebujesz serwera na 3 godziny testów, czy chcesz uruchamiać krótkie skrypty bez wiązania się miesięcznym abonamentem - nowa oferta Hourly jest stworzona dla Ciebie.
 
-{% image "/assets/images/blog/hourly-vps-launch/billing-cycle-toggle.png", "Nowy przełącznik cyklu rozliczeniowego w panelu VoxiHost pozwalający na wybór między płatnością miesięczną a godzinową", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/hourly-vps-launch/billing-cycle-toggle.png", "Nowy przełącznik cyklu rozliczeniowego w panelu VoxiHost pozwalający na wybór między płatnością miesięczną a godzinową", "(max-width: 768px) 100vw, 800px" %}
 
 ## Dlaczego warto wybrać Hourly VPS?
 
@@ -63,7 +63,7 @@ Wprowadziliśmy szereg funkcji, które ułatwiają życie użytkownikom modelu H
 *   **Przycisk samozniszczenia (Destroy)**: Chcesz natychmiast przestać płacić? Jeden klik i serwer zostaje usunięty, a naliczanie opłat wstrzymane.
 *   **Porównanie cen**: Panel automatycznie podpowie Ci, kiedy bardziej opłaca się przejść na plan miesięczny (Monthly), jeśli wybierzesz taką samą konfiguracje jak jedna z ofert miesięcznych **(Które długo terminowo są bardziej opłacalne).**
 
-{% image "/assets/images/blog/hourly-vps-launch/server-destroy.png", "Interfejs zarządzania serwerem godzinowym z widocznym przyciskiem usuwania usługi w celu zatrzymania naliczania opłat", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/hourly-vps-launch/server-destroy.png", "Interfejs zarządzania serwerem godzinowym z widocznym przyciskiem usuwania usługi w celu zatrzymania naliczania opłat", "(max-width: 768px) 100vw, 800px" %}
 
 ## Wielka Promocja
 

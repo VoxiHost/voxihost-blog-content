@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/konfiguracja-wireguard-vpn-ubuntu/og-image.png
+image: /assets/images/blog/pl/konfiguracja-wireguard-vpn-ubuntu/og-image.png
 title: Jak skonfigurować serwer VPN WireGuard na Ubuntu i Debian
 description: 'Kompletny poradnik dla początkujących: instalacja, konfiguracja i generowanie kluczy dla błyskawicznego serwera VPN WireGuard na Twoim serwerze Linux VPS.'
 date: '2026-03-25'
@@ -59,7 +59,7 @@ Oto jak wdrożyć własny, prywatny VPN na dowolnym serwerze Linux VPS, aby omij
 
 Zaloguj się na swój serwer przez SSH. Przed przystąpieniem do instalacji upewnij się, że Twój system jest aktualny:
 
-{% image "/assets/images/blog/konfiguracja-wireguard-vpn-ubuntu/H1.png", "Uruchamianie sudo apt update i apt upgrade -y na Ubuntu w celu aktualizacji systemu przed instalacją VPN WireGuard", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-wireguard-vpn-ubuntu/H1.png", "Uruchamianie sudo apt update i apt upgrade -y na Ubuntu w celu aktualizacji systemu przed instalacją VPN WireGuard", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -67,7 +67,7 @@ sudo apt update && sudo apt upgrade -y
 
 Następnie pobierz oficjalny skrypt instalacyjny bezpośrednio z repozytorium GitHub Angristan:
 
-{% image "/assets/images/blog/konfiguracja-wireguard-vpn-ubuntu/H2.png", "Pobieranie skryptu auto-instalacyjnego WireGuard z GitHub za pomocą curl na Ubuntu VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-wireguard-vpn-ubuntu/H2.png", "Pobieranie skryptu auto-instalacyjnego WireGuard z GitHub za pomocą curl na Ubuntu VPS", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
@@ -77,7 +77,7 @@ curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wir
 
 Zanim będziesz mógł uruchomić pobrany plik, **musisz** nadać mu uprawnienia do wykonywania:
 
-{% image "/assets/images/blog/konfiguracja-wireguard-vpn-ubuntu/H3.png", "Uruchamianie sudo chmod, a następnie sudo ./wireguard-install.sh, aby włączyć instalator WireGuard na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-wireguard-vpn-ubuntu/H3.png", "Uruchamianie sudo chmod, a następnie sudo ./wireguard-install.sh, aby włączyć instalator WireGuard na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo chmod +x wireguard-install.sh
@@ -91,7 +91,7 @@ sudo ./wireguard-install.sh
 
 ## Krok 3: Pytania konfiguracyjne
 
-{% image "/assets/images/blog/konfiguracja-wireguard-vpn-ubuntu/H4.png", "Pytania konfiguracyjne skryptu WireGuard pokazujące adres IP, port i opcje resolvera DNS na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-wireguard-vpn-ubuntu/H4.png", "Pytania konfiguracyjne skryptu WireGuard pokazujące adres IP, port i opcje resolvera DNS na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 Największą zaletą tego skryptu jest fakt, że automatycznie wykrywa on interfejsy sieciowe serwera, publiczne adresy IP oraz konfiguracje DNS.
 
@@ -109,7 +109,7 @@ Przejdź przez nie, naciskając `Enter`. Skrypt szybko pobierze pakiety `wiregua
 
 ## Krok 4: Wygeneruj pierwszy profil klienta
 
-{% image "/assets/images/blog/konfiguracja-wireguard-vpn-ubuntu/H5.png", "Skrypt WireGuard proszący o nazwę klienta i generujący pierwszy plik .conf oraz kod QR na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-wireguard-vpn-ubuntu/H5.png", "Skrypt WireGuard proszący o nazwę klienta i generujący pierwszy plik .conf oraz kod QR na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 WireGuard wykorzystuje bezpieczną kryptografię peer-to-peer. Aby połączyć telefon lub laptop z VPN, musisz wygenerować plik konfiguracyjny klienta (`.conf`) dla każdego urządzenia.
 
@@ -155,7 +155,7 @@ Jeśli chcesz dodać drugi laptop, smart TV lub udostępnić bezpieczne połącz
 
 Po prostu uruchom skrypt ponownie:
 
-{% image "/assets/images/blog/konfiguracja-wireguard-vpn-ubuntu/H6.png", "Ponowne uruchomienie skryptu instalacyjnego WireGuard w celu otwarcia menu zarządzania i dodania kolejnych klientów VPN", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-wireguard-vpn-ubuntu/H6.png", "Ponowne uruchomienie skryptu instalacyjnego WireGuard w celu otwarcia menu zarządzania i dodania kolejnych klientów VPN", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ./wireguard-install.sh

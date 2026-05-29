@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/przesylanie-plikow-vps-sftp-filezilla/og-image.png
+image: /assets/images/blog/pl/przesylanie-plikow-vps-sftp-filezilla/og-image.png
 title: Jak transferować pliki na VPS używając SFTP i FileZilla
 description: Kompletny przewodnik dla początkujących do bezpiecznego transferowania plików z komputera na serwer Linux VPS używając SFTP i FileZilla.
 date: '2026-03-25'
@@ -64,7 +64,7 @@ FileZilla to darmowy, wieloplatformowy klient FTP który jest standardem branży
 
 Pobierz i zainstaluj FileZilla na swoim komputerze:
 
-{% image "/assets/images/blog/przesylanie-plikow-vps-sftp-filezilla/H1.png", "Pobieranie FileZilla Client z oficjalnej strony internetowej do instalacji SFTP na komputerze", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/przesylanie-plikow-vps-sftp-filezilla/H1.png", "Pobieranie FileZilla Client z oficjalnej strony internetowej do instalacji SFTP na komputerze", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 # Jeśli używasz system Windows:
@@ -83,7 +83,7 @@ Po zainstalowaniu otwórz FileZilla. Zamiast używać paska szybkiego połączen
 
 Otwórz Menedżera Witryn:
 
-{% image "/assets/images/blog/przesylanie-plikow-vps-sftp-filezilla/H2.png", "Otwieranie Menedżera Witryn FileZilla w celu utworzenia nowego, stałego połączenia SFTP z serwerem Linux VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/przesylanie-plikow-vps-sftp-filezilla/H2.png", "Otwieranie Menedżera Witryn FileZilla w celu utworzenia nowego, stałego połączenia SFTP z serwerem Linux VPS", "(max-width: 768px) 100vw, 800px" %}
 
 Możesz go znaleźć w menu Start lub wyszukując "FileZilla" w swoich aplikacjach.
 
@@ -101,7 +101,7 @@ Standardowo FileZilla używa zwykłego FTP, który wysyła hasła i dane w posta
 
 Zmień na SFTP:
 
-{% image "/assets/images/blog/przesylanie-plikow-vps-sftp-filezilla/H3.png", "Zmienianie protokołu z FTP na SFTP - SSH File Transfer Protocol w ustawieniach FileZilla", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/przesylanie-plikow-vps-sftp-filezilla/H3.png", "Zmienianie protokołu z FTP na SFTP - SSH File Transfer Protocol w ustawieniach FileZilla", "(max-width: 768px) 100vw, 800px" %}
 
 W menu rozwijanym obok pola "Protokół" wybierz:
 **`SFTP - SSH File Transfer Protocol`**
@@ -132,11 +132,11 @@ Kliknij przycisk **Połącz** w dolnym oknie.
 
 Zaakceptuj ostrzeżenie o kluczu hosta (pojawia się tylko przy pierwszym połączeniu z tym hostem). To jest standardowe środowisko bezpieczeństwa chroniące przed "man in the middle" atakami.
 
-{% image "/assets/images/blog/przesylanie-plikow-vps-sftp-filezilla/H5.png", "Okno weryfikacji klucza hosta FileZilla podczas pierwszego połączenia z VPS przez SFTP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/przesylanie-plikow-vps-sftp-filezilla/H5.png", "Okno weryfikacji klucza hosta FileZilla podczas pierwszego połączenia z VPS przez SFTP", "(max-width: 768px) 100vw, 800px" %}
 
 Po nawiązaniu połączenia zobaczysz interfejs podzielony na dwie części:
 
-{% image "/assets/images/blog/przesylanie-plikow-vps-sftp-filezilla/H6.png", "Interfejs FileZilla podzielony na dwie części pokazujący lokalne pliki po lewej i zdalne pliki serwera Linux VPS po prawej dla transferu przeciągania i upuszczania", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/przesylanie-plikow-vps-sftp-filezilla/H6.png", "Interfejs FileZilla podzielony na dwie części pokazujący lokalne pliki po lewej i zdalne pliki serwera Linux VPS po prawej dla transferu przeciągania i upuszczania", "(max-width: 768px) 100vw, 800px" %}
 
 - **Lewa strona**: Twój lokalny komputer z plikami i folderami.
 - **Prawa strona**: Twój zdalny serwer Linux VPS.

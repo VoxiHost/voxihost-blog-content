@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/add-sudo-user-ubuntu/og-image.png
+image: /assets/images/blog/en/add-sudo-user-ubuntu/og-image.png
 title: 'How to Create a Sudo User on Ubuntu & Debian: The Complete Server Guide'
 description: A complete beginner-friendly guide to creating a new user with sudo privileges on Ubuntu and Debian servers. Stop logging in as root and secure your VPS.
 date: '2026-03-25'
@@ -61,7 +61,7 @@ ssh root@your-server-ip
 
 Use the `adduser` command to create the new account. Replace `yourusername` with whatever name you want to use (don't use spaces or uppercase letters):
 
-{% image "/assets/images/blog/add-sudo-user-ubuntu/H1.png", "Running adduser command in Ubuntu terminal to create a new non-root user account", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/add-sudo-user-ubuntu/H1.png", "Running adduser command in Ubuntu terminal to create a new non-root user account", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 adduser yourusername
@@ -90,7 +90,7 @@ To grant administrative powers, you need to add the user to the `sudo` group. Me
 
 Run this command (again, replace `yourusername`):
 
-{% image "/assets/images/blog/add-sudo-user-ubuntu/H2.png", "Running usermod -aG sudo command on Ubuntu to grant sudo privileges to a non-root user", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/add-sudo-user-ubuntu/H2.png", "Running usermod -aG sudo command on Ubuntu to grant sudo privileges to a non-root user", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 usermod -aG sudo yourusername
@@ -102,7 +102,7 @@ The `-aG` flags are important. `-a` means "append" and `-G` means "groups". If y
 
 Before you log out of your root session, make sure the new user works. Use the `su` (switch user) command to instantly switch to the new account:
 
-{% image "/assets/images/blog/add-sudo-user-ubuntu/H3.png", "Using su command in Ubuntu to switch user accounts and test new user access", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/add-sudo-user-ubuntu/H3.png", "Using su command in Ubuntu to switch user accounts and test new user access", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 su - yourusername
@@ -110,7 +110,7 @@ su - yourusername
 
 Your command prompt will change from `root@server` to `yourusername@server`. Now, verify that your sudo privileges work by running a command that requires root access, like checking the root directory or testing the `whoami` command:
 
-{% image "/assets/images/blog/add-sudo-user-ubuntu/H4.png", "Running sudo whoami on Ubuntu to verify that sudo privileges were successfully granted to new user", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/add-sudo-user-ubuntu/H4.png", "Running sudo whoami on Ubuntu to verify that sudo privileges were successfully granted to new user", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo whoami

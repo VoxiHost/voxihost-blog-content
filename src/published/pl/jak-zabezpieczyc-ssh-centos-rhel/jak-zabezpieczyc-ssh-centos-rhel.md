@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-zabezpieczyc-ssh-centos-rhel/og-image.png
+image: /assets/images/blog/pl/jak-zabezpieczyc-ssh-centos-rhel/og-image.png
 title: 'Jak zabezpieczyć SSH na AlmaLinux, CentOS, Rocky Linux i Fedora: Kompletny przewodnik serwera'
 description: Kompletny przewodnik do utwardzania SSH na serwerach AlmaLinux, CentOS Stream, Rocky Linux i Fedora. Wyłącz logowanie root, skonfiguruj uwierzytelnianie oparte na kluczach, zmień domyślny port, skonfiguruj firewalld i chroń swój VPS przed atakami siłowymi.
 date: '2026-03-25'
@@ -65,7 +65,7 @@ Rób klucze przed czymkolwiek innym. Uwierzytelnianie hasłem to główny wektor
 
 Na swojej **maszynie lokalnej**, wygeneruj parę kluczy ed25519:
 
-{% image "/assets/images/blog/jak-zabezpieczyc-ssh-centos-rhel/H1.png", "Uruchamianie ssh-keygen -t ed25519 -C \"your-server-label\" na AlmaLinux, CentOS, Rocky Linux i Fedorze aby wygenerować parę kluczy ed25519", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zabezpieczyc-ssh-centos-rhel/H1.png", "Uruchamianie ssh-keygen -t ed25519 -C \"your-server-label\" na AlmaLinux, CentOS, Rocky Linux i Fedorze aby wygenerować parę kluczy ed25519", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ssh-keygen -t ed25519 -C "your-server-label"
@@ -75,7 +75,7 @@ Ustaw hasło gdy zostaniesz o nie poproszony. Szyfruje klucz prywatny na dysku, 
 
 Skopiuj klucz publiczny na serwer:
 
-{% image "/assets/images/blog/jak-zabezpieczyc-ssh-centos-rhel/H2.png", "Uruchamianie ssh-copy-id -i ~/.ssh/id_ed25519.pub user@your-server-ip na AlmaLinux, CentOS, Rocky Linux i Fedorze aby skopiować klucz publiczny na serwer", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zabezpieczyc-ssh-centos-rhel/H2.png", "Uruchamianie ssh-copy-id -i ~/.ssh/id_ed25519.pub user@your-server-ip na AlmaLinux, CentOS, Rocky Linux i Fedorze aby skopiować klucz publiczny na serwer", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ssh-copy-id -i ~/.ssh/id_ed25519.pub user@your-server-ip
@@ -89,7 +89,7 @@ Bezpośrednie logowanie root to niepotrzebne ryzyko. Jeśli twój klucz zostanie
 
 Edytuj konfigurację SSH:
 
-{% image "/assets/images/blog/jak-zabezpieczyc-ssh-centos-rhel/H3.png", "Uruchamianie sudo nano /etc/ssh/sshd_config na AlmaLinux aby otworzyć i edytować plik konfiguracyjny demona SSH aby wyłączyć logowanie root", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zabezpieczyc-ssh-centos-rhel/H3.png", "Uruchamianie sudo nano /etc/ssh/sshd_config na AlmaLinux aby otworzyć i edytować plik konfiguracyjny demona SSH aby wyłączyć logowanie root", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/ssh/sshd_config
@@ -107,7 +107,7 @@ Jeśli to nie jest ustawione, na systemach opartych na RHEL domyślne mogą się
 
 Z Twoim kluczem potwierdzonym działającym, wyłącz hasła:
 
-{% image "/assets/images/blog/jak-zabezpieczyc-ssh-centos-rhel/H4.png", "Edytowanie /etc/ssh/sshd_config na AlmaLinux aby ustawić PasswordAuthentication no i PubkeyAuthentication yes aby wymusić logowanie tylko oparte na kluczach", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zabezpieczyc-ssh-centos-rhel/H4.png", "Edytowanie /etc/ssh/sshd_config na AlmaLinux aby ustawić PasswordAuthentication no i PubkeyAuthentication yes aby wymusić logowanie tylko oparte na kluczach", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/ssh/sshd_config

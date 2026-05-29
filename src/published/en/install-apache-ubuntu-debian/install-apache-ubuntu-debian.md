@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/install-apache-ubuntu-debian/og-image.png
+image: /assets/images/blog/en/install-apache-ubuntu-debian/og-image.png
 title: 'How to Install Apache on Ubuntu & Debian: The Complete Server Guide'
 description: A complete step-by-step guide to installing the Apache web server on Ubuntu and Debian. Learn how to configure UFW, manage the apache2 service, and create Virtual Hosts.
 date: '2026-03-25'
@@ -65,7 +65,7 @@ sudo apt update
 
 Install the `apache2` package:
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H1.png", "Running sudo apt install apache2 -y on Ubuntu to install the Apache web server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H1.png", "Running sudo apt install apache2 -y on Ubuntu to install the Apache web server", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install apache2 -y
@@ -79,7 +79,7 @@ Before testing Apache, you need to modify your firewall rules to allow outside a
 
 Apache registers a few application profiles with UFW upon installation. List them by typing:
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H2.png", "Running sudo ufw app list on Ubuntu showing Apache firewall application profiles", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H2.png", "Running sudo ufw app list on Ubuntu showing Apache firewall application profiles", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw app list
@@ -100,7 +100,7 @@ Available applications:
 
 We strongly recommend allowing both ports out of the gate so you are ready to configure SSL/TLS encryption (HTTPS) in the future.
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H3.png", "Running sudo ufw allow 'Apache Full' to open HTTP and HTTPS ports through UFW firewall on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H3.png", "Running sudo ufw allow 'Apache Full' to open HTTP and HTTPS ports through UFW firewall on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw allow 'Apache Full'
@@ -118,7 +118,7 @@ At this point, Apache is running and your firewall is permitting traffic. Let's 
 
 Point your favorite web browser at your server's public IP address. If you need to remind yourself of your server's IP quickly from the terminal:
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H4.png", "Running curl -4 icanhazip.com on Ubuntu to display the server's public IP address in terminal", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H4.png", "Running curl -4 icanhazip.com on Ubuntu to display the server's public IP address in terminal", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 curl -4 icanhazip.com
@@ -127,7 +127,7 @@ curl -4 icanhazip.com
 Enter this IP address into the URL bar of your browser:
 `http://your_server_ip`
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H5.png", "Default Apache2 welcome page in browser confirming successful installation on Ubuntu server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H5.png", "Default Apache2 welcome page in browser confirming successful installation on Ubuntu server", "(max-width: 768px) 100vw, 800px" %}
 
 You should immediately see the default **Ubuntu Apache2 Default Page** (or the Debian equivalent). This page confirms that the web server software is installed properly and accessible over the internet securely.
 
@@ -137,7 +137,7 @@ Managing Apache relies on systemd via the `systemctl` command. Here are the basi
 
 To stop the web server entirely:
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H6.png", "Running sudo systemctl stop apache2 to stop the Apache web server on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H6.png", "Running sudo systemctl stop apache2 to stop the Apache web server on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl stop apache2
@@ -145,7 +145,7 @@ sudo systemctl stop apache2
 
 To start your web server when it is stopped:
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H7.png", "Running sudo systemctl start apache2 to start the Apache web server on Ubuntu or Debian", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H7.png", "Running sudo systemctl start apache2 to start the Apache web server on Ubuntu or Debian", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl start apache2
@@ -153,7 +153,7 @@ sudo systemctl start apache2
 
 To stop and start the service in a single command, use restart (useful if you heavily broke configuration dependencies):
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H8.png", "Running sudo systemctl restart apache2 to restart Apache and reload config on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H8.png", "Running sudo systemctl restart apache2 to restart Apache and reload config on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl restart apache2
@@ -161,7 +161,7 @@ sudo systemctl restart apache2
 
 However, if you simply changed a configuration file or added a new Virtual Host, you can force Apache to reload its config without dropping the connections of anyone currently browsing the site:
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H9.png", "Running sudo systemctl reload apache2 to reload Apache config without dropping connections", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H9.png", "Running sudo systemctl reload apache2 to reload Apache config without dropping connections", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl reload apache2
@@ -178,7 +178,7 @@ Instead of overriding the default site, we will create an entirely new directory
 ### 1. Create the Directory
 Create a dedicated folder for your domain inside `/var/www/`:
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H10.png", "Running sudo mkdir -p to create a new website directory in /var/www on Ubuntu Apache server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H10.png", "Running sudo mkdir -p to create a new website directory in /var/www on Ubuntu Apache server", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo mkdir -p /var/www/your_domain.com/html
@@ -187,7 +187,7 @@ sudo mkdir -p /var/www/your_domain.com/html
 ### 2. Adjust Ownership
 Give your user account ownership of the web root folder so that you can edit or upload files without needing root permissions continuously:
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H11.png", "Running sudo chown to assign user ownership of the web root /var/www directory on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H11.png", "Running sudo chown to assign user ownership of the web root /var/www directory on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo chown -R $USER:$USER /var/www/your_domain.com/html
@@ -196,7 +196,7 @@ sudo chown -R $USER:$USER /var/www/your_domain.com/html
 ### 3. Create a Test Page
 Put a sample file in place to ensure everything is wiring up correctly.
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H12.png", "Creating a test index.html page with nano editor in the Apache web root on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H12.png", "Creating a test index.html page with nano editor in the Apache web root on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 nano /var/www/your_domain.com/html/index.html
@@ -220,7 +220,7 @@ Save and exit.
 ### 4. Create the Virtual Host Configuration File
 Apache on Ubuntu isolates configuration into cleanly organized folders. Virtual hosts should be defined in `/etc/apache2/sites-available`.
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H13.png", "Creating a new Apache virtual host configuration file with nano for a custom domain on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H13.png", "Creating a new Apache virtual host configuration file with nano for a custom domain on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/apache2/sites-available/your_domain.com.conf
@@ -244,7 +244,7 @@ Save and close the file.
 ### 5. Enable the Virtual Host
 Apache includes built-in tools for easily managing configurations. We'll use the `a2ensite` (Apache 2 Enable Site) tool to explicitly enable your new virtual host:
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H14.png", "Running sudo a2ensite to enable the Apache virtual host configuration for a custom domain", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H14.png", "Running sudo a2ensite to enable the Apache virtual host configuration for a custom domain", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo a2ensite your_domain.com.conf
@@ -252,7 +252,7 @@ sudo a2ensite your_domain.com.conf
 
 While we're at it, let's disable the default landing page that comes with Apache (so requests meant for our domain don't confusingly get mapped back to the default fallback):
 
-{% image "/assets/images/blog/install-apache-ubuntu-debian/H15.png", "Running sudo a2dissite 000-default.conf to disable the default Apache site on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-apache-ubuntu-debian/H15.png", "Running sudo a2dissite 000-default.conf to disable the default Apache site on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo a2dissite 000-default.conf

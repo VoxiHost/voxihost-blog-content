@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/install-lamp-ubuntu-debian/og-image.png
+image: /assets/images/blog/en/install-lamp-ubuntu-debian/og-image.png
 title: How to Set Up a LAMP Stack (Linux, Apache, MySQL, PHP) on Ubuntu & Debian
 description: A comprehensive beginner-friendly guide to installing the tried-and-true LAMP stack (Linux, Apache2, MySQL, PHP) on Ubuntu and Debian.
 date: '2026-03-25'
@@ -69,7 +69,7 @@ sudo apt upgrade -y
 
 Now, install the Apache web server (the package is named `apache2` on Debian/Ubuntu systems):
 
-{% image "/assets/images/blog/install-lamp-ubuntu-debian/H1.png", "Running sudo apt install apache2 -y to start Apache installation", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lamp-ubuntu-debian/H1.png", "Running sudo apt install apache2 -y to start Apache installation", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install apache2 -y
@@ -89,7 +89,7 @@ Your server can serve static HTML now, but to store application data (like user 
 
 Install the official MySQL server:
 
-{% image "/assets/images/blog/install-lamp-ubuntu-debian/H2.png", "Running sudo apt install mysql-server -y to start MySQL installation", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lamp-ubuntu-debian/H2.png", "Running sudo apt install mysql-server -y to start MySQL installation", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install mysql-server -y
@@ -97,7 +97,7 @@ sudo apt install mysql-server -y
 
 Once the installation finishes, the database is running but its default configuration is dangerously open. You must lock it down using the interactive security script:
 
-{% image "/assets/images/blog/install-lamp-ubuntu-debian/H3.png", "Running sudo mysql_secure_installation to secure MySQL installation", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lamp-ubuntu-debian/H3.png", "Running sudo mysql_secure_installation to secure MySQL installation", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo mysql_secure_installation
@@ -118,7 +118,7 @@ You have a web server and a database, but they cannot communicate with each othe
 
 For Apache, installing PHP requires three main packages: the core `php` package, the `php-mysql` extension allowing PHP scripts to talk to your database, and the vital `libapache2-mod-php` package, which magically binds PHP processing directly into the Apache runtime.
 
-{% image "/assets/images/blog/install-lamp-ubuntu-debian/H4.png", "Running sudo apt install php libapache2-mod-php php-mysql -y to start PHP installation", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lamp-ubuntu-debian/H4.png", "Running sudo apt install php libapache2-mod-php php-mysql -y to start PHP installation", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install php libapache2-mod-php php-mysql -y
@@ -130,7 +130,7 @@ When a user visits a directory on your website (like `yoursite.com/blog/`), Apac
 
 For dynamic applications, we want Apache to prioritize `index.php`. 
 
-{% image "/assets/images/blog/install-lamp-ubuntu-debian/H5.png", "Running sudo nano /etc/apache2/mods-enabled/dir.conf to open the dir.conf file", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lamp-ubuntu-debian/H5.png", "Running sudo nano /etc/apache2/mods-enabled/dir.conf to open the dir.conf file", "(max-width: 768px) 100vw, 800px" %}
 
 Open the `dir.conf` file in the nano text editor:
 ```bash
@@ -176,7 +176,7 @@ phpinfo();
 
 Save the file. Open your web browser and navigate to `http://your_server_ip/info.php`.
 
-{% image "/assets/images/blog/install-lamp-ubuntu-debian/H6.png", "Running sudo systemctl status apache2 on Ubuntu to verify Apache is active after completing the full LAMP stack installation", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lamp-ubuntu-debian/H6.png", "Running sudo systemctl status apache2 on Ubuntu to verify Apache is active after completing the full LAMP stack installation", "(max-width: 768px) 100vw, 800px" %}
 
 If the installation was successful, you will be greeted by a massive, highly detailed table detailing your PHP version, installed modules, memory limits, and Apache integration settings. 
 

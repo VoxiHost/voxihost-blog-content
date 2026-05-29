@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/install-docker-centos-rhel/og-image.png
+image: /assets/images/blog/en/install-docker-centos-rhel/og-image.png
 title: 'How to Install Docker on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide'
 description: A complete step-by-step guide to installing the latest official Docker Engine and Docker Compose on AlmaLinux, CentOS Stream, Rocky Linux, and Fedora servers.
 date: '2026-03-25'
@@ -60,7 +60,7 @@ Before you install the official engine, you need to verify no older, conflicting
 
 Run this command to clear the slate smoothly:
 
-{% image "/assets/images/blog/install-docker-centos-rhel/H1.png", "Running sudo dnf remove docker to clean up any old conflicting Docker packages on AlmaLinux or Rocky Linux before a fresh install", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-docker-centos-rhel/H1.png", "Running sudo dnf remove docker to clean up any old conflicting Docker packages on AlmaLinux or Rocky Linux before a fresh install", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf remove docker \
@@ -81,7 +81,7 @@ You need to tell your package manager (`dnf`) exactly where to find the official
 
 Install the utilities:
 
-{% image "/assets/images/blog/install-docker-centos-rhel/H2.png", "Running sudo dnf install -y yum-utils on AlmaLinux to install the yum-config-manager tool needed to add the Docker CE repository", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-docker-centos-rhel/H2.png", "Running sudo dnf install -y yum-utils on AlmaLinux to install the yum-config-manager tool needed to add the Docker CE repository", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install -y yum-utils
@@ -89,7 +89,7 @@ sudo dnf install -y yum-utils
 
 Now, use the `yum-config-manager` to safely add the official Docker repository to your system sources:
 
-{% image "/assets/images/blog/install-docker-centos-rhel/H3.png", "Running sudo yum-config-manager --add-repo to add the official Docker CE repository to AlmaLinux or Rocky Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-docker-centos-rhel/H3.png", "Running sudo yum-config-manager --add-repo to add the official Docker CE repository to AlmaLinux or Rocky Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -102,7 +102,7 @@ With the repository securely added, your system knows where to look. You can now
 
 This command installs the core engine (`docker-ce`), the command-line interface (`docker-ce-cli`), the container runtime (`containerd.io`), and modern plugins like **Docker Compose V2** (`docker-compose-plugin`).
 
-{% image "/assets/images/blog/install-docker-centos-rhel/H4.png", "Running sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin on AlmaLinux to install Docker Engine and Compose", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-docker-centos-rhel/H4.png", "Running sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin on AlmaLinux to install Docker Engine and Compose", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
@@ -114,7 +114,7 @@ Unlike Ubuntu, which automatically starts services immediately after downloading
 
 You need to start the Docker daemon and enable it so it safely wakes up every time the server reboots. You can do both in one single systemctl command:
 
-{% image "/assets/images/blog/install-docker-centos-rhel/H5.png", "Running sudo systemctl enable --now docker on AlmaLinux to start the Docker service and enable it to launch automatically on boot", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-docker-centos-rhel/H5.png", "Running sudo systemctl enable --now docker on AlmaLinux to start the Docker service and enable it to launch automatically on boot", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl enable --now docker
@@ -122,7 +122,7 @@ sudo systemctl enable --now docker
 
 To confirm the service is alive, check the status:
 
-{% image "/assets/images/blog/install-docker-centos-rhel/H6.png", "Running sudo systemctl status docker on AlmaLinux to confirm the Docker daemon is active and running correctly", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-docker-centos-rhel/H6.png", "Running sudo systemctl status docker on AlmaLinux to confirm the Docker daemon is active and running correctly", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status docker
@@ -133,7 +133,7 @@ Look for the bright green `"active (running)"` text.
 
 To prove unequivocally that Docker can successfully pull images from the internet and spin them up into operating containers, use the standard test payload:
 
-{% image "/assets/images/blog/install-docker-centos-rhel/H7.png", "Running sudo docker run hello-world on AlmaLinux or Rocky Linux to verify Docker Engine is installed and working correctly", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-docker-centos-rhel/H7.png", "Running sudo docker run hello-world on AlmaLinux or Rocky Linux to verify Docker Engine is installed and working correctly", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo docker run hello-world

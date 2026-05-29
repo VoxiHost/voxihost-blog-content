@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-zalozyc-serwer-minecraft-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/jak-zalozyc-serwer-minecraft-ubuntu-debian/og-image.png
 title: Jak postawić serwer Minecraft Java Edition na Ubuntu/Debian
 description: Kompletny poradnik hostowania serwera Minecraft Java Edition na Linuksie. Dowiedz się, jak zainstalować i skonfigurować odpowiednie środowisko Java dla każdej wersji.
 date: '2026-04-22'

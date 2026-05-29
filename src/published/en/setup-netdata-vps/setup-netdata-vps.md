@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/setup-netdata-vps/og-image.png
+image: /assets/images/blog/en/setup-netdata-vps/og-image.png
 title: How to Set Up Netdata for Real-Time VPS Monitoring
 description: A complete step-by-step guide to installing Netdata on your Linux VPS. Get highly detailed, beautiful real-time dashboard metrics for CPU, RAM, Network, and Disk in minutes.
 date: '2026-03-25'
@@ -54,7 +54,7 @@ Netdata provides an official, universally supported "kickstart" script. This han
 
 First, download the script to a temporary folder and execute it:
 
-{% image "/assets/images/blog/setup-netdata-vps/H1.png", "Downloading and executing the Netdata kickstart installation script via wget on a Linux VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-netdata-vps/H1.png", "Downloading and executing the Netdata kickstart installation script via wget on a Linux VPS", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /tmp/netdata-kickstart.sh
@@ -64,11 +64,11 @@ The script will prompt you for confirmation. Press `Y` to confirm.
 
 It handles everything invisibly in the background. Once the installation is finished, Netdata automatically registers itself as a systemd service, starts running its daemons, and configures itself to boot whenever your server starts.
 
-{% image "/assets/images/blog/setup-netdata-vps/H2.png", "Terminal output showing the successful installation of Netdata and its telemetry agents", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-netdata-vps/H2.png", "Terminal output showing the successful installation of Netdata and its telemetry agents", "(max-width: 768px) 100vw, 800px" %}
 
 To verify it is running smoothly, check the service status:
 
-{% image "/assets/images/blog/setup-netdata-vps/H3.png", "Running sudo systemctl status netdata to verify the Netdata daemon is actively running in the background", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-netdata-vps/H3.png", "Running sudo systemctl status netdata to verify the Netdata daemon is actively running in the background", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status netdata
@@ -101,7 +101,7 @@ Open your favorite web browser and navigate to your server's public IP address, 
 
 `http://your_server_ip:19999`
 
-{% image "/assets/images/blog/setup-netdata-vps/H4.png", "The beautifully graphed real-time Netdata visual monitoring dashboard loaded in a web browser on port 19999", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-netdata-vps/H4.png", "The beautifully graphed real-time Netdata visual monitoring dashboard loaded in a web browser on port 19999", "(max-width: 768px) 100vw, 800px" %}
 
 You will immediately be loaded directly into the Netdata Local Dashboard. No passwords, no configurations, no waiting.
 

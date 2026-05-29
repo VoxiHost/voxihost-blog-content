@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-zaktualizowac-fedore/og-image.png
+image: /assets/images/blog/pl/jak-zaktualizowac-fedore/og-image.png
 title: 'Jak aktualizować Fedora 43 i nowsze: Kompletny przewodnik serwera'
 description: Kompletny przewodnik krok po kroku do aktualizacji serwerów Fedora 43 i nowszych używając dnf5. Obejmuje dnf5 upgrade, autoremove, wykrywanie restartu i automatyczne aktualizacje dla środowisk produkcyjnych VPS.
 date: '2026-03-25'
@@ -55,7 +55,7 @@ Zaczynając od **Fedory 41**, domyślny menedżer pakietów zmienił się na **d
 
 Aby zaktualizować serwer Fedora 43, uruchom:
 
-{% image "/assets/images/blog/jak-zaktualizowac-fedore/H1.png", "Uruchamianie sudo dnf5 upgrade na Fedora 43 - wynik terminala pokazujący aktualizowane pakiety", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-fedore/H1.png", "Uruchamianie sudo dnf5 upgrade na Fedora 43 - wynik terminala pokazujący aktualizowane pakiety", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 upgrade -y
@@ -65,7 +65,7 @@ To polecenie sprawdza dostępne aktualizacje, pobiera je i instaluje w jednym pr
 
 Jeśli chcesz zobaczyć co by się zmieniło przed zatwierdzeniem:
 
-{% image "/assets/images/blog/jak-zaktualizowac-fedore/H2.png", "Uruchamianie dnf5 check-upgrade na Fedorze aby podglądnąć dostępne aktualizacje pakietów bez instalowania", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-fedore/H2.png", "Uruchamianie dnf5 check-upgrade na Fedorze aby podglądnąć dostępne aktualizacje pakietów bez instalowania", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 check-upgrade
@@ -97,7 +97,7 @@ To pokazuje co zostałoby usunięte. Dodaj `--remove` aby faktycznie to zrobić.
 
 Niektóre aktualizacje jądra lub usług wymagają restartu systemu. Użyj `needs-restarting` aby sprawdzić:
 
-{% image "/assets/images/blog/jak-zaktualizowac-fedore/H3.png", "Uruchamianie sudo needs-restarting -r na Fedorze aby sprawdzić czy restart jest wymagany po aktualizacji jądra", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-fedore/H3.png", "Uruchamianie sudo needs-restarting -r na Fedorze aby sprawdzić czy restart jest wymagany po aktualizacji jądra", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo needs-restarting -r
@@ -107,7 +107,7 @@ Jeśli to polecenie zwraca kod wyjścia `1`, restart jest wymagany. Jeśli zwrac
 
 **Kod wyjścia 1** oznacza że restart jest potrzebny (zwykle aktualizacja jądra). **Kod wyjścia 0** oznacza że wszystko w porządku. Jeśli narzędzie nie jest zainstalowane:
 
-{% image "/assets/images/blog/jak-zaktualizowac-fedore/H4.png", "Instalowanie dnf-utils na Fedorze za pomocą sudo dnf5 install dnf-utils aby uzyskać needs-restarting", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-fedore/H4.png", "Instalowanie dnf-utils na Fedorze za pomocą sudo dnf5 install dnf-utils aby uzyskać needs-restarting", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 install dnf-utils -y
@@ -125,7 +125,7 @@ To jest szczególnie przydatne na Fedorze, gdzie aktualizacje jądra są częste
 
 Dla serwerów które działają w tle bez regularnej uwagi ręcznej:
 
-{% image "/assets/images/blog/jak-zaktualizowac-fedore/H5.png", "Instalowanie pakietu dnf-automatic na Fedorze dla automatycznych niezauważalnych aktualizacji bezpieczeństwa", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-fedore/H5.png", "Instalowanie pakietu dnf-automatic na Fedorze dla automatycznych niezauważalnych aktualizacji bezpieczeństwa", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 install dnf-automatic -y
@@ -139,7 +139,7 @@ sudo dnf5 install nano -y
 
 Plik konfiguracyjny kontroluje co jest aktualizowane automatycznie:
 
-{% image "/assets/images/blog/jak-zaktualizowac-fedore/H6.png", "Edycja /etc/dnf/automatic.conf na Fedorze aby skonfigurować niezauważalne aktualizacje za pomocą nano", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-fedore/H6.png", "Edycja /etc/dnf/automatic.conf na Fedorze aby skonfigurować niezauważalne aktualizacje za pomocą nano", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/dnf/automatic.conf
@@ -187,7 +187,7 @@ Następnie sprawdź `needs-restarting -r`. Dwie minuty pracy, system pozostaje a
 
 Fedora przechodzi do nowej wersji co sześć miesięcy, a każda wersja jest wspierana przez około 13 miesięcy. Gdy nadejdzie czas na przejście z 43 do 44:
 
-{% image "/assets/images/blog/jak-zaktualizowac-fedore/H7.png", "Uruchamianie sudo dnf5 system-upgrade download --releasever=43 aby rozpocząć aktualizację wersji Fedory", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-fedore/H7.png", "Uruchamianie sudo dnf5 system-upgrade download --releasever=43 aby rozpocząć aktualizację wersji Fedory", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf5 system-upgrade download --releasever=44
