@@ -85,7 +85,8 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| *No active drafts or reviews.* | — | — | — | — |
+| [nginx-vs-apache (EN)](file:///src/drafts/en/nginx-vs-apache/nginx-vs-apache.md) | EN | `draft` | — | VoxiHost Team |
+| [nginx-vs-apache (PL)](file:///src/drafts/pl/nginx-vs-apache/nginx-vs-apache.md) | PL | `draft` | — | VoxiHost Team |
 <!-- END_DRAFTS -->
 
 ---
