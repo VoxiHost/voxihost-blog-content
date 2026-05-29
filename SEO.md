@@ -95,7 +95,7 @@ The engine automatically generates two baseline JSON-LD blocks on every article 
 }
 ```
 
-> **Notice:** Articles with `category: Tutorials` or `category: Poradniki` receive the **dual type** `["TechArticle", "BlogPosting"]` which signals to Google that this is a technical how-to, potentially qualifying for enhanced rich results. `Updates` / `Nowości` posts get only `"BlogPosting"`.
+> **Notice:** Articles with `category: Tutorials` / `Poradniki` or `Comparisons` / `Porównania` receive the **dual type** `["TechArticle", "BlogPosting"]` which signals to Google that this is a technical how-to, potentially qualifying for enhanced rich results. `Updates` / `Nowości` posts get only `"BlogPosting"`.
 
 **What you need to fill in to make this complete:**
 - `title` → `headline`

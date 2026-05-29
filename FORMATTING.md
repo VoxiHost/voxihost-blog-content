@@ -37,7 +37,7 @@ contributors:
 *   **`date`**: Publication date in `YYYY-MM-DD` format.
 *   **`translationKey`**: A unique string shared between the English and Polish versions of the same article (used for language switching).
 *   **`locale`**: Language code (`en` or `pl`).
-*   **`category`**: The primary topic/section. Valid values: `Tutorials` / `Poradniki` (how-to guides), `Updates` / `Nowości` (announcements).
+*   **`category`**: The primary topic/section. Valid values: `Tutorials` / `Poradniki` (how-to guides), `Updates` / `Nowości` (announcements), `Comparisons` / `Porównania` (technology comparisons).
 *   **`status`**: Use `draft` when submitting. The team will change it to `published` after approval.
 *   **`author`**: Object defining the primary author:
     ```yaml

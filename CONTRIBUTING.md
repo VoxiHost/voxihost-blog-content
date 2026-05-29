@@ -168,6 +168,7 @@ contributors:
 | :--- | :--- | :--- |
 | `Tutorials` | `Poradniki` | Step-by-step technical how-to guides |
 | `Updates` | `Nowości` | VoxiHost product announcements and devblogs |
+| `Comparisons` | `Porównania` | Detailed side-by-side technology comparisons |
 
 > [!NOTE]
 > New categories may be added by the VoxiHost team in the future. If you believe your article doesn't fit any existing category, mention it in your PR description.

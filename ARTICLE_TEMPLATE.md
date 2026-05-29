@@ -40,8 +40,8 @@ translationKey: your-article-slug
 locale: en
 
 # [REQUIRED] The primary topic category. Must match the blog's category taxonomy.
-# EN categories: Tutorials, Updates
-# PL categories: Poradniki, Nowości
+# EN categories: Tutorials, Updates, Comparisons
+# PL categories: Poradniki, Nowości, Porównania
 category: Tutorials
 
 # [OPTIONAL] Tags for search and filtering. Use lowercase kebab-case.
