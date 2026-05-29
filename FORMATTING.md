@@ -10,7 +10,7 @@ Every article must start with a YAML frontmatter block containing the required p
 
 ```yaml
 ---
-image: /assets/images/blog/aktualizacja-wersji-php-linux/og-image.png
+image: /assets/images/blog/pl/aktualizacja-wersji-php-linux/og-image.png
 title: Jak zarządzać i aktualizować wersje PHP na Linux (Ubuntu i Debian)
 description: Kompletny przewodnik do bezpiecznej instalacji, aktualizacji i zarządzania wieloma wersjami PHP i PHP-FPM na swoim serwerze Linux.
 date: '2026-03-25'
@@ -62,7 +62,7 @@ To keep pages lightweight and fast-loading, **never use native Markdown image sy
 ```
 
 ### Shortcode Parameters
-1.  **`src`** *(String)*: Webroot path to the image, formatted as: `/assets/images/blog/<post-slug>/<image-name>.<ext>`
+1.  **`src`** *(String)*: Webroot path to the image, formatted as: `/assets/images/blog/<lang>/<post-slug>/<image-name>.<ext>`
 2.  **`alt_text`** *(String)*: Descriptive text for accessibility and SEO.
 3.  **`sizes`** *(String, optional)*: Responsive width hints. Standard value: `"(max-width: 768px) 100vw, 800px"`.
 4.  **`class`** *(String, optional)*: Additional CSS styling classes.
@@ -70,9 +70,9 @@ To keep pages lightweight and fast-loading, **never use native Markdown image sy
 
 ### Asset Storage & Path Mapping
 *   **Local Storage Path**: Save all image files inside the `images/` directory of the post (e.g. `src/published/pl/aktualizacja-wersji-php-linux/images/H1.png`).
-*   **Markdown Reference**: Map this path to the web production prefix `/assets/images/blog/<post-slug>/` as shown below:
+*   **Markdown Reference**: Map this path to the web production prefix `/assets/images/blog/<lang>/<post-slug>/` as shown below:
     ```jinja
-    {% image "/assets/images/blog/aktualizacja-wersji-php-linux/H1.png", "Uruchamianie instalacji PHP", "(max-width: 768px) 100vw, 800px" %}
+    {% image "/assets/images/blog/pl/aktualizacja-wersji-php-linux/H1.png", "Uruchamianie instalacji PHP", "(max-width: 768px) 100vw, 800px" %}
     ```
 
 ---
@@ -128,7 +128,7 @@ This section shows the most frequent errors contributors make. Check your articl
 
 ✅ **Correct** — always use the Nunjucks shortcode with the full web path:
 ```jinja
-{% image "/assets/images/blog/your-article-slug/step1.png", "Description of what is shown in step 1", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/<lang>/your-article-slug/step1.png", "Description of what is shown in step 1", "(max-width: 768px) 100vw, 800px" %}
 ```
 
 ---
