@@ -17,7 +17,7 @@ Before submitting this PR, please verify all items below. Incomplete submissions
 
 - [ ] `title` is present and descriptive.
 - [ ] `description` is present, under 160 characters, and plain text (no markdown).
-- [ ] `image` path is correct: `/assets/images/blog/<slug>/og-image.png`.
+- [ ] `image` path is correct: `/assets/images/blog/<lang>/<slug>/og-image.png`.
 - [ ] `date` is in `YYYY-MM-DD` format.
 - [ ] `translationKey` is set and matches the paired translation (if applicable).
 - [ ] `locale` is set to `en` or `pl`.
@@ -33,7 +33,7 @@ Before submitting this PR, please verify all items below. Incomplete submissions
 - [ ] **No native markdown image syntax** (`![alt](url)`) is used anywhere in the article body.
 - [ ] All images use the `{% image "path", "alt text", "sizes" %}` Nunjucks shortcode.
 - [ ] All image files are stored in the `images/` subdirectory of the article folder.
-- [ ] Image paths in shortcodes match the pattern `/assets/images/blog/<slug>/<filename>`.
+- [ ] Image paths in shortcodes match the pattern `/assets/images/blog/<lang>/<slug>/<filename>`.
 - [ ] All images have meaningful, descriptive alt text (for SEO and accessibility).
 
 ---
