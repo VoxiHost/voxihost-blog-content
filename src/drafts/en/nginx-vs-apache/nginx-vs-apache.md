@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/nginx-vs-apache/og-image.png
+image: /assets/images/blog/en/nginx-vs-apache/og-image.png
 title: "Nginx vs Apache on a VPS: 2026 Benchmarks & Choice"
 description: "Compare Nginx and Apache under the hood on a VPS. Read architectural differences, memory usage benchmarks, and choose the best web server in 2026."
 date: '2026-05-29'
@@ -52,7 +52,7 @@ When a request comes in, a worker process reads the event, passes it to the syst
 
 ## 2. Performance Comparison & Benchmarks
 
-To illustrate the real-world performance differences, we ran a quick benchmark on clean installations of Nginx (v1.26) and Apache (v2.4 with Event MPM) running on a standard <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/premium-vps/) (2 vCPU, 4 GB RAM, running Ubuntu 24.04 LTS). No performance tuning was applied to either server; the only modification was raising the `worker_connections` limit to `4096` in Nginx's configuration file to ensure stable handling of the 1,000 concurrent client threads.
+To illustrate the real-world performance differences, we ran a quick benchmark on clean installations of Nginx (v1.26, see our [guide to install Nginx on Ubuntu/Debian](/blog/install-nginx-ubuntu-debian/)) and Apache (v2.4 with Event MPM, see our [guide to install Apache on Ubuntu/Debian](/blog/install-apache-ubuntu-debian/)) running on a standard <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/premium-vps/) (2 vCPU, 4 GB RAM, running Ubuntu 24.04 LTS). No performance tuning was applied to either server; the only modification was raising the `worker_connections` limit to `4096` in Nginx's configuration file to ensure stable handling of the 1,000 concurrent client threads.
 
 We used `wrk` on a client machine to send 1,000 concurrent requests over a duration of 30 seconds:
 
@@ -63,15 +63,15 @@ wrk -t16 -c1000 -d30s http://your_server_ip/
 ### The Benchmark Results
 *   **Nginx throughput:** Handled **37,180 requests per second** (RPS) with a stable memory footprint of **15–18 MB RAM** and **0 socket errors**.
 
-{% image "/assets/images/blog/nginx-vs-apache/nginx-benchmark.png", "Terminal output showing wrk benchmark test results for Nginx achieving 37,180 RPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/nginx-vs-apache/nginx-benchmark.png", "Terminal output showing wrk benchmark test results for Nginx achieving 37,180 RPS", "(max-width: 768px) 100vw, 800px" %}
 
 *   **Apache throughput:** Handled **3,180 requests per second** (RPS) with memory usage spiking to **145 MB RAM** and experiencing **883 socket timeout errors** as connections queued up.
 
-{% image "/assets/images/blog/nginx-vs-apache/apache2-benchmark.png", "Terminal output showing wrk benchmark test results for Apache with connection timeouts", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/nginx-vs-apache/apache2-benchmark.png", "Terminal output showing wrk benchmark test results for Apache with connection timeouts", "(max-width: 768px) 100vw, 800px" %}
 
 ### Static Content vs. Dynamic Content
 *   **Static Content (HTML, CSS, JS, Images):** **Nginx is the clear winner**. Because of its event-driven model and efficient use of kernel-level system calls (like `sendfile`), Nginx bypasses user-space overhead and serves files directly. Under high concurrent load, this enables Nginx to serve static files up to **11.7 times faster** than Apache out of the box. If you are running static sites (React, Vue, or Hugo), hosting it on Nginx ensures lightning-fast load times even on a budget-friendly [Budget VPS](/budget-vps/).
-*   **Dynamic Content (PHP, Node.js, Python):** When executing dynamic scripts (e.g., running PHP code), both servers act similarly since the bottleneck is the runtime engine itself (like `PHP-FPM`). However, Nginx still keeps a lower memory footprint because it doesn't bloat its processes with dynamic processing modules like Apache does.
+*   **Dynamic Content (PHP, Node.js, Python):** When executing dynamic scripts (e.g., running PHP code), both servers act similarly since the bottleneck is the runtime engine itself (like `PHP-FPM`). However, Nginx still keeps a lower memory footprint because it doesn't bloat its processes with dynamic processing modules like Apache does. If you are building a modern web stack, check our [LEMP Stack setup guide](/blog/install-lemp-ubuntu-debian/) or the alternative [LAMP Stack setup guide](/blog/install-lamp-ubuntu-debian/).
 
 ---
 
@@ -95,7 +95,7 @@ If you make a change, you must test the configuration and reload the Nginx daemo
 ```bash
 sudo nginx -t && sudo systemctl reload nginx
 ```
-While this requires SSH access and root privileges (meaning it is less flexible for multi-tenant environments), it makes Nginx significantly faster and more secure since configuration files are loaded into memory once on startup.
+While this requires SSH access and root privileges (meaning it is less flexible for multi-tenant environments), it makes Nginx significantly faster and more secure since configuration files are loaded into memory once on startup. This also makes setting up SSL straightforward (see how to [set up SSL with Let's Encrypt and Certbot on Ubuntu](/blog/ssl-letsencrypt-certbot-ubuntu/)).
 
 ---
 
@@ -123,7 +123,7 @@ While this requires SSH access and root privileges (meaning it is less flexible 
 *   You are hosting high-traffic websites, APIs, or single-page applications.
 *   You need a powerful reverse proxy to route traffic to backend runtimes like Node.js, Go, or Python.
 *   You want to squeeze maximum performance and handle thousands of concurrent users on a [Budget VPS](/budget-vps/).
-*   You want to build a highly optimized LEMP stack for WordPress.
+*   You want to build a highly optimized LEMP stack (see our [LEMP Stack installation guide](/blog/install-lemp-ubuntu-debian/)) for WordPress.
 
 For modern production setups, the combination of Nginx as a reverse proxy in front of backend applications running on a [Premium VPS](/premium-vps/) protected by <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Shield DDoS protection](/shield/) represents the industry gold standard for speed, reliability, and security.
 

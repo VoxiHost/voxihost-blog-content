@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/nginx-vs-apache/og-image.png
+image: /assets/images/blog/pl/nginx-vs-apache/og-image.png
 title: "Nginx vs Apache na VPS: Benchmarki i wybór w 2026 roku"
 description: "Porównaj Nginx i Apache na serwerze VPS. Poznaj różnice architektoniczne, benchmarki zużycia pamięci i dowiedz się, co wybrać w 2026 roku."
 date: '2026-05-29'
@@ -52,7 +52,7 @@ Gdy pojawia się żądanie, proces roboczy odczytuje zdarzenie, przekazuje je do
 
 ## 2. Porównanie wydajności i benchmarki
 
-Aby zademonstrować rzeczywiste różnice w wydajności obu serwerów, przeprowadziliśmy testy na czystych instalacjach Nginx (v1.26) oraz Apache (v2.4 z Event MPM), uruchomionych na standardowym serwerze <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/premium-vps/) (2 vCPU, 4 GB RAM, system Ubuntu 24.04 LTS). W konfiguracjach nie stosowano żadnego dodatkowego tuningu – jedyną modyfikacją było zwiększenie wartości `worker_connections` do `4096` w pliku konfiguracyjnym Nginx, aby umożliwić stabilną obsługę 1000 jednoczesnych połączeń.
+Aby zademonstrować rzeczywiste różnice w wydajności obu serwerów, przeprowadziliśmy testy na czystych instalacjach Nginx (v1.26, zobacz nasz [poradnik instalacji Nginx](/pl/blog/instalacja-nginx-ubuntu-debian/)) oraz Apache (v2.4 z Event MPM, zobacz naszą [instrukcję instalacji Apache](/pl/blog/instalacja-apache-ubuntu-debian/)), uruchomionych na standardowym serwerze <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/pl/premium-vps/) (2 vCPU, 4 GB RAM, system Ubuntu 24.04 LTS). W konfiguracjach nie stosowano żadnego dodatkowego tuningu – jedyną modyfikacją było zwiększenie wartości `worker_connections` do `4096` w pliku konfiguracyjnym Nginx, aby umożliwić stabilną obsługę 1000 jednoczesnych połączeń.
 
 Do symulacji obciążenia użyliśmy nowoczesnego narzędzia benchmarkującego `wrk`, wysyłając 1000 jednoczesnych połączeń przez 30 sekund:
 
@@ -63,15 +63,15 @@ wrk -t16 -c1000 -d30s http://<adres_ip_serwera>/
 ### Wyniki testów wydajnościowych
 *   **Wydajność Nginx:** Obsłużył **37 180 zapytań na sekundę** (RPS) przy stabilnym zużyciu pamięci na poziomie **15–18 MB RAM** i **0 błędach połączenia**.
 
-{% image "/assets/images/blog/nginx-vs-apache/nginx-benchmark.png", "Konsola z wynikiem testu wydajnościowego Nginx w programie wrk wykazująca 37 180 RPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/nginx-vs-apache/nginx-benchmark.png", "Konsola z wynikiem testu wydajnościowego Nginx w programie wrk wykazująca 37 180 RPS", "(max-width: 768px) 100vw, 800px" %}
 
 *   **Wydajność Apache:** Obsłużył **3 180 zapytań na sekundę** (RPS), podczas gdy zużycie pamięci RAM wzrosło do **145 MB**, a test wykazał aż **883 błędy przekroczenia limitu czasu (timeouts)**.
 
-{% image "/assets/images/blog/nginx-vs-apache/apache2-benchmark.png", "Konsola z wynikiem testu wydajnościowego Apache w programie wrk pokazująca błędy połączeń", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/nginx-vs-apache/apache2-benchmark.png", "Konsola z wynikiem testu wydajnościowego Apache w programie wrk pokazująca błędy połączeń", "(max-width: 768px) 100vw, 800px" %}
 
 ### Treści statyczne vs. dynamiczne
-*   **Treści statyczne (HTML, CSS, JS, Obrazki):** **Nginx jest niekwestionowanym liderem**. Dzięki asynchronicznej architekturze oraz bezpośredniemu wykorzystaniu wywołań systemowych jądra Linux (takich jak `sendfile`), serwer omija narzut przestrzeni użytkownika. Przy wysokim, jednoczesnym obciążeniu pozwala to Nginx na serwowanie plików statycznych aż **11,7 raza szybciej** niż Apache prosto po instalacji. Hosting stron statycznych (React, Vue, Hugo) na Nginx gwarantuje najszybsze ładowanie nawet na maszynach [Budget VPS](/budget-vps/).
-*   **Treści dynamiczne (PHP, Node.js, Python):** W przypadku uruchamiania skryptów dynamicznych (np. WordPressa na PHP), oba serwery wykazują zbliżoną wydajność obliczeniową, gdyż głównym wąskim gardłem staje się sam interpreter (np. `PHP-FPM`). Nginx zachowuje jednak przewagę w postaci mniejszego ogólnego zużycia pamięci serwera, ponieważ nie ładuje ciężkich modułów interpretujących bezpośrednio do swoich procesów.
+*   **Treści statyczne (HTML, CSS, JS, Obrazki):** **Nginx jest niekwestionowanym liderem**. Dzięki asynchronicznej architekturze oraz bezpośredniemu wykorzystaniu wywołań systemowych jądra Linux (takich jak `sendfile`), serwer omija narzut przestrzeni użytkownika. Przy wysokim, jednoczesnym obciążeniu pozwala to Nginx na serwowanie plików statycznych aż **11,7 raza szybciej** niż Apache prosto po instalacji. Hosting stron statycznych (React, Vue, Hugo) na Nginx gwarantuje najszybsze ładowanie nawet na maszynach [Budget VPS](/pl/budget-vps/).
+*   **Treści dynamiczne (PHP, Node.js, Python):** W przypadku uruchamiania skryptów dynamicznych (np. WordPressa na PHP), oba serwery wykazują zbliżoną wydajność obliczeniową, gdyż głównym wąskim gardłem staje się sam interpreter (np. `PHP-FPM`). Nginx zachowuje jednak przewagę w postaci mniejszego ogólnego zużycia pamięci serwera, ponieważ nie ładuje ciężkich modułów interpretujących bezpośrednio do swoich procesów. Jeśli planujesz postawić wydajną aplikację PHP, zapoznaj się z naszym [poradnikiem instalacji LEMP](/pl/blog/instalacja-lemp-ubuntu-debian/) lub alternatywnym [przewodnikiem po LAMP](/pl/blog/instalacja-lamp-ubuntu-debian/).
 
 ---
 
@@ -95,7 +95,7 @@ Po wprowadzeniu jakiejkolwiek zmiany należy przetestować konfigurację i prze�
 ```bash
 sudo nginx -t && sudo systemctl reload nginx
 ```
-Choć to podejście wymaga dostępu z uprawnieniami roota, czyni Nginx znacznie szybszym i bezpieczniejszym, ponieważ cała konfiguracja jest ładowana do pamięci RAM jednorazowo przy uruchomieniu serwera.
+Choć to podejście wymaga dostępu z uprawnieniami roota, czyni Nginx znacznie szybszym i bezpieczniejszym, ponieważ cała konfiguracja jest ładowana do pamięci RAM jednorazowo przy uruchomieniu serwera. Ułatwia to również bezpieczne wdrażanie certyfikatów SSL (zobacz jak skonfigurować [SSL z Let's Encrypt i Certbot na Ubuntu](/pl/blog/certyfikat-ssl-letsencrypt-ubuntu/)).
 
 ---
 
@@ -122,10 +122,10 @@ Choć to podejście wymaga dostępu z uprawnieniami roota, czyni Nginx znacznie 
 ### Wybierz Nginx, jeśli:
 *   Hostujesz strony o dużym natężeniu ruchu, API lub aplikacje typu Single Page Application.
 *   Potrzebujesz wydajnego reverse proxy do przekazywania ruchu do backendów w Node.js, Go lub Pythonie.
-*   Chcesz uzyskać maksymalną wydajność i obsłużyć tysiące użytkowników na tanim [Budget VPS](/budget-vps/).
-*   Budujesz zoptymalizowany stos LEMP pod wymagający sklep internetowy lub portal.
+*   Chcesz uzyskać maksymalną wydajność i obsłużyć tysiące użytkowników na tanim [Budget VPS](/pl/budget-vps/).
+*   Budujesz zoptymalizowany stos LEMP pod wymagający sklep internetowy lub portal (zobacz nasz [poradnik instalacji LEMP na Ubuntu/Debian](/pl/blog/instalacja-lemp-ubuntu-debian/)).
 
-Dla nowoczesnych projektów, optymalnym rozwiązaniem jest użycie Nginx jako reverse proxy przed aplikacją backendową. Taka konfiguracja uruchomiona na serwerze [Premium VPS](/premium-vps/) i zabezpieczona przez <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Shield DDoS](/shield/) stanowi standard rynkowy gwarantujący najwyższą szybkość i stabilność.
+Dla nowoczesnych projektów, optymalnym rozwiązaniem jest użycie Nginx jako reverse proxy przed aplikacją backendową. Taka konfiguracja uruchomiona na serwerze [Premium VPS](/pl/premium-vps/) i zabezpieczona przez <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Shield DDoS](/pl/shield/) stanowi standard rynkowy gwarantujący najwyższą szybkość i stabilność.
 
 ---
 
