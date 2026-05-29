@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-dodac-uzytkownika-sudo-ubuntu/og-image.png
+image: /assets/images/blog/pl/jak-dodac-uzytkownika-sudo-ubuntu/og-image.png
 title: 'Jak utworzyć użytkownika sudo na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik dla początkujących do tworzenia nowego użytkownika z uprawnieniami sudo na serwerach Ubuntu i Debian. Przestań logować się jako root i zabezpiecz swój VPS.
 date: '2026-03-25'
@@ -61,7 +61,7 @@ ssh root@your-server-ip
 
 Użyj polecenia `adduser` aby utworzyć nowe konto. Zastąp `yourusername` dowolną nazwą którą chcesz użyć (nie używaj spacji ani wielkich liter):
 
-{% image "/assets/images/blog/jak-dodac-uzytkownika-sudo-ubuntu/H1.png", "Uruchamianie polecenia adduser w terminalu Ubuntu aby utworzyć nowe konto użytkownika niestandardowego", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-dodac-uzytkownika-sudo-ubuntu/H1.png", "Uruchamianie polecenia adduser w terminalu Ubuntu aby utworzyć nowe konto użytkownika niestandardowego", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 adduser yourusername
@@ -90,7 +90,7 @@ Aby nadać uprawnienia administracyjne, musisz dodać użytkownika do grupy `sud
 
 Uruchom to polecenie (ponownie, zastąp `yourusername`):
 
-{% image "/assets/images/blog/jak-dodac-uzytkownika-sudo-ubuntu/H2.png", "Uruchamianie polecenia usermod -aG sudo na Ubuntu aby nadać uprawnienia sudo użytkownikowi niestandardowemu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-dodac-uzytkownika-sudo-ubuntu/H2.png", "Uruchamianie polecenia usermod -aG sudo na Ubuntu aby nadać uprawnienia sudo użytkownikowi niestandardowemu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 usermod -aG sudo yourusername
@@ -102,7 +102,7 @@ Flagi `-aG` są ważne. `-a` oznacza "dołącz" i `-G` oznacza "grupy". Jeśli z
 
 Zanim wylogujesz się z sesji root, upewnij się że nowy użytkownik działa. Użyj polecenia `su` (switch user) aby natychmiast przełączyć się na nowe konto:
 
-{% image "/assets/images/blog/jak-dodac-uzytkownika-sudo-ubuntu/H3.png", "Używanie polecenia su w Ubuntu aby przełączyć konta użytkowników i przetestować dostęp nowego użytkownika", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-dodac-uzytkownika-sudo-ubuntu/H3.png", "Używanie polecenia su w Ubuntu aby przełączyć konta użytkowników i przetestować dostęp nowego użytkownika", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 su - yourusername
@@ -110,7 +110,7 @@ su - yourusername
 
 Twój prompt polecenia zmieni się z `root@server` na `yourusername@server`. Teraz zweryfikuj że twoje uprawnienia sudo działają uruchamiając polecenie które wymaga dostępu root, jak sprawdzenie katalogu root lub przetestowanie polecenia `whoami`:
 
-{% image "/assets/images/blog/jak-dodac-uzytkownika-sudo-ubuntu/H4.png", "Uruchamianie sudo whoami na Ubuntu aby zweryfikować że uprawnienia sudo zostały pomyślnie nadane nowemu użytkownikowi", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-dodac-uzytkownika-sudo-ubuntu/H4.png", "Uruchamianie sudo whoami na Ubuntu aby zweryfikować że uprawnienia sudo zostały pomyślnie nadane nowemu użytkownikowi", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo whoami

@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-dodac-uzytkownika-sudo-centos/og-image.png
+image: /assets/images/blog/pl/jak-dodac-uzytkownika-sudo-centos/og-image.png
 title: 'Jak utworzyć użytkownika sudo na AlmaLinux, CentOS, Rocky Linux i Fedora: Kompletny przewodnik serwera'
 description: Kompletny przewodnik dla początkujących do tworzenia nowego użytkownika z uprawnieniami sudo na serwerach AlmaLinux, CentOS Stream, Rocky Linux i Fedora.
 date: '2026-03-25'
@@ -68,7 +68,7 @@ W przeciwieństwie do Ubuntu, które używa interaktywnego skryptu `adduser`, dy
 
 Zastąp `yourusername` nazwą którą chcesz użyć (małe litery, bez spacji):
 
-{% image "/assets/images/blog/jak-dodac-uzytkownika-sudo-centos/H1.png", "Uruchamianie polecenia useradd yourusername na AlmaLinux, CentOS, Rocky Linux i Fedora aby utworzyć nowe konto użytkownika", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-dodac-uzytkownika-sudo-centos/H1.png", "Uruchamianie polecenia useradd yourusername na AlmaLinux, CentOS, Rocky Linux i Fedora aby utworzyć nowe konto użytkownika", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 useradd yourusername
@@ -76,7 +76,7 @@ useradd yourusername
 
 Użytkownik teraz istnieje, ale nie ma hasła, co oznacza że nie może się zalogować. Przypisz hasło używając polecenia `passwd`:
 
-{% image "/assets/images/blog/jak-dodac-uzytkownika-sudo-centos/H2.png", "Uruchamianie polecenia passwd yourusername na AlmaLinux, CentOS, Rocky Linux i Fedora aby ustawić hasło dla nowego konta użytkownika", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-dodac-uzytkownika-sudo-centos/H2.png", "Uruchamianie polecenia passwd yourusername na AlmaLinux, CentOS, Rocky Linux i Fedora aby ustawić hasło dla nowego konta użytkownika", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 passwd yourusername
@@ -99,7 +99,7 @@ Oto główna różnica między systemami rodziny Debian a RHEL: na Ubuntu/Debian
 
 Dodaj swojego nowego użytkownika do grupy `wheel` używając polecenia `usermod`:
 
-{% image "/assets/images/blog/jak-dodac-uzytkownika-sudo-centos/H3.png", "Uruchamianie polecenia usermod -aG wheel yourusername na AlmaLinux, CentOS, Rocky Linux i Fedora aby dodać nowego użytkownika do grupy wheel", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-dodac-uzytkownika-sudo-centos/H3.png", "Uruchamianie polecenia usermod -aG wheel yourusername na AlmaLinux, CentOS, Rocky Linux i Fedora aby dodać nowego użytkownika do grupy wheel", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 usermod -aG wheel yourusername
@@ -113,7 +113,7 @@ Członkowie grupy `wheel` są automatycznie nadawani pełne uprawnienia `sudo` p
 
 Zweryfikuj że nowa konfiguracja działa przed wylogowaniem się z konta root. Przełącz się na nowego użytkownika bezproblemowo używając polecenia `su`:
 
-{% image "/assets/images/blog/jak-dodac-uzytkownika-sudo-centos/H4.png", "Uruchamianie polecenia su - yourusername na AlmaLinux, CentOS, Rocky Linux i Fedora aby przełączyć się na nowe konto użytkownika", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-dodac-uzytkownika-sudo-centos/H4.png", "Uruchamianie polecenia su - yourusername na AlmaLinux, CentOS, Rocky Linux i Fedora aby przełączyć się na nowe konto użytkownika", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 su - yourusername
@@ -121,7 +121,7 @@ su - yourusername
 
 Twój prompt zmieni się z `root@server` na `yourusername@server`. Teraz przetestuj dostęp administracyjny uruchamiając polecenie które wymaga uprawnień root:
 
-{% image "/assets/images/blog/jak-dodac-uzytkownika-sudo-centos/H5.png", "Uruchamianie polecenia sudo whoami na AlmaLinux, CentOS, Rocky Linux i Fedora aby przetestować dostęp sudo", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-dodac-uzytkownika-sudo-centos/H5.png", "Uruchamianie polecenia sudo whoami na AlmaLinux, CentOS, Rocky Linux i Fedora aby przetestować dostęp sudo", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo whoami

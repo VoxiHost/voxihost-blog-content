@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/konfiguracja-netdata-vps/og-image.png
+image: /assets/images/blog/pl/konfiguracja-netdata-vps/og-image.png
 title: Jak skonfigurować Netdata do monitorowania VPS w czasie rzeczywistym
 description: Kompletny przewodnik krok po kroku do instalacji Netdata na swoim serwerze Linux VPS. Uzyskaj wysoko szczegółowe, pięknie wygenerowane wykresy metryk dla CPU, RAM, Sieci i Dysku w minutach.
 date: '2026-03-25'
@@ -54,7 +54,7 @@ Netdata dostarcza oficjalny, uniwersalnie wspierany skrypt "kickstart" który ob
 
 Najpierw pobierz skrypt do folderu tymczasowego i wykonaj go:
 
-{% image "/assets/images/blog/konfiguracja-netdata-vps/H1.png", "Pobieranie i wykonywanie skryptu instalacyjnego Netdata za pomocą wget na serwerze Linux VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-netdata-vps/H1.png", "Pobieranie i wykonywanie skryptu instalacyjnego Netdata za pomocą wget na serwerze Linux VPS", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /tmp/netdata-kickstart.sh
@@ -66,7 +66,7 @@ Skrypt obsługuje wszystko niewidzialnie w tle. Gdy instalacja się zakończy, N
 
 Sprawdź czy działa poprawnie sprawdzając status usługi:
 
-{% image "/assets/images/blog/konfiguracja-netdata-vps/H2.png", "Sprawdzanie statusu usługi Netdata za pomocą systemctl aby zweryfikować że demon monitorujący działa aktywnie w tle na serwerze Linux VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-netdata-vps/H2.png", "Sprawdzanie statusu usługi Netdata za pomocą systemctl aby zweryfikować że demon monitorujący działa aktywnie w tle na serwerze Linux VPS", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status netdata
@@ -99,7 +99,7 @@ Otwórz swoją ulubioną przeglądarkę internetową i nawiguj do adresu IP swoj
 
 `http://your_server_ip:19999`
 
-{% image "/assets/images/blog/konfiguracja-netdata-vps/H3.png", "Pięknie wygenerowany panel monitorowania Netdata wczytany w przeglądarce internetowej pokazujący wykresy metryk serwera VPS w czasie rzeczywistym", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-netdata-vps/H3.png", "Pięknie wygenerowany panel monitorowania Netdata wczytany w przeglądarce internetowej pokazujący wykresy metryk serwera VPS w czasie rzeczywistym", "(max-width: 768px) 100vw, 800px" %}
 
 Zostaniesz natychmiast załadowany bezpośrednio do **Lokalnego Panelu Netdata**. Bez haseł, bez konfiguracji, bez oczekiwania. Wszystkie wykresy są generowane na żywo.
 

@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/transfer-files-vps-sftp-filezilla/og-image.png
+image: /assets/images/blog/en/transfer-files-vps-sftp-filezilla/og-image.png
 title: How to Transfer Files to Your VPS using SFTP & FileZilla
 description: A complete beginner's guide to securely transferring files from your PC to your Linux VPS using SFTP, FileZilla, and SSH Keys.
 date: '2026-03-25'
@@ -58,13 +58,13 @@ The absolute best way to do this is using **SFTP** (Secure File Transfer Protoco
 
 ## Step 1: Download FileZilla
 
-{% image "/assets/images/blog/transfer-files-vps-sftp-filezilla/H1.png", "Downloading FileZilla Client installer from the official filezilla-project.org website for SFTP connection", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/transfer-files-vps-sftp-filezilla/H1.png", "Downloading FileZilla Client installer from the official filezilla-project.org website for SFTP connection", "(max-width: 768px) 100vw, 800px" %}
 
 If you haven't already, download the **FileZilla Client** (not the Server version) from the [official FileZilla website](https://filezilla-project.org/). It is completely free and available for Windows, macOS, and Linux.
 
 ## Step 2: Configure the Site Manager
 
-{% image "/assets/images/blog/transfer-files-vps-sftp-filezilla/H2.png", "Opening the FileZilla Site Manager to create a new saved SFTP server connection", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/transfer-files-vps-sftp-filezilla/H2.png", "Opening the FileZilla Site Manager to create a new saved SFTP server connection", "(max-width: 768px) 100vw, 800px" %}
 
 Do **not** use the "Quickconnect" bar at the very top of the application. It does not securely save your SSH keys or complex server settings. 
 
@@ -75,7 +75,7 @@ Instead, open the **Site Manager**. You can find it by clicking the very first i
 
 ## Step 3: Select the SFTP Protocol
 
-{% image "/assets/images/blog/transfer-files-vps-sftp-filezilla/H3.png", "Selecting SFTP - SSH File Transfer Protocol from the FileZilla protocol dropdown instead of FTP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/transfer-files-vps-sftp-filezilla/H3.png", "Selecting SFTP - SSH File Transfer Protocol from the FileZilla protocol dropdown instead of FTP", "(max-width: 768px) 100vw, 800px" %}
 
 Look at the right side of the Site Manager window. Under the **Protocol** dropdown, it defaults to standard FTP. 
 
@@ -86,7 +86,7 @@ If you skip this step, FileZilla will constantly fail to connect to your server 
 
 ## Step 4: Add Your Credentials or SSH Key
 
-{% image "/assets/images/blog/transfer-files-vps-sftp-filezilla/H4.png", "Adding VPS IP address, username, and SSH key file in FileZilla Site Manager for secure connection", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/transfer-files-vps-sftp-filezilla/H4.png", "Adding VPS IP address, username, and SSH key file in FileZilla Site Manager for secure connection", "(max-width: 768px) 100vw, 800px" %}
 
 Now you need to tell FileZilla where to go and how to log in.
 
@@ -112,7 +112,7 @@ If you generated an [SSH key pair](/blog/secure-ssh-ubuntu-debian/) (like `id_rs
 
 ## Step 5: Connect and Transfer
 
-{% image "/assets/images/blog/transfer-files-vps-sftp-filezilla/H5.png", "FileZilla host key verification popup when connecting to a VPS for the first time via SFTP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/transfer-files-vps-sftp-filezilla/H5.png", "FileZilla host key verification popup when connecting to a VPS for the first time via SFTP", "(max-width: 768px) 100vw, 800px" %}
 
 Click the **Connect** button at the bottom of the window.
 
@@ -121,7 +121,7 @@ Check the box that says **"Always trust this host..."** and click OK.
 
 ### The FileZilla Interface
 
-{% image "/assets/images/blog/transfer-files-vps-sftp-filezilla/H6.png", "FileZilla split-pane interface showing local files on left and remote Linux VPS directory on right for drag-and-drop transfer", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/transfer-files-vps-sftp-filezilla/H6.png", "FileZilla split-pane interface showing local files on left and remote Linux VPS directory on right for drag-and-drop transfer", "(max-width: 768px) 100vw, 800px" %}
 
 If your credentials are correct, you will successfully connect. You are now looking at two massive split windows:
 - **Left Side**: Your **local computer** (your hard drive).

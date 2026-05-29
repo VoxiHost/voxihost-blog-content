@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/setup-fail2ban-ubuntu-debian/og-image.png
+image: /assets/images/blog/en/setup-fail2ban-ubuntu-debian/og-image.png
 title: 'How to Set Up fail2ban on Ubuntu & Debian: The Complete Server Guide'
 description: A complete guide to installing and configuring fail2ban on Ubuntu and Debian servers. Protect SSH and web services from brute-force attacks with automatic IP banning, custom jails, and ufw integration.
 date: '2026-03-25'
@@ -57,7 +57,7 @@ fail2ban is often not installed by default on fresh Linux images, though premium
 
 If it's not already installed:
 
-{% image "/assets/images/blog/setup-fail2ban-ubuntu-debian/H1.png", "Running sudo apt install fail2ban -y on Ubuntu or Debian to install fail2ban from the apt repository", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-fail2ban-ubuntu-debian/H1.png", "Running sudo apt install fail2ban -y on Ubuntu or Debian to install fail2ban from the apt repository", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt update
@@ -66,7 +66,7 @@ sudo apt install fail2ban -y
 
 Once installed, the service starts automatically. Verify:
 
-{% image "/assets/images/blog/setup-fail2ban-ubuntu-debian/H2.png", "Running sudo systemctl status fail2ban on Ubuntu to verify the fail2ban service is active and running", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-fail2ban-ubuntu-debian/H2.png", "Running sudo systemctl status fail2ban on Ubuntu to verify the fail2ban service is active and running", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status fail2ban
@@ -152,7 +152,7 @@ sudo systemctl restart fail2ban
 
 Check the status of the SSH jail specifically:
 
-{% image "/assets/images/blog/setup-fail2ban-ubuntu-debian/H3.png", "Running sudo fail2ban-client status sshd to check how many IPs are banned in the SSH jail", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-fail2ban-ubuntu-debian/H3.png", "Running sudo fail2ban-client status sshd to check how many IPs are banned in the SSH jail", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo fail2ban-client status sshd

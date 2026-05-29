@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/ssl-letsencrypt-certbot-ubuntu/og-image.png
+image: /assets/images/blog/en/ssl-letsencrypt-certbot-ubuntu/og-image.png
 title: 'How to Set Up SSL with Let''s Encrypt & Certbot on Ubuntu & Debian: The Complete Guide'
 description: A complete beginner-friendly guide to securing your Nginx or Apache web server with free SSL/TLS certificates from Let's Encrypt using Certbot on Ubuntu and Debian.
 date: '2026-03-25'
@@ -71,7 +71,7 @@ Next, you need to install Certbot along with its plugin for your specific web se
 
 **If you are using Nginx:**
 
-{% image "/assets/images/blog/ssl-letsencrypt-certbot-ubuntu/H1.png", "Running sudo apt install certbot python3-certbot-nginx -y on Ubuntu/Debian - terminal output", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/ssl-letsencrypt-certbot-ubuntu/H1.png", "Running sudo apt install certbot python3-certbot-nginx -y on Ubuntu/Debian - terminal output", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install certbot python3-certbot-nginx -y
@@ -111,7 +111,7 @@ This is where the magic happens. By using the web server plugins you installed i
 
 **Run Certbot for Nginx:**
 
-{% image "/assets/images/blog/ssl-letsencrypt-certbot-ubuntu/H2.png", "Running sudo certbot --nginx -d your_domain.com -d www.your_domain.com on Ubuntu/Debian - terminal output", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/ssl-letsencrypt-certbot-ubuntu/H2.png", "Running sudo certbot --nginx -d your_domain.com -d www.your_domain.com on Ubuntu/Debian - terminal output", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo certbot --nginx -d your_domain.com -d www.your_domain.com
@@ -144,7 +144,7 @@ Thankfully, you never have to repeat Step 3. The `certbot` package on Ubuntu and
 
 You can verify the timer is active by running:
 
-{% image "/assets/images/blog/ssl-letsencrypt-certbot-ubuntu/H3.png", "Running sudo systemctl status certbot.timer on Ubuntu/Debian - terminal output", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/ssl-letsencrypt-certbot-ubuntu/H3.png", "Running sudo systemctl status certbot.timer on Ubuntu/Debian - terminal output", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status certbot.timer

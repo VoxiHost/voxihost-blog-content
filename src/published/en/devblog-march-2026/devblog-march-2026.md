@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/devblog-march-2026/og-image.png
+image: /assets/images/blog/en/devblog-march-2026/og-image.png
 title: 'March 2026: VoxiHost DevBlog'
 description: A major month of updates for VoxiHost! In this DevBlog, we've launched the VNC console, added support for 7 brand new Linux distributions, and enabled Google Authentication.
 date: '2026-04-01'
@@ -30,7 +30,7 @@ From low-level server access to a massive expansion of our supported operating s
 
 One of our most requested features is finally live: **VNC Console support** directly in your dashboard. 
 
-{% image "/assets/images/blog/devblog-march-2026/vnc-support.png", "VoxiHost Dashboard showing the new VNC console integration for remote VPS management", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/devblog-march-2026/vnc-support.png", "VoxiHost Dashboard showing the new VNC console integration for remote VPS management", "(max-width: 768px) 100vw, 800px" %}
 
 We know how frustrating it is to be locked out of your server because of a firewall misconfiguration or a broken SSH config. With the new VNC support, you can access your VPS \"at the hardware level\" through your browser. This means you can troubleshoot boot issues, fix network settings, or manage your server even if SSH is completely unavailable.
 
@@ -44,7 +44,7 @@ We believe in giving you the freedom to choose the environment that fits your wo
 *   **CentOS Stream 9 & 10**
 *   **Fedora 43** (For those who need the absolute latest packages)
 
-{% image "/assets/images/blog/devblog-march-2026/new-distributions.png", "A selection of new Linux distributions available for one-click install on VoxiHost VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/devblog-march-2026/new-distributions.png", "A selection of new Linux distributions available for one-click install on VoxiHost VPS", "(max-width: 768px) 100vw, 800px" %}
 
 All these distributions are now available for **one-click deployment** on all our [Premium](/premium-vps/) and [Budget](/budget-vps/) VPS plans.
 
@@ -52,15 +52,15 @@ All these distributions are now available for **one-click deployment** on all ou
 
 Security and convenience shouldn't be a trade-off. To make your life easier, we have implemented **Google OAuth support**. 
 
-{% image "/assets/images/blog/devblog-march-2026/google-login.png", "Showing google login page redirecting to VoxiHost Dashboard", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/devblog-march-2026/google-login.png", "Showing google login page redirecting to VoxiHost Dashboard", "(max-width: 768px) 100vw, 800px" %}
 
-{% image "/assets/images/blog/devblog-march-2026/google-select.png", "VoxiHost login page showcasing the new 'Sign in with Google' feature for faster dashboard access", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/devblog-march-2026/google-select.png", "VoxiHost login page showcasing the new 'Sign in with Google' feature for faster dashboard access", "(max-width: 768px) 100vw, 800px" %}
 
 You can now link your Google account to <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> and log in with a single click. This not only speeds up your workflow but also allows you to leverage Google’s advanced multi-factor authentication (MFA) to protect your hosting account.
 
 ## 4. Verified Reviews via Trustpilot
 
-{% image "/assets/images/blog/devblog-march-2026/trustpilot-reviews.png", "VoxiHost reviews section showing Trustpilot integration", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/devblog-march-2026/trustpilot-reviews.png", "VoxiHost reviews section showing Trustpilot integration", "(max-width: 768px) 100vw, 800px" %}
 
 Transparency is one of our core values. We’ve redesigned our reviews section and integrated it directly with **Trustpilot**. You can now see verified feedback from our users with direct links to the original reviews. 
 

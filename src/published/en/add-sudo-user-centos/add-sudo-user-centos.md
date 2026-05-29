@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/add-sudo-user-centos/og-image.png
+image: /assets/images/blog/en/add-sudo-user-centos/og-image.png
 title: 'How to Create a Sudo User on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide'
 description: A complete beginner-friendly guide to creating a new user with sudo privileges on AlmaLinux, CentOS Stream, Rocky Linux, and Fedora servers.
 date: '2026-03-25'
@@ -68,7 +68,7 @@ Unlike Ubuntu, which uses the interactive `adduser` script, RHEL-based distribut
 
 Replace `yourusername` with the name you want to use (lowercase letters, no spaces):
 
-{% image "/assets/images/blog/add-sudo-user-centos/H1.png", "Running useradd yourusername command on AlmaLinux, CentOS, Rocky Linux & Fedora to create a new user account", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/add-sudo-user-centos/H1.png", "Running useradd yourusername command on AlmaLinux, CentOS, Rocky Linux & Fedora to create a new user account", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 useradd yourusername
@@ -76,7 +76,7 @@ useradd yourusername
 
 The user exists now, but they don't have a password, which means they can't log in. Assign a password using the `passwd` command:
 
-{% image "/assets/images/blog/add-sudo-user-centos/H2.png", "Running passwd yourusername command on AlmaLinux, CentOS, Rocky Linux & Fedora to set a password for the new user account", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/add-sudo-user-centos/H2.png", "Running passwd yourusername command on AlmaLinux, CentOS, Rocky Linux & Fedora to set a password for the new user account", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 passwd yourusername
@@ -99,7 +99,7 @@ Here is the main difference between Debian-family and RHEL-family systems: on Ub
 
 Add your new user to the `wheel` group using the `usermod` command:
 
-{% image "/assets/images/blog/add-sudo-user-centos/H3.png", "Running usermod -aG wheel yourusername command on AlmaLinux, CentOS, Rocky Linux & Fedora to add the new user to the wheel group", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/add-sudo-user-centos/H3.png", "Running usermod -aG wheel yourusername command on AlmaLinux, CentOS, Rocky Linux & Fedora to add the new user to the wheel group", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 usermod -aG wheel yourusername
@@ -113,7 +113,7 @@ Members of the `wheel` group are automatically granted full `sudo` privileges by
 
 Verify that the new setup works before logging out of your root account. Switch to the new user seamlessly using the `su` command:
 
-{% image "/assets/images/blog/add-sudo-user-centos/H4.png", "Running su - yourusername command on AlmaLinux, CentOS, Rocky Linux & Fedora to switch to the new user account", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/add-sudo-user-centos/H4.png", "Running su - yourusername command on AlmaLinux, CentOS, Rocky Linux & Fedora to switch to the new user account", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 su - yourusername
@@ -121,7 +121,7 @@ su - yourusername
 
 Your prompt will change from `root@server` to `yourusername@server`. Now, test your administrative access by running a command that requires root privileges:
 
-{% image "/assets/images/blog/add-sudo-user-centos/H5.png", "Running sudo whoami command on AlmaLinux, CentOS, Rocky Linux & Fedora to test sudo access", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/add-sudo-user-centos/H5.png", "Running sudo whoami command on AlmaLinux, CentOS, Rocky Linux & Fedora to test sudo access", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo whoami

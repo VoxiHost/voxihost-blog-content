@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/aktualizacja-wersji-php-linux/og-image.png
+image: /assets/images/blog/pl/aktualizacja-wersji-php-linux/og-image.png
 title: Jak zarządzać i aktualizować wersje PHP na Linux (Ubuntu i Debian)
 description: Kompletny przewodnik do bezpiecznej instalacji, aktualizacji i zarządzania wieloma wersjami PHP i PHP-FPM na swoim serwerze Linux używając oficjalnego PPA Ondřeja Surýego.
 date: '2026-03-25'
@@ -59,7 +59,7 @@ Przez prawie dekadę, globalny standard dla tego był utrzymywany przez **Ondře
 
 Najpierw zainstaluj pakiet właściwości oprogramowania (jeśli nie jest już tam):
 
-{% image "/assets/images/blog/aktualizacja-wersji-php-linux/H1.png", "Uruchamianie sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https aby przygotować Ubuntu do dodania repozytorium PHP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/aktualizacja-wersji-php-linux/H1.png", "Uruchamianie sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https aby przygotować Ubuntu do dodania repozytorium PHP", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt update
@@ -70,7 +70,7 @@ Teraz dodaj repozytorium:
 
 **Dla Ubuntu:**
 
-{% image "/assets/images/blog/aktualizacja-wersji-php-linux/H2.png", "Uruchamianie sudo add-apt-repository ppa:ondrej/php na Ubuntu aby dodać repozytorium PHP Ondřeja Surýego z wieloma wersjami PHP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/aktualizacja-wersji-php-linux/H2.png", "Uruchamianie sudo add-apt-repository ppa:ondrej/php na Ubuntu aby dodać repozytorium PHP Ondřeja Surýego z wieloma wersjami PHP", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo add-apt-repository ppa:ondrej/php
@@ -92,7 +92,7 @@ Możesz bezpiecznie zainstalować wiele wersji. Nie nadpiszą się ani nie będ�
 
 Zainstalujmy **PHP 8.3** (dla nowoczesnej aplikacji) i **PHP 8.1** (dla starszej aplikacji):
 
-{% image "/assets/images/blog/aktualizacja-wersji-php-linux/H3.png", "Instalowanie PHP 8.3 i PHP 8.1 z php-fpm obok siebie na Ubuntu używając apt do zarządzania wieloma wersjami PHP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/aktualizacja-wersji-php-linux/H3.png", "Instalowanie PHP 8.3 i PHP 8.1 z php-fpm obok siebie na Ubuntu używając apt do zarządzania wieloma wersjami PHP", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 # Zainstaluj PHP 8.3 i jego procesor FPM
@@ -104,7 +104,7 @@ sudo apt install php8.1 php8.1-fpm php8.1-mysql php8.1-xml php8.1-curl -y
 
 Po zainstalowaniu, obie usługi PHP-FPM automatycznie zaczną działać w tle niezależnie. Możesz to zweryfikować sprawdzając ich status:
 
-{% image "/assets/images/blog/aktualizacja-wersji-php-linux/H4.png", "Uruchamianie sudo systemctl status php8.3-fpm aby zweryfikować że PHP-FPM działa po instalacji na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/aktualizacja-wersji-php-linux/H4.png", "Uruchamianie sudo systemctl status php8.3-fpm aby zweryfikować że PHP-FPM działa po instalacji na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status php8.3-fpm
@@ -115,13 +115,13 @@ sudo systemctl status php8.1-fpm
 
 Jeśli wpiszesz `php -v` w terminalu teraz, wyświetli wersję która była zainstalowana *ostatnia*.
 
-{% image "/assets/images/blog/aktualizacja-wersji-php-linux/H5.png", "Uruchamianie php -v w terminalu aby sprawdzić obecną domyślną wersję PHP na Ubuntu Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/aktualizacja-wersji-php-linux/H5.png", "Uruchamianie php -v w terminalu aby sprawdzić obecną domyślną wersję PHP na Ubuntu Linux", "(max-width: 768px) 100vw, 800px" %}
 
 Jeśli używasz narzędzi terminalowych jak `composer` czy WP-CLI, musisz zapewnić że domyślna wersja wiersza poleceń PHP pasuje do twojego projektu.
 
 Aby łatwo przełączać domyślną wersję CLI, Linux używa narzędzia o nazwie `update-alternatives`:
 
-{% image "/assets/images/blog/aktualizacja-wersji-php-linux/H6.png", "Uruchamianie sudo update-alternatives --config php aby interaktywnie wybrać domyślną wersję CLI PHP na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/aktualizacja-wersji-php-linux/H6.png", "Uruchamianie sudo update-alternatives --config php aby interaktywnie wybrać domyślną wersję CLI PHP na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo update-alternatives --config php

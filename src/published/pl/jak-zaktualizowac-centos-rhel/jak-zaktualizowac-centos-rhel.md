@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-zaktualizowac-centos-rhel/og-image.png
+image: /assets/images/blog/pl/jak-zaktualizowac-centos-rhel/og-image.png
 title: 'Jak aktualizować AlmaLinux, CentOS Stream i Rocky Linux: Kompletny przewodnik serwera'
 description: Kompletny przewodnik krok po kroku do aktualizacji serwerów AlmaLinux 9/10, CentOS Stream 9/10 i Rocky Linux 9/10. Obejmuje dnf update, dnf upgrade, autoremove, reboot detection i dnf-automatic dla środowisk produkcyjnych VPS.
 date: '2026-03-25'
@@ -98,7 +98,7 @@ Jeśli to polecenie wyświetla kod wyjścia `1` i informuje że restart jest wym
 
 Dla środowisk produkcyjnych VPS, zaleca się włączenie automatycznych aktualizacji bezpieczeństwa.
 
-{% image "/assets/images/blog/jak-zaktualizowac-centos-rhel/H6.png", "Instalowanie dnf-automatic dla niezauważonych aktualizacji na AlmaLinux 9", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-centos-rhel/H6.png", "Instalowanie dnf-automatic dla niezauważonych aktualizacji na AlmaLinux 9", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install dnf-automatic -y
@@ -112,7 +112,7 @@ sudo nano /etc/dnf/automatic.conf
 
 Jeśli brakuje pakietu `nano`, zainstaluj go najpierw:
 
-{% image "/assets/images/blog/jak-zaktualizowac-centos-rhel/H7.png", "Instalowanie edytora nano za pomocą sudo dnf install nano -y na CentOS Stream", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-centos-rhel/H7.png", "Instalowanie edytora nano za pomocą sudo dnf install nano -y na CentOS Stream", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install nano -y
@@ -170,7 +170,7 @@ sudo ausearch -m avc -ts recent
 
 Jeśli brakuje polecenia `ausearch`, zainstaluj je najpierw:
 
-{% image "/assets/images/blog/jak-zaktualizowac-centos-rhel/H8.png", "Instalowanie setroubleshoot-server aby diagnozować odmowy dostępu SELinux na AlmaLinux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zaktualizowac-centos-rhel/H8.png", "Instalowanie setroubleshoot-server aby diagnozować odmowy dostępu SELinux na AlmaLinux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install setroubleshoot-server -y

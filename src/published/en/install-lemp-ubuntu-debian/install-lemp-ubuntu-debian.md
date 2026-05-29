@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/install-lemp-ubuntu-debian/og-image.png
+image: /assets/images/blog/en/install-lemp-ubuntu-debian/og-image.png
 title: How to Set Up a LEMP Stack (Linux, Nginx, MariaDB, PHP) on Ubuntu & Debian
 description: A complete step-by-step guide to installing the modern LEMP stack (Linux, Nginx, MariaDB, PHP-FPM) on a fresh Ubuntu or Debian server.
 date: '2026-03-25'
@@ -68,7 +68,7 @@ sudo apt upgrade -y
 
 Install Nginx:
 
-{% image "/assets/images/blog/install-lemp-ubuntu-debian/H1.png", "Running sudo apt install nginx -y on Ubuntu or Debian to install Nginx as part of the LEMP stack", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lemp-ubuntu-debian/H1.png", "Running sudo apt install nginx -y on Ubuntu or Debian to install Nginx as part of the LEMP stack", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install nginx -y
@@ -88,7 +88,7 @@ Now that you have a web server, you need a database system to store and manage y
 
 Install the MariaDB server:
 
-{% image "/assets/images/blog/install-lemp-ubuntu-debian/H2.png", "Running sudo apt install mariadb-server mariadb-client -y on Ubuntu to install MariaDB as part of the LEMP stack", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lemp-ubuntu-debian/H2.png", "Running sudo apt install mariadb-server mariadb-client -y on Ubuntu to install MariaDB as part of the LEMP stack", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install mariadb-server -y
@@ -96,7 +96,7 @@ sudo apt install mariadb-server -y
 
 Once installed, the database is active but completely unsecured. You need to lock it down using the built-in security script.
 
-{% image "/assets/images/blog/install-lemp-ubuntu-debian/H3.png", "Running sudo mysql_secure_installation on Ubuntu to remove anonymous users, disable remote root login, and secure MariaDB", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lemp-ubuntu-debian/H3.png", "Running sudo mysql_secure_installation on Ubuntu to remove anonymous users, disable remote root login, and secure MariaDB", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo mysql_secure_installation
@@ -121,7 +121,7 @@ To process PHP, we must install **PHP-FPM** (FastCGI Process Manager). Nginx wil
 
 Install both packages:
 
-{% image "/assets/images/blog/install-lemp-ubuntu-debian/H4.png", "Running sudo apt install php-fpm php-mysql to install PHP 8 with FPM and MySQL extension on Ubuntu for LEMP stack", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lemp-ubuntu-debian/H4.png", "Running sudo apt install php-fpm php-mysql to install PHP 8 with FPM and MySQL extension on Ubuntu for LEMP stack", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install php-fpm php-mysql -y
@@ -135,7 +135,7 @@ We need to explicitly tell Nginx how to handle PHP files.
 
 Let's assume you are configuring the default Nginx Server Block. Open the default configuration file in nano:
 
-{% image "/assets/images/blog/install-lemp-ubuntu-debian/H5.png", "Creating a new Nginx server block configuration file in sites-available for a custom domain on Ubuntu LEMP setup", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lemp-ubuntu-debian/H5.png", "Creating a new Nginx server block configuration file in sites-available for a custom domain on Ubuntu LEMP setup", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/nginx/sites-available/default
@@ -161,7 +161,7 @@ Save the file and exit `nano`.
 
 Test your Nginx configuration for syntax errors:
 
-{% image "/assets/images/blog/install-lemp-ubuntu-debian/H6.png", "Running sudo nginx -t to test Nginx server block configuration for syntax errors before enabling the LEMP site", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lemp-ubuntu-debian/H6.png", "Running sudo nginx -t to test Nginx server block configuration for syntax errors before enabling the LEMP site", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nginx -t
@@ -178,7 +178,7 @@ To prove that Nginx is successfully handing off code to PHP-FPM, we will create 
 
 Create a new file in your web root directory:
 
-{% image "/assets/images/blog/install-lemp-ubuntu-debian/H7.png", "Creating a PHP info test file at /var/www/your_domain/info.php with nano to verify PHP-FPM on Nginx LEMP stack", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lemp-ubuntu-debian/H7.png", "Creating a PHP info test file at /var/www/your_domain/info.php with nano to verify PHP-FPM on Nginx LEMP stack", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /var/www/html/info.php
@@ -195,7 +195,7 @@ Save and exit.
 
 Open your browser and navigate to: `http://your_server_ip/info.php`
 
-{% image "/assets/images/blog/install-lemp-ubuntu-debian/H8.png", "phpinfo() page rendering in browser confirming PHP is working correctly with Nginx and MariaDB on the LEMP stack", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-lemp-ubuntu-debian/H8.png", "phpinfo() page rendering in browser confirming PHP is working correctly with Nginx and MariaDB on the LEMP stack", "(max-width: 768px) 100vw, 800px" %}
 
 You should see a massive, detailed purple and gray table outlining your server's exact PHP configuration and modules. This proves your complete LEMP stack is functioning perfectly! 
 

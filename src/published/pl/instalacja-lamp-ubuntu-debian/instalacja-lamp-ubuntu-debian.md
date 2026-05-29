@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/instalacja-lamp-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/instalacja-lamp-ubuntu-debian/og-image.png
 title: Jak skonfigurować stos LAMP (Linux, Apache, MySQL, PHP) na Ubuntu i Debian
 description: Kompleksowy przewodnik dla początkujących do instalacji sprawdzonego stosu LAMP (Linux, Apache2, MySQL, PHP) na Ubuntu i Debian.
 date: '2026-03-25'
@@ -69,7 +69,7 @@ sudo apt upgrade -y
 
 Teraz zainstaluj serwer WWW Apache (pakiet nosi się `apache2` na systemach Debian/Ubuntu):
 
-{% image "/assets/images/blog/instalacja-lamp-ubuntu-debian/H1.png", "Uruchamianie sudo apt install apache2 -y aby rozpocząć instalację serwera WWW Apache na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lamp-ubuntu-debian/H1.png", "Uruchamianie sudo apt install apache2 -y aby rozpocząć instalację serwera WWW Apache na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install apache2 -y
@@ -89,7 +89,7 @@ Twój serwer może teraz serwować statyczne HTML, ale aby przechowywać dane ap
 
 Zainstaluj oficjalny serwer MySQL:
 
-{% image "/assets/images/blog/instalacja-lamp-ubuntu-debian/H2.png", "Uruchamianie sudo apt install mysql-server -y aby rozpocząć instalację serwera bazy danych MySQL na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lamp-ubuntu-debian/H2.png", "Uruchamianie sudo apt install mysql-server -y aby rozpocząć instalację serwera bazy danych MySQL na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install mysql-server -y
@@ -97,7 +97,7 @@ sudo apt install mysql-server -y
 
 Gdy instalacja się zakończy, baza danych działa ale jej domyślna konfiguracja jest niebezpiecznie otwarta. Musisz ją zablokować używając interaktywnego skryptu bezpieczeństwa:
 
-{% image "/assets/images/blog/instalacja-lamp-ubuntu-debian/H3.png", "Uruchamianie sudo mysql_secure_installation aby zabezpieczyć instalację MySQL", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lamp-ubuntu-debian/H3.png", "Uruchamianie sudo mysql_secure_installation aby zabezpieczyć instalację MySQL", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo mysql_secure_installation
@@ -118,7 +118,7 @@ Masz serwer WWW i bazę danych, ale nie mogą się jeszcze ze sobą komunikować
 
 Dla Apache, instalacja PHP wymaga trzech głównych pakietów: podstawowy pakiet `php`, rozszerzenie `php-mysql` pozwalające skryptom PHP rozmawiać z twoją bazą danych, i kluczowy pakiet `libapache2-mod-php` który magicznie wiąże przetwarzanie PHP bezpośrednio w runtime Apache.
 
-{% image "/assets/images/blog/instalacja-lamp-ubuntu-debian/H4.png", "Uruchamianie sudo apt install php libapache2-mod-php php-mysql -y aby zainstalować PHP i powiązać je z Apache i MySQL na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lamp-ubuntu-debian/H4.png", "Uruchamianie sudo apt install php libapache2-mod-php php-mysql -y aby zainstalować PHP i powiązać je z Apache i MySQL na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install php libapache2-mod-php php-mysql -y
@@ -132,7 +132,7 @@ Dla aplikacji dynamicznych, chcemy aby Apache priorytetyzowało `index.php`.
 
 Otwórz plik konfiguracyjny modułu `dir`:
 
-{% image "/assets/images/blog/instalacja-lamp-ubuntu-debian/H5.png", "Uruchamianie sudo nano /etc/apache2/mods-enabled/dir.conf aby otworzyć plik konfiguracyjny priorytetów indeksu Apache", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lamp-ubuntu-debian/H5.png", "Uruchamianie sudo nano /etc/apache2/mods-enabled/dir.conf aby otworzyć plik konfiguracyjny priorytetów indeksu Apache", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/apache2/mods-enabled/dir.conf
@@ -182,7 +182,7 @@ phpinfo();
 
 Zapisz plik. Otwórz przeglądarkę i nawiguj do `http://your_server_ip/info.php`.
 
-{% image "/assets/images/blog/instalacja-lamp-ubuntu-debian/H6.png", "Uruchamianie sudo systemctl status apache2 na Ubuntu aby zweryfikować że Apache jest aktywne po zakończeniu pełnej instalacji stosu LAMP", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/instalacja-lamp-ubuntu-debian/H6.png", "Uruchamianie sudo systemctl status apache2 na Ubuntu aby zweryfikować że Apache jest aktywne po zakończeniu pełnej instalacji stosu LAMP", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status apache2

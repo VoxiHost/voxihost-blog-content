@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/hourly-vps-launch/og-image.png
+image: /assets/images/blog/en/hourly-vps-launch/og-image.png
 title: 'Now Live: Hourly VPS Hosting - The Ultimate Flexibility for Your Projects'
 description: We are launching our new Hourly VPS offer! Discover how hourly billing, rates starting at €0.01/hr, and the special DEPLOYMENT promo code will revolutionize your workflow.
 date: '2026-04-10'
@@ -25,7 +25,7 @@ At **<span class="text-white">Voxi</span><span class="text-amber-300">Host</span
 
 Whether you need a server for 3 hours of testing or want to run short-term scripts without committing to a monthly subscription, the new Hourly offer is built for you.
 
-{% image "/assets/images/blog/hourly-vps-launch/billing-cycle-toggle.png", "The new billing cycle toggle in the VoxiHost dashboard allowing users to switch between Monthly and Hourly payments", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/hourly-vps-launch/billing-cycle-toggle.png", "The new billing cycle toggle in the VoxiHost dashboard allowing users to switch between Monthly and Hourly payments", "(max-width: 768px) 100vw, 800px" %}
 
 ## Why Choose Hourly VPS?
 
@@ -63,7 +63,7 @@ We’ve introduced several features to make life easier for Hourly users:
 *   **Self-Destruct Button (Destroy)**: Want to stop paying immediately? One click and the server is deleted, and billing stops instantly.
 *   **Price Comparison**: The dashboard will automatically notify you when it’s more cost-effective to switch to a Monthly plan if your server configuration matches one of the standard monthly tiers **(Which are long-term more cost-effective).**
 
-{% image "/assets/images/blog/hourly-vps-launch/server-destroy.png", "The hourly server management interface showcasing the 'Destroy' button to stop billing instantly", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/hourly-vps-launch/server-destroy.png", "The hourly server management interface showcasing the 'Destroy' button to stop billing instantly", "(max-width: 768px) 100vw, 800px" %}
 
 ## Major Promotion
 

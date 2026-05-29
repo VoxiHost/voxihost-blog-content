@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/konfiguracja-ufw-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/og-image.png
 title: 'Jak skonfigurować zaporę UFW na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik dla początkujących do konfiguracji Uncomplicated Firewall (UFW) na serwerach Ubuntu i Debian. Naucz się zezwalać na SSH, blokować ruch i zabezpieczać swój VPS.
 date: '2026-03-25'
@@ -57,7 +57,7 @@ Na Ubuntu i Debian, standardowym narzędziem do zarządzania zaporą jest **UFW*
 ## Krok 1: Zainstaluj UFW (jeśli konieczne)
 
 Sprawdź czy jest tam:
-{% image "/assets/images/blog/konfiguracja-ufw-ubuntu-debian/H1.png", "Uruchamianie sudo ufw status na Ubuntu aby sprawdzić czy zapora UFW jest zainstalowana i aktywna", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/H1.png", "Uruchamianie sudo ufw status na Ubuntu aby sprawdzić czy zapora UFW jest zainstalowana i aktywna", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 sudo ufw status
 ```
@@ -72,7 +72,7 @@ sudo apt install ufw -y
 
 Zanim zaczniemy otwierać porty, musimy ustalić reguły bazowe. Najbezpieczniejszą bazą jest zablokowanie wszystkiego przychodzącego i zezwolenie na wszystko wychodzące.
 
-{% image "/assets/images/blog/konfiguracja-ufw-ubuntu-debian/H2.png", "Ustawianie domyślnej polityki UFW na odmowę przychodzącego i zezwolenie na wychodzący na Ubuntu Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/H2.png", "Ustawianie domyślnej polityki UFW na odmowę przychodzącego i zezwolenie na wychodzący na Ubuntu Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw default deny incoming
@@ -87,7 +87,7 @@ Gdy UFW jest włączone, te polecenia zapewniają że nikt nie może połączyć
 
 Musisz najpierw jawnie zezwolić na ruch SSH.
 
-{% image "/assets/images/blog/konfiguracja-ufw-ubuntu-debian/H3.png", "Uruchamianie sudo ufw allow ssh na Ubuntu aby zezwolić na połączenia SSH na porcie 22 przed włączeniem zapory", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/H3.png", "Uruchamianie sudo ufw allow ssh na Ubuntu aby zezwolić na połączenia SSH na porcie 22 przed włączeniem zapory", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw allow ssh
@@ -104,7 +104,7 @@ sudo ufw allow 2222/tcp
 Teraz otwórz porty dla wszystkiego innego co twój serwer hostuje. Większość usług ma nazwy które UFW rozpoznaje, ale możesz zawsze używać numerów portów bezpośrednio.
 
 Dla serwera WWW (HTTP / HTTPS):
-{% image "/assets/images/blog/konfiguracja-ufw-ubuntu-debian/H4.png", "Zezwalanie na port HTTP 80 i HTTPS 443 przez zaporę UFW na serwerze Debian/Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/H4.png", "Zezwalanie na port HTTP 80 i HTTPS 443 przez zaporę UFW na serwerze Debian/Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 sudo ufw allow http
 sudo ufw allow https
@@ -128,7 +128,7 @@ sudo ufw allow from 203.0.113.50 to any port 3306
 
 Z portem SSH bezpiecznie dozwolonym, czas włączyć zaporę:
 
-{% image "/assets/images/blog/konfiguracja-ufw-ubuntu-debian/H5.png", "Uruchamianie sudo ufw enable aby aktywować zaporę UFW na Ubuntu z aktywnymi regułami", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/H5.png", "Uruchamianie sudo ufw enable aby aktywować zaporę UFW na Ubuntu z aktywnymi regułami", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw enable
@@ -138,7 +138,7 @@ Zobaczysz ostrzeżenie: `Command may disrupt existing ssh connections. Proceed w
 
 Ponieważ otworzyłeś port SSH w Kroku 3, twoje połączenie pozostanie aktywne. Sprawdź status aby zobaczyć aktywne reguły:
 
-{% image "/assets/images/blog/konfiguracja-ufw-ubuntu-debian/H6.png", "Uruchamianie sudo ufw status verbose pokazujące aktywne reguły zapory dla SSH, HTTP i HTTPS na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/H6.png", "Uruchamianie sudo ufw status verbose pokazujące aktywne reguły zapory dla SSH, HTTP i HTTPS na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw status verbose
@@ -148,7 +148,7 @@ sudo ufw status verbose
 
 Jeśli popełnisz błąd lub nie potrzebujesz już otwartego portu, możesz usunąć regułę. Najłatwiejszy sposób to wyświetlenie reguł jako numerowanej listy:
 
-{% image "/assets/images/blog/konfiguracja-ufw-ubuntu-debian/H7.png", "Uruchamianie sudo ufw status numbered na Ubuntu aby wyświetlić reguły zapory z numerami do usunięcia", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/H7.png", "Uruchamianie sudo ufw status numbered na Ubuntu aby wyświetlić reguły zapory z numerami do usunięcia", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw status numbered
@@ -156,7 +156,7 @@ sudo ufw status numbered
 
 Znajdź numer obok reguły którą chcesz usunąć i usuń ją:
 
-{% image "/assets/images/blog/konfiguracja-ufw-ubuntu-debian/H8.png", "Uruchamianie sudo ufw delete 3 aby usunąć konkretną regułę zapory UFW według numeru na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/H8.png", "Uruchamianie sudo ufw delete 3 aby usunąć konkretną regułę zapory UFW według numeru na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo ufw delete 3

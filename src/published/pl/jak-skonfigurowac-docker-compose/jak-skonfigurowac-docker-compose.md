@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/jak-skonfigurowac-docker-compose/og-image.png
+image: /assets/images/blog/pl/jak-skonfigurowac-docker-compose/og-image.png
 title: 'Jak skonfigurować Docker Compose: Kompletny przewodnik do zarządzania aplikacji wielokontenerowych'
 description: Kompletny przewodnik krok po kroku do konfiguracji i używania Docker Compose V2 na Ubuntu, Debian, AlmaLinux, Rocky Linux, CentOS i Fedorze.
 date: '2026-03-25'
@@ -62,7 +62,7 @@ Nowoczesne dystrybucje Dockera przeszły od starego samodzielnego pliku binarneg
 
 Zweryfikuj że jest zainstalowany sprawdzając jego wersję:
 
-{% image "/assets/images/blog/jak-skonfigurowac-docker-compose/H1.png", "Uruchamianie docker compose version w terminalu na Ubuntu aby zweryfikować że Docker Compose V2 jest zainstalowany", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-docker-compose/H1.png", "Uruchamianie docker compose version w terminalu na Ubuntu aby zweryfikować że Docker Compose V2 jest zainstalowany", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose version
@@ -83,7 +83,7 @@ Docker Compole opiera się absolutnie na kontekście katalogu w którym uruchami
 
 Najpierw stwórzmy dedykowany dom dla swojego nowego projektu tak aby pliki pozostały zorganizowane:
 
-{% image "/assets/images/blog/jak-skonfigurowac-docker-compose/H2.png", "Uruchamianie mkdir my-webapp i cd my-webapp aby utworzyć i wejść do dedykowanego katalogu projektu Docker Compose na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-docker-compose/H2.png", "Uruchamianie mkdir my-webapp i cd my-webapp aby utworzyć i wejść do dedykowanego katalogu projektu Docker Compose na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 mkdir my-webapp
@@ -96,7 +96,7 @@ Teraz stwórzmy funkcjonalny, realistyczny przykład. Będziemy wdrażać oficja
 
 Otwórz nowy plik za pomocą `nano`:
 
-{% image "/assets/images/blog/jak-skonfigurowac-docker-compose/H3.png", "Uruchamianie nano docker-compose.yml aby otworzyć plik konfiguracyjny Docker Compose do edycji na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-docker-compose/H3.png", "Uruchamianie nano docker-compose.yml aby otworzyć plik konfiguracyjny Docker Compose do edycji na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 nano docker-compose.yml
@@ -148,7 +148,7 @@ Zapisz i wyjdź.
 
 Z jednym plikiem, cała twoja infrastruktura jest zadeklarowana. Aby ją uruchomić, użyj polecenia `up`. Flaga `-d` mówi mu aby działał "odłączony" w tle tak abyś mógł nadal używać konsoli terminala:
 
-{% image "/assets/images/blog/jak-skonfigurowac-docker-compose/H4.png", "Uruchamianie docker compose up -d aby uruchomić wszystkie kontenery zdefiniowane w docker-compose.yml w trybie odłączonym na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-docker-compose/H4.png", "Uruchamianie docker compose up -d aby uruchomić wszystkie kontenery zdefiniowane w docker-compose.yml w trybie odłączonym na Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose up -d
@@ -165,7 +165,7 @@ Gdy skończone, otwórz swoją przeglądarkę internetową i nawiguj do adresu I
 
 > **Ostrzeżenie bezpieczeństwa:** Docker zarządza swoimi własnymi regułami sieciowymi przez `iptables`. Gdy używasz mapowanie `ports:` w swoim pliku `docker-compose.yml`, Docker będzie **całkowicie omijać twoją zaporę UFW**. Aby utrzymać usługę prywatną, zmapuj ją do `127.0.0.1:8080` zamiast tylko `8080`.
 
-{% image "/assets/images/blog/jak-skonfigurowac-docker-compose/H5.png", "Ekran kreatora instalacji WordPress w przeglądarce po uruchomieniu stosu WordPress plus MySQL Docker Compose na VPS Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-docker-compose/H5.png", "Ekran kreatora instalacji WordPress w przeglądarce po uruchomieniu stosu WordPress plus MySQL Docker Compose na VPS Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 Natychmiast trafisz słyny ekran instalacji WordPress!
 
@@ -175,7 +175,7 @@ Oto kluczowe polecenia do zapamiętania gdy działasz w katalogu zawierającym t
 
 Zobacz co aktywnie działa w tym projekcie:
 
-{% image "/assets/images/blog/jak-skonfigurowac-docker-compose/H6.png", "Uruchamianie docker compose ps aby wyświetlić wszystkie działające kontenery i ich porty w bieżącym projekcie Docker Compose", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-docker-compose/H6.png", "Uruchamianie docker compose ps aby wyświetlić wszystkie działające kontenery i ich porty w bieżącym projekcie Docker Compose", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose ps
@@ -191,7 +191,7 @@ docker compose logs -f
 
 Zatrzymaj kontenery tymczasowo bez usuwania ich:
 
-{% image "/assets/images/blog/jak-skonfigurowac-docker-compose/H7.png", "Uruchamianie docker compose stop aby tymczasowo zatrzymać wszystkie działające kontenery w projekcie Docker Compose bez usuwania ich", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-docker-compose/H7.png", "Uruchamianie docker compose stop aby tymczasowo zatrzymać wszystkie działające kontenery w projekcie Docker Compose bez usuwania ich", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose stop
@@ -201,7 +201,7 @@ docker compose stop
 
 Zniszcz cały projekt w dół (zatrzymuje kontenery, usuwa je i usuwa wewnętrzne sieci):
 
-{% image "/assets/images/blog/jak-skonfigurowac-docker-compose/H8.png", "Uruchamianie docker compose down aby zatrzymać i usunąć wszystkie kontenery, sieci i woluminy w projekcie Docker Compose", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-docker-compose/H8.png", "Uruchamianie docker compose down aby zatrzymać i usunąć wszystkie kontenery, sieci i woluminy w projekcie Docker Compose", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose down

@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/update-ubuntu-debian/og-image.png
+image: /assets/images/blog/en/update-ubuntu-debian/og-image.png
 title: 'How to Update Ubuntu & Debian: The Complete Server Guide'
 description: A complete step-by-step guide on how to update Ubuntu and Debian Linux servers. Covers apt update, apt upgrade, kernel updates, automatic updates, and best practices for production VPS environments.
 date: '2026-03-24'
@@ -61,7 +61,7 @@ Before we start: if you are deploying a fresh server with a premium provider lik
 
 Before anything else, refresh your local package index. This doesn't install anything, it just checks what updates are actually out there:
 
-{% image "/assets/images/blog/update-ubuntu-debian/H1.png", "Running sudo apt update on Ubuntu or Debian to refresh the package index and check for available updates", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-ubuntu-debian/H1.png", "Running sudo apt update on Ubuntu or Debian to refresh the package index and check for available updates", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt update
@@ -69,7 +69,7 @@ sudo apt update
 
 Then install them:
 
-{% image "/assets/images/blog/update-ubuntu-debian/H2.png", "Running sudo apt upgrade -y on Ubuntu or Debian to install all available package upgrades from the updated index", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-ubuntu-debian/H2.png", "Running sudo apt upgrade -y on Ubuntu or Debian to install all available package upgrades from the updated index", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt upgrade -y
@@ -95,7 +95,7 @@ This can pull in new dependencies or remove conflicting packages. It's not dange
 
 Upgrades tend to leave orphaned packages behind: old libraries that were dependencies of something that got updated. Clean those up with:
 
-{% image "/assets/images/blog/update-ubuntu-debian/H3.png", "Running sudo apt autoremove -y on Ubuntu or Debian to remove old dependency packages no longer needed after upgrades", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-ubuntu-debian/H3.png", "Running sudo apt autoremove -y on Ubuntu or Debian to remove old dependency packages no longer needed after upgrades", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt autoremove -y
@@ -107,7 +107,7 @@ Worth running after any major upgrade. You're not losing anything important, jus
 
 Kernel updates don't take effect until you restart the machine. Ubuntu and Debian leave a breadcrumb when a reboot is pending:
 
-{% image "/assets/images/blog/update-ubuntu-debian/H4.png", "Checking /var/run/reboot-required file on Ubuntu to determine if a system reboot is needed after a kernel update", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-ubuntu-debian/H4.png", "Checking /var/run/reboot-required file on Ubuntu to determine if a system reboot is needed after a kernel update", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 cat /var/run/reboot-required
@@ -146,7 +146,7 @@ Chain it, let it run, check if a reboot is needed, done.
 
 If you want to jump from Ubuntu 22.04 to 24.04:
 
-{% image "/assets/images/blog/update-ubuntu-debian/H5.png", "Running sudo do-release-upgrade on Ubuntu to upgrade from one major release to the next, for example 22.04 to 24.04", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/update-ubuntu-debian/H5.png", "Running sudo do-release-upgrade on Ubuntu to upgrade from one major release to the next, for example 22.04 to 24.04", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo do-release-upgrade

@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/og-image.png
+image: /assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/og-image.png
 title: Jak postawić klasyczny serwer Minecraft 1.8.8 (Java 8) na AlmaLinux, CentOS, Rocky Linux i Fedorze
 description: Poradnik instalacji serwera Minecraft 1.8.8, idealny do nostalgicznego PvP i klasycznej rozgrywki Vanilla z użyciem Java 8 na dystrybucjach RHEL.
 date: '2026-04-23'
@@ -77,7 +77,7 @@ Najpierw wykonaj pełną [aktualizację systemu](/pl/blog/jak-zaktualizowac-cent
 
 Na standardowych serwerach klasy enterprise (AlmaLinux 8 i 9, Rocky Linux 8 i 9) Java 8 jest dostępna natywnie:
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H1.png", "Terminal przedstawiający instalację OpenJDK 8 na serwerze Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H1.png", "Terminal przedstawiający instalację OpenJDK 8 na serwerze Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf check-update
@@ -95,7 +95,7 @@ sudo dnf install java-1.8.0-openjdk-headless wget -y
 
 Dla bezpieczeństwa nigdy nie uruchamiaj serwera jako root. Nawet starsze wersje powinny być izolowane. Jeśli dopiero zaczynasz z uprawnieniami w Linuksie, zapoznaj się z naszym poradnikiem [Tworzenia i zarządzania użytkownikami na AlmaLinux/Rocky](/pl/blog/jak-dodac-uzytkownika-sudo-centos/).
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H2.png", "Tworzenie dedykowanego użytkownika 'minecraft' do bezpiecznego hostowania starszego serwera", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H2.png", "Tworzenie dedykowanego użytkownika 'minecraft' do bezpiecznego hostowania starszego serwera", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo useradd -m -r -s /bin/bash minecraft
@@ -107,7 +107,7 @@ mkdir server && cd server
 
 Szukasz innej klasycznej wersji? Bezpośrednie linki do pobrania od Mojang dla wszystkich historycznych wydań znajdziesz w naszym [Archiwum linków do serwerów Minecraft](/pl/blog/serwer-minecraft-linki-do-pobrania/).
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H3.png", "Pobieranie pliku Minecraft 1.8.8 server.jar za pomocą wget", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H3.png", "Pobieranie pliku Minecraft 1.8.8 server.jar za pomocą wget", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 wget https://launcher.mojang.com/v1/objects/5fafba3f58c40dc51b5c3ca72a98f62dfdae1db7/server.jar
@@ -115,7 +115,7 @@ wget https://launcher.mojang.com/v1/objects/5fafba3f58c40dc51b5c3ca72a98f62dfdae
 
 ## Krok 4: Akceptacja EULA
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H4.png", "Pierwsze uruchomienie pliku JAR 1.8.8 w celu wygenerowania plików konfiguracyjnych i akceptacji EULA", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H4.png", "Pierwsze uruchomienie pliku JAR 1.8.8 w celu wygenerowania plików konfiguracyjnych i akceptacji EULA", "(max-width: 768px) 100vw, 800px" %}
 
 Uruchom serwer raz, aby wygenerować wymagane pliki konfiguracyjne:
 
@@ -133,7 +133,7 @@ sed -i 's/eula=false/eula=true/' eula.txt
 
 Wersja 1.8.8 jest znacznie lżejsza od nowoczesnych, dla małej grupy graczy często wystarczy 2GB RAM.
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H5.png", "Używanie edytora nano do tworzenia i konfigurowania skryptu startowego start.sh", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H5.png", "Używanie edytora nano do tworzenia i konfigurowania skryptu startowego start.sh", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 nano start.sh
@@ -145,7 +145,7 @@ W edytorze wklej:
 java -Xmx2G -Xms2G -jar server.jar nogui
 ```
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H6.png", "Nadawanie uprawnień do wykonywania skryptowi start.sh", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H6.png", "Nadawanie uprawnień do wykonywania skryptowi start.sh", "(max-width: 768px) 100vw, 800px" %}
 
 Nadaj uprawnienia do wykonywania:
 ```bash
@@ -156,7 +156,7 @@ chmod +x start.sh
 
 Przed skonfigurowaniem usługi działającej w tle powinieneś uruchomić serwer ręcznie przynajmniej raz, aby nadać sobie uprawnienia administratora (**OP**).
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H7.png", "Ręczne uruchamianie serwera Minecraft 1.8.8 w celu uzyskania dostępu do konsoli", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H7.png", "Ręczne uruchamianie serwera Minecraft 1.8.8 w celu uzyskania dostępu do konsoli", "(max-width: 768px) 100vw, 800px" %}
 
 **1. Ręczne uruchomienie serwera**
 Uruchom właśnie utworzony skrypt startowy:
@@ -164,7 +164,7 @@ Uruchom właśnie utworzony skrypt startowy:
 ./start.sh
 ```
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H8.png", "Nadawanie sobie uprawnień OP przez konsolę serwera", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H8.png", "Nadawanie sobie uprawnień OP przez konsolę serwera", "(max-width: 768px) 100vw, 800px" %}
 
 **2. Nadanie uprawnień administratora (OP)**
 Gdy serwer zakończy ładowanie (zobaczysz komunikat „Done!"), wpisz bezpośrednio w konsoli:
@@ -172,7 +172,7 @@ Gdy serwer zakończy ładowanie (zobaczysz komunikat „Done!"), wpisz bezpośre
 op twoja_nazwa_gracza_minecraft
 ```
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H9.png", "Bezpieczne wyłączanie serwera Minecraft poleceniem stop", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H9.png", "Bezpieczne wyłączanie serwera Minecraft poleceniem stop", "(max-width: 768px) 100vw, 800px" %}
 
 **3. Zatrzymanie serwera**
 Aby zapisać dane świata i przygotować serwer do działania w tle, wpisz:
@@ -190,7 +190,7 @@ Wyjdź z konta użytkownika `minecraft` z powrotem na konto root/sudo:
 exit
 ```
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H10.png", "Tworzenie pliku usługi minecraft.service dla systemd", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H10.png", "Tworzenie pliku usługi minecraft.service dla systemd", "(max-width: 768px) 100vw, 800px" %}
 
 Utwórz plik usługi:
 ```bash
@@ -214,7 +214,7 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-{% image "/assets/images/blog/serwer-minecraft-1-8-8-centos-rhel/H11.png", "Włączanie i uruchamianie usługi minecraft w systemd", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-8-8-centos-rhel/H11.png", "Włączanie i uruchamianie usługi minecraft w systemd", "(max-width: 768px) 100vw, 800px" %}
 
 Włącz i uruchom serwer:
 ```bash

@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/configure-firewalld-centos-rhel/og-image.png
+image: /assets/images/blog/en/configure-firewalld-centos-rhel/og-image.png
 title: 'How to Configure firewalld on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide'
 description: A complete step-by-step guide to setting up firewalld on AlmaLinux, CentOS Stream, Rocky Linux, and Fedora servers. Learn how to manage zones, open ports, list services, and secure your VPS.
 date: '2026-03-25'
@@ -59,7 +59,7 @@ For a standard web server or VPS, though, it's just as easy to set up. Here is e
 
 On most RHEL-family distributions, `firewalld` is installed by default but might not be running.
 
-{% image "/assets/images/blog/configure-firewalld-centos-rhel/H1.png", "Running sudo systemctl enable --now firewalld on AlmaLinux or Rocky Linux to start and enable the firewalld service on boot", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-firewalld-centos-rhel/H1.png", "Running sudo systemctl enable --now firewalld on AlmaLinux or Rocky Linux to start and enable the firewalld service on boot", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl enable --now firewalld
@@ -79,7 +79,7 @@ sudo systemctl enable --now firewalld
 
 Find out which zone your main network interface is in:
 
-{% image "/assets/images/blog/configure-firewalld-centos-rhel/H2.png", "Running sudo firewall-cmd --get-active-zones on AlmaLinux to display which firewalld zones are active and which interfaces are assigned to them", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-firewalld-centos-rhel/H2.png", "Running sudo firewall-cmd --get-active-zones on AlmaLinux to display which firewalld zones are active and which interfaces are assigned to them", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --get-active-zones
@@ -97,7 +97,7 @@ This confirms your active internet connection (`eth0`) uses the `public` zone. U
 
 Before blindly adding rules, see what is already open:
 
-{% image "/assets/images/blog/configure-firewalld-centos-rhel/H3.png", "Running sudo firewall-cmd --list-all on AlmaLinux to list all currently active firewall rules and open services in the public zone", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-firewalld-centos-rhel/H3.png", "Running sudo firewall-cmd --list-all on AlmaLinux to list all currently active firewall rules and open services in the public zone", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --list-all
@@ -111,7 +111,7 @@ The cleanest way to use firewalld is by allowing predefined **services**. A "ser
 
 For example, to open your server up to HTTP and HTTPS web traffic:
 
-{% image "/assets/images/blog/configure-firewalld-centos-rhel/H4.png", "Running sudo firewall-cmd --permanent --add-service=http to permanently allow HTTP traffic through firewalld on AlmaLinux or Rocky Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-firewalld-centos-rhel/H4.png", "Running sudo firewall-cmd --permanent --add-service=http to permanently allow HTTP traffic through firewalld on AlmaLinux or Rocky Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --permanent --add-service=http
@@ -140,7 +140,7 @@ sudo firewall-cmd --permanent --remove-port=3000/tcp
 
 Because you used the `--permanent` flag in Step 4, none of your new rules are actively running yet. They only exist on the disk. To push the saved rules into the active firewall state, you must reload:
 
-{% image "/assets/images/blog/configure-firewalld-centos-rhel/H5.png", "Running sudo firewall-cmd --reload on AlmaLinux to apply permanent firewall rule changes without restarting the server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-firewalld-centos-rhel/H5.png", "Running sudo firewall-cmd --reload on AlmaLinux to apply permanent firewall rule changes without restarting the server", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --reload
@@ -148,7 +148,7 @@ sudo firewall-cmd --reload
 
 Finally, run `--list-all` again to verify your new policies are in place:
 
-{% image "/assets/images/blog/configure-firewalld-centos-rhel/H6.png", "Running sudo firewall-cmd --list-all after reload on AlmaLinux to confirm the new HTTP and HTTPS rules are now active", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/configure-firewalld-centos-rhel/H6.png", "Running sudo firewall-cmd --list-all after reload on AlmaLinux to confirm the new HTTP and HTTPS rules are now active", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo firewall-cmd --list-all

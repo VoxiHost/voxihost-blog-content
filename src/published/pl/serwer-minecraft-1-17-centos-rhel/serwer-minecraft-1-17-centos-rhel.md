@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/serwer-minecraft-1-17-centos-rhel/og-image.png
+image: /assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/og-image.png
 title: Jak postawić serwer Minecraft Vanilla 1.17.1 (Java 16) na AlmaLinux, CentOS, Rocky Linux i Fedorze
 description: Instrukcja instalacji serwera Minecraft 1.17.1 na AlmaLinux, CentOS lub Rocky Linux z użyciem środowiska Java 16/17.
 date: '2026-04-23'
@@ -83,13 +83,13 @@ sudo dnf check-update
 sudo dnf install java-17-openjdk-headless wget -y
 ```
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H1.png", "Terminal przedstawiający instalację OpenJDK na systemie Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H1.png", "Terminal przedstawiający instalację OpenJDK na systemie Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ## Krok 2: Tworzenie dedykowanego użytkownika
 
 Dla bezpieczeństwa nigdy nie uruchamiaj serwera jako root. Jeśli dopiero zaczynasz z uprawnieniami w Linuksie, zapoznaj się z naszym poradnikiem [Tworzenia i zarządzania użytkownikami na AlmaLinux/Rocky](/pl/blog/jak-dodac-uzytkownika-sudo-centos/).
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H2.png", "Tworzenie dedykowanego użytkownika 'minecraft' do bezpiecznego hostowania serwera", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H2.png", "Tworzenie dedykowanego użytkownika 'minecraft' do bezpiecznego hostowania serwera", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo useradd -m -r -s /bin/bash minecraft
@@ -101,7 +101,7 @@ mkdir server && cd server
 
 Szukasz innej wersji? Bezpośrednie linki do pobrania od Mojang dla wszystkich wydań znajdziesz w naszym [Archiwum linków do serwerów Minecraft](/pl/blog/serwer-minecraft-linki-do-pobrania/).
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H3.png", "Pobieranie pliku Minecraft 1.17.1 server.jar za pomocą wget", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H3.png", "Pobieranie pliku Minecraft 1.17.1 server.jar za pomocą wget", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 wget https://piston-data.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
@@ -109,7 +109,7 @@ wget https://piston-data.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf2022619
 
 ## Krok 4: Akceptacja EULA
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H4.png", "Pierwsze uruchomienie pliku JAR 1.17.1 w celu wygenerowania plików konfiguracyjnych i akceptacji EULA", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H4.png", "Pierwsze uruchomienie pliku JAR 1.17.1 w celu wygenerowania plików konfiguracyjnych i akceptacji EULA", "(max-width: 768px) 100vw, 800px" %}
 
 Uruchom serwer raz, aby wygenerować wymagane pliki konfiguracyjne:
 
@@ -127,7 +127,7 @@ sed -i 's/eula=false/eula=true/' eula.txt
 
 Wklej poniższą zawartość (flagi Aikara zoptymalizowane pod G1GC):
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H5.png", "Używanie edytora nano do tworzenia i konfigurowania skryptu startowego start.sh", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H5.png", "Używanie edytora nano do tworzenia i konfigurowania skryptu startowego start.sh", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 nano start.sh
@@ -139,7 +139,7 @@ W edytorze wklej:
 java -Xmx4G -Xms4G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikar.for.v1.20=false -jar server.jar nogui
 ```
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H6.png", "Nadawanie uprawnień do wykonywania skryptowi start.sh", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H6.png", "Nadawanie uprawnień do wykonywania skryptowi start.sh", "(max-width: 768px) 100vw, 800px" %}
 
 Nadaj uprawnienia do wykonywania:
 ```bash
@@ -152,7 +152,7 @@ Przed skonfigurowaniem usługi działającej w tle powinieneś uruchomić serwer
 
 **1. Ręczne uruchomienie serwera**
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H7.png", "Ręczne uruchamianie serwera Minecraft 1.17.1 w celu uzyskania dostępu do konsoli", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H7.png", "Ręczne uruchamianie serwera Minecraft 1.17.1 w celu uzyskania dostępu do konsoli", "(max-width: 768px) 100vw, 800px" %}
 
 Uruchom właśnie utworzony skrypt startowy:
 ```bash
@@ -161,7 +161,7 @@ Uruchom właśnie utworzony skrypt startowy:
 
 **2. Nadanie uprawnień administratora (OP)**
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H8.png", "Używanie polecenia op w konsoli do nadania uprawnień administratora", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H8.png", "Używanie polecenia op w konsoli do nadania uprawnień administratora", "(max-width: 768px) 100vw, 800px" %}
 
 Gdy serwer zakończy ładowanie (zobaczysz komunikat „Done!"), wpisz bezpośrednio w konsoli:
 ```text
@@ -170,7 +170,7 @@ op twoja_nazwa_gracza_minecraft
 
 **3. Zatrzymanie serwera**
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H9.png", "Wykonywanie polecenia stop w celu bezpiecznego wyłączenia serwera", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H9.png", "Wykonywanie polecenia stop w celu bezpiecznego wyłączenia serwera", "(max-width: 768px) 100vw, 800px" %}
 
 Aby zapisać dane świata i przygotować serwer do działania w tle, wpisz:
 ```text
@@ -187,7 +187,7 @@ Wyjdź z konta użytkownika `minecraft` z powrotem na konto root/sudo:
 exit
 ```
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H10.png", "Tworzenie pliku minecraft.service dla profesjonalnego hostowania w tle", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H10.png", "Tworzenie pliku minecraft.service dla profesjonalnego hostowania w tle", "(max-width: 768px) 100vw, 800px" %}
 
 Utwórz plik usługi:
 ```bash
@@ -211,7 +211,7 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-{% image "/assets/images/blog/serwer-minecraft-1-17-centos-rhel/H11.png", "Włączanie i uruchamianie usługi minecraft w systemd", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/H11.png", "Włączanie i uruchamianie usługi minecraft w systemd", "(max-width: 768px) 100vw, 800px" %}
 
 Włącz i uruchom serwer:
 ```bash

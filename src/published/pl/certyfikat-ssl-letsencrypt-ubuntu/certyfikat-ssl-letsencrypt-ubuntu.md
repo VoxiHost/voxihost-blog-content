@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/certyfikat-ssl-letsencrypt-ubuntu/og-image.png
+image: /assets/images/blog/pl/certyfikat-ssl-letsencrypt-ubuntu/og-image.png
 title: 'Jak skonfigurować SSL z Let''s Encrypt i Certbot na Ubuntu i Debian: Kompletny przewodnik'
 description: Kompletny przewodnik dla początkujących do zabezpieczania serwera Nginx lub Apache z bezpłatnymi certyfikatami SSL/TLS od Let's Encrypt używając Certbota na Ubuntu i Debian.
 date: '2026-03-25'
@@ -72,7 +72,7 @@ Teraz zainstaluj Certbot wraz z wtyczką dla swojego serwera WWW:
 
 **Dla Nginx:**
 
-{% image "/assets/images/blog/certyfikat-ssl-letsencrypt-ubuntu/H1.png", "Uruchamianie sudo apt install certbot python3-certbot-nginx -y na Ubuntu/Debian - wynik terminala", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/certyfikat-ssl-letsencrypt-ubuntu/H1.png", "Uruchamianie sudo apt install certbot python3-certbot-nginx -y na Ubuntu/Debian - wynik terminala", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt install certbot python3-certbot-nginx -y
@@ -121,7 +121,7 @@ Teraz uzyskaj i instaluj certyfikat SSL dla swojej domeny. Użyj polecenia Certb
 
 **Uruchom Certbot dla Nginx:**
 
-{% image "/assets/images/blog/certyfikat-ssl-letsencrypt-ubuntu/H2.png", "Uruchamianie sudo certbot --nginx -d twoja_domena.com -d www.twoja_domena.com na Ubuntu/Debian - wynik terminala", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/certyfikat-ssl-letsencrypt-ubuntu/H2.png", "Uruchamianie sudo certbot --nginx -d twoja_domena.com -d www.twoja_domena.com na Ubuntu/Debian - wynik terminala", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo certbot --nginx -d twoja_domena.com -d www.twoja_domena.com
@@ -145,7 +145,7 @@ Key is saved at:         /etc/letsencrypt/live/twoja_domena.com/privkey.pem
 
 Let's Encrypt certyfikaty są ważne tylko przez 90 dni. Certbot instaluje timer systemowy który automatycznie odnawia certyfikaty zanim wygaśnięciem. Możesz zweryfikować czy timer jest aktywny uruchamiając:
 
-{% image "/assets/images/blog/certyfikat-ssl-letsencrypt-ubuntu/H3.png", "Uruchamianie sudo systemctl status certbot.timer na Ubuntu/Debian - wynik terminala", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/certyfikat-ssl-letsencrypt-ubuntu/H3.png", "Uruchamianie sudo systemctl status certbot.timer na Ubuntu/Debian - wynik terminala", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status certbot.timer

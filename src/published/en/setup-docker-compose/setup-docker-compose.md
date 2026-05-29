@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/setup-docker-compose/og-image.png
+image: /assets/images/blog/en/setup-docker-compose/og-image.png
 title: 'How to Set Up Docker Compose: A Complete Guide to Managing Multi-Container Apps'
 description: A complete step-by-step guide to setting up and using Docker Compose V2 on Ubuntu, Debian, AlmaLinux, Rocky Linux, CentOS, and Fedora.
 date: '2026-03-25'
@@ -62,7 +62,7 @@ Modern Docker distributions have shifted away from the old standalone `docker-co
 
 Verify it is installed by checking its version:
 
-{% image "/assets/images/blog/setup-docker-compose/H1.png", "Running docker compose version in the terminal on Ubuntu to verify Docker Compose V2 is installed", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-docker-compose/H1.png", "Running docker compose version in the terminal on Ubuntu to verify Docker Compose V2 is installed", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose version
@@ -82,7 +82,7 @@ Docker Compose relies absolutely on the context of the directory you run the com
 
 First, let's make a dedicated home for your new project so files stay organized:
 
-{% image "/assets/images/blog/setup-docker-compose/H2.png", "Running mkdir my-webapp and cd my-webapp to create and enter a dedicated Docker Compose project directory on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-docker-compose/H2.png", "Running mkdir my-webapp and cd my-webapp to create and enter a dedicated Docker Compose project directory on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 mkdir my-webapp
@@ -95,7 +95,7 @@ Now, let's create a functional, real-world example. We are going to deploy the o
 
 Open a new file with `nano`:
 
-{% image "/assets/images/blog/setup-docker-compose/H3.png", "Running nano docker-compose.yml to open the Docker Compose configuration file for editing on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-docker-compose/H3.png", "Running nano docker-compose.yml to open the Docker Compose configuration file for editing on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 nano docker-compose.yml
@@ -147,7 +147,7 @@ Save and exit.
 
 With one file, your entire infrastructure is declared. To launch it, run the `up` command. The `-d` flag tells it to run "detached" in the background so you can keep using your terminal console:
 
-{% image "/assets/images/blog/setup-docker-compose/H4.png", "Running docker compose up -d to start all containers defined in docker-compose.yml in detached mode on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-docker-compose/H4.png", "Running docker compose up -d to start all containers defined in docker-compose.yml in detached mode on Ubuntu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose up -d
@@ -164,7 +164,7 @@ Once finished, open your web browser and navigate to your server's IP address co
 
 > **Security Warning:** Docker manages its own network rules through `iptables`. When you use a `ports:` mapping in your `docker-compose.yml` file, Docker will **bypass your UFW firewall completely**. To keep a service private, map it to `127.0.0.1:8080` instead of just `8080`.
 
-{% image "/assets/images/blog/setup-docker-compose/H5.png", "WordPress installation wizard screen in browser after launching a WordPress plus MySQL Docker Compose stack on Ubuntu VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-docker-compose/H5.png", "WordPress installation wizard screen in browser after launching a WordPress plus MySQL Docker Compose stack on Ubuntu VPS", "(max-width: 768px) 100vw, 800px" %}
 
 You will instantly hit the famous WordPress installation screen!
 
@@ -174,7 +174,7 @@ Here are the crucial commands to memorize when operating in the directory contai
 
 See what's actively running in this project:
 
-{% image "/assets/images/blog/setup-docker-compose/H6.png", "Running docker compose ps to list all running containers and their ports in the current Docker Compose project", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-docker-compose/H6.png", "Running docker compose ps to list all running containers and their ports in the current Docker Compose project", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose ps
@@ -189,7 +189,7 @@ docker compose logs -f
 
 Stop the containers temporarily without deleting them:
 
-{% image "/assets/images/blog/setup-docker-compose/H7.png", "Running docker compose stop to temporarily stop all running containers in a Docker Compose project without removing them", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-docker-compose/H7.png", "Running docker compose stop to temporarily stop all running containers in a Docker Compose project without removing them", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose stop
@@ -198,7 +198,7 @@ docker compose stop
 
 Tear the entire project down (stops the containers, deletes them, and removes the internal network):
 
-{% image "/assets/images/blog/setup-docker-compose/H8.png", "Running docker compose down to stop and remove all containers, networks, and volumes in a Docker Compose project", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/setup-docker-compose/H8.png", "Running docker compose down to stop and remove all containers, networks, and volumes in a Docker Compose project", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker compose down

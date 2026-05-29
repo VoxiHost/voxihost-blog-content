@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/secure-ssh-centos-rhel/og-image.png
+image: /assets/images/blog/en/secure-ssh-centos-rhel/og-image.png
 title: 'How to Secure SSH on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide'
 description: A complete guide to hardening SSH on AlmaLinux, CentOS Stream, Rocky Linux, and Fedora servers. Disable root login, set up key-based authentication, change the default port, configure firewalld, and protect your VPS against brute-force attacks.
 date: '2026-03-25'
@@ -65,7 +65,7 @@ Do keys before anything else. Password authentication is the main vector for SSH
 
 On your **local machine**, generate an ed25519 key pair:
 
-{% image "/assets/images/blog/secure-ssh-centos-rhel/H1.png", "Running ssh-keygen -t ed25519 -C \"your-server-label\" command on AlmaLinux, CentOS, Rocky Linux & Fedora to generate an ed25519 key pair", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-ssh-centos-rhel/H1.png", "Running ssh-keygen -t ed25519 -C \"your-server-label\" command on AlmaLinux, CentOS, Rocky Linux & Fedora to generate an ed25519 key pair", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ssh-keygen -t ed25519 -C "your-server-label"
@@ -75,7 +75,7 @@ Set a passphrase when prompted. It encrypts the private key on disk, if someone 
 
 Copy the public key to the server:
 
-{% image "/assets/images/blog/secure-ssh-centos-rhel/H2.png", "Running ssh-copy-id -i ~/.ssh/id_ed25519.pub user@your-server-ip command on AlmaLinux, CentOS, Rocky Linux & Fedora to copy the public key to the server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-ssh-centos-rhel/H2.png", "Running ssh-copy-id -i ~/.ssh/id_ed25519.pub user@your-server-ip command on AlmaLinux, CentOS, Rocky Linux & Fedora to copy the public key to the server", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ssh-copy-id -i ~/.ssh/id_ed25519.pub user@your-server-ip
@@ -89,7 +89,7 @@ Direct root login is an unnecessary risk. If your key gets compromised, an attac
 
 Edit the SSH config:
 
-{% image "/assets/images/blog/secure-ssh-centos-rhel/H3.png", "Running sudo nano /etc/ssh/sshd_config on AlmaLinux to open and edit the SSH daemon configuration file to disable root login", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-ssh-centos-rhel/H3.png", "Running sudo nano /etc/ssh/sshd_config on AlmaLinux to open and edit the SSH daemon configuration file to disable root login", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/ssh/sshd_config
@@ -107,7 +107,7 @@ If this isn't set, on RHEL-based systems the default may vary by cloud image. Al
 
 With your key confirmed working, disable passwords:
 
-{% image "/assets/images/blog/secure-ssh-centos-rhel/H4.png", "Editing /etc/ssh/sshd_config on AlmaLinux to set PasswordAuthentication no and PubkeyAuthentication yes to enforce key-only login", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-ssh-centos-rhel/H4.png", "Editing /etc/ssh/sshd_config on AlmaLinux to set PasswordAuthentication no and PubkeyAuthentication yes to enforce key-only login", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo nano /etc/ssh/sshd_config

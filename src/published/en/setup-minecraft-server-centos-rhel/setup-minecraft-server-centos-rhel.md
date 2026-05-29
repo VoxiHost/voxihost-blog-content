@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/setup-minecraft-server-centos-rhel/og-image.png
+image: /assets/images/blog/en/setup-minecraft-server-centos-rhel/og-image.png
 title: How to Set Up a Minecraft Java Edition Server on AlmaLinux, CentOS, Rocky Linux & Fedora
 description: A complete guide to hosting a Minecraft Java Edition server on RHEL-based Linux. Learn how to install and configure the correct Java environment for every version.
 date: '2026-04-23'

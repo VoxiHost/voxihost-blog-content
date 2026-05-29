@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/monitor-vps-htop-df-free/og-image.png
+image: /assets/images/blog/en/monitor-vps-htop-df-free/og-image.png
 title: 'How to Monitor Your VPS: A Beginner''s Guide to htop, df, and free'
 description: A complete beginner's guide to monitoring your Linux server's health. Learn how to check CPU, RAM, and disk space usage using htop, free, and df.
 date: '2026-03-25'
@@ -65,7 +65,7 @@ sudo dnf install htop -y
 
 Launch it by simply typing:
 
-{% image "/assets/images/blog/monitor-vps-htop-df-free/H1.png", "Colorful htop terminal interface showing live CPU and RAM usage on a Linux VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/monitor-vps-htop-df-free/H1.png", "Colorful htop terminal interface showing live CPU and RAM usage on a Linux VPS", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 htop
@@ -85,7 +85,7 @@ If you just want a quick, clean snapshot of your RAM, you don't need `htop`. You
 
 Always run it with the `-h` flag. This stands for **"human-readable"**, which translates the output into easily readable Megabytes (M) or Gigabytes (G) instead of millions of confusing bytes.
 
-{% image "/assets/images/blog/monitor-vps-htop-df-free/H2.png", "Running free -h command to check available RAM and memory cache on a Linux Server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/monitor-vps-htop-df-free/H2.png", "Running free -h command to check available RAM and memory cache on a Linux Server", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 free -h
@@ -110,7 +110,7 @@ Running out of disk space will completely break your server. Databases corrupt, 
 
 To check how much space you have left, use `df` (Disk Free). Again, use the `-h` flag for human-readable sizes:
 
-{% image "/assets/images/blog/monitor-vps-htop-df-free/H3.png", "Running df -h command to monitor total disk space and storage usage on a Linux VPS", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/monitor-vps-htop-df-free/H3.png", "Running df -h command to monitor total disk space and storage usage on a Linux VPS", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 df -h
@@ -132,7 +132,7 @@ If `df` tells you your disk is 99% full, your next question is: *"What is taking
 
 Use `du` (Disk Usage) to find the culprit. Move to the directory you suspect (usually `/var/log` or a website folder) and run:
 
-{% image "/assets/images/blog/monitor-vps-htop-df-free/H4.png", "Running du -sh /* command to find large application directories taking up disk space", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/monitor-vps-htop-df-free/H4.png", "Running du -sh /* command to find large application directories taking up disk space", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 du -sh /*
@@ -142,7 +142,7 @@ This will print the size (`-s` for summary) in human-readable format (`-h`) of e
 
 You can also combine it with sorting to easily find the biggest folders. For example, to find the biggest folders in `/var/log` across the entire server:
 
-{% image "/assets/images/blog/monitor-vps-htop-df-free/H5.png", "Running sudo du -h /var/log/* | sort -h to find the largest individual log files on Linux", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/monitor-vps-htop-df-free/H5.png", "Running sudo du -h /var/log/* | sort -h to find the largest individual log files on Linux", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo du -h /var/log/* | sort -h

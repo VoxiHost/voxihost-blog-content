@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/minecraft-1-8-8-server-centos-rhel/og-image.png
+image: /assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/og-image.png
 title: How to Setup a Classic Minecraft 1.8.8 Server (Java 8) on AlmaLinux, CentOS, Rocky Linux & Fedora
 description: A legacy setup guide for Minecraft 1.8.8 servers, perfect for nostalgic PvP and classic Vanilla gameplay using Java 8 on RHEL distributions.
 date: '2026-04-23'
@@ -77,7 +77,7 @@ First, perform a full [system update](/blog/update-centos-rhel/) to ensure your 
 
 On standard enterprise servers (AlmaLinux 8 & 9, Rocky Linux 8 & 9), Java 8 is available natively:
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H1.png", "Terminal output showing the installation of OpenJDK 8 on a Linux server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H1.png", "Terminal output showing the installation of OpenJDK 8 on a Linux server", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf check-update
@@ -95,7 +95,7 @@ sudo dnf install java-1.8.0-openjdk-headless wget -y
 
 For security, never run your server as root. Even legacy versions should be isolated. If you are new to Linux permissions, check our guide on [How to Create and Manage Users on AlmaLinux/Rocky](/blog/add-sudo-user-centos/).
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H2.png", "Creating a dedicated 'minecraft' user to safely host the legacy server", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H2.png", "Creating a dedicated 'minecraft' user to safely host the legacy server", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo useradd -m -r -s /bin/bash minecraft
@@ -107,7 +107,7 @@ mkdir server && cd server
 
 Looking for a different classic version? You can find direct Mojang download links for all historical releases in our [Minecraft Server Download Archive](/blog/minecraft-server-download-links/).
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H3.png", "Downloading the official Minecraft 1.8.8 server.jar file from Mojang servers using wget", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H3.png", "Downloading the official Minecraft 1.8.8 server.jar file from Mojang servers using wget", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 wget https://launcher.mojang.com/v1/objects/5fafba3f58c40dc51b5c3ca72a98f62dfdae1db7/server.jar
@@ -115,7 +115,7 @@ wget https://launcher.mojang.com/v1/objects/5fafba3f58c40dc51b5c3ca72a98f62dfdae
 
 ## Step 4: Accept the EULA
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H4.png", "First launch of the 1.8.8 JAR to generate configuration files and accept the EULA", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H4.png", "First launch of the 1.8.8 JAR to generate configuration files and accept the EULA", "(max-width: 768px) 100vw, 800px" %}
 
 Run the server once to generate the required configuration files:
 
@@ -133,7 +133,7 @@ sed -i 's/eula=false/eula=true/' eula.txt
 
 Since 1.8.8 is much lighter than modern versions, 2GB of RAM is often enough for a small group.
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H5.png", "Using the nano editor to create and configure the start.sh launch script", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H5.png", "Using the nano editor to create and configure the start.sh launch script", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 nano start.sh
@@ -145,7 +145,7 @@ In the editor, paste:
 java -Xmx2G -Xms2G -jar server.jar nogui
 ```
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H6.png", "Setting executable permissions on the start.sh script", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H6.png", "Setting executable permissions on the start.sh script", "(max-width: 768px) 100vw, 800px" %}
 
 Make it executable:
 ```bash
@@ -156,7 +156,7 @@ chmod +x start.sh
 
 Before setting up the automatic background service, you should run the server manually at least once to grant yourself administrator (**OP**) rights.
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H7.png", "Manually starting the Minecraft 1.8.8 server to access the live console", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H7.png", "Manually starting the Minecraft 1.8.8 server to access the live console", "(max-width: 768px) 100vw, 800px" %}
 
 **1. Start the server manually**
 Run the launch script you just created:
@@ -164,7 +164,7 @@ Run the launch script you just created:
 ./start.sh
 ```
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H8.png", "Giving yourself administrative (OP) privileges via the server console", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H8.png", "Giving yourself administrative (OP) privileges via the server console", "(max-width: 768px) 100vw, 800px" %}
 
 **2. Grant Administrator (OP) rights**
 Once the server has finished loading (you see the "Done!" message), type your command directly into the console:
@@ -172,7 +172,7 @@ Once the server has finished loading (you see the "Done!" message), type your co
 op your_minecraft_username
 ```
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H9.png", "Shutting down the Minecraft server safely using the stop command", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H9.png", "Shutting down the Minecraft server safely using the stop command", "(max-width: 768px) 100vw, 800px" %}
 
 **3. Stop the server**
 To save the world data and prepare for background hosting, type:
@@ -190,7 +190,7 @@ Exit the `minecraft` user back to your root/sudo account:
 exit
 ```
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H10.png", "Creating the minecraft.service systemd file for professional background hosting", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H10.png", "Creating the minecraft.service systemd file for professional background hosting", "(max-width: 768px) 100vw, 800px" %}
 
 Create the service file:
 ```bash
@@ -214,7 +214,7 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-{% image "/assets/images/blog/minecraft-1-8-8-server-centos-rhel/H11.png", "Enabling and starting the minecraft systemd service in the terminal", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/minecraft-1-8-8-server-centos-rhel/H11.png", "Enabling and starting the minecraft systemd service in the terminal", "(max-width: 768px) 100vw, 800px" %}
 
 Enable and start your server:
 ```bash

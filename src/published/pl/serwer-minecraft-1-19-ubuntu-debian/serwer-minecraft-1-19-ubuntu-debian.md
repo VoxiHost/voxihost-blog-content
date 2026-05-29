@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/og-image.png
+image: /assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/og-image.png
 title: Jak postawić serwer Minecraft Vanilla 1.19.2 (Java 17) na Ubuntu/Debian
 description: Szczegółowy poradnik konfiguracji serwera Minecraft 1.19.2 Vanilla na Ubuntu lub Debianie z użyciem środowiska Java 17.
 date: '2026-04-23'
@@ -76,7 +76,7 @@ Potrzebujesz innej wersji? Bezpośredni link znajdziesz w naszym [Archiwum link�
 
 Zadbaj o bezpieczeństwo systemu, wykonując najpierw pełną [aktualizację systemu](/pl/blog/jak-zaktualizowac-ubuntu-debian/). Następnie zainstaluj wymagany pakiet LTS Java 17:
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H1.png", "Terminal przedstawiający instalację OpenJDK 17 na Ubuntu/Debian", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H1.png", "Terminal przedstawiający instalację OpenJDK 17 na Ubuntu/Debian", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo apt update
@@ -87,7 +87,7 @@ sudo apt install openjdk-17-jre-headless -y
 
 Dla bezpieczeństwa nigdy nie uruchamiaj serwera jako root. Jeśli dopiero zaczynasz z uprawnieniami w Linuksie, zapoznaj się z naszym poradnikiem [Tworzenia i zarządzania użytkownikami na Ubuntu/Debian](/pl/blog/jak-dodac-uzytkownika-sudo-ubuntu/).
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H2.png", "Tworzenie dedykowanego użytkownika 'minecraft' do bezpiecznego hostowania serwera 1.19", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H2.png", "Tworzenie dedykowanego użytkownika 'minecraft' do bezpiecznego hostowania serwera 1.19", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo adduser --disabled-password --gecos "" minecraft
@@ -99,7 +99,7 @@ mkdir server && cd server
 
 Szukasz innej wersji? Bezpośrednie linki do pobrania od Mojang dla wszystkich wydań znajdziesz w naszym [Archiwum linków do serwerów Minecraft](/pl/blog/serwer-minecraft-linki-do-pobrania/).
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H3.png", "Pobieranie pliku Minecraft 1.19.2 server.jar za pomocą wget", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H3.png", "Pobieranie pliku Minecraft 1.19.2 server.jar za pomocą wget", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 wget https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar
@@ -107,7 +107,7 @@ wget https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581
 
 ## Krok 4: Akceptacja EULA
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H4.png", "Pierwsze uruchomienie pliku JAR 1.19.2 w celu wygenerowania plików konfiguracyjnych i akceptacji EULA", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H4.png", "Pierwsze uruchomienie pliku JAR 1.19.2 w celu wygenerowania plików konfiguracyjnych i akceptacji EULA", "(max-width: 768px) 100vw, 800px" %}
 
 Uruchom serwer raz, aby wygenerować wymagane pliki konfiguracyjne:
 
@@ -125,7 +125,7 @@ sed -i 's/eula=false/eula=true/' eula.txt
 
 Wklej poniższą zawartość (flagi Aikara zoptymalizowane pod G1GC):
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H5.png", "Używanie edytora nano do tworzenia i konfigurowania skryptu startowego start.sh", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H5.png", "Używanie edytora nano do tworzenia i konfigurowania skryptu startowego start.sh", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 nano start.sh
 ```
@@ -138,7 +138,7 @@ java -Xmx6G -Xms6G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis
 
 Nadaj uprawnienia do wykonywania:
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H6.png", "Nadawanie uprawnień do wykonywania skryptowi start.sh", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H6.png", "Nadawanie uprawnień do wykonywania skryptowi start.sh", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 chmod +x start.sh
 ```
@@ -149,7 +149,7 @@ Przed skonfigurowaniem usługi działającej w tle powinieneś uruchomić serwer
 
 **1. Ręczne uruchomienie serwera**
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H7.png", "Ręczne uruchamianie serwera Minecraft 1.19.2 w celu uzyskania dostępu do konsoli", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H7.png", "Ręczne uruchamianie serwera Minecraft 1.19.2 w celu uzyskania dostępu do konsoli", "(max-width: 768px) 100vw, 800px" %}
 Uruchom właśnie utworzony skrypt startowy:
 ```bash
 ./start.sh
@@ -157,7 +157,7 @@ Uruchom właśnie utworzony skrypt startowy:
 
 **2. Nadanie uprawnień administratora (OP)**
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H8.png", "Nadawanie uprawnień OP przez konsolę serwera", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H8.png", "Nadawanie uprawnień OP przez konsolę serwera", "(max-width: 768px) 100vw, 800px" %}
 Gdy serwer zakończy ładowanie (zobaczysz komunikat „Done!"), wpisz bezpośrednio w konsoli:
 ```text
 op twoja_nazwa_gracza_minecraft
@@ -165,7 +165,7 @@ op twoja_nazwa_gracza_minecraft
 
 **3. Zatrzymanie serwera**
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H9.png", "Bezpieczne wyłączanie serwera Minecraft 1.19.2", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H9.png", "Bezpieczne wyłączanie serwera Minecraft 1.19.2", "(max-width: 768px) 100vw, 800px" %}
 Aby zapisać dane świata i przygotować serwer do działania w tle, wpisz:
 ```text
 stop
@@ -183,7 +183,7 @@ exit
 
 Utwórz plik usługi:
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H10.png", "Tworzenie pliku usługi minecraft.service dla systemd", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H10.png", "Tworzenie pliku usługi minecraft.service dla systemd", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 sudo nano /etc/systemd/system/minecraft.service
 ```
@@ -207,7 +207,7 @@ WantedBy=multi-user.target
 
 Włącz i uruchom serwer:
 
-{% image "/assets/images/blog/serwer-minecraft-1-19-ubuntu-debian/H11.png", "Włączanie i uruchamianie usługi minecraft w systemd", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/serwer-minecraft-1-19-ubuntu-debian/H11.png", "Włączanie i uruchamianie usługi minecraft w systemd", "(max-width: 768px) 100vw, 800px" %}
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable minecraft

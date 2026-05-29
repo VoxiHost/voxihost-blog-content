@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/konfiguracja-fail2ban-centos-rhel/og-image.png
+image: /assets/images/blog/pl/konfiguracja-fail2ban-centos-rhel/og-image.png
 title: 'Jak skonfigurować fail2ban na AlmaLinux, CentOS, Rocky Linux i Fedora: Kompletny przewodnik serwera'
 description: Kompletny przewodnik do instalacji i konfiguracji fail2ban na serwerach AlmaLinux, CentOS Stream, Rocky Linux i Fedora. Chroń SSH i usługi WWW przed atakami siłowymi z automatycznym banowaniem IP i integracją z firewalld.
 date: '2026-03-25'
@@ -62,7 +62,7 @@ Podczas gdy dostawcy premium jak **<span class="text-white">Voxi</span><span cla
 
 Na systemach opartych na RHEL, fail2ban jest dostępny z EPEL (Extra Packages for Enterprise Linux). Jeśli nie jest jeszcze zainstalowany:
 
-{% image "/assets/images/blog/konfiguracja-fail2ban-centos-rhel/H1.png", "Uruchamianie sudo dnf install epel-release -y na AlmaLinux, CentOS, Rocky Linux i Fedorze aby zainstalować epel-release", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-fail2ban-centos-rhel/H1.png", "Uruchamianie sudo dnf install epel-release -y na AlmaLinux, CentOS, Rocky Linux i Fedorze aby zainstalować epel-release", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo dnf install epel-release -y
@@ -77,7 +77,7 @@ sudo dnf install fail2ban -y
 
 Włącz i uruchom go:
 
-{% image "/assets/images/blog/konfiguracja-fail2ban-centos-rhel/H2.png", "Uruchamianie sudo systemctl enable --now fail2ban na AlmaLinux, CentOS, Rocky Linux i Fedorze aby włączyć i uruchomić fail2ban", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-fail2ban-centos-rhel/H2.png", "Uruchamianie sudo systemctl enable --now fail2ban na AlmaLinux, CentOS, Rocky Linux i Fedorze aby włączyć i uruchomić fail2ban", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl enable --now fail2ban
@@ -153,7 +153,7 @@ sudo systemctl restart fail2ban
 
 Sprawdź status więzienia SSH:
 
-{% image "/assets/images/blog/konfiguracja-fail2ban-centos-rhel/H3.png", "Uruchamianie sudo fail2ban-client status sshd na AlmaLinux, CentOS, Rocky Linux i Fedorze aby sprawdzić status więzienia SSH", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-fail2ban-centos-rhel/H3.png", "Uruchamianie sudo fail2ban-client status sshd na AlmaLinux, CentOS, Rocky Linux i Fedorze aby sprawdzić status więzienia SSH", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo fail2ban-client status sshd
@@ -202,7 +202,7 @@ sudo tail -f /var/log/fail2ban.log
 
 Na publicznym serwerze zobaczysz że to szybko się zapełnia. Zdarzenia banowania, zdarzenia odbanowania i okazjonalne błędy jeśli coś jest źle skonfigurowane. Jeśli przestałeś widzieć bany ale wiesz że SSH jest ciągle atakowane, sprawdź czy fail2ban wciąż działa:
 
-{% image "/assets/images/blog/konfiguracja-fail2ban-centos-rhel/H4.png", "Uruchamianie sudo systemctl status fail2ban na AlmaLinux, CentOS, Rocky Linux i Fedorze aby sprawdzić status fail2ban", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/konfiguracja-fail2ban-centos-rhel/H4.png", "Uruchamianie sudo systemctl status fail2ban na AlmaLinux, CentOS, Rocky Linux i Fedorze aby sprawdzić status fail2ban", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 sudo systemctl status fail2ban
