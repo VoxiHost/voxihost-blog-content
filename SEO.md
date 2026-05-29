@@ -84,7 +84,7 @@ The engine automatically generates two baseline JSON-LD blocks on every article 
   "@type": ["TechArticle", "BlogPosting"],
   "headline": "Your title here",
   "description": "Your description here",
-  "image": "https://voxihost.pl/assets/images/blog/<slug>/og-image.png",
+  "image": "https://voxihost.pl/assets/images/blog/<lang>/<slug>/og-image.png",
   "author": { "@type": "Person", "name": "VoxiHost Team", "url": "https://voxihost.pl/" },
   "datePublished": "2026-05-28",
   "dateModified": "2026-05-28",
@@ -275,10 +275,10 @@ Every image must have descriptive alt text. The engine uses this for:
 
 ```jinja
 {# Good — describes the specific screenshot content: #}
-{% image "/assets/images/blog/your-slug/step2.png", "Terminal output showing SSH service successfully restarted with systemctl", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/<lang>/your-slug/step2.png", "Terminal output showing SSH service successfully restarted with systemctl", "(max-width: 768px) 100vw, 800px" %}
 
 {# Bad — too generic: #}
-{% image "/assets/images/blog/your-slug/step2.png", "Screenshot", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/<lang>/your-slug/step2.png", "Screenshot", "(max-width: 768px) 100vw, 800px" %}
 ```
 
 ---
@@ -292,7 +292,7 @@ The `image:` field in frontmatter controls the hero image, social media preview 
 >
 > When submitting a draft, simply leave the `image:` placeholder as-is:
 > ```yaml
-> image: /assets/images/blog/your-article-slug/og-image.png
+> image: /assets/images/blog/<lang>/your-article-slug/og-image.png
 > ```
 > We will replace it with the final branded image before the article goes live.
 
@@ -314,7 +314,7 @@ image: images/og-image.png
 image: /assets/images/blog/og-image.png
 
 # Correct placeholder for your draft (leave as-is):
-image: /assets/images/blog/your-article-slug/og-image.png
+image: /assets/images/blog/<lang>/your-article-slug/og-image.png
 ```
 
 ### ❌ `description` too short or too long
