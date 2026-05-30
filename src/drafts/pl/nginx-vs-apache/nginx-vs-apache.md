@@ -2,7 +2,7 @@
 image: /assets/images/blog/pl/nginx-vs-apache/og-image.png
 title: "Nginx vs Apache na VPS: Benchmarki i wybór w 2026 roku"
 description: "Porównaj Nginx i Apache na serwerze VPS. Poznaj różnice architektoniczne, benchmarki zużycia pamięci i dowiedz się, co wybrać w 2026 roku."
-date: '2026-05-29'
+date: '2026-06-01'
 translationKey: nginx-vs-apache
 category: Porównania
 tags:
