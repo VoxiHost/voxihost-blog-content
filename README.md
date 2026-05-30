@@ -85,8 +85,10 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| [nginx-vs-apache (EN)](file:///src/drafts/en/nginx-vs-apache/nginx-vs-apache.md) | EN | `draft` | — | VoxiHost Team |
-| [nginx-vs-apache (PL)](file:///src/drafts/pl/nginx-vs-apache/nginx-vs-apache.md) | PL | `draft` | — | VoxiHost Team |
+| [nginx-vs-apache (EN)](src/drafts/en/nginx-vs-apache/nginx-vs-apache.md) | EN | `draft` | — | VoxiHost Team |
+| [nginx-vs-apache (PL)](src/drafts/pl/nginx-vs-apache/nginx-vs-apache.md) | PL | `draft` | — | VoxiHost Team |
+| [wireguard-vs-openvpn (EN)](src/drafts/en/wireguard-vs-openvpn/wireguard-vs-openvpn.md) | EN | `draft` | — | VoxiHost Team |
+| [wireguard-vs-openvpn (PL)](src/drafts/pl/wireguard-vs-openvpn/wireguard-vs-openvpn.md) | PL | `draft` | — | VoxiHost Team |
 <!-- END_DRAFTS -->
 
 ---
