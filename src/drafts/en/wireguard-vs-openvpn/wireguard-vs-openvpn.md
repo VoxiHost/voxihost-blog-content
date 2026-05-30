@@ -2,7 +2,7 @@
 image: /assets/images/blog/en/wireguard-vs-openvpn/og-image.png
 title: "WireGuard vs OpenVPN: VPN Protocols Performance & Security Comparison"
 description: "Compare WireGuard and OpenVPN. Learn which protocol offers better speed, security, battery efficiency, and lower latency when hosted on a Linux VPS."
-date: '2026-05-29'
+date: '2026-06-08'
 translationKey: wireguard-vs-openvpn
 category: Comparisons
 tags:
