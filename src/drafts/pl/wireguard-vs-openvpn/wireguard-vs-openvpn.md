@@ -2,7 +2,7 @@
 image: /assets/images/blog/pl/wireguard-vs-openvpn/og-image.png
 title: "WireGuard vs OpenVPN: Porównanie protokołów VPN pod kątem wydajności"
 description: "Porównaj WireGuard i OpenVPN. Dowiedz się, który protokół oferuje lepszą prędkość, bezpieczeństwo, niskie opóźnienia i oszczędność baterii na VPS."
-date: '2026-05-29'
+date: '2026-06-08'
 translationKey: wireguard-vs-openvpn
 category: Porównania
 tags:
