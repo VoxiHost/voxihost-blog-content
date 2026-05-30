@@ -89,6 +89,13 @@ The following articles are currently in progress, awaiting approval, or schedule
 | [nginx-vs-apache (PL)](src/drafts/pl/nginx-vs-apache/nginx-vs-apache.md) | PL | `draft` | VoxiHost Team | 01.06.2026 |
 | [wireguard-vs-openvpn (EN)](src/drafts/en/wireguard-vs-openvpn/wireguard-vs-openvpn.md) | EN | `draft` | VoxiHost Team | 08.06.2026 |
 | [wireguard-vs-openvpn (PL)](src/drafts/pl/wireguard-vs-openvpn/wireguard-vs-openvpn.md) | PL | `draft` | VoxiHost Team | 08.06.2026 |
+| [install-nextcloud-vps-docker-compose (EN)](src/drafts/en/install-nextcloud-vps-docker-compose/install-nextcloud-vps-docker-compose.md) | EN | `draft` | VoxiHost Team | - |
+| [instalacja-nextcloud-vps-docker-compose (PL)](src/drafts/pl/instalacja-nextcloud-vps-docker-compose/instalacja-nextcloud-vps-docker-compose.md) | PL | `draft` | VoxiHost Team | - |
+| [install-wordpress-docker-compose (EN)](src/drafts/en/install-wordpress-docker-compose/install-wordpress-docker-compose.md) | EN | `draft` | VoxiHost Team | - |
+| [instalacja-wordpress-docker-compose (PL)](src/drafts/pl/instalacja-wordpress-docker-compose/instalacja-wordpress-docker-compose.md) | PL | `draft` | VoxiHost Team | - |
+| [setup-nginx-proxy-manager-vps (EN)](src/drafts/en/setup-nginx-proxy-manager-vps/setup-nginx-proxy-manager-vps.md) | EN | `draft` | VoxiHost Team | - |
+| [konfiguracja-nginx-proxy-manager-vps (PL)](src/drafts/pl/konfiguracja-nginx-proxy-manager-vps/konfiguracja-nginx-proxy-manager-vps.md) | PL | `draft` | VoxiHost Team | - |
+
 <!-- END_DRAFTS -->
 
 ---
@@ -99,6 +106,7 @@ Thanks to all the amazing developers and writers who help keep the VoxiHost know
 
 <!-- START_CONTRIBUTORS -->
 * [@danielmarszalkowski](https://github.com/danielmarszalkowski)
+* [@sl0ikkk](https://github.com/sl0ikkk)
 <!-- END_CONTRIBUTORS -->
 
 ---
