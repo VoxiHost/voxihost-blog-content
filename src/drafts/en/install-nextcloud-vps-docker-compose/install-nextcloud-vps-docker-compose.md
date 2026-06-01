@@ -2,7 +2,7 @@
 image: /assets/images/blog/en/install-nextcloud-vps-docker-compose/og-image.png
 title: "How to Install Nextcloud on a VPS using Docker Compose"
 description: "Learn how to deploy Nextcloud on a Linux VPS using Docker Compose and MariaDB. Build your own private cloud storage without paying monthly fees for Google Drive or iCloud."
-date: '2026-05-16'
+date: '2026-06-15'
 translationKey: install-nextcloud-vps-docker-compose
 locale: en
 category: Tutorials
@@ -48,7 +48,7 @@ In this guide, we will deploy Nextcloud using **Docker Compose**, ensuring a cle
 
 ## Step 1: Prerequisites
 
-Before starting, ensure your VPS has Docker and Docker Compose installed. If you haven't set them up yet, check out our previous guide on [how to set up Docker Compose](/blog/how-to-setup-docker-compose/).
+Before starting, ensure your VPS has Docker and Docker Compose installed. If you haven't set them up yet, check out our previous guide on [how to set up Docker Compose](/blog/setup-docker-compose/).
 
 Verify your installation:
 
