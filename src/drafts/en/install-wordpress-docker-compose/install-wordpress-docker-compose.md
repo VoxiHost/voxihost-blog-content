@@ -2,7 +2,7 @@
 image: /assets/images/blog/en/install-wordpress-docker-compose/og-image.png
 title: "How to Install WordPress on a VPS using Docker Compose"
 description: "A complete step-by-step guide to deploying a self-hosted WordPress website with a dedicated MySQL database using Docker Compose on a Linux VPS."
-date: '2026-05-16'
+date: '2026-06-02'
 translationKey: install-wordpress-docker-compose
 locale: en
 category: Tutorials
