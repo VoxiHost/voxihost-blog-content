@@ -2,7 +2,7 @@
 image: /assets/images/blog/pl/instalacja-wordpress-docker-compose/og-image.png
 title: "Jak zainstalować WordPressa na VPS przy użyciu Docker Compose"
 description: "Kompletny poradnik krok po kroku, jak uruchomić stronę na WordPressie z dedykowaną bazą MySQL przy użyciu Docker Compose na serwerze Linux VPS."
-date: '2026-05-16'
+date: '2026-06-02'
 translationKey: install-wordpress-docker-compose
 locale: pl
 category: Poradniki
