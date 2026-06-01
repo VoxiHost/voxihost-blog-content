@@ -10,7 +10,7 @@ tags:
   - nginx
   - apache
   - performance
-status: draft
+status: published
 locale: en
 author:
   name: VoxiHost Team
