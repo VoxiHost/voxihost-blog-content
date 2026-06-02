@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/jak-zaktualizowac-fedore/og-image.png
 title: 'Jak aktualizować Fedora 43 i nowsze: Kompletny przewodnik serwera'
 description: Kompletny przewodnik krok po kroku do aktualizacji serwerów Fedora 43 i nowszych używając dnf5. Obejmuje dnf5 upgrade, autoremove, wykrywanie restartu i automatyczne aktualizacje dla środowisk produkcyjnych VPS.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: update-fedora
 category: Poradniki
 tags:

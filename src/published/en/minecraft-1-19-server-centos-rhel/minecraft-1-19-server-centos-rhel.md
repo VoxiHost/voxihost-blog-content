@@ -3,6 +3,7 @@ image: /assets/images/blog/en/minecraft-1-19-server-centos-rhel/og-image.png
 title: How to Setup a Minecraft Vanilla 1.19.2 Server (Java 17) on AlmaLinux, CentOS, Rocky Linux & Fedora
 description: A detailed tutorial on setting up a Minecraft 1.19.2 Vanilla server on AlmaLinux, CentOS, or Rocky Linux using the Java 17 environment.
 date: '2026-04-23'
+updated: '2026-06-02'
 translationKey: minecraft-vanilla-java-1-19-server-setup-almalinux-centos-rocky-fedora
 locale: en
 category: Tutorials

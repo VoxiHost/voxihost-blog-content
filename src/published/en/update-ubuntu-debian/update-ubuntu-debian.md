@@ -3,6 +3,7 @@ image: /assets/images/blog/en/update-ubuntu-debian/og-image.png
 title: 'How to Update Ubuntu & Debian: The Complete Server Guide'
 description: A complete step-by-step guide on how to update Ubuntu and Debian Linux servers. Covers apt update, apt upgrade, kernel updates, automatic updates, and best practices for production VPS environments.
 date: '2026-03-24'
+updated: '2026-06-02'
 translationKey: update-ubuntu-debian
 category: Tutorials
 tags:

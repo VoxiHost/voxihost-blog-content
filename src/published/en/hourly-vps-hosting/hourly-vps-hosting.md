@@ -3,6 +3,7 @@ image: /assets/images/blog/en/hourly-vps-launch/og-image.png
 title: 'Now Live: Hourly VPS Hosting - The Ultimate Flexibility for Your Projects'
 description: We are launching our new Hourly VPS offer! Discover how hourly billing, rates starting at €0.01/hr, and the special DEPLOYMENT promo code will revolutionize your workflow.
 date: '2026-04-10'
+updated: '2026-06-02'
 translationKey: hourly-vps-hosting-launch
 locale: en
 category: Updates

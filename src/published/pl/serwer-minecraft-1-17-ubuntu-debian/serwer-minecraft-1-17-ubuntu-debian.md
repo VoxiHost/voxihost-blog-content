@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/serwer-minecraft-1-17-ubuntu-debian/og-image.png
 title: Jak postawić serwer Minecraft Vanilla 1.17.1 (Java 16) na Ubuntu/Debian
 description: Instrukcja instalacji serwera Minecraft 1.17.1 na Ubuntu/Debian z użyciem środowiska Java 16.
 date: '2026-04-23'
+updated: '2026-06-02'
 translationKey: minecraft-vanilla-java-1-17-server-setup-ubuntu-debian
 locale: pl
 category: Poradniki

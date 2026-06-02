@@ -3,6 +3,7 @@ image: /assets/images/blog/en/setup-fail2ban-ubuntu-debian/og-image.png
 title: 'How to Set Up fail2ban on Ubuntu & Debian: The Complete Server Guide'
 description: A complete guide to installing and configuring fail2ban on Ubuntu and Debian servers. Protect SSH and web services from brute-force attacks with automatic IP banning, custom jails, and ufw integration.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-fail2ban-ubuntu-debian
 category: Tutorials
 tags:

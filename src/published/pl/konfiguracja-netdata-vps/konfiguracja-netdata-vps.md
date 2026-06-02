@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/konfiguracja-netdata-vps/og-image.png
 title: Jak skonfigurować Netdata do monitorowania VPS w czasie rzeczywistym
 description: Kompletny przewodnik krok po kroku do instalacji Netdata na swoim serwerze Linux VPS. Uzyskaj wysoko szczegółowe, pięknie wygenerowane wykresy metryk dla CPU, RAM, Sieci i Dysku w minutach.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-netdata-vps
 category: Poradniki
 tags:

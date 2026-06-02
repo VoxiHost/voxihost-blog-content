@@ -3,6 +3,7 @@ image: /assets/images/blog/en/install-lamp-ubuntu-debian/og-image.png
 title: How to Set Up a LAMP Stack (Linux, Apache, MySQL, PHP) on Ubuntu & Debian
 description: A comprehensive beginner-friendly guide to installing the tried-and-true LAMP stack (Linux, Apache2, MySQL, PHP) on Ubuntu and Debian.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-lamp-stack-ubuntu-debian
 category: Tutorials
 tags:

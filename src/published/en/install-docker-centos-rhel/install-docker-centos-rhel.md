@@ -3,6 +3,7 @@ image: /assets/images/blog/en/install-docker-centos-rhel/og-image.png
 title: 'How to Install Docker on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide'
 description: A complete step-by-step guide to installing the latest official Docker Engine and Docker Compose on AlmaLinux, CentOS Stream, Rocky Linux, and Fedora servers.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: install-docker-almalinux-centos-rocky
 category: Tutorials
 tags:

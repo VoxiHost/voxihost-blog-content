@@ -3,6 +3,7 @@ image: /assets/images/blog/en/install-docker-ubuntu-debian/og-image.png
 title: 'How to Install Docker on Ubuntu & Debian: The Complete Server Guide'
 description: A complete step-by-step guide to installing the latest Docker Engine and Docker Compose on Ubuntu and Debian servers properly using the official Docker repository.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: install-docker-ubuntu-debian
 category: Tutorials
 tags:

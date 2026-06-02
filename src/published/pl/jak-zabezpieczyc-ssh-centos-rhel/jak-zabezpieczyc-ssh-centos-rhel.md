@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/jak-zabezpieczyc-ssh-centos-rhel/og-image.png
 title: 'Jak zabezpieczyć SSH na AlmaLinux, CentOS, Rocky Linux i Fedora: Kompletny przewodnik serwera'
 description: Kompletny przewodnik do utwardzania SSH na serwerach AlmaLinux, CentOS Stream, Rocky Linux i Fedora. Wyłącz logowanie root, skonfiguruj uwierzytelnianie oparte na kluczach, zmień domyślny port, skonfiguruj firewalld i chroń swój VPS przed atakami siłowymi.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: secure-ssh-rhel-fedora
 category: Poradniki
 tags:

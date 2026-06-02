@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/aktualizacja-wersji-php-linux/og-image.png
 title: Jak zarządzać i aktualizować wersje PHP na Linux (Ubuntu i Debian)
 description: Kompletny przewodnik do bezpiecznej instalacji, aktualizacji i zarządzania wieloma wersjami PHP i PHP-FPM na swoim serwerze Linux używając oficjalnego PPA Ondřeja Surýego.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: manage-update-php-versions-linux
 category: Poradniki
 tags:

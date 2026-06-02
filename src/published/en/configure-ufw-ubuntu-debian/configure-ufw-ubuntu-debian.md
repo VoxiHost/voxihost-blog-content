@@ -3,6 +3,7 @@ image: /assets/images/blog/en/configure-ufw-ubuntu-debian/og-image.png
 title: 'How to Configure UFW Firewall on Ubuntu & Debian: The Complete Server Guide'
 description: A complete beginner-friendly guide to setting up and configuring the Uncomplicated Firewall (UFW) on Ubuntu and Debian servers. Learn to allow SSH, block traffic, and secure your VPS.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: configure-ufw-ubuntu-debian
 category: Tutorials
 tags:

@@ -3,6 +3,7 @@ image: /assets/images/blog/en/minecraft-1-8-8-server-ubuntu-debian/og-image.png
 title: How to Setup a Classic Minecraft 1.8.8 Server (Java 8) on Ubuntu/Debian
 description: A legacy setup guide for Minecraft 1.8.8 servers, perfect for nostalgic PvP and classic Vanilla gameplay using Java 8.
 date: '2026-04-23'
+updated: '2026-06-02'
 translationKey: minecraft-vanilla-java-1-8-8-server-setup-ubuntu-debian
 locale: en
 category: Tutorials

@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/serwer-minecraft-1-17-centos-rhel/og-image.png
 title: Jak postawić serwer Minecraft Vanilla 1.17.1 (Java 16) na AlmaLinux, CentOS, Rocky Linux i Fedorze
 description: Instrukcja instalacji serwera Minecraft 1.17.1 na AlmaLinux, CentOS lub Rocky Linux z użyciem środowiska Java 16/17.
 date: '2026-04-23'
+updated: '2026-06-02'
 translationKey: minecraft-vanilla-java-1-17-server-setup-almalinux-centos-rocky-fedora
 locale: pl
 category: Poradniki

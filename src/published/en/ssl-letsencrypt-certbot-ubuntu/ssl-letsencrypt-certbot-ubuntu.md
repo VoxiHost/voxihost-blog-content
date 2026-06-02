@@ -3,6 +3,7 @@ image: /assets/images/blog/en/ssl-letsencrypt-certbot-ubuntu/og-image.png
 title: 'How to Set Up SSL with Let''s Encrypt & Certbot on Ubuntu & Debian: The Complete Guide'
 description: A complete beginner-friendly guide to securing your Nginx or Apache web server with free SSL/TLS certificates from Let's Encrypt using Certbot on Ubuntu and Debian.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-ssl-letsencrypt-certbot
 category: Tutorials
 tags:

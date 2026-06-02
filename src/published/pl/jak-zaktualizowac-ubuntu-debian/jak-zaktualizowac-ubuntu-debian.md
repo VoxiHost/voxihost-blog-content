@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/jak-zaktualizowac-ubuntu-debian/og-image.png
 title: 'Jak aktualizować Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik krok po kroku do aktualizacji serwerów Ubuntu i Debian Linux. Obejmuje apt update, apt upgrade, aktualizacje jądra, automatyczne aktualizacje i najlepsze praktyki dla środowisk produkcyjnych VPS.
 date: '2026-03-24'
+updated: '2026-06-02'
 translationKey: update-ubuntu-debian
 category: Poradniki
 tags:

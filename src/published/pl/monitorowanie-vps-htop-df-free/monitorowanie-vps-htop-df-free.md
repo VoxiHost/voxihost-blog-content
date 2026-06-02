@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/monitorowanie-vps-htop-df-free/og-image.png
 title: 'Jak monitorować swój VPS: Przewodnik początkującego do htop, df i free'
 description: Kompletny przewodnik początkującego do monitorowania zdrowia swojego serwera Linux. Naucz się sprawdzać użycie CPU, RAM i przestrzeni dyskowej używając htop, free i df.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: monitor-vps-htop-df-free
 category: Poradniki
 tags:

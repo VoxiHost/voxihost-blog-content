@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/instalacja-lamp-ubuntu-debian/og-image.png
 title: Jak skonfigurować stos LAMP (Linux, Apache, MySQL, PHP) na Ubuntu i Debian
 description: Kompleksowy przewodnik dla początkujących do instalacji sprawdzonego stosu LAMP (Linux, Apache2, MySQL, PHP) na Ubuntu i Debian.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-lamp-stack-ubuntu-debian
 category: Poradniki
 tags:

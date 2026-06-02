@@ -3,6 +3,7 @@ image: /assets/images/blog/en/setup-nginx-proxy-manager-vps/og-image.png
 title: "How to Setup Nginx Proxy Manager on a VPS"
 description: "Learn how to effortlessly host multiple websites, map domains, and manage SSL certificates using Nginx Proxy Manager with Docker Compose."
 date: '2026-06-02'
+updated: '2026-06-02'
 translationKey: setup-nginx-proxy-manager-vps
 locale: en
 category: Tutorials

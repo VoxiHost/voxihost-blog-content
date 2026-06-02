@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/instalacja-lemp-ubuntu-debian/og-image.png
 title: Jak skonfigurować stos LEMP (Linux, Nginx, MariaDB, PHP) na Ubuntu i Debian
 description: Kompletny przewodnik krok po kroku do instalacji nowoczesnego stosu LEMP (Linux, Nginx, MariaDB, PHP) na świeżym serwerze Ubuntu lub Debian.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-lemp-stack-ubuntu-debian
 category: Poradniki
 tags:

@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/konfiguracja-ufw-ubuntu-debian/og-image.png
 title: 'Jak skonfigurować zaporę UFW na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik dla początkujących do konfiguracji Uncomplicated Firewall (UFW) na serwerach Ubuntu i Debian. Naucz się zezwalać na SSH, blokować ruch i zabezpieczać swój VPS.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: configure-ufw-ubuntu-debian
 category: Poradniki
 tags:

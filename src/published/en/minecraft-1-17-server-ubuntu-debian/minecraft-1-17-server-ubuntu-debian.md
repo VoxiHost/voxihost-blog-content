@@ -3,6 +3,7 @@ image: /assets/images/blog/en/minecraft-1-17-server-ubuntu-debian/og-image.png
 title: How to Setup a Minecraft Vanilla 1.17.1 Server (Java 16) on Ubuntu/Debian
 description: Instructions for installing a Minecraft 1.17.1 server on Ubuntu/Debian using the specific Java 16 runtime.
 date: '2026-04-23'
+updated: '2026-06-02'
 translationKey: minecraft-vanilla-java-1-17-server-setup-ubuntu-debian
 locale: en
 category: Tutorials

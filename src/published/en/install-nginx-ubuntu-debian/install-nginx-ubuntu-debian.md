@@ -3,6 +3,7 @@ image: /assets/images/blog/en/install-nginx-ubuntu-debian/og-image.png
 title: 'How to Install Nginx on Ubuntu & Debian: The Complete Server Guide'
 description: A complete step-by-step guide to installing Nginx on Ubuntu and Debian servers. Learn how to install the web server, configure UFW, manage the Nginx process, and set up your first server block.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: install-nginx-ubuntu-debian
 category: Tutorials
 tags:

@@ -3,6 +3,7 @@ image: /assets/images/blog/en/minecraft-1-21-server-ubuntu-debian/og-image.png
 title: How to Setup a Minecraft Vanilla 1.21.1 Server (Java 21) on Ubuntu/Debian
 description: Step-by-step guide to installing the latest Minecraft 1.21.1 Vanilla server on Ubuntu or Debian using Java 21.
 date: '2026-04-23'
+updated: '2026-06-02'
 translationKey: minecraft-vanilla-java-1-21-server-setup-ubuntu-debian
 locale: en
 category: Tutorials

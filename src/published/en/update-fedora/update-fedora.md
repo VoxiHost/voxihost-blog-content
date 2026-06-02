@@ -3,6 +3,7 @@ image: /assets/images/blog/en/update-fedora/og-image.png
 title: 'How to Update Fedora 43 & Newer: The Complete Server Guide'
 description: A complete step-by-step guide to updating Fedora 43 and newer servers using dnf5. Covers dnf5 upgrade, autoremove, reboot detection, and automatic updates for production VPS environments.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: update-fedora
 category: Tutorials
 tags:

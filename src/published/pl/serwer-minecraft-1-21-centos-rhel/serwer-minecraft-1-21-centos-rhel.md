@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/serwer-minecraft-1-21-centos-rhel/og-image.png
 title: Jak postawić serwer Minecraft Vanilla 1.21.1 (Java 21) na AlmaLinux, CentOS, Rocky Linux i Fedorze
 description: Poradnik krok po kroku dotyczący instalacji najnowszego serwera Minecraft 1.21.1 Vanilla na AlmaLinux, Rocky Linux lub CentOS z użyciem Java 21.
 date: '2026-04-23'
+updated: '2026-06-02'
 translationKey: minecraft-vanilla-java-1-21-server-setup-almalinux-centos-rocky-fedora
 locale: pl
 category: Poradniki

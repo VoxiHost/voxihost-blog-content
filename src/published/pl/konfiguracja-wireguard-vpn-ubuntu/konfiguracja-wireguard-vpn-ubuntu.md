@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/konfiguracja-wireguard-vpn-ubuntu/og-image.png
 title: Jak skonfigurować serwer VPN WireGuard na Ubuntu i Debian
 description: 'Kompletny poradnik dla początkujących: instalacja, konfiguracja i generowanie kluczy dla błyskawicznego serwera VPN WireGuard na Twoim serwerze Linux VPS.'
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-wireguard-vpn-ubuntu-debian
 locale: pl
 category: Poradniki

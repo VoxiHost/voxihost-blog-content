@@ -3,6 +3,7 @@ image: /assets/images/blog/en/devblog-march-2026/og-image.png
 title: 'March 2026: VoxiHost DevBlog'
 description: A major month of updates for VoxiHost! In this DevBlog, we've launched the VNC console, added support for 7 brand new Linux distributions, and enabled Google Authentication.
 date: '2026-04-01'
+updated: '2026-06-02'
 translationKey: march-2026-devblog
 category: Updates
 tags:

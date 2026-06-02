@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/konfiguracja-fail2ban-centos-rhel/og-image.png
 title: 'Jak skonfigurować fail2ban na AlmaLinux, CentOS, Rocky Linux i Fedora: Kompletny przewodnik serwera'
 description: Kompletny przewodnik do instalacji i konfiguracji fail2ban na serwerach AlmaLinux, CentOS Stream, Rocky Linux i Fedora. Chroń SSH i usługi WWW przed atakami siłowymi z automatycznym banowaniem IP i integracją z firewalld.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-fail2ban-rhel-fedora
 category: Poradniki
 tags:

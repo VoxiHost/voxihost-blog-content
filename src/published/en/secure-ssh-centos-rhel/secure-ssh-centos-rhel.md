@@ -3,6 +3,7 @@ image: /assets/images/blog/en/secure-ssh-centos-rhel/og-image.png
 title: 'How to Secure SSH on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide'
 description: A complete guide to hardening SSH on AlmaLinux, CentOS Stream, Rocky Linux, and Fedora servers. Disable root login, set up key-based authentication, change the default port, configure firewalld, and protect your VPS against brute-force attacks.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: secure-ssh-rhel-fedora
 category: Tutorials
 tags:

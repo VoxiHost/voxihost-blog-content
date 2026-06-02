@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/jak-zabezpieczyc-ssh-ubuntu-debian/og-image.png
 title: 'Jak zabezpieczyć SSH na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik do utwardzania SSH na serwerach Ubuntu i Debian. Wyłącz logowanie root, skonfiguruj uwierzytelnianie oparte na kluczach, zmień domyślny port, skonfiguruj ufw i zablokuj swój VPS przed atakami siłowymi.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: secure-ssh-ubuntu-debian
 category: Poradniki
 tags:

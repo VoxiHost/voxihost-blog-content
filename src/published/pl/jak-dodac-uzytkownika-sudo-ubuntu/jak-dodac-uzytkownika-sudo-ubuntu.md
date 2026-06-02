@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/jak-dodac-uzytkownika-sudo-ubuntu/og-image.png
 title: 'Jak utworzyć użytkownika sudo na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik dla początkujących do tworzenia nowego użytkownika z uprawnieniami sudo na serwerach Ubuntu i Debian. Przestań logować się jako root i zabezpiecz swój VPS.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: create-sudo-user-ubuntu-debian
 category: Poradniki
 tags:

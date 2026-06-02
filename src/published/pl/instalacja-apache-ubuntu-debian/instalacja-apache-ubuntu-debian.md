@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/instalacja-apache-ubuntu-debian/og-image.png
 title: 'Jak zainstalować Apache na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik krok po kroku do instalacji serwera WWW Apache na Ubuntu i Debian. Naucz się konfigurować UFW, zarządzać usługą apache2 i tworzyć Wirtualne Hosty.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: install-apache-ubuntu-debian
 category: Poradniki
 tags:

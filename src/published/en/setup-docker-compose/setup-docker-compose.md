@@ -3,6 +3,7 @@ image: /assets/images/blog/en/setup-docker-compose/og-image.png
 title: 'How to Set Up Docker Compose: A Complete Guide to Managing Multi-Container Apps'
 description: A complete step-by-step guide to setting up and using Docker Compose V2 on Ubuntu, Debian, AlmaLinux, Rocky Linux, CentOS, and Fedora.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-docker-compose
 category: Tutorials
 tags:
