@@ -14,6 +14,17 @@ tags:
   - ubuntu
   - debian
   - server setup
+faq:
+  - question: "Why does Java version matter for a Minecraft server?"
+    answer: "Minecraft's game engine has evolved over time, and different versions require different Java environments to run. Using the wrong version of Java (e.g. Java 8 for Minecraft 1.21) is the most common cause of startup crashes."
+  - question: "What is the difference between openjdk and openjdk-headless?"
+    answer: "The <code>-headless</code> package excludes graphical libraries (GUI), which are not needed on a terminal-only server. Installing the headless version saves disk space and RAM."
+  - question: "Can I install multiple versions of Java on the same server?"
+    answer: "Yes, you can install multiple Java versions side-by-side. You can switch the default system version using <code>sudo update-alternatives --config java</code>, or specify the exact path to the Java binary in your server startup script."
+  - question: "Is this guide compatible with Bedrock Edition?"
+    answer: "No. This guide is specifically for Minecraft Java Edition. Bedrock Edition (consoles, mobile, and Windows 10/11) uses a completely different C++ server engine that does not require Java."
+  - question: "How do I upgrade from Vanilla to Paper or Spigot?"
+    answer: "Upgrading is simple: replace the Vanilla <code>server.jar</code> file with the <code>paper.jar</code> or <code>spigot.jar</code> file, and update your startup script to point to the new file. Your world files will automatically be converted."
 status: published
 author:
   name: VoxiHost Team

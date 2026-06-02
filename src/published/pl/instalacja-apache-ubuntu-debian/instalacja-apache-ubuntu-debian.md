@@ -40,6 +40,17 @@ howto:
     - name: Skonfiguruj Wirtualny Host
       text: Utwórz niestandardowy plik konfiguracyjny w /etc/apache2/sites-available/ aby hostować swoje unikalne domeny.
       url: krok-5-skonfiguruj-wirtualne-hosty
+faq:
+  - question: "Co to jest Apache2 i czym różni się od Nginx?"
+    answer: "Apache to procesowy serwer WWW, który tworzy nowy wątek/proces dla każdego połączenia, co pozwala na dużą elastyczność konfiguracji (np. za pomocą plików <code>.htaccess</code>). Nginx jest serwerem sterowanym zdarzeniami, lepiej radzącym sobie z obsługą ruchu o wysokim natężeniu."
+  - question: "Do czego służy polecenie a2ensite?"
+    answer: "Polecenie <code>a2ensite</code> (Apache2 Enable Site) tworzy dowiązanie symboliczne w folderze <code>/etc/apache2/sites-enabled/</code> do oryginalnego pliku konfiguracji w <code>/etc/apache2/sites-available/</code>, aktywując dany wirtualny host."
+  - question: "Jak sprawdzić poprawność plików konfiguracyjnych Apache?"
+    answer: "Składnię wszystkich aktywnych konfiguracji Apache sprawdzisz za pomocą komendy <code>sudo apache2ctl configtest</code>. Wynik 'Syntax OK' oznacza, że konfiguracja jest poprawna i można bezpiecznie przeładować serwer."
+  - question: "Co to jest wirtualny host (Virtual Host) w Apache?"
+    answer: "Wirtualny host to dyrektywa konfiguracyjna, która pozwala na uruchamianie wielu osobnych stron internetowych (z różnymi domenami) w ramach jednego serwera fizycznego lub instancji VPS."
+  - question: "Jak włączyć moduł mod_rewrite w Apache?"
+    answer: "Moduł przepisywania linków (niezbędny m.in. dla WordPressa) włącza się poleceniem <code>sudo a2enmod rewrite</code>, po którym należy zrestartować usługę za pomocą <code>sudo systemctl restart apache2</code>."
 status: published
 locale: pl
 author:

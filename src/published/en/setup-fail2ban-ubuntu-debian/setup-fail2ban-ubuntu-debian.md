@@ -38,6 +38,17 @@ howto:
     - name: Verify the SSH jail is active
       text: Run sudo fail2ban-client status sshd to confirm the jail is watching SSH and counting failed attempts.
       url: verifying-fail2ban-status
+faq:
+  - question: "What is fail2ban and how does it protect my server?"
+    answer: "Fail2ban is an intrusion prevention software framework that monitors system log files (like authentication logs) for brute-force patterns. When it detects multiple failed login attempts from the same IP address, it updates firewall rules to temporarily ban that IP."
+  - question: "Why should I configure jail.local instead of editing jail.conf?"
+    answer: "The <code>jail.conf</code> file is the default configuration file and will be overwritten during package updates. Creating a <code>jail.local</code> file overrides default settings and preserves your custom configurations across software updates."
+  - question: "How do I check which IP addresses are currently banned by fail2ban?"
+    answer: "You can check the status and list of banned IPs for a specific jail (like SSH) by running the command <code>sudo fail2ban-client status sshd</code>."
+  - question: "How can I manually unban a specific IP address?"
+    answer: "You can unban a blocked IP address by running the fail2ban-client command with the unban action: <code>sudo fail2ban-client set sshd unbanip YOUR_IP_ADDRESS</code>."
+  - question: "How does fail2ban integrate with UFW on Ubuntu/Debian?"
+    answer: "On Ubuntu/Debian, fail2ban automatically detects UFW if configured. It dynamically adds temporary deny rules using the UFW interface to block offending IP addresses at the packet level."
 status: published
 locale: en
 author:

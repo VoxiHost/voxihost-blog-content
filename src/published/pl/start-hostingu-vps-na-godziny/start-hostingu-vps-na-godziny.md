@@ -13,6 +13,17 @@ tags:
   - elastyczność
   - premiera
   - hourly billing
+faq:
+  - question: "Jak naliczane są opłaty w hostingu godzinowym VPS?"
+    answer: "Nasz system rozliczeniowy nalicza opłaty za każdą rozpoczętą godzinę działania serwera. Każda konfiguracja posiada cenę bazową (od €0.01/h), a dodatkowe zasoby (CPU, RAM, dysk) doliczają stałą stawkę godzinową."
+  - question: "Czy hosting godzinowy jest droższy od planów miesięcznych?"
+    answer: "W przeliczeniu na cały miesiąc ciągłego działania – tak. Stawki godzinowe są średnio o 1.46x wyższe dla planów Budget i 1.77x wyższe dla planów Premium. Dla projektów działających 24/7 pakiety miesięczne są najbardziej opłacalne."
+  - question: "Jak mogę przestać płacić za serwer godzinowy?"
+    answer: "Aby natychmiast zatrzymać naliczanie opłat, należy użyć przycisku <b>Destroy</b> (Usuń) w panelu klienta. Usunie to instancję VPS i zwolni zasoby, całkowicie wstrzymując dalsze rozliczanie."
+  - question: "Czy mogę zmienić rozliczenie godzinowe na plan miesięczny?"
+    answer: "Tak. Panel klienta monitoruje konfigurację serwera i podpowiada optymalny moment na konwersję aktywnego serwera godzinowego na stały abonament miesięczny."
+  - question: "Czy kod rabatowy DEPLOYMENT działa przy rozliczeniu godzinowym?"
+    answer: "Nie. Kod promocyjny <code>DEPLOYMENT</code> dający 45% zniżki obowiązuje wyłącznie przy wyborze miesięcznego cyklu rozliczeniowego."
 status: published
 author:
   name: VoxiHost Team

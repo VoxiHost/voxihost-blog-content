@@ -10,6 +10,17 @@ tags:
   - nginx
   - apache
   - performance
+faq:
+  - question: "Czy mogę używać Nginx i Apache razem?"
+    answer: "Tak. Bardzo popularnym wzorcem projektowym jest uruchomienie Nginx jako tzw. reverse proxy przed Apache. Nginx odbiera cały ruch z internetu, błyskawicznie serwuje pliki statyczne, a zapytania dynamiczne (np. PHP) przekazuje do Apache w tle. Łączy to zalety wydajnościowe Nginx oraz wygodę obsługi plików <code>.htaccess</code> przez Apache."
+  - question: "Czy Nginx obsługuje pliki .htaccess?"
+    answer: "Nie. Nginx nie wspiera konfiguracji wewnątrz katalogów. Wszystkie reguły przekierowań i konfiguracje serwera muszą być wpisane bezpośrednio do centralnych plików konfiguracyjnych serwera (np. w <code>/etc/nginx/sites-available/</code>). Przekłada się to na lepszą wydajność, bo serwer nie musi przeszukiwać dysku przy każdym zapytaniu."
+  - question: "Który serwer jest lepszy dla WordPressa?"
+    answer: "Dla dużych witryn WordPress zaleca się stosowanie Nginx ze względu na mniejsze zużycie pamięci RAM oraz szybkość przy połączeniu z <code>PHP-FPM</code> i cache FastCGI. Apache jest jednak prostszy dla początkujących, ponieważ wiele wtyczek automatycznie zapisuje reguły przekierowań bezpośrednio do pliku <code>.htaccess</code>."
+  - question: "Który serwer zużywa mniej procesora (CPU)?"
+    answer: "Pod wysokim obciążeniem Nginx zużywa znacznie mniej procesora niż Apache. Ze względu na asynchroniczną pętlę zdarzeń przypisaną do rdzenia procesora, Nginx nie generuje narzutu związanego z ciągłym tworzeniem, przełączaniem oraz usuwaniem procesów i wątków, co jest główną bolączką architektury Apache."
+  - question: "Jak sprawdzić, który serwer WWW obsługuje moją stronę?"
+    answer: "Możesz wysłać zapytanie testowe za pomocą narzędzia curl w terminalu: <code>curl -I http://localhost</code>. W odpowiedzi zwrócony zostanie nagłówek <code>Server:</code>, który wskaże odpowiednio <code>nginx</code>, <code>Apache</code> lub inną nazwę oprogramowania."
 status: published
 locale: pl
 author:
@@ -127,25 +138,4 @@ Choć to podejście wymaga dostępu z uprawnieniami roota, czyni Nginx znacznie 
 
 Dla nowoczesnych projektów, optymalnym rozwiązaniem jest użycie Nginx jako reverse proxy przed aplikacją backendową. Taka konfiguracja uruchomiona na serwerze [Premium VPS](/pl/premium-vps/) i zabezpieczona przez <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Shield DDoS](/pl/shield/) stanowi standard rynkowy gwarantujący najwyższą szybkość i stabilność.
 
----
 
-## Najczęściej zadawane pytania (FAQ)
-
-### Czy mogę używać Nginx i Apache razem?
-Tak. Bardzo popularnym wzorcem projektowym jest uruchomienie Nginx jako tzw. reverse proxy przed Apache. Nginx odbiera cały ruch z internetu, błyskawicznie serwuje pliki statyczne, a zapytania dynamiczne (np. PHP) przekazuje do Apache w tle. Łączy to zalety wydajnościowe Nginx oraz wygodę obsługi plików `.htaccess` przez Apache.
-
-### Czy Nginx obsługuje pliki `.htaccess`?
-Nie. Nginx nie wspiera konfiguracji wewnątrz katalogów. Wszystkie reguły przekierowań i konfiguracje serwera muszą być wpisane bezpośrednio do centralnych plików konfiguracyjnych serwera (np. w `/etc/nginx/sites-available/`). Przekłada się to na lepszą wydajność, bo serwer nie musi przeszukiwać dysku przy każdym zapytaniu.
-
-### Który serwer jest lepszy dla WordPressa?
-Dla dużych witryn WordPress zaleca się stosowanie Nginx ze względu na mniejsze zużycie pamięci RAM oraz szybkość przy połączeniu z `PHP-FPM` i cache FastCGI. Apache jest jednak prostszy dla początkujących, ponieważ wiele wtyczek automatycznie zapisuje reguły przekierowań bezpośrednio do pliku `.htaccess`.
-
-### Który serwer zużywa mniej procesora (CPU)?
-Pod wysokim obciążeniem Nginx zużywa znacznie mniej procesora niż Apache. Ze względu na asynchroniczną pętlę zdarzeń przypisaną do rdzenia procesora, Nginx nie generuje narzutu związanego z ciągłym tworzeniem, przełączaniem oraz usuwaniem procesów i wątków, co jest główną bolączką architektury Apache.
-
-### Jak sprawdzić, który serwer WWW obsługuje moją stronę?
-Możesz wysłać zapytanie testowe za pomocą narzędzia curl w terminalu:
-```bash
-curl -I http://localhost
-```
-W odpowiedzi zwrócony zostanie nagłówek `Server:`, który wskaże odpowiednio `nginx`, `Apache` lub inną nazwę oprogramowania.

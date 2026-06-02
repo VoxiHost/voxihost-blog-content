@@ -39,6 +39,17 @@ howto:
     - name: Włącz automatyczne aktualizacje bezpieczeństwa
       text: Zainstaluj i skonfiguruj dnf-automatic aby automatycznie stosować poprawki bezpieczeństwa.
       url: wlaczanie-automatycznych-aktualizacji-bezpieczenstwa
+faq:
+  - question: "Jaka jest różnica między dnf update a dnf upgrade?"
+    answer: "W nowoczesnym menedżerze pakietów DNF (używanym w systemach AlmaLinux, Rocky Linux i CentOS Stream) polecenia <code>dnf update</code> i <code>dnf upgrade</code> są aliasami i wykonują dokładnie to samo działanie."
+  - question: "Jak zainstalować wyłącznie aktualizacje bezpieczeństwa?"
+    answer: "Możesz ograniczyć proces aktualizacji tylko do pakietów zawierających poprawki bezpieczeństwa za pomocą polecenia <code>sudo dnf upgrade --security</code>."
+  - question: "Czy bezpieczne jest aktualizowanie serwera produkcyjnego?"
+    answer: "Tak, choć zaleca się wykonywanie aktualizacji w godzinach niskiego ruchu, wcześniejsze wykonanie kopii zapasowej (snapshotu) oraz sprawdzenie narzędziem <code>needs-restarting -r</code>, czy po aktualizacji wymagany jest restart."
+  - question: "Jak sprawdzić historię aktualizacji DNF lub cofnąć zmianę?"
+    answer: "Historię wszystkich operacji DNF sprawdzisz wpisując <code>sudo dnf history</code>. Możesz cofnąć wybraną transakcję za pomocą polecenia <code>sudo dnf history rollback ID</code>, gdzie ID to numer transakcji."
+  - question: "Jak skonfigurować automatyczne codzienne aktualizacje bezpieczeństwa?"
+    answer: "W tym celu należy zainstalować pakiet dnf-automatic komendą <code>sudo dnf install dnf-automatic -y</code>, a następnie ustawić <code>upgrade_type = security</code> w pliku konfiguracyjnym <code>/etc/dnf/automatic.conf</code>."
 status: published
 locale: pl
 author:

@@ -44,6 +44,17 @@ howto:
     - name: Professional Startup (Systemd)
       text: Set up a systemd service to ensure your server starts automatically on boot.
       url: step-7-configure-systemd-service
+faq:
+  - question: "Why is Java 17 required for Minecraft 1.19?"
+    answer: "Minecraft 1.18 through 1.20.4 require Java 17 to execute correctly. Attempting to run a 1.19 server on older versions (like Java 8) or newer versions (without adjustments) can result in JVM execution errors."
+  - question: "What is the purpose of creating a dedicated 'minecraft' user?"
+    answer: "Running the server under a restricted, non-root user account prevents potential security vulnerabilities in Minecraft (or its plugins) from allowing attackers to gain full control of your operating system."
+  - question: "How do I allocate more RAM to the server?"
+    answer: "You can adjust the allocation by modifying the <code>-Xmx</code> (maximum) and <code>-Xms</code> (starting) memory flags in your launch script. For example, <code>-Xmx4G</code> allocates 4 gigabytes of RAM."
+  - question: "How do I make the Minecraft server run automatically when the system boots?"
+    answer: "You can create a systemd service file (e.g. <code>/etc/systemd/system/minecraft.service</code>) to manage the server daemon, then enable it using <code>sudo systemctl enable minecraft</code>."
+  - question: "How do I accept the Minecraft EULA?"
+    answer: "When you first launch the server, it will generate a file named <code>eula.txt</code> and exit. Open this file and change the line <code>eula=false</code> to <code>eula=true</code>, then save the file."
 status: published
 author:
   name: VoxiHost Team

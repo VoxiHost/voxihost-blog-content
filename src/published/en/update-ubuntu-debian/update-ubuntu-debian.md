@@ -42,6 +42,17 @@ howto:
     - name: Enable automatic security updates
       text: Install and configure unattended-upgrades to automatically apply security patches.
       url: automating-patches-with-unattended-upgrades
+faq:
+  - question: "What is the difference between apt update and apt upgrade?"
+    answer: "The <code>apt update</code> command refreshes the local package list and metadata from repositories (without installing anything), whereas <code>apt upgrade</code> downloads and installs the actual package updates."
+  - question: "How do I fix packages kept back on Ubuntu?"
+    answer: "Packages are held back when an upgrade requires installing new dependencies or removing old ones. You can safely force the installation of these packages by running <code>sudo apt full-upgrade</code>."
+  - question: "Is it safe to run apt upgrade on a production server?"
+    answer: "Yes, standard package upgrades are safe, but you should always take a VM snapshot first, run updates during low-traffic hours, and check if a reboot is needed afterwards using the <code>/var/run/reboot-required</code> file."
+  - question: "What does apt autoremove do?"
+    answer: "The <code>apt autoremove</code> command removes packages (mostly libraries or old kernel versions) that were automatically installed to satisfy dependencies for other packages but are no longer needed by any installed software."
+  - question: "How do I automate security updates on Ubuntu and Debian?"
+    answer: "You can enable automatic background updates by installing the <code>unattended-upgrades</code> package and configuring the package manager behavior in <code>/etc/apt/apt.conf.d/50unattended-upgrades</code>."
 status: published
 locale: en
 author:

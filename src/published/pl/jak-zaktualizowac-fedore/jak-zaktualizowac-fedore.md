@@ -38,6 +38,17 @@ howto:
     - name: Włącz automatyczne aktualizacje bezpieczeństwa
       text: Zainstaluj i skonfiguruj dnf-automatic aby automatycznie stosować poprawki bezpieczeństwa.
       url: automatyzacja-poprawek-z-dnf-automatic
+faq:
+  - question: "Co to jest DNF5 i czym różni się od starszego DNF?"
+    answer: "DNF5 to nowa wersja menedżera pakietów napisana w C++, która zastąpiła dotychczasowy DNF oparty na Pythonie. Jest znacznie szybsza, zużywa mniej pamięci RAM i ujednolica działanie poleceń."
+  - question: "Czy polecenie dnf update jest nadal obsługiwane w systemie Fedora?"
+    answer: "Tak, polecenia <code>dnf update</code> oraz <code>dnf upgrade</code> są wewnętrznie przekierowywane do <code>dnf5</code>, więc działają jako bezpośrednie skróty do aktualizacji systemu."
+  - question: "Jak zaktualizować wyłącznie pakiety powiązane z bezpieczeństwem?"
+    answer: "Możesz ograniczyć aktualizację tylko do poprawek bezpieczeństwa uruchamiając komendę <code>sudo dnf5 upgrade --security</code>."
+  - question: "Do czego służy polecenie needs-restarting na serwerze?"
+    answer: "Polecenie <code>needs-restarting -r</code> sprawdza, czy po wykonaniu aktualizacji bibliotek systemowych lub jądra (kernel) wymagany jest restart serwera, co zapobiega działaniu starego kodu."
+  - question: "Czy mogę zautomatyzować codzienne aktualizacje w Fedorze?"
+    answer: "Tak. W tym celu zainstaluj narzędzie za pomocą <code>sudo dnf5 install dnf-automatic -y</code> i skonfiguruj plik <code>/etc/dnf/automatic.conf</code>, aby automatycznie pobierał i wdrażał poprawki."
 status: published
 locale: pl
 author:

@@ -28,22 +28,33 @@ howto:
   steps:
     - name: Wygeneruj parę kluczy SSH
       text: Uruchom ssh-keygen -t ed25519 na swojej lokalnej maszynie aby wygenerować nowoczesną parę kluczy SSH.
-      url: skonfiguruj-uwierzytelnianie-oparte-na-kluczach-ssh
+      url: wygeneruj-pare-kluczy-ssh
     - name: Skopiuj swój klucz publiczny na serwer
       text: Uruchom ssh-copy-id user@your-server-ip aby zainstalować swój klucz publiczny na serwerze.
-      url: wylacz-logowanie-root
+      url: skopiuj-swoj-klucz-publiczny-na-serwer
     - name: Wyłącz logowanie root
       text: Ustaw PermitRootLogin no w /etc/ssh/sshd_config aby zapobiec bezpośredniemu dostępowi root.
-      url: wylacz-uwierzytelnianie-haslem
+      url: wylacz-logowanie-root
     - name: Wyłącz uwierzytelnianie hasłem
       text: Ustaw PasswordAuthentication no w /etc/ssh/sshd_config aby wymagać tylko logowania opartego na kluczach.
-      url: zaostrz-kilka-dodatkowych-ustawien
+      url: wylacz-uwierzytelnianie-haslem
     - name: Zmień domyślny port SSH
       text: Ustaw Port 2222 w sshd_config, zaktualizuj etykiety portów SELinux i skonfiguruj firewalld odpowiednio.
-      url: zmien-domyslny-port
+      url: zmien-domyslny-port-ssh
     - name: Zrestartuj SSH i zweryfikuj
       text: Uruchom sudo systemctl restart sshd i przetestuj swoje połączenie przed zamknięciem obecnej sesji.
       url: zrestartuj-sshd-i-zweryfikuj
+faq:
+  - question: "Dlaczego muszę zaktualizować SELinux podczas zmiany portu SSH?"
+    answer: "Systemy oparte na RHEL używają SELinux do wymuszania polityk bezpieczeństwa. Domyślnie SELinux zezwala SSH na działanie tylko na porcie 22. Jeśli zmienisz port na np. 2222, musisz uruchomić <code>semanage port -a -t ssh_port_t -p tcp 2222</code>, w przeciwnym razie usługa SSH nie uruchomi się."
+  - question: "Jaka jest różnica między kluczami Ed25519 a RSA?"
+    answer: "Ed25519 to nowoczesny algorytm sygnatur oparty na krzywych eliptycznych, który jest szybszy i bezpieczniejszy niż RSA. Klucze Ed25519 są również znacznie krótsze (68 znaków) w porównaniu do bezpiecznych kluczy RSA (zazwyczaj 4096 bitów)."
+  - question: "Co się stanie, jeśli zgubię klucz prywatny po wyłączeniu logowania hasłem?"
+    answer: "Jeśli zgubisz klucz prywatny, utracisz dostęp do serwera. W takim wypadku musisz skorzystać z konsoli VNC lub IPMI w panelu dostawcy hostingu, aby tymczasowo włączyć logowanie hasłem lub wgrać nowy klucz publiczny do pliku <code>~/.ssh/authorized_keys</code>."
+  - question: "Dlaczego należy zostawić aktywną sesję SSH podczas testowania zmian?"
+    answer: "Aktywna sesja to Twoje zabezpieczenie. Jeśli popełnisz błąd w konfiguracji uniemożliwiający logowanie, możesz go poprawić i zrestartować usługę z poziomu wciąż otwartej konsoli. Jeśli ją zamkniesz, zostaniesz trwale zablokowany."
+  - question: "Czy zmiana domyślnego portu SSH chroni przed atakami brute-force?"
+    answer: "Zmiana portu z 22 na niestandardowy nie czyni serwera w 100% odpornym, ale eliminuje 99% zautomatyzowanych skanerów i botów brute-force, co drastycznie zmniejsza liczbę logów oraz zużycie zasobów procesora."
 status: published
 locale: pl
 author:
@@ -59,7 +70,7 @@ Zablokowanie SSH na AlmaLinux, CentOS Stream, Rocky Linux i Fedorze zajmuje te s
 
 > **Wymaganie:** Ten przewodnik wyłącza logowanie root. **Musisz** mieć niestandardowego użytkownika z uprawnieniami `sudo` gotowego **przed** uruchomieniem jakichkolwiek z tych kroków. Jeśli jeszcze tego nie zrobiłeś, postępuj zgodnie z naszym przewodnikiem [Jak utworzyć użytkownika sudo na AlmaLinux, CentOS, Rocky Linux i Fedora](/pl/blog/jak-dodac-uzytkownika-sudo-centos/), potem wróć tutaj.
 
-## Skonfiguruj uwierzytelnianie oparte na kluczach SSH
+## Wygeneruj parę kluczy SSH
 
 Rób klucze przed czymkolwiek innym. Uwierzytelnianie hasłem to główny wektor ataków siłowych SSH, a przełączenie na klucze eliminuje go całkowicie.
 
@@ -72,6 +83,8 @@ ssh-keygen -t ed25519 -C "your-server-label"
 ```
 
 Ustaw hasło gdy zostaniesz o nie poproszony. Szyfruje klucz prywatny na dysku, jeśli ktoś dostanie się do twojej lokalnej maszyny, wciąż nie będzie mógł użyć klucza bez hasła.
+
+## Skopiuj swój klucz publiczny na serwer
 
 Skopiuj klucz publiczny na serwer:
 
@@ -152,7 +165,7 @@ AllowUsers youruser
 
 Żaden użytkownik systemowy niewymieniony nie będzie mógł uwierzytelnić zdalnie, nawet z ważnymi danymi. Przydatne do blokowania kont aplikacyjnych.
 
-## Zmień domyślny port
+## Zmień domyślny port SSH
 
 To jest miejsce gdzie systemy oparte na RHEL różnią się od systemów opartych na Debian. SELinux kontroluje które porty usługi mogą nasłuchiwać. Jeśli zmienisz port SSH bez aktualizacji SELinux, usługa nie uda się zrestartować.
 

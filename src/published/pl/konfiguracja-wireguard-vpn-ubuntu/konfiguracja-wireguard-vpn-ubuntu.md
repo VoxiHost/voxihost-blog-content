@@ -39,6 +39,17 @@ howto:
     - name: Połącz swoje urządzenia
       text: Pobierz aplikację WireGuard na telefon lub PC i zeskanuj kod QR, aby połączyć się bezpiecznie.
       url: krok-5-polacz-swoje-urzadzenia
+faq:
+  - question: "Dlaczego WireGuard jest lepszy od OpenVPN?"
+    answer: "WireGuard to nowoczesny protokół VPN, który jest znacznie szybszy, zużywa mniej danych, ma prostszy kod źródłowy oraz w znacznie mniejszym stopniu obciąża baterię urządzeń mobilnych w porównaniu do OpenVPN."
+  - question: "Czy skrypt instalacyjny WireGuard autorstwa Angristana jest bezpieczny?"
+    answer: "Tak. Skrypt instalacyjny Angristana to otwartoźródłowe, powszechnie sprawdzane przez społeczność narzędzie. Automatyzuje ono instalację pakietów, konfigurację routingu i reguł zapory sieciowej, co zapobiega błędom ręcznej konfiguracji."
+  - question: "Jak dodać nowego użytkownika (klienta) po wstępnej instalacji?"
+    answer: "Nie musisz instalować VPN od nowa. Uruchom ponownie skrypt poleceniem <code>sudo ./wireguard-install.sh</code>. Skrypt wykryje instalację i wyświetli menu zarządzania, w którym wybierając opcję 1 wygenerujesz nowego klienta."
+  - question: "Jak całkowicie odinstalować WireGuard z serwera?"
+    answer: "Aby usunąć WireGuard wraz ze wszystkimi pakietami i konfiguracją, uruchom ponownie skrypt instalacyjny (<code>sudo ./wireguard-install.sh</code>) i wybierz opcję odinstalowania (uninstall)."
+  - question: "Czy mogę połączyć kilka urządzeń przy użyciu jednego pliku konfiguracyjnego?"
+    answer: "Nie. WireGuard opiera się na relacji peer-to-peer 1:1. Jeśli połączysz dwa urządzenia przy użyciu tego samego pliku konfiguracyjnego, połączenia będą się nawzajem rozłączać. Każde urządzenie musi mieć wygenerowany osobny profil."
 status: published
 author:
   name: VoxiHost Team

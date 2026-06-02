@@ -13,6 +13,17 @@ tags:
   - flexibility
   - launch
   - hourly billing
+faq:
+  - question: "How does VoxiHost calculate the hourly VPS billing?"
+    answer: "Our billing system calculates the usage on an hourly basis. Each VPS instance has a base configuration price (starting at €0.01/hr), and any upgraded resources (CPU, RAM, or Disk) add a dynamic surcharge per hour."
+  - question: "Is Hourly VPS hosting more expensive than Monthly plans?"
+    answer: "On a per-hour basis, yes. Hourly rates are approximately 1.46x higher for Budget plans and 1.77x higher for Premium plans compared to our fixed Monthly packages. For long-term 24/7 projects, Monthly billing remains the most economical choice."
+  - question: "How do I stop billing for an Hourly VPS?"
+    answer: "To stop billing immediately, you must click the <b>Destroy</b> button in your dashboard. This deletes the VPS instance and releases all reserved resources, halting all future hourly charges."
+  - question: "Can I switch an existing Hourly VPS to a Monthly plan?"
+    answer: "Yes. Our dashboard monitors your usage and will automatically suggest when it is more cost-effective to convert your active Hourly VPS into a standard Monthly package."
+  - question: "Does the DEPLOYMENT promo code apply to hourly billing?"
+    answer: "No. The 45% discount promo code <code>DEPLOYMENT</code> applies exclusively to Monthly billing cycles and is valid until April 18, 2026."
 status: published
 author:
   name: VoxiHost Team

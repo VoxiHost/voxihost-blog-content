@@ -38,6 +38,17 @@ howto:
     - name: Zweryfikuj że więzienie SSH jest aktywne
       text: Uruchom sudo fail2ban-client status sshd aby potwierdzić że więzienie monitoruje SSH i liczy nieudane próby.
       url: weryfikacja-dzialania-i-aktywnego-wiezienia
+faq:
+  - question: "Co to jest fail2ban i jak chroni mój serwer?"
+    answer: "Fail2ban to oprogramowanie zapobiegające włamaniom, które monitoruje logi systemowe (np. logi uwierzytelniania) pod kątem powtarzających się błędnych prób logowania. Po wykryciu ataku typu brute-force, program automatycznie dodaje tymczasową regułę do zapory sieciowej, blokując złośliwy adres IP."
+  - question: "Dlaczego powinno się edytować plik jail.local zamiast jail.conf?"
+    answer: "Plik <code>jail.conf</code> jest plikiem domyślnym dostarczanym przez system pakietów i zostanie nadpisany podczas aktualizacji fail2ban. Zapisanie własnych reguł w pliku <code>jail.local</code> gwarantuje, że nie zostaną one utracone podczas aktualizacji."
+  - question: "Jak sprawdzić listę adresów IP aktualnie zablokowanych przez fail2ban?"
+    answer: "Listę zablokowanych adresów IP dla konkretnego filtra (np. dla SSH) sprawdzisz w terminalu wpisując polecenie: <code>sudo fail2ban-client status sshd</code>."
+  - question: "Jak ręcznie odblokować (odbanować) adres IP?"
+    answer: "Możesz ręcznie usunąć blokadę dla danego adresu IP za pomocą narzędzia klienckiego fail2ban: <code>sudo fail2ban-client set sshd unbanip TWÓJ_ADRES_IP</code>."
+  - question: "Jak fail2ban integruje się z zaporą UFW na systemach Ubuntu/Debian?"
+    answer: "Na systemach Ubuntu/Debian fail2ban automatycznie wykrywa obecność zapory UFW. W razie wykrycia naruszeń reguł, fail2ban dynamicznie dodaje tymczasowe reguły blokujące (deny) bezpośrednio do tabel UFW."
 status: published
 locale: pl
 author:

@@ -41,6 +41,17 @@ howto:
     - name: Zweryfikuj instalację
       text: Uruchom sudo docker run hello-world aby potwierdzić że wszystko działa.
       url: krok-5-zweryfikuj-instalacje
+faq:
+  - question: "Dlaczego należy usunąć stare wersje Dockera przed nową instalacją?"
+    answer: "Starsze pakiety (np. <code>docker</code> lub <code>docker-engine</code>) mogą wchodzić w konflikty z nowszymi oficjalnymi wersjami <code>docker-ce</code> (Community Edition). Usunięcie ich zapobiega problemom z zależnościami w systemie."
+  - question: "Czym jest docker-ce-cli i dlaczego jest instalowany osobno?"
+    answer: "Pakiet <code>docker-ce-cli</code> to interfejs wiersza poleceń służący do komunikacji z demonem Dockera. Rozdzielenie klienta CLI od samego silnika pozwala na zdalne zarządzanie innymi instancjami Dockera."
+  - question: "Jak uruchamiać kontenery Docker bez używania uprawnień sudo?"
+    answer: "Aby uruchamiać polecenia Dockera jako zwykły użytkownik, dodaj swoje konto do grupy docker poleceniem: <code>sudo usermod -aG docker $USER</code>. Zmiany wejdą w życie po ponownym zalogowaniu."
+  - question: "Jak sprawdzić, czy demon Dockera działa poprawnie?"
+    answer: "Status usługi systemowej sprawdzisz za pomocą standardowego polecenia: <code>sudo systemctl status docker</code>."
+  - question: "Czym różni się Docker od narzędzia podman na systemach RHEL?"
+    answer: "Podman to bezdemonowy (daemonless) silnik kontenerów stworzony przez Red Hat jako alternatywa dla Dockera. Chociaż podman jest domyślny w RHEL, Docker wciąż jest szeroko wybierany z uwagi na bogaty ekosystem i natywne wsparcie dla Docker Compose."
 status: published
 locale: pl
 author:

@@ -36,6 +36,17 @@ howto:
     - name: Configure your Web Server
       text: Point Nginx or Apache to the specific PHP-FPM socket you want to use for your website.
       url: step-4-tell-your-web-server-which-version-to-use
+faq:
+  - question: "Why should I use the Ondřej Surý PPA repository?"
+    answer: "The default Ubuntu and Debian repositories only carry a single static PHP version that is frozen at OS release. The Ondřej Surý PPA is the official industry standard repository that allows installing and running multiple PHP versions concurrently."
+  - question: "Can different PHP versions run at the same time?"
+    answer: "Yes. Each PHP version runs as its own separate <code>php-fpm</code> background service (e.g. <code>php8.1-fpm</code> and <code>php8.3-fpm</code>). They listen on unique Unix sockets, allowing them to run concurrently without conflict."
+  - question: "How do I install a PHP extension for a specific PHP version?"
+    answer: "You must prefix the extension package name with the PHP version number. For example, to install the curl extension for PHP 8.3, run <code>sudo apt install php8.3-curl</code>."
+  - question: "How do I switch the PHP version used by Nginx?"
+    answer: "Nginx connects to PHP via PHP-FPM sockets. To change the version, edit your site's Nginx configuration block and change the <code>fastcgi_pass</code> socket path (e.g., from <code>/var/run/php/php8.1-fpm.sock</code> to <code>/var/run/php/php8.3-fpm.sock</code>) and reload Nginx."
+  - question: "Why are my php.ini changes not taking effect?"
+    answer: "After editing <code>/etc/php/VERSION/fpm/php.ini</code>, you must restart the specific PHP-FPM service (e.g., <code>sudo systemctl restart php8.3-fpm</code>). Also, ensure you are editing the FPM <code>php.ini</code> file, not the CLI one."
 status: published
 locale: en
 author:

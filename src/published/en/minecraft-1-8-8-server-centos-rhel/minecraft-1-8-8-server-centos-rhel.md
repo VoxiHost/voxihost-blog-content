@@ -45,6 +45,17 @@ howto:
     - name: Professional Startup (Systemd)
       text: Set up a systemd service to ensure your server starts automatically on boot.
       url: step-7-configure-systemd-service
+faq:
+  - question: "Why is Java 8 required for Minecraft 1.8.8?"
+    answer: "Legacy Minecraft versions (1.7.10 through 1.16.5) were built and compiled for Java 8. Running them on newer Java runtimes can lead to severe compatibility issues and startup failures."
+  - question: "Is Minecraft 1.8.8 safe from the Log4j vulnerability?"
+    answer: "No, Minecraft 1.8.8 is vulnerable to Log4Shell by default. You should apply specific startup arguments (like <code>-Dlog4j.configurationFile=...</code>) or use a patched server software like PaperMC to mitigate this risk."
+  - question: "What is the purpose of creating a dedicated 'minecraft' user?"
+    answer: "Running the server under a restricted, non-root user account prevents potential security vulnerabilities in Minecraft (or its plugins) from allowing attackers to gain full control of your operating system."
+  - question: "How do I allocate more RAM to the server?"
+    answer: "You can adjust the allocation by modifying the <code>-Xmx</code> (maximum) and <code>-Xms</code> (starting) memory flags in your launch script. For example, <code>-Xmx4G</code> allocates 4 gigabytes of RAM."
+  - question: "How do I make the Minecraft server run automatically when the system boots?"
+    answer: "You can create a systemd service file (e.g. <code>/etc/systemd/system/minecraft.service</code>) to manage the server daemon, then enable it using <code>sudo systemctl enable minecraft</code>."
 status: published
 author:
   name: VoxiHost Team

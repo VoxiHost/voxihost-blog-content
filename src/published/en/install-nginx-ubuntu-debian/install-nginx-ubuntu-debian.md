@@ -39,6 +39,17 @@ howto:
     - name: Set up a Server Block (Virtual Host)
       text: Create a custom configuration file in /etc/nginx/sites-available/ to host your own domain.
       url: step-5-set-up-a-server-block-virtual-host
+faq:
+  - question: "What is Nginx and why is it preferred over Apache?"
+    answer: "Nginx uses an asynchronous, event-driven architecture that handles concurrent connections much more efficiently than Apache's process-driven model, making it ideal for high-traffic sites and reverse proxy setups."
+  - question: "What is the difference between sites-available and sites-enabled directories?"
+    answer: "The <code>sites-available</code> directory contains all server block configuration files you have created, while <code>sites-enabled</code> contains symbolic links to the configurations you want Nginx to actually load and activate."
+  - question: "How do I check Nginx configuration files for syntax errors?"
+    answer: "You should always run the test command <code>sudo nginx -t</code> before reloading Nginx to ensure there are no syntax errors that could crash your web server."
+  - question: "How do I redirect all HTTP traffic to HTTPS in Nginx?"
+    answer: "In your HTTP server block (listening on port 80), add a directive: <code>return 301 https://$host$request_uri;</code> to redirect all incoming traffic to the secure HTTPS protocol."
+  - question: "Where are the default Nginx error and access log files located?"
+    answer: "By default, Nginx logs all web traffic and errors in the <code>/var/log/nginx/</code> directory, specifically in the <code>access.log</code> and <code>error.log</code> files."
 status: published
 locale: en
 author:

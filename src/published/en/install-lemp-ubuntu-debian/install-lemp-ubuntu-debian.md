@@ -39,6 +39,17 @@ howto:
     - name: Test your LEMP Stack
       text: Create an info.php file to verify Nginx and PHP are communicating correctly.
       url: step-5-test-php-processing-on-nginx
+faq:
+  - question: "What is a LEMP stack and how does it differ from LAMP?"
+    answer: "A LEMP stack is a web software bundle where the <b>E</b> stands for Nginx (pronounced <i>Engine-X</i>) instead of Apache. Nginx is event-driven and offers better performance under high concurrent loads compared to Apache."
+  - question: "Why is MariaDB preferred over MySQL in LEMP?"
+    answer: "MariaDB is a community-developed, binary drop-in replacement for MySQL. It is fully open-source, offers faster query processing and better performance optimizations out of the box, and is the default database package in Debian and modern Ubuntu versions."
+  - question: "Why does Nginx require PHP-FPM instead of a standard PHP module?"
+    answer: "Unlike Apache, Nginx cannot run PHP code directly within its web server process. It relies on <b>PHP-FPM</b> (FastCGI Process Manager) to handle PHP processing externally. Nginx acts as a reverse proxy, passing PHP requests to the PHP-FPM daemon via a Unix socket."
+  - question: "How do I find which PHP-FPM version and socket path Nginx is using?"
+    answer: "You can find your PHP-FPM version by running <code>php -v</code>. The socket file is typically located in the <code>/var/run/php/</code> directory (e.g., <code>/var/run/php/php8.3-fpm.sock</code>). You must match this socket path exactly in your Nginx server block configuration."
+  - question: "What should I do if Nginx returns a 502 Bad Gateway error when loading PHP files?"
+    answer: "A 502 Bad Gateway error usually means Nginx cannot communicate with PHP-FPM. Check that the PHP-FPM service is running (<code>sudo systemctl status phpX.X-fpm</code>) and verify that the socket path in your Nginx configuration matches the active PHP-FPM configuration."
 status: published
 locale: en
 author:

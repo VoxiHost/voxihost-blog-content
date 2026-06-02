@@ -13,6 +13,17 @@ tags:
   - docker-compose
   - vps
   - ssl
+faq:
+  - question: "Co to jest odwrotne proxy (reverse proxy)?"
+    answer: "Odwrotne proxy to serwer pośredniczący, który przyjmuje ruch z zewnątrz i kieruje go do odpowiednich aplikacji wewnętrznych. Pozwala na uruchomienie wielu aplikacji na jednym serwerze VPS pod różnymi portami, mapując je na ładne domeny."
+  - question: "Dlaczego Nginx Proxy Manager wymaga portu 81?"
+    answer: "Port 81 służy do logowania się do graficznego panelu administracyjnego Nginx Proxy Manager. Porty 80 i 443 są zarezerwowane dla publicznego ruchu HTTP i HTTPS."
+  - question: "Jak zabezpieczyć panel administracyjny Nginx Proxy Manager?"
+    answer: "Przy pierwszym logowaniu NPM zmusi Cię do zmiany domyślnego adresu e-mail (<code>admin@example.com</code>) oraz hasła (<code>changeme</code>). Dodatkowo możesz wystawić sam panel NPM przez proxy i zabezpieczyć go darmowym certyfikatem SSL."
+  - question: "Czy Nginx Proxy Manager automatycznie odnawia certyfikaty SSL?"
+    answer: "Tak. NPM ma zintegrowanego klienta Let's Encrypt, który nie tylko automatycznie generuje darmowe certyfikaty SSL za pomocą kilku kliknięć, ale również dba o ich automatyczne odnawianie przed wygaśnięciem."
+  - question: "Czym różni się Nginx Proxy Manager od czystej instalacji Nginx?"
+    answer: "NPM to przyjazna nakładka graficzna (Web UI) na serwer Nginx. Zamiast ręcznie pisać skomplikowane pliki konfiguracyjne w terminalu, wszystkie ustawienia wyklikujesz w wygodnym panelu przeglądarki."
 status: published
 author:
   name: VoxiHost Team

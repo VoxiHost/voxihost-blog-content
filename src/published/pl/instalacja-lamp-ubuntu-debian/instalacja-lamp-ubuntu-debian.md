@@ -39,6 +39,17 @@ howto:
     - name: Przetestuj przetwarzanie PHP
       text: Utwórz plik info.php w /var/www/html aby zweryfikować swoją konfigurację.
       url: krok-5-przetestuj-stos-lamp
+faq:
+  - question: "Co to jest pakiet LAMP stack?"
+    answer: "LAMP to klasyczny zestaw oprogramowania serwerowego służący do hostowania dynamicznych stron WWW i aplikacji. Skrót pochodzi od pierwszych liter: <b>L</b>inux (system), <b>A</b>pache (serwer WWW), <b>M</b>ySQL (baza danych) oraz <b>P</b>HP (język skryptowy)."
+  - question: "Do czego służy pakiet libapache2-mod-php?"
+    answer: "Pakiet <code>libapache2-mod-php</code> to moduł Apache, który pozwala serwerowi WWW na bezpośrednie uruchamianie i przetwarzanie skryptów PHP wewnątrz własnych procesów, bez potrzeby konfigurowania zewnętrznej usługi PHP-FPM."
+  - question: "Jak zabezpieczyć bazę danych MySQL po instalacji?"
+    answer: "Po zainstalowaniu pakietu należy uruchomić wbudowany skrypt zabezpieczający <code>sudo mysql_secure_installation</code>. Pozwoli on m.in. ustawić hasło roota, usunąć anonimowych użytkowników i wyłączyć zdalne logowanie roota."
+  - question: "Dlaczego powinno się zmienić priorytet indeksowania w dir.conf?"
+    answer: "Domyślnie Apache szuka najpierw pliku <code>index.html</code>. Dla stron opartych o PHP (jak WordPress) priorytetem jest plik <code>index.php</code>. Przesunięcie go na pierwsze miejsce w pliku <code>dir.conf</code> przyspiesza i poprawia ładowanie strony."
+  - question: "Dlaczego należy usunąć plik info.php po zakończeniu testu?"
+    answer: "Plik zawierający funkcję <code>phpinfo()</code> wyświetla szczegółowe parametry środowiska, wersje modułów oraz zmienne ścieżek serwera. Pozostawienie go publicznie dostępnym stanowi poważne zagrożenie bezpieczeństwa."
 status: published
 locale: pl
 author:

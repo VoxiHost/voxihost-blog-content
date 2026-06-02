@@ -39,6 +39,17 @@ howto:
     - name: Verify installation
       text: Run sudo docker run hello-world to verify the engine is successfully running containers.
       url: step-5-verify-the-installation
+faq:
+  - question: "Why is the official Docker repository preferred over default system repositories?"
+    answer: "The default Ubuntu and Debian repositories contain outdated versions of Docker. Using the official Docker repository ensures you receive the latest stable version of Docker Engine, security updates, and Docker Compose."
+  - question: "What is the purpose of the GPG key in Docker installation?"
+    answer: "The GPG key allows the system's package manager (<code>apt</code>) to verify the authenticity and integrity of the downloaded Docker packages, ensuring they have not been tampered with."
+  - question: "How do I run Docker commands without using sudo?"
+    answer: "You can add your user to the docker group by running <code>sudo usermod -aG docker $USER</code>. You will need to log out and log back in for this change to take effect."
+  - question: "How does Docker affect the UFW firewall rules on Ubuntu?"
+    answer: "Docker directly manipulates iptables rules and bypasses UFW. If you publish a port using the <code>-p</code> flag, it will be exposed to the public internet regardless of UFW's incoming rules."
+  - question: "How do I stop or start the Docker daemon?"
+    answer: "You can manage the Docker service using systemctl: run <code>sudo systemctl stop docker</code> to stop it, <code>sudo systemctl start docker</code> to start it, and <code>sudo systemctl restart docker</code> to restart it."
 status: published
 locale: en
 author:

@@ -39,6 +39,17 @@ howto:
     - name: Zarządzaj swoim stosem
       text: Użyj docker compose logs, pause, stop lub down aby zarządzać działającymi środowiskami.
       url: krok-5-zarzadzaj-swoim-srodowiskiem
+faq:
+  - question: "Jaka jest różnica między Docker Compose V1 a V2?"
+    answer: "Docker Compose V1 był samodzielnym narzędziem napisanym w Pythonie i uruchamianym z myślnikiem: <code>docker-compose</code>. Wersja V2 została przepisana na język Go i wdrożona bezpośrednio do CLI Dockera jako wtyczka, wywoływana spacją: <code>docker compose</code>."
+  - question: "Jak Docker Compose obsługuje sieci między kontenerami?"
+    answer: "Domyślnie Docker Compose tworzy dedykowaną, izolowaną sieć wirtualną dla wszystkich usług w danym pliku konfiguracyjnym. Kontenery mogą komunikować się ze sobą bezpośrednio za pomocą nazw swoich usług (np. <code>database</code>)."
+  - question: "Gdzie są przechowywane dane z kontenera po jego usunięciu?"
+    answer: "W przypadku zdefiniowania sekcji <code>volumes:</code> dane są składowane w specjalnym katalogu zarządzanym przez demona Dockera na dysku systemu-hosta. Dzięki temu dane nie zostaną usunięte po zatrzymaniu lub skasowaniu kontenera."
+  - question: "Jak zabezpieczyć porty przed publicznym dostępem w Docker Compose?"
+    answer: "Domyślna deklaracja portów (np. <code>8080:80</code>) otwiera port publicznie. Aby ograniczyć dostęp tylko do lokalnego serwera, zdefiniuj mapowanie jako <code>127.0.0.1:8080:80</code>, co zablokuje ruch z zewnątrz bez pośrednictwa np. lokalnego serwera proxy."
+  - question: "Do czego służy opcja depends_on w pliku docker-compose.yml?"
+    answer: "Opcja <code>depends_on</code> określa kolejność uruchamiania kontenerów. Gwarantuje ona, że usługa nadrzędna (np. baza danych) zostanie uruchomiona przed usługami zależnymi (np. aplikacją webową)."
 status: published
 locale: pl
 author:

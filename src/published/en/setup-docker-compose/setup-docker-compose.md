@@ -39,6 +39,17 @@ howto:
     - name: Manage your stack
       text: Use docker compose logs, pause, stop, or down to manage the running environments.
       url: step-5-manage-your-environment
+faq:
+  - question: "What is the difference between Docker Compose V1 and V2?"
+    answer: "Docker Compose V1 was a standalone Python command written as <code>docker-compose</code>. Docker Compose V2 is written in Go and integrated directly into the Docker CLI as a native plugin, executed as <code>docker compose</code>."
+  - question: "How does Docker Compose handle container networks?"
+    answer: "By default, Docker Compose automatically creates a single private network for all services defined in the YAML file. Each container joins this network, allowing them to resolve and communicate with other services using their service name (e.g. <code>database</code>)."
+  - question: "Where is Docker Compose data stored when a container is deleted?"
+    answer: "If you define a persistent volume under the <code>volumes:</code> key in your YAML file, Docker stores that data in a directory managed by the Docker engine on the host system. This data survives container restarts and deletions."
+  - question: "How do I secure ports exposed by Docker Compose?"
+    answer: "By default, mapping a port like <code>8080:80</code> exposes it globally. To limit access, map it to the localhost loopback address: <code>127.0.0.1:8080:80</code>. This restricts external access unless routed through a local reverse proxy."
+  - question: "What does the depends_on option do in docker-compose.yml?"
+    answer: "The <code>depends_on</code> option defines startup order dependencies. It ensures that prerequisite services (like databases) are started before the dependent services (like web applications) are launched."
 status: published
 locale: en
 author:

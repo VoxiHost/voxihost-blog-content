@@ -39,6 +39,17 @@ howto:
     - name: Połącz i transferuj
       text: Kliknij Połącz, zaakceptuj ostrzeżenie o kluczu hosta i przeciągnij pliki przeciągając i upuszczając je.
       url: krok-5-polacz-i-transferuj
+faq:
+  - question: "Jaka jest główna różnica między FTP a SFTP?"
+    answer: "FTP (File Transfer Protocol) przesyła hasła i pliki otwartym tekstem (bez szyfrowania), co jest niebezpieczne. SFTP (SSH File Transfer Protocol) działa wewnątrz bezpiecznego tunelu SSH, w pełni szyfrując dane logowania oraz przesyłane pliki."
+  - question: "Z jakiego portu korzysta protokół SFTP?"
+    answer: "Domyślnie SFTP korzysta z portu <code>22</code> (standardowy port SSH). Jeśli zmieniłeś port SSH na swoim serwerze (np. na <code>2222</code>), musisz wpisać ten niestandardowy port w polu Port w programie FileZilla."
+  - question: "Jak naprawić błąd Permission Denied (brak uprawnień) podczas przesyłania plików?"
+    answer: "Błąd ten oznacza, że zalogowany użytkownik SSH nie ma praw do zapisu w docelowym folderze. Możesz to naprawić, zmieniając właściciela katalogu na serwerze za pomocą komendy: <code>sudo chown -R nazwa_użytkownika:nazwa_użytkownika /sciezka/do/katalogu</code>."
+  - question: "Jak pokazać ukryte pliki (np. .htaccess, .env) w FileZilla?"
+    answer: "W górnym menu programu FileZilla wybierz zakładkę <b>Serwer</b>, a następnie kliknij <b>Wymuś pokazywanie ukrytych plików</b>."
+  - question: "Czy FileZilla obsługuje klucze prywatne PuTTY (.ppk)?"
+    answer: "Tak. FileZilla w pełni wspiera format <code>.ppk</code>. Jeśli wskażesz standardowy klucz OpenSSH, FileZilla zaproponuje jego automatyczną konwersję do formatu <code>.ppk</code>."
 status: published
 locale: pl
 author:

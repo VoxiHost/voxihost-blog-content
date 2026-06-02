@@ -10,6 +10,17 @@ tags:
   - nginx
   - apache
   - performance
+faq:
+  - question: "Can I run Nginx and Apache together?"
+    answer: "Yes. It is a common design pattern to run Nginx as a reverse proxy in front of Apache. Nginx handles all incoming traffic, serves static files instantly, and passes dynamic requests (like PHP) to Apache. This gives you the best of both worlds: Nginx's static performance and Apache's <code>.htaccess</code> compatibility."
+  - question: "Does Nginx support .htaccess files?"
+    answer: "No. Nginx does not support directory-level configuration files. All configuration rules must be written directly in the central files (e.g., <code>/etc/nginx/sites-available/</code>). This improves performance significantly, as the server doesn't need to search the filesystem on every request."
+  - question: "Which web server is better for WordPress?"
+    answer: "For high-traffic WordPress sites, Nginx is generally preferred due to its lower memory usage and speed when paired with <code>PHP-FPM</code> and FastCGI caching. However, Apache is easier for beginners because many WordPress plugins automatically write redirects directly to the <code>.htaccess</code> file."
+  - question: "Which web server uses less CPU?"
+    answer: "Under high concurrent load, Nginx uses significantly less CPU than Apache. Since Nginx runs a single-threaded loop per CPU core to handle thousands of requests, it avoids the massive CPU overhead of thread creation, deletion, and context switching that Apache's process/thread-based architecture suffers from."
+  - question: "How do I check which web server is running?"
+    answer: "You can run the command <code>curl -I http://localhost</code> in your terminal and look for the <code>Server:</code> header in the response, which will say either <code>nginx</code>, <code>Apache</code>, or another server type."
 status: published
 locale: en
 author:
@@ -126,26 +137,3 @@ While this requires SSH access and root privileges (meaning it is less flexible 
 *   You want to build a highly optimized LEMP stack (see our [LEMP Stack installation guide](/blog/install-lemp-ubuntu-debian/)) for WordPress.
 
 For modern production setups, the combination of Nginx as a reverse proxy in front of backend applications running on a [Premium VPS](/premium-vps/) protected by <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Shield DDoS protection](/shield/) represents the industry gold standard for speed, reliability, and security.
-
----
-
-## Frequently Asked Questions (FAQ)
-
-### Can I run Nginx and Apache together?
-Yes. It is a common design pattern to run Nginx as a reverse proxy in front of Apache. Nginx handles all incoming traffic, serves static files instantly, and passes dynamic requests (like PHP) to Apache. This gives you the best of both worlds: Nginx's static performance and Apache's `.htaccess` compatibility.
-
-### Does Nginx support `.htaccess` files?
-No. Nginx does not support directory-level configuration files. All configuration rules must be written directly in the central files (e.g., `/etc/nginx/sites-available/`). This improves performance significantly, as the server doesn't need to search the filesystem on every request.
-
-### Which web server is better for WordPress?
-For high-traffic WordPress sites, Nginx is generally preferred due to its lower memory usage and speed when paired with `PHP-FPM` and FastCGI caching. However, Apache is easier for beginners because many WordPress plugins automatically write redirects directly to the `.htaccess` file.
-
-### Which web server uses less CPU?
-Under high concurrent load, Nginx uses significantly less CPU than Apache. Since Nginx runs a single-threaded loop per CPU core to handle thousands of requests, it avoids the massive CPU overhead of thread creation, deletion, and context switching that Apache's process/thread-based architecture suffers from.
-
-### How do I check which web server is running?
-You can run the following command in your terminal:
-```bash
-curl -I http://localhost
-```
-Look for the `Server:` header in the response, which will say either `nginx`, `Apache`, or another server type.

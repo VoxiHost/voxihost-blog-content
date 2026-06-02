@@ -39,6 +39,17 @@ howto:
     - name: Test PHP Processing
       text: Create an info.php file in /var/www/html to verify your configuration.
       url: step-5-test-the-lamp-stack
+faq:
+  - question: "What is a LAMP stack?"
+    answer: "A LAMP stack is a classic open-source software bundle used for hosting dynamic websites and web applications. It stands for <b>L</b>inux (operating system), <b>A</b>pache (web server), <b>M</b>ySQL (database), and <b>P</b>HP (programming language)."
+  - question: "Why do we need the libapache2-mod-php package?"
+    answer: "The <code>libapache2-mod-php</code> package is an Apache module that allows the Apache web server to directly run and process PHP files within its own processes, without needing a separate PHP-FPM service."
+  - question: "How do I secure the MySQL installation after installing the package?"
+    answer: "You should run the built-in security script <code>sudo mysql_secure_installation</code>, which helps you set a root password, remove anonymous users, disable remote root logins, and drop the test database."
+  - question: "Why is it important to change the Directory Index priority in dir.conf?"
+    answer: "By default, Apache looks for <code>index.html</code> files first. If your web application relies on PHP (like WordPress), prioritizing <code>index.php</code> in <code>dir.conf</code> ensures that visitors are directed to the dynamic PHP home page immediately."
+  - question: "Why should I delete the info.php test file after verifying the setup?"
+    answer: "The <code>info.php</code> file exposes detailed information about your server's configuration, PHP version, modules, and path variables. Leaving it public is a security risk as malicious actors can exploit it."
 status: published
 locale: en
 author:

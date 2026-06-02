@@ -40,6 +40,17 @@ howto:
     - name: Przeładuj zaporę
       text: Uruchom sudo firewall-cmd --reload aby zastosować wszystkie trwałe zmiany reguł.
       url: krok-5-przeladuj-i-zweryfikuj
+faq:
+  - question: "Co to jest firewalld i czym różni się od UFW?"
+    answer: "Firewalld to dynamiczny menedżer zapory sieciowej oparty na strefach (zones), stosowany głównie w systemach z rodziny RHEL (AlmaLinux, Rocky Linux, CentOS, Fedora). W przeciwieństwie do UFW, pozwala na przypisywanie różnych reguł bezpieczeństwa dla różnych interfejsów sieciowych."
+  - question: "Dlaczego flaga --permanent jest ważna w poleceniu firewall-cmd?"
+    answer: "Bez flagi <code>--permanent</code> reguły są stosowane tylko w pamięci podręcznej i znikną przy restarcie serwera. Flaga ta zapisuje zmiany na dysku, dzięki czemu są one trwałe (wymagają przeładowania zapory za pomocą <code>--reload</code>, aby weszły w życie)."
+  - question: "Jak tymczasowo wyłączyć lub zatrzymać usługę firewalld?"
+    answer: "Możesz zatrzymać zaporę wpisując <code>sudo systemctl stop firewalld</code>. Aby zapobiec jej automatycznemu uruchamianiu przy starcie systemu, wpisz dodatkowo <code>sudo systemctl disable firewalld</code>."
+  - question: "Jak sprawdzić, która strefa jest obecnie ustawiona jako domyślna?"
+    answer: "Domyślną strefę sprawdzisz za pomocą polecenia: <code>sudo firewall-cmd --get-default-zone</code>. Na świeżej instalacji domyślną strefą jest zazwyczaj strefa 'public'."
+  - question: "Co to jest bogata reguła (Rich Rule) w firewalld?"
+    answer: "Bogata reguła (Rich Rule) to zaawansowana dyrektywa konfiguracyjna, która pozwala na tworzenie bardzo precyzyjnych zasad zapory, na przykład zezwolenie na ruch na konkretnym porcie tylko i wyłącznie dla wybranego adresu IP."
 status: published
 locale: pl
 author:

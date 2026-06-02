@@ -39,6 +39,17 @@ howto:
     - name: Przetestuj stos LEMP
       text: Utwórz plik info.php aby zweryfikować że Nginx i PHP-FPM komunikują się poprawnie.
       url: krok-5-przetestuj-stos-lemp
+faq:
+  - question: "Co to jest stos LEMP i czym różni się od LAMP?"
+    answer: "Stos LEMP to zestaw oprogramowania serwerowego, w którym litera <b>E</b> oznacza serwer Nginx (wymawiany jako <i>Engine-X</i>) zamiast serwera Apache. Nginx opiera się na zdarzeniach i zużywa znacznie mniej zasobów przy dużym natężeniu ruchu."
+  - question: "Dlaczego MariaDB jest zalecana zamiast tradycyjnego MySQL?"
+    answer: "MariaDB to w pełni otwarta (open-source) baza danych, będąca bezpośrednim zamiennikiem (drop-in replacement) dla MySQL. Charakteryzuje się szybszym przetwarzaniem zapytań, lepszymi algorytmami optymalizacji i jest domyślnym pakietem bazy danych w Debianie i Ubuntu."
+  - question: "Dlaczego Nginx wymaga PHP-FPM zamiast tradycyjnego modułu PHP?"
+    answer: "Nginx nie potrafi przetwarzać skryptów PHP wewnątrz własnego procesu. Wymaga zewnętrznego procesora – **PHP-FPM** (FastCGI Process Manager). Nginx działa jako proxy, przekazując żądania PHP do demona PHP-FPM poprzez gniazdo Unix socket."
+  - question: "Jak sprawdzić, z której wersji PHP-FPM korzysta mój serwer i jaka jest ścieżka socketu?"
+    answer: "Wersję sprawdzisz wpisując <code>php -v</code>. Plik gniazda Unix znajduje się zazwyczaj w folderze <code>/var/run/php/</code> (np. <code>php8.3-fpm.sock</code>). Ta sama ścieżka musi być wpisana w pliku konfiguracyjnym bloku serwera Nginx."
+  - question: "Co oznacza błąd 502 Bad Gateway przy otwieraniu plików PHP i jak go naprawić?"
+    answer: "Błąd 502 Bad Gateway oznacza brak komunikacji Nginx z PHP-FPM. Upewnij się, że usługa PHP-FPM działa (<code>sudo systemctl status phpX.X-fpm</code>) oraz że ścieżka do socketu w konfiguracji Nginx (<code>fastcgi_pass</code>) jest poprawna."
 status: published
 locale: pl
 author:

@@ -14,6 +14,17 @@ tags:
   - archive
   - mojang
   - java
+faq:
+  - question: "Are these Minecraft server download links safe?"
+    answer: "Yes. All download links point directly to official Mojang server domains (<code>piston-data.mojang.com</code> or <code>launcher.mojang.com</code>), which are the official distribution networks for Minecraft."
+  - question: "Which Java version is required for Minecraft 1.21?"
+    answer: "Minecraft 1.20.5 and higher (including 1.21) require Java 21 to run. Using an older Java version will prevent the server from starting."
+  - question: "How much RAM is recommended for a Minecraft server?"
+    answer: "For standard vanilla servers, 2GB to 4GB of RAM is sufficient for a few players. For newer versions (1.18+) or heavily modded servers, 6GB or more is highly recommended."
+  - question: "What is server.jar in Minecraft?"
+    answer: "The <code>server.jar</code> file is the official executable file provided by Mojang to run a Minecraft Vanilla server. It contains the game logic, server configuration settings, and world generator."
+  - question: "How do I run the downloaded server.jar file?"
+    answer: "You can run the server jar file using the java command in your terminal: <code>java -Xmx2048M -Xms2048M -jar server.jar nogui</code>. Make sure you accept the EULA in the generated <code>eula.txt</code> file."
 status: published
 author:
   name: VoxiHost Team

@@ -39,6 +39,17 @@ howto:
     - name: Verify Auto-Renewal
       text: Check if the automatic renewal timer is active by running sudo systemctl status certbot.timer.
       url: step-4-verify-auto-renewal
+faq:
+  - question: "What is the difference between SSL and TLS?"
+    answer: "TLS (Transport Layer Security) is the modern, more secure successor to SSL (Secure Sockets Layer). Although the terms are often used interchangeably and most people still refer to them as SSL, modern secure web traffic actually uses the TLS protocol."
+  - question: "Why do Let's Encrypt certificates only last for 90 days?"
+    answer: "Short-lived certificates encourage automation, making manual renewal obsolete. They also limit the damage from compromised keys and ensure that abandoned domains automatically lose their active certificates quickly."
+  - question: "How does Certbot prove that I own the domain?"
+    answer: "Certbot uses the ACME protocol to complete a challenge. For Nginx and Apache, it temporary modifies your web server configuration or places a validation file in your web root to prove to Let's Encrypt that the domain resolves to your server."
+  - question: "How do I force all traffic to use HTTPS instead of HTTP?"
+    answer: "During installation, Certbot will ask if you want to redirect HTTP traffic. If you agree, it automatically adds a redirect rule (e.g. <code>return 301 https://$host$request_uri;</code> for Nginx) directly into your configuration files."
+  - question: "Can I get a wildcard certificate using Let's Encrypt and Certbot?"
+    answer: "Yes, but wildcard certificates (e.g., <code>*.your_domain.com</code>) require a DNS-01 challenge instead of HTTP. You must use a Certbot DNS plugin (like Cloudflare, Route53, or DigitalOcean) to automate adding TXT records to your DNS zone."
 status: published
 locale: en
 author:

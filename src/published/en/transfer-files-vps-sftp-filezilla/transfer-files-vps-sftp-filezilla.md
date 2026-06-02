@@ -39,6 +39,17 @@ howto:
     - name: Connect and transfer
       text: Click Connect, accept the host key warning, and drag-and-drop your files between your PC and the server.
       url: step-5-connect-and-transfer
+faq:
+  - question: "What is the difference between FTP and SFTP?"
+    answer: "FTP (File Transfer Protocol) transfers data and credentials in plain text, making it insecure. SFTP (SSH File Transfer Protocol) runs inside a secure SSH tunnel, encrypting both authentication credentials and files in transit."
+  - question: "Which port does SFTP use?"
+    answer: "By default, SFTP uses port <code>22</code>, which is the standard SSH port. If you have changed your server's SSH port (e.g. to <code>2222</code>), you must specify this custom port in FileZilla's Port field."
+  - question: "How do I fix permission denied errors when uploading files?"
+    answer: "Permission denied errors occur when the SSH user you connected with does not own the target directory. You can fix this by running <code>sudo chown -R username:username /path/to/directory</code> on your server."
+  - question: "How do I show hidden files (dotfiles like .htaccess) in FileZilla?"
+    answer: "In FileZilla, go to the top menu, select <b>Server</b>, and check <b>Force showing hidden files</b> to display files starting with a dot."
+  - question: "Can I use PuTTY private keys (.ppk) with FileZilla?"
+    answer: "Yes. FileZilla fully supports PuTTY's <code>.ppk</code> format. When using a standard OpenSSH key, FileZilla will prompt to automatically convert it to <code>.ppk</code> format for Windows users."
 status: published
 locale: en
 author:

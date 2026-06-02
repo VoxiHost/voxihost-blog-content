@@ -31,6 +31,17 @@ howto:
     - name: Dostęp do panelu
       text: Otwórz przeglądarkę i nawiguj do http://your_server_ip:19999.
       url: krok-3-dostep-do-panelu
+faq:
+  - question: "Jakiego portu używa domyślnie Netdata?"
+    answer: "Netdata domyślnie uruchamia swój serwer WWW na porcie <code>19999</code>. Aby uzyskać dostęp do panelu, musisz odblokować ten port w zaporze sieciowej (np. UFW lub firewalld)."
+  - question: "Czy Netdata mocno obciąża zasoby serwera?"
+    answer: "Nie. Netdata została napisana w języku C i jest zoptymalizowana pod kątem minimalnego zużycia zasobów. Zazwyczaj zużywa poniżej 1% procesora i bardzo małą, konfigurowalną ilość pamięci RAM."
+  - question: "Jak zabezpieczyć panel Netdata przed dostępem osób trzecich?"
+    answer: "Najlepszym sposobem jest edycja pliku <code>/etc/netdata/netdata.conf</code> w celu powiązania usługi tylko z adresem localhost (<code>127.0.0.1</code>) i skonfigurowanie serwera Nginx jako reverse proxy z autoryzacją logowania (HTTP Basic Auth)."
+  - question: "Czy Netdata może monitorować kontenery Docker?"
+    answer: "Tak. Netdata automatycznie wykrywa uruchomione kontenery Docker i bez dodatkowej konfiguracji generuje osobne, szczegółowe wykresy użycia CPU, RAM-u i sieci dla każdego z nich."
+  - question: "Jak zrestartować lub zatrzymać usługę Netdata?"
+    answer: "Możesz zarządzać usługą Netdata za pomocą polecenia systemctl. Aby zatrzymać usługę, wpisz <code>sudo systemctl stop netdata</code>. Aby uruchomić: <code>sudo systemctl start netdata</code>, a aby zrestartować: <code>sudo systemctl restart netdata</code>."
 status: published
 locale: pl
 author:

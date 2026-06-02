@@ -38,6 +38,17 @@ howto:
     - name: Connect your devices
       text: Download the WireGuard App on your phone or PC and scan the QR code to connect securely.
       url: step-5-connect-your-devices
+faq:
+  - question: "Why is WireGuard preferred over OpenVPN?"
+    answer: "WireGuard is a modern VPN protocol that is significantly faster, uses less bandwidth, has a smaller codebase, and is much lighter on device battery life compared to legacy protocols like OpenVPN."
+  - question: "Is Angristan's WireGuard script safe to use?"
+    answer: "Yes. Angristan's auto-installer is a highly popular, open-source, and community-audited script. It automates package installation, IP forwarding setup, and firewall routing rules to prevent manual configuration errors."
+  - question: "How do I add a new client connection after the initial setup?"
+    answer: "You do not need to reinstall WireGuard. Simply run the script again with <code>sudo ./wireguard-install.sh</code>. It will open a management menu where you can select option 1 to add a new client."
+  - question: "How can I uninstall WireGuard from my server?"
+    answer: "To completely remove WireGuard, run the setup script again using <code>sudo ./wireguard-install.sh</code> and select the option to uninstall WireGuard. The script will clean up all packages, configs, and firewall rules."
+  - question: "Can I connect multiple devices using the same client configuration?"
+    answer: "No. WireGuard is designed around a strict 1:1 peer-to-peer relationship. If you connect a second device using the same client configuration, the connections will conflict and constantly disconnect each other. You must generate a separate client for each device."
 status: published
 locale: en
 author:

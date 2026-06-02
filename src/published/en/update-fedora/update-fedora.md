@@ -38,6 +38,17 @@ howto:
     - name: Enable automatic security updates
       text: Install and configure dnf-automatic to automatically apply security patches on a schedule.
       url: automating-patches-with-dnf-automatic
+faq:
+  - question: "What is DNF5 and how does it differ from older DNF?"
+    answer: "DNF5 is a next-generation package manager written in C++ that replaced the Python-based DNF. It is significantly faster, uses less memory, and unifies command behavior across Fedora systems."
+  - question: "Is dnf update still supported in Fedora 43?"
+    answer: "Yes, <code>dnf update</code> and <code>dnf upgrade</code> are redirected internally to the new <code>dnf5</code> system, so they function as aliases to execute the system upgrade."
+  - question: "How do I upgrade only security packages on Fedora?"
+    answer: "You can restrict package upgrades strictly to security fixes by running the command <code>sudo dnf5 upgrade --security</code>."
+  - question: "How does needs-restarting help in server administration?"
+    answer: "The <code>needs-restarting -r</code> command checks if any updated library (like glibc or the Linux kernel) requires a system reboot to become active, preventing running outdated code after updates."
+  - question: "Can I schedule automatic daily updates in Fedora?"
+    answer: "Yes, you can install the automatic updates package via <code>sudo dnf5 install dnf-automatic -y</code> and configure <code>/etc/dnf/automatic.conf</code> to execute security upgrades automatically."
 status: published
 locale: en
 author:

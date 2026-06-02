@@ -42,6 +42,17 @@ howto:
     - name: Restart SSH and verify
       text: Run sudo systemctl restart ssh and verify from a new terminal window before closing your session.
       url: restart-ssh-and-verify
+faq:
+  - question: "Is changing the default SSH port really effective?"
+    answer: "Yes. While it doesn't stop targeted hacks, changing the port from 22 to a custom port like 2222 stops 99% of automated scanners and script bots, keeping your <code>/var/log/auth.log</code> clean and reducing server CPU overhead."
+  - question: "What is the difference between sshd_config and ssh_config?"
+    answer: "The <code>sshd_config</code> file configures the SSH daemon (server-side, incoming connections), whereas <code>ssh_config</code> configures the SSH client (outgoing connections from your server)."
+  - question: "What happens if I lose my SSH private key?"
+    answer: "If password login is disabled and you lose your private key, you will be locked out. You must use your cloud provider's VNC or IPMI out-of-band console to log in and re-enable password auth or append a new public key."
+  - question: "Why is UFW configuration critical before restarting SSH on a new port?"
+    answer: "If you change the port to 2222 but do not run <code>sudo ufw allow 2222/tcp</code> before reloading the SSH service, UFW will block the new port, locking you out as soon as you disconnect."
+  - question: "Can I allow only specific users to log in via SSH?"
+    answer: "Yes, you can add <code>AllowUsers username1 username2</code> to your <code>/etc/ssh/sshd_config</code>. Any user not listed will be blocked from logging in, even if they have valid keys."
 status: published
 locale: en
 author:
