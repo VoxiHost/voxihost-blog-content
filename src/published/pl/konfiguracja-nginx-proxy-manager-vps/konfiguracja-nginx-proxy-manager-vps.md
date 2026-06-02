@@ -120,6 +120,6 @@ Możesz teraz przejść do zakładki **"Proxy Hosts"** -> **"Add Proxy Host"**, 
 
 Nginx Proxy Manager działa teraz na Twoim VPS i jest w pełni dostępny przez przeglądarkę. Możesz przekierowywać dowolną liczbę usług na własne domeny i wystawiać bezpłatne certyfikaty Let's Encrypt w zaledwie kilka kliknięć — bez ręcznej edycji plików konfiguracyjnych Nginx.
 
-Połącz NPM z innymi usługami działającymi na tym samym VPS-ie, takimi jak [WordPress](/pl/blog/instalacja-wordpress-docker-compose/) czy [Nextcloud](/pl/blog/instalacja-nextcloud-vps-docker-compose/), aby zbudować kompletny, produkcyjny stos self-hosted.
+Połącz NPM z innymi usługami działającymi na tym samym VPS-ie, takimi jak WordPress czy Nextcloud, aby zbudować kompletny, produkcyjny stos self-hosted.
 
 Jeśli szukasz niezawodnego serwera pod taki stos, sprawdź nasze [plany Premium VPS](/pl/premium-vps/) lub [Budget VPS](/pl/budget-vps/) — oba oferują szybkie dyski NVMe SSD i port sieciowy o dużej przepustowości.
