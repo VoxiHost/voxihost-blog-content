@@ -22,30 +22,27 @@ howto:
     - Java 21 JRE
     - Klient SSH
   steps:
-    - name: Przygotowanie środowiska
-      text: Odśwież repozytoria pakietów poleceniem 'sudo apt update', aby przygotować instalację Javy.
-      url: '#krok-1-instalacja-java-21'
     - name: Instalacja Java 21
       text: Zainstaluj nowoczesne środowisko uruchomieniowe Minecrafta za pomocą 'sudo apt install openjdk-21-jre-headless'.
-      url: '#krok-1-instalacja-java-21'
+      url: krok-1-instalacja-java-21
     - name: Tworzenie użytkownika gry
       text: Skonfiguruj ograniczonego użytkownika 'minecraft' ze względów bezpieczeństwa za pomocą polecenia 'adduser'.
-      url: '#krok-2-tworzenie-dedykowanego-uzytkownika'
+      url: krok-2-tworzenie-dedykowanego-uzytkownika
     - name: Pobranie oprogramowania serwerowego
       text: Pobierz oficjalny plik Vanilla 1.21.1 server.jar z serwerów Mojang.
-      url: '#krok-3-pobranie-pliku-server-jar'
+      url: krok-3-pobranie-pliku-server-jar
     - name: Akceptacja EULA
       text: Uruchom plik JAR raz i edytuj 'eula.txt', ustawiając 'eula=true'.
-      url: '#krok-4-akceptacja-eula'
+      url: krok-4-akceptacja-eula
     - name: Konfiguracja uruchamiania
       text: Utwórz skrypt 'start.sh' z optymalizowanymi flagami RAM od Aikara.
-      url: '#krok-5-tworzenie-skryptu-startowego'
+      url: krok-5-tworzenie-skryptu-startowego
     - name: Pierwsze uruchomienie i OP
       text: Uruchom serwer ręcznie, aby nadać sobie uprawnienia administratora.
-      url: '#krok-6-pierwsze-uruchomienie-i-konfiguracja-administratora'
+      url: krok-6-pierwsze-uruchomienie-i-konfiguracja-administratora
     - name: Profesjonalne uruchamianie (Systemd)
       text: Skonfiguruj usługę systemd, aby serwer uruchamiał się automatycznie po restarcie.
-      url: '#krok-7-konfiguracja-uslugi-systemd'
+      url: krok-7-konfiguracja-uslugi-systemd
 status: published
 author:
   name: VoxiHost Team
