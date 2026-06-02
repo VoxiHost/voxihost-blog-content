@@ -28,19 +28,19 @@ howto:
   steps:
     - name: Log in as root
       text: Connect to your server via SSH using the root account.
-      url: step-1-add-the-new-user
+      url: step-1-log-in-as-root
     - name: Add the new user
       text: Run useradd username to create the account structure.
-      url: step-1-add-the-new-user
+      url: step-2-add-the-new-user
     - name: Set a password
       text: Run passwd username to assign a password to the new account.
-      url: step-1-add-the-new-user
+      url: step-3-set-a-password
     - name: Grant sudo privileges
       text: Run usermod -aG wheel username to add the new user to the wheel group.
-      url: step-2-add-the-user-to-the-wheel-group
+      url: step-4-add-the-user-to-the-wheel-group
     - name: Test the new account
       text: Switch to the new user with su - username and test sudo access by running sudo whoami.
-      url: step-3-test-the-new-sudo-user
+      url: step-5-test-the-new-sudo-user
 status: published
 locale: en
 author:
@@ -56,13 +56,15 @@ Because of this, logging in directly as root is a terrible habit. The standard s
 
 On RHEL-family distributions (AlmaLinux, CentOS Stream, Rocky Linux) and Fedora, the process requires only three commands.
 
-## Step 1: Add the new user
+## Step 1: Log in as root
 
 Connect to your server via SSH as the `root` user:
 
 ```bash
 ssh root@your-server-ip
 ```
+
+## Step 2: Add the new user
 
 Unlike Ubuntu, which uses the interactive `adduser` script, RHEL-based distributions typically use the standard `useradd` command. It does its job silently without prompting for extra information.
 
@@ -73,6 +75,8 @@ Replace `yourusername` with the name you want to use (lowercase letters, no spac
 ```bash
 useradd yourusername
 ```
+
+## Step 3: Set a password
 
 The user exists now, but they don't have a password, which means they can't log in. Assign a password using the `passwd` command:
 
@@ -91,7 +95,7 @@ Retype new password:
 passwd: all authentication tokens updated successfully.
 ```
 
-## Step 2: Add the user to the wheel group
+## Step 4: Add the user to the wheel group
 
 By default, the new user cannot run administrative commands. To fix this, you need to add them to a specific group.
 
@@ -109,7 +113,7 @@ usermod -aG wheel yourusername
 
 Members of the `wheel` group are automatically granted full `sudo` privileges by the system's default policy.
 
-## Step 3: Test the new sudo user
+## Step 5: Test the new sudo user
 
 Verify that the new setup works before logging out of your root account. Switch to the new user seamlessly using the `su` command:
 

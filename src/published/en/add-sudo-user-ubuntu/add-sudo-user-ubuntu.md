@@ -26,16 +26,16 @@ howto:
   steps:
     - name: Log in as root
       text: Connect to your server via SSH using the root account.
-      url: step-1-add-the-new-user
+      url: step-1-log-in-as-root
     - name: Add the new user
       text: Run adduser username and follow the prompts to set a strong password.
-      url: step-1-add-the-new-user
+      url: step-2-add-the-new-user
     - name: Grant sudo privileges
       text: Run usermod -aG sudo username to add the new user to the sudo group.
-      url: step-2-grant-sudo-privileges
+      url: step-3-grant-sudo-privileges
     - name: Test the new account
       text: Switch to the new user with su - username and test sudo access by running sudo whoami.
-      url: step-3-test-the-new-sudo-user
+      url: step-4-test-the-new-sudo-user
 status: published
 locale: en
 author:
@@ -51,13 +51,15 @@ Logging in directly as root is widely considered a bad security practice. Instea
 
 On Ubuntu and Debian, creating a new sudo user takes about two minutes.
 
-## Step 1: Add the new user
+## Step 1: Log in as root
 
 First, connect to your server via SSH as the `root` user:
 
 ```bash
 ssh root@your-server-ip
 ```
+
+## Step 2: Add the new user
 
 Use the `adduser` command to create the new account. Replace `yourusername` with whatever name you want to use (don't use spaces or uppercase letters):
 
@@ -82,7 +84,7 @@ passwd: password updated successfully
 
 After the password, you'll be asked for some user information (Full Name, Room Number, etc.). This is a relic from the early days of Unix. You don't need to fill any of it out, just press `ENTER` to skip through all of them, and press `Y` when asked if the information is correct.
 
-## Step 2: Grant sudo privileges
+## Step 3: Grant sudo privileges
 
 By default, new users on Ubuntu and Debian are standard, unprivileged accounts. They can't install software or edit system configurations. 
 
@@ -98,7 +100,7 @@ usermod -aG sudo yourusername
 
 The `-aG` flags are important. `-a` means "append" and `-G` means "groups". If you forget the `-a`, the user will be removed from all their other groups and added *only* to the sudo group, which breaks things.
 
-## Step 3: Test the new sudo user
+## Step 4: Test the new sudo user
 
 Before you log out of your root session, make sure the new user works. Use the `su` (switch user) command to instantly switch to the new account:
 

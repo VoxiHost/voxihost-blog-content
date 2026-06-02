@@ -30,19 +30,19 @@ howto:
       url: installing-fail2ban
     - name: Create a local jail configuration
       text: 'Copy jail.conf to jail.local with: sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local'
-      url: configuring-fail2ban-jails
+      url: creating-a-local-jail-configuration
     - name: Configure for firewalld backend
       text: Set banaction = firewallcmd-ipset in jail.local to integrate fail2ban with firewalld.
       url: firewalld-integration
     - name: Configure the SSH jail
       text: Enable and tune the sshd jail in jail.local with your desired ban settings.
-      url: configuring-fail2ban-jails
+      url: ssh-jail
     - name: Enable and start fail2ban
       text: Run sudo systemctl enable --now fail2ban to start fail2ban and enable it at boot.
-      url: enabling-and-verifying-fail2ban
+      url: enabling-and-starting-fail2ban
     - name: Verify the SSH jail is active
       text: Run sudo fail2ban-client status sshd to confirm active monitoring and banning.
-      url: enabling-and-verifying-fail2ban
+      url: verifying-fail2ban-status
 status: published
 locale: en
 author:
@@ -83,7 +83,7 @@ Enable and start it:
 sudo systemctl enable --now fail2ban
 ```
 
-## Configuring fail2ban jails
+## Creating a local jail configuration
 
 fail2ban's behavior is controlled by "jails", each one watches a specific log for failure patterns and bans offending IPs.
 
@@ -147,13 +147,15 @@ bantime = 86400
 
 Three strikes and you're out for 24 hours is a reasonable policy for SSH.
 
-## Enabling and verifying fail2ban
+## Enabling and starting fail2ban
 
 Apply the configuration:
 
 ```bash
 sudo systemctl restart fail2ban
 ```
+
+## Verifying fail2ban status
 
 Check the SSH jail status:
 

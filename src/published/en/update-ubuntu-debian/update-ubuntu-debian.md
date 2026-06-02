@@ -26,10 +26,10 @@ howto:
   steps:
     - name: Refresh the package index
       text: Run sudo apt update to sync the local package index with the repositories. This does not install anything.
-      url: the-basics-apt-update-and-apt-upgrade
+      url: refresh-the-package-index
     - name: Install available updates
       text: Run sudo apt upgrade -y to install all pending updates for already-installed packages.
-      url: the-basics-apt-update-and-apt-upgrade
+      url: install-available-updates
     - name: Handle held-back packages
       text: If apt upgrade reports packages kept back, run sudo apt full-upgrade -y to resolve dependency changes.
       url: handling-kept-back-packages-full-upgrade
@@ -57,7 +57,7 @@ Ubuntu and Debian ship solid defaults, but "solid" doesn't mean "secure forever"
 
 Before we start: if you are deploying a fresh server with a premium provider like **<span class="text-white">Voxi</span><span class="text-amber-300">Host</span>**, the system automatically runs a full package update immediately after deployment on first boot. But as your server runs over time, you will still need to know how to maintain it yourself.
 
-## The basics: apt update and apt upgrade
+## Refresh the package index
 
 Before anything else, refresh your local package index. This doesn't install anything, it just checks what updates are actually out there:
 
@@ -66,6 +66,8 @@ Before anything else, refresh your local package index. This doesn't install any
 ```bash
 sudo apt update
 ```
+
+## Install available updates
 
 Then install them:
 

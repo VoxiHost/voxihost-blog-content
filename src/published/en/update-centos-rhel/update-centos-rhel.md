@@ -27,10 +27,10 @@ howto:
   steps:
     - name: Check for available updates
       text: Run sudo dnf check-update to see what updates are available without installing anything.
-      url: the-basics-dnf-update-and-dnf-upgrade
+      url: check-for-available-updates
     - name: Install all available updates
       text: Run sudo dnf update -y to download and install all pending package updates.
-      url: the-basics-dnf-update-and-dnf-upgrade
+      url: install-all-available-updates
     - name: Remove orphaned packages
       text: Run sudo dnf autoremove -y to clean up old libraries and dependencies no longer needed by any package.
       url: cleaning-up-dnf-autoremove
@@ -55,7 +55,7 @@ Good news: all three distros share the exact same package manager, `dnf`. Same c
 
 Before we start: if you are deploying a fresh server with a premium provider like **<span class="text-white">Voxi</span><span class="text-amber-300">Host</span>**, the system automatically runs a full package update immediately after deployment on first boot. But as your server runs over time, you will still need to know how to maintain it yourself.
 
-## The basics: dnf update and dnf upgrade
+## Install all available updates
 
 Unlike `apt`, which splits "refresh index" and "install updates" into two separate commands, `dnf update` does both in one shot. It fetches the latest metadata and installs whatever's new:
 
@@ -66,6 +66,8 @@ sudo dnf update -y
 ```
 
 That's genuinely all you need for routine maintenance. The **`-y` flag skips confirmation prompts**, which is convenient when you're SSH'd in to do something else and don't want to babysit a package upgrade.
+
+## Check for available updates
 
 If you want to check what would be updated before actually running it:
 

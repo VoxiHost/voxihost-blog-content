@@ -26,10 +26,10 @@ howto:
   steps:
     - name: Generate an SSH key pair
       text: Run ssh-keygen -t ed25519 on your local machine to generate a modern SSH key pair.
-      url: set-up-ssh-key-authentication
+      url: generate-an-ssh-key-pair
     - name: Copy your public key to the server
       text: Run ssh-copy-id user@your-server-ip to install your public key on the server.
-      url: set-up-ssh-key-authentication
+      url: copy-your-public-key-to-the-server
     - name: Disable root login
       text: Set PermitRootLogin no in /etc/ssh/sshd_config to prevent direct root access.
       url: disable-root-login
@@ -55,7 +55,7 @@ Port 22 is scanned constantly. The moment you spin up a VPS with a public IP, au
 
 > **Prerequisite:** This guide disables root login. You **must** have a non-root user with `sudo` privileges ready **before** running any of these steps. If you haven't done that yet, follow our [How to Create a Sudo User on Ubuntu & Debian](/blog/add-sudo-user-ubuntu/) guide first, then come back here.
 
-## Set up SSH key authentication
+## Generate an SSH key pair
 
 The single most effective change you can make. Password logins can be brute-forced. Key-based auth cannot,  not in any realistic timeframe.
 
@@ -68,6 +68,8 @@ ssh-keygen -t ed25519 -C "your-server-label"
 ```
 
 Use `ed25519`,  it's faster and more secure than the older RSA algorithm. When prompted for a passphrase, **set one**. It encrypts the private key on disk, so even if someone compromises your laptop, they still can't use the key without it.
+
+## Copy your public key to the server
 
 Copy the public key to the server. Replace `youruser` with your actual sudo username:
 
