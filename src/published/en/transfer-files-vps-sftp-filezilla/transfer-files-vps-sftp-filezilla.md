@@ -3,6 +3,7 @@ image: /assets/images/blog/en/transfer-files-vps-sftp-filezilla/og-image.png
 title: How to Transfer Files to Your VPS using SFTP & FileZilla
 description: A complete beginner's guide to securely transferring files from your PC to your Linux VPS using SFTP, FileZilla, and SSH Keys.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: transfer-files-vps-sftp-filezilla
 category: Tutorials
 tags:

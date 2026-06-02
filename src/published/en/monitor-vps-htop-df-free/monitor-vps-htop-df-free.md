@@ -3,6 +3,7 @@ image: /assets/images/blog/en/monitor-vps-htop-df-free/og-image.png
 title: 'How to Monitor Your VPS: A Beginner''s Guide to htop, df, and free'
 description: A complete beginner's guide to monitoring your Linux server's health. Learn how to check CPU, RAM, and disk space usage using htop, free, and df.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: monitor-vps-htop-df-free
 category: Tutorials
 tags:

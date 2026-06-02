@@ -3,6 +3,7 @@ image: /assets/images/blog/en/secure-ssh-ubuntu-debian/og-image.png
 title: 'How to Secure SSH on Ubuntu & Debian: The Complete Server Guide'
 description: A complete guide to hardening SSH on Ubuntu and Debian servers. Disable root login, set up key-based authentication, change the default port, configure ufw, and lock down your VPS against brute-force attacks.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: secure-ssh-ubuntu-debian
 category: Tutorials
 tags:

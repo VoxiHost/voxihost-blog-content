@@ -3,6 +3,7 @@ image: /assets/images/blog/en/add-sudo-user-ubuntu/og-image.png
 title: 'How to Create a Sudo User on Ubuntu & Debian: The Complete Server Guide'
 description: A complete beginner-friendly guide to creating a new user with sudo privileges on Ubuntu and Debian servers. Stop logging in as root and secure your VPS.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: create-sudo-user-ubuntu-debian
 category: Tutorials
 tags:

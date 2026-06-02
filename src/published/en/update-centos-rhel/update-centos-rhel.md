@@ -3,6 +3,7 @@ image: /assets/images/blog/en/update-centos-rhel/og-image.png
 title: 'How to Update AlmaLinux, CentOS Stream & Rocky Linux: The Complete Server Guide'
 description: A complete step-by-step guide to updating AlmaLinux 9/10, CentOS Stream 9/10, and Rocky Linux 9/10 servers. Covers dnf update, autoremove, reboot detection, and dnf-automatic for production VPS environments.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: update-almalinux-centos-rocky
 category: Tutorials
 tags:

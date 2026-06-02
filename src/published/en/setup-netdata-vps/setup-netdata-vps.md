@@ -3,6 +3,7 @@ image: /assets/images/blog/en/setup-netdata-vps/og-image.png
 title: How to Set Up Netdata for Real-Time VPS Monitoring
 description: A complete step-by-step guide to installing Netdata on your Linux VPS. Get highly detailed, beautiful real-time dashboard metrics for CPU, RAM, Network, and Disk in minutes.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-netdata-vps
 category: Tutorials
 tags:

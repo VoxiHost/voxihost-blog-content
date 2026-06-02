@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/hourly-vps-launch/og-image.png
 title: 'Nowość: Hosting VPS na godziny - Elastyczność, której potrzebujesz'
 description: Wprowadzamy nową ofertę Hourly VPS! Dowiedz się, jak rozliczanie godzinowe, ceny od 0,03 PLN/h oraz specjalny kod promocyjny DEPLOYMENT zrewolucjonizują Twoją pracę.
 date: '2026-04-10'
+updated: '2026-06-02'
 translationKey: hourly-vps-hosting-launch
 locale: pl
 category: Nowości

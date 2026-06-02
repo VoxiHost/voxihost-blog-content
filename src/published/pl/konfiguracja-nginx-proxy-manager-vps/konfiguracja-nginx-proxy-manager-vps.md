@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/konfiguracja-nginx-proxy-manager-vps/og-image.png
 title: Jak skonfigurować Nginx Proxy Manager na VPS
 description: Dowiedz się, jak łatwo hostować wiele stron, podpinać domeny i zarządzać certyfikatami SSL za pomocą Nginx Proxy Manager i Docker Compose na serwerze VPS.
 date: '2026-06-02'
+updated: '2026-06-02'
 translationKey: setup-nginx-proxy-manager-vps
 locale: pl
 category: Poradniki

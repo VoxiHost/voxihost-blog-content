@@ -3,6 +3,7 @@ image: /assets/images/blog/en/add-sudo-user-centos/og-image.png
 title: 'How to Create a Sudo User on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide'
 description: A complete beginner-friendly guide to creating a new user with sudo privileges on AlmaLinux, CentOS Stream, Rocky Linux, and Fedora servers.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: create-sudo-user-rhel-fedora
 category: Tutorials
 tags:

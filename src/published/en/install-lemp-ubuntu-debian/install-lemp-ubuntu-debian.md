@@ -3,6 +3,7 @@ image: /assets/images/blog/en/install-lemp-ubuntu-debian/og-image.png
 title: How to Set Up a LEMP Stack (Linux, Nginx, MariaDB, PHP) on Ubuntu & Debian
 description: A complete step-by-step guide to installing the modern LEMP stack (Linux, Nginx, MariaDB, PHP-FPM) on a fresh Ubuntu or Debian server.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-lemp-stack-ubuntu-debian
 category: Tutorials
 tags:

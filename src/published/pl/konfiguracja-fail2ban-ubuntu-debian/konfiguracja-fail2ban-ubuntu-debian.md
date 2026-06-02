@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/konfiguracja-fail2ban-ubuntu-debian/og-image.png
 title: 'Jak skonfigurować fail2ban na Ubuntu i Debian: Kompletny przewodnik serwera'
 description: Kompletny przewodnik do instalacji i konfiguracji fail2ban na serwerach Ubuntu i Debian. Chroń SSH i usługi WWW przed atakami siłowymi z automatycznym banowaniem IP, niestandardowymi więzieniami i integracją z ufw.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-fail2ban-ubuntu-debian
 category: Poradniki
 tags:

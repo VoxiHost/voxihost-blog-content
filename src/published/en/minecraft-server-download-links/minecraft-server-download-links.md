@@ -3,6 +3,7 @@ image: /assets/images/blog/en/minecraft-server-download-links/og-image.png
 title: Minecraft Vanilla Java Server Download Links Archive
 description: A comprehensive repository of direct Mojang download URLs for every major Minecraft Vanilla server version, from 1.7.10 to the latest snapshots.
 date: '2026-04-22'
+updated: '2026-06-02'
 translationKey: minecraft-vanilla-java-server-download-links
 locale: en
 category: Tutorials

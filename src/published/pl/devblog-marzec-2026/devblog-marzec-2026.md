@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/devblog-marzec-2026/og-image.png
 title: 'Marzec 2026: VoxiHost DevBlog'
 description: To był intensywny miesiąc w VoxiHost! W tym DevBlogu opisujemy wdrożenie konsoli VNC, wsparcie dla 7 nowych dystrybucji Linux oraz logowanie przez Google.
 date: '2026-04-01'
+updated: '2026-06-02'
 translationKey: march-2026-devblog
 locale: pl
 category: Nowości

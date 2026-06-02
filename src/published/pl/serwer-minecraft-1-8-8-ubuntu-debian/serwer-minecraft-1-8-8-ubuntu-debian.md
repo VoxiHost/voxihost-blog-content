@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/serwer-minecraft-1-8-8-ubuntu-debian/og-image.png
 title: Jak postawić klasyczny serwer Minecraft 1.8.8 (Java 8) na Ubuntu/Debian
 description: Poradnik instalacji serwera Minecraft 1.8.8, idealny do nostalgicznego PvP i klasycznej rozgrywki Vanilla z użyciem Java 8.
 date: '2026-04-23'
+updated: '2026-06-02'
 translationKey: minecraft-vanilla-java-1-8-8-server-setup-ubuntu-debian
 locale: pl
 category: Poradniki

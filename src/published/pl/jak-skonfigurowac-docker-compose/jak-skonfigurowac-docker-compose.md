@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/jak-skonfigurowac-docker-compose/og-image.png
 title: 'Jak skonfigurować Docker Compose: Kompletny przewodnik do zarządzania aplikacji wielokontenerowych'
 description: Kompletny przewodnik krok po kroku do konfiguracji i używania Docker Compose V2 na Ubuntu, Debian, AlmaLinux, Rocky Linux, CentOS i Fedorze.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: setup-docker-compose
 category: Poradniki
 tags:

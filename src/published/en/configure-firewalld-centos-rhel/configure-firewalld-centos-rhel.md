@@ -3,6 +3,7 @@ image: /assets/images/blog/en/configure-firewalld-centos-rhel/og-image.png
 title: 'How to Configure firewalld on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide'
 description: A complete step-by-step guide to setting up firewalld on AlmaLinux, CentOS Stream, Rocky Linux, and Fedora servers. Learn how to manage zones, open ports, list services, and secure your VPS.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: configure-firewalld-rhel-fedora
 category: Tutorials
 tags:

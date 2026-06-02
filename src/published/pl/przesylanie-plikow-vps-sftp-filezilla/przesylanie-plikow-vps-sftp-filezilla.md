@@ -3,6 +3,7 @@ image: /assets/images/blog/pl/przesylanie-plikow-vps-sftp-filezilla/og-image.png
 title: Jak transferować pliki na VPS używając SFTP i FileZilla
 description: Kompletny przewodnik dla początkujących do bezpiecznego transferowania plików z komputera na serwer Linux VPS używając SFTP i FileZilla.
 date: '2026-03-25'
+updated: '2026-06-02'
 translationKey: transfer-files-vps-sftp-filezilla
 category: Poradniki
 tags:
