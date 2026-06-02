@@ -115,6 +115,28 @@ Use blockquotes (`>`) to emphasize warnings or tips. They are styled with a soli
 
 ---
 
+## ❓ 4. FAQ & FAQPage Schema (`faq`)
+
+If an article includes a list of frequently asked questions, you can define them in the frontmatter. Doing so automatically renders a matching visual Accordion section at the bottom of the article and injects a valid `@type: "FAQPage"` JSON-LD schema into the page headers.
+
+### Frontmatter Schema Syntax
+
+Add the `faq` property as a YAML list of questions and answers:
+
+```yaml
+faq:
+  - question: "How to check PHP version?"
+    answer: "You can check it by running <code>php -v</code> in the terminal."
+  - question: "Can multiple PHP versions run side-by-side?"
+    answer: "Yes, each version runs as an independent PHP-FPM service."
+```
+
+> [!IMPORTANT]
+> 1. **Formatting in Answers**: The `answer` field can contain HTML tags (like `<code>` or `<a>`). Since the post template automatically wraps the accordion answers in a `.markdown-content` container, these elements will receive correct theme styling.
+> 2. **Schema Sanitization**: The generated FAQPage JSON-LD schema automatically strips HTML tags (using `striptags`) to remain strictly text-based and compliant with search engine guidelines. If you use HTML entities (such as `&lt;` or `&gt;`), they will be preserved in the schema.
+
+---
+
 ## ❌ Common Mistakes
 
 This section shows the most frequent errors contributors make. Check your article against these before submitting a PR.
