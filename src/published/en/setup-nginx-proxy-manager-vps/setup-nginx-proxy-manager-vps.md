@@ -13,6 +13,17 @@ tags:
   - docker-compose
   - vps
   - ssl
+faq:
+  - question: "What is a reverse proxy?"
+    answer: "A reverse proxy is a server that sits in front of backend applications and forwards client requests to them. It allows you to host multiple applications on a single VPS on different internal ports, routing traffic based on domain names."
+  - question: "Why does Nginx Proxy Manager require port 81?"
+    answer: "Port 81 is the default port used to access Nginx Proxy Manager's web management interface. Ports 80 and 443 are reserved for public HTTP and HTTPS traffic."
+  - question: "How do I secure the web admin panel of Nginx Proxy Manager?"
+    answer: "During your first login, NPM will force you to change the default email (<code>admin@example.com</code>) and password (<code>changeme</code>). You can also route port 81 through NPM itself to secure it with an SSL certificate."
+  - question: "Can Nginx Proxy Manager handle Let's Encrypt SSL certificates automatically?"
+    answer: "Yes. NPM integrates directly with Let's Encrypt. You can request, renew, and assign SSL certificates automatically for any proxy host by toggling the SSL options in the dashboard."
+  - question: "What is the difference between Nginx Proxy Manager and raw Nginx?"
+    answer: "NPM is a user-friendly wrapper around Nginx that provides a graphical web interface. It generates the under-the-hood Nginx configurations automatically, eliminating the need to write code manually."
 status: published
 author:
   name: VoxiHost Team

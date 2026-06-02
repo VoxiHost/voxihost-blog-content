@@ -45,6 +45,17 @@ howto:
     - name: Profesjonalne uruchamianie (Systemd)
       text: Skonfiguruj usługę systemd, aby serwer uruchamiał się automatycznie po restarcie.
       url: krok-7-konfiguracja-uslugi-systemd
+faq:
+  - question: "Dlaczego Java 16/17 jest wymagana dla Minecrafta 1.17?"
+    answer: "Minecraft 1.17 to pierwsza wersja, która podniosła wymagania systemowe z Javy 8 do Javy 16. Próba uruchomienia na starszych wersjach Javy uniemożliwi start serwera."
+  - question: "Czy mogę użyć Javy 17 zamiast Javy 16?"
+    answer: "Tak, serwer Minecraft 1.17 można bez problemu uruchomić na nowszej wersji Java 17. Ponieważ Java 16 nie jest łatwo dostępna na systemach AlmaLinux/Rocky Linux, Java 17 jest zalecanym zamiennikiem."
+  - question: "Jaki jest cel tworzenia dedykowanego użytkownika 'minecraft'?"
+    answer: "Uruchamianie serwera na koncie użytkownika bez uprawnień roota (administratora) chroni serwer VPS. W przypadku wykrycia luki w zabezpieczeniach gry, napastnik nie uzyska pełnej kontroli nad systemem operacyjnym."
+  - question: "Jak przydzielić więcej pamięci RAM do serwera?"
+    answer: "Możesz to zrobić, modyfikując parametry pamięci <code>-Xmx</code> (maksymalna) i <code>-Xms</code> (początkowa) w swoim skrypcie startowym. Na przykład <code>-Xmx4G</code> przydzieli 4 gigabajty pamięci RAM."
+  - question: "Jak sprawić, by serwer Minecraft uruchamiał się automatycznie po starcie systemu?"
+    answer: "Najlepszym rozwiązaniem jest utworzenie usługi systemd (np. w pliku <code>/etc/systemd/system/minecraft.service</code>) i jej włączenie za pomocą polecenia: <code>sudo systemctl enable minecraft</code>."
 status: published
 author:
   name: VoxiHost Team

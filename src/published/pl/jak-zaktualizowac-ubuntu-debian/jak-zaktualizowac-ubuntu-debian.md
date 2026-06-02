@@ -42,6 +42,17 @@ howto:
     - name: Włącz automatyczne aktualizacje bezpieczeństwa
       text: Zainstaluj i skonfiguruj unattended-upgrades aby automatycznie stosować poprawki bezpieczeństwa.
       url: automatyczne-aktualizacje-bezpieczenstwa
+faq:
+  - question: "Jaka jest różnica między apt update a apt upgrade?"
+    answer: "Komenda <code>apt update</code> pobiera aktualną listę pakietów i metadanych z repozytoriów (nie instalując niczego), natomiast <code>apt upgrade</code> pobiera i instaluje faktyczne wersje pakietów."
+  - question: "Jak naprawić wstrzymane pakiety (packages kept back) w Ubuntu?"
+    answer: "Pakiety są wstrzymywane, gdy ich aktualizacja wymaga zainstalowania nowych zależności lub usunięcia starych. Możesz bezpiecznie wymusić ich aktualizację za pomocą polecenia <code>sudo apt full-upgrade</code>."
+  - question: "Czy aktualizowanie serwera produkcyjnego poprzez apt upgrade jest bezpieczne?"
+    answer: "Tak, standardowe aktualizacje pakietów są bezpieczne. Dobrą praktyką jest jednak wykonanie snapshotu serwera przed aktualizacją, wykonywanie jej przy niskim natężeniu ruchu i sprawdzenie pliku <code>/var/run/reboot-required</code>."
+  - question: "Do czego służy polecenie apt autoremove?"
+    answer: "Komenda <code>apt autoremove</code> usuwa pakiety (najczęściej starsze jądra systemowe i biblioteki), które zostały zainstalowane automatycznie jako zależności, ale nie są już wymagane przez żadne zainstalowane oprogramowanie."
+  - question: "Jak skonfigurować automatyczne aktualizacje bezpieczeństwa?"
+    answer: "Aby włączyć automatyczną instalację poprawek bezpieczeństwa w tle, zainstaluj pakiet <code>unattended-upgrades</code> i dostosuj jego konfigurację w pliku <code>/etc/apt/apt.conf.d/50unattended-upgrades</code>."
 status: published
 locale: pl
 author:

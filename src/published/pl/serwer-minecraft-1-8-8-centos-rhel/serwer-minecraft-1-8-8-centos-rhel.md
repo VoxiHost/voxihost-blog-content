@@ -45,6 +45,17 @@ howto:
     - name: Profesjonalne uruchamianie (Systemd)
       text: Skonfiguruj usługę systemd, aby serwer uruchamiał się automatycznie po restarcie.
       url: krok-7-konfiguracja-uslugi-systemd
+faq:
+  - question: "Dlaczego Java 8 jest wymagana dla Minecrafta 1.8.8?"
+    answer: "Klasyczne wersje Minecrafta (od 1.7.10 do 1.16.5) zostały zaprojektowane do działania ze środowiskiem Java 8. Uruchomienie ich na nowszych wersjach Javy może powodować poważne błędy kompatybilności."
+  - question: "Czy wersja Minecraft 1.8.8 jest bezpieczna pod kątem podatności Log4j?"
+    answer: "Nie, wersja 1.8.8 jest domyślnie podatna na błąd Log4Shell. Aby zabezpieczyć serwer, zaleca się stosowanie dodatkowych parametrów startowych Javy lub przejście na zaktualizowany silnik, np. PaperMC."
+  - question: "Jaki jest cel tworzenia dedykowanego użytkownika 'minecraft'?"
+    answer: "Uruchamianie serwera na koncie użytkownika bez uprawnień roota (administratora) chroni serwer VPS. W przypadku wykrycia luki w zabezpieczeniach gry, napastnik nie uzyska pełnej kontroli nad systemem operacyjnym."
+  - question: "Jak przydzielić więcej pamięci RAM do serwera?"
+    answer: "Możesz to zrobić, modyfikując parametry pamięci <code>-Xmx</code> (maksymalna) i <code>-Xms</code> (początkowa) w swoim skrypcie startowym. Na przykład <code>-Xmx4G</code> przydzieli 4 gigabajty pamięci RAM."
+  - question: "Jak sprawić, by serwer Minecraft uruchamiał się automatycznie po starcie systemu?"
+    answer: "Najlepszym rozwiązaniem jest utworzenie usługi systemd (np. w pliku <code>/etc/systemd/system/minecraft.service</code>) i jej włączenie za pomocą polecenia: <code>sudo systemctl enable minecraft</code>."
 status: published
 author:
   name: VoxiHost Team

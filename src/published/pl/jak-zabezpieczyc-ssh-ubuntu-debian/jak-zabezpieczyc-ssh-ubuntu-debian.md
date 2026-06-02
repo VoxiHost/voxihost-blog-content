@@ -26,22 +26,33 @@ howto:
   steps:
     - name: Wygeneruj parę kluczy SSH
       text: Uruchom ssh-keygen -t ed25519 na swojej lokalnej maszynie aby wygenerować nowoczesną parę kluczy SSH.
-      url: skonfiguruj-uwierzytelnianie-oparte-na-kluczach-ssh
+      url: wygeneruj-pare-kluczy-ssh
     - name: Skopiuj swój klucz publiczny na serwer
       text: Uruchom ssh-copy-id user@your-server-ip aby zainstalować swój klucz publiczny na serwerze.
-      url: wylacz-logowanie-root
+      url: skopiuj-swoj-klucz-publiczny-na-serwer
     - name: Wyłącz logowanie root
       text: Ustaw PermitRootLogin no w /etc/ssh/sshd_config aby zapobiec bezpośredniemu dostępowi root.
-      url: wylacz-uwierzytelnianie-haslem
+      url: wylacz-logowanie-root
     - name: Wyłącz uwierzytelnianie hasłem
       text: Ustaw PasswordAuthentication no w /etc/ssh/sshd_config aby wymagać tylko logowania opartego na kluczach.
-      url: zaostrz-kilka-dodatkowych-ustawien
+      url: wylacz-uwierzytelnianie-haslem
     - name: Zmień domyślny port SSH
       text: Ustaw Port 2222 w sshd_config i zaktualizuj swoje reguły zapory UFW odpowiednio.
-      url: zmien-domyslny-port
+      url: zmien-domyslny-port-ssh
     - name: Zrestartuj SSH i zweryfikuj
       text: Uruchom sudo systemctl restart ssh i zweryfikuj z nowego okna terminala przed zamknięciem sesji.
       url: zrestartuj-ssh-i-zweryfikuj
+faq:
+  - question: "Czy zmiana domyślnego portu SSH rzeczywiście pomaga?"
+    answer: "Tak. Choć nie powstrzyma to celowego ataku hakera, zmiana portu z 22 na niestandardowy (np. 2222) odrzuca 99% automatycznych skanerów i botów. Dzięki temu plik <code>/var/log/auth.log</code> nie rośnie do ogromnych rozmiarów, a procesor nie jest obciążany ciągłymi próbami logowania."
+  - question: "Jaka jest różnica między sshd_config a ssh_config?"
+    answer: "Plik <code>sshd_config</code> służy do konfiguracji demona SSH (po stronie serwera, dla połączeń przychodzących), natomiast <code>ssh_config</code> konfiguruje klienta SSH (dla połączeń wychodzących z Twojego serwera)."
+  - question: "Co zrobić, jeśli zgubię klucz prywatny SSH?"
+    answer: "Jeżeli logowanie hasłem jest wyłączone, stracisz dostęp. Musisz zalogować się do VPS przez konsolę awaryjną VNC w panelu dostawcy hostingu, aby tymczasowo włączyć logowanie hasłem lub wgrać nowy klucz publiczny."
+  - question: "Dlaczego konfiguracja UFW jest kluczowa przed restartem SSH na nowym porcie?"
+    answer: "Jeśli zmienisz port SSH w konfiguracji na np. 2222, ale nie odblokujesz go najpierw w firewallu za pomocą <code>sudo ufw allow 2222/tcp</code>, to po restarcie usługi SSH zapora zablokuje ruch na nowym porcie, co odetnie Cię od serwera."
+  - question: "Czy mogę ograniczyć dostęp SSH tylko dla wybranych użytkowników?"
+    answer: "Tak. Dodając linijkę <code>AllowUsers nazwa_uzytkownika1 nazwa_uzytkownika2</code> w pliku <code>/etc/ssh/sshd_config</code> sprawisz, że nikt inny (nawet z poprawnym kluczem) nie będzie mógł się zalogować."
 status: published
 locale: pl
 author:
@@ -55,7 +66,7 @@ Port 22 jest ciągle skanowany. Moment gdy uruchamiasz VPS z publicznym IP, zaut
 
 > **Wymaganie:** Ten przewodnik wyłącza logowanie root. **Musisz** mieć niestandardowego użytkownika z uprawnieniami `sudo` gotowego **przed** uruchomieniem jakichkolwiek z tych kroków. Jeśli jeszcze tego nie zrobiłeś, postępuj zgodnie z naszym przewodnikiem [Jak utworzyć użytkownika sudo na Ubuntu i Debian](/pl/blog/jak-dodac-uzytkownika-sudo-ubuntu/), potem wróć tutaj.
 
-## Skonfiguruj uwierzytelnianie oparte na kluczach SSH
+## Wygeneruj parę kluczy SSH
 
 Jedna najskuteczniejsza zmiana jaką możesz zrobić. Logowania hasłowe mogą być siłowo złamane. Uwierzytelnianie oparte na kluczach nie może, nie w żadnym realistycznym przedziale czasowym.
 
@@ -68,6 +79,8 @@ ssh-keygen -t ed25519 -C "your-server-label"
 ```
 
 Użyj `ed25519`, jest szybszy i bezpieczniejszy od starszego algorytmu RSA. Gdy zostaniesz poproszony o hasło, **ustaw je**. Szyfruje klucz prywatny na dysku, więc nawet jeśli ktoś naruszy twój laptop, wciąż nie będzie mógł użyć klucza bez niego.
+
+## Skopiuj swój klucz publiczny na serwer
 
 Skopiuj klucz publiczny na serwer. Zastąp `youruser` swoim rzeczywistym nazwą użytkownika sudo:
 
@@ -159,7 +172,7 @@ AllowUsers youruser
 
 Żadne konto niewymienione na liście zostanie odrzucone na poziomie SSH, nawet z ważnym kluczem.
 
-## Zmień domyślny port
+## Zmień domyślny port SSH
 
 Port 22 pojawia się na każdej liście celów domyślnych skanerów. Przeniesienie SSH na niestandardowy port nie powstrzyma zdeterminowanego atakującego od skanowania portów, ale eliminuje praktycznie cały zautomatyzowany szum. Logi autoryzacji spadają z setek nieudanych prób logowania dziennie do efektywnie zera.
 

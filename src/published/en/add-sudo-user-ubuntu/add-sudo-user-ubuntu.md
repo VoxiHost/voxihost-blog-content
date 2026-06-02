@@ -36,6 +36,17 @@ howto:
     - name: Test the new account
       text: Switch to the new user with su - username and test sudo access by running sudo whoami.
       url: step-4-test-the-new-sudo-user
+faq:
+  - question: "What is the sudo group on Ubuntu/Debian?"
+    answer: "The <code>sudo</code> group is a system group that grants its members the permission to run any command with root-level privileges by typing <code>sudo</code> before the command."
+  - question: "How does the adduser command differ from useradd on Debian/Ubuntu?"
+    answer: "The <code>adduser</code> command is a user-friendly perl script that automatically sets up the home directory, prompts for a password, and copies default configuration files. The <code>useradd</code> command is a low-level utility that does not create these by default unless specified with flags."
+  - question: "How do I remove sudo access from a user on Ubuntu?"
+    answer: "You can remove a user from the <code>sudo</code> group by running <code>sudo deluser username sudo</code>."
+  - question: "How do I delete a user account and their home directory?"
+    answer: "You can delete a user and purge their home directory/files by running the command <code>sudo deluser --remove-home username</code>."
+  - question: "Why does the system ask for my password when running a sudo command?"
+    answer: "This is a security feature to verify that the person at the keyboard is indeed the authorized user, protecting the session in case the terminal was left unattended. Sudo caches the authentication for 15 minutes by default."
 status: published
 locale: en
 author:

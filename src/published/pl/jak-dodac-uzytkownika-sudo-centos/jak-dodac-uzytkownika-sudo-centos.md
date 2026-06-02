@@ -28,19 +28,30 @@ howto:
   steps:
     - name: Zaloguj się jako root
       text: Połącz się z serwerem przez SSH używając konta root.
-      url: krok-1-dodaj-nowego-uzytkownika
+      url: krok-1-zaloguj-sie-jako-root
     - name: Dodaj nowego użytkownika
       text: Uruchom useradd username aby utworzyć strukturę konta.
-      url: krok-2-dodaj-uzytkownika-do-grupy-wheel
+      url: krok-2-dodaj-nowego-uzytkownika
     - name: Ustaw hasło
       text: Uruchom passwd username aby przypisać hasło do nowego konta.
-      url: krok-3-przetestuj-nowego-uzytkownika-sudo
+      url: krok-3-ustaw-haslo
     - name: Nadaj uprawnienia sudo
       text: Uruchom usermod -aG wheel username aby dodać nowego użytkownika do grupy wheel.
-      url: step-2-add-the-user-to-the-wheel-group
+      url: krok-4-nadaj-uprawnienia-sudo
     - name: Przetestuj nowe konto
       text: Przełącz się na nowego użytkownika za pomocą su - username i przetestuj dostęp sudo uruchamiając sudo whoami.
-      url: step-3-test-the-new-sudo-user
+      url: krok-5-przetestuj-nowe-konto
+faq:
+  - question: "Co to jest grupa wheel w systemach opartych na RHEL?"
+    answer: "Grupa <code>wheel</code> to specjalna grupa użytkowników w systemach RHEL, CentOS, Rocky Linux i Fedora, która automatycznie nadaje swoim członkom pełne uprawnienia administracyjne za pomocą polecenia <code>sudo</code>."
+  - question: "Dlaczego zaleca się używanie użytkownika sudo zamiast konta root?"
+    answer: "Używanie konta z uprawnieniami <code>sudo</code> zapobiega przypadkowym błędom przy wykonywaniu komend, tworzy historię logów (audit trail) oraz pozwala na zablokowanie bezpośredniego logowania przez SSH na konto root, co znacznie zwiększa bezpieczeństwo."
+  - question: "Jak odebrać użytkownikowi uprawnienia sudo?"
+    answer: "Możesz usunąć użytkownika z grupy <code>wheel</code> za pomocą komendy <code>sudo gpasswd -d nazwa_użytkownika wheel</code>."
+  - question: "Jak całkowicie usunąć konto użytkownika?"
+    answer: "Aby usunąć użytkownika wraz z jego katalogiem domowym i plikami, użyj polecenia <code>sudo userdel -r nazwa_użytkownika</code>."
+  - question: "Jaka jest różnica między useradd a adduser w systemach RHEL?"
+    answer: "W systemach CentOS/RHEL polecenie <code>adduser</code> jest dowiązaniem symbolicznym (skrótem) do <code>useradd</code>, więc wykonują one dokładnie to samo działanie. Inaczej jest w Debianie/Ubuntu, gdzie są to dwa różne narzędzia."
 status: published
 locale: pl
 author:
@@ -56,13 +67,15 @@ Z tego powodu logowanie bezpośrednio jako root to straszny nawyk. Standardowa p
 
 Na dystrybucjach rodziny RHEL (AlmaLinux, CentOS Stream, Rocky Linux) i Fedorze, proces wymaga tylko trzech poleceń.
 
-## Krok 1: Dodaj nowego użytkownika
+## Krok 1: Zaloguj się jako root
 
 Połącz się z serwerem przez SSH jako użytkownik `root`:
 
 ```bash
 ssh root@your-server-ip
 ```
+
+## Krok 2: Dodaj nowego użytkownika
 
 W przeciwieństwie do Ubuntu, które używa interaktywnego skryptu `adduser`, dystrybucje oparte na RHEL typowo używają standardowego polecenia `useradd`. Wykonuje swoją pracę cicho bez pytania o dodatkowe informacje.
 
@@ -73,6 +86,8 @@ Zastąp `yourusername` nazwą którą chcesz użyć (małe litery, bez spacji):
 ```bash
 useradd yourusername
 ```
+
+## Krok 3: Ustaw hasło
 
 Użytkownik teraz istnieje, ale nie ma hasła, co oznacza że nie może się zalogować. Przypisz hasło używając polecenia `passwd`:
 
@@ -91,7 +106,7 @@ Retype new password:
 passwd: all authentication tokens updated successfully.
 ```
 
-## Krok 2: Dodaj użytkownika do grupy wheel
+## Krok 4: Nadaj uprawnienia sudo
 
 Domyślnie nowy użytkownik nie może uruchamiać poleceń administracyjnych. Aby to naprawić, musisz dodać go do konkretnej grupy.
 
@@ -109,7 +124,7 @@ usermod -aG wheel yourusername
 
 Członkowie grupy `wheel` są automatycznie nadawani pełne uprawnienia `sudo` przez domyślną politykę systemu.
 
-## Krok 3: Przetestuj nowego użytkownika sudo
+## Krok 5: Przetestuj nowe konto
 
 Zweryfikuj że nowa konfiguracja działa przed wylogowaniem się z konta root. Przełącz się na nowego użytkownika bezproblemowo używając polecenia `su`:
 

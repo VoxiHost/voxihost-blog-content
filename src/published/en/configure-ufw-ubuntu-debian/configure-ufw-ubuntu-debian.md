@@ -39,6 +39,17 @@ howto:
     - name: Enable the firewall
       text: Run sudo ufw enable to activate the firewall and sudo ufw status to verify.
       url: step-5-enable-ufw
+faq:
+  - question: "What is UFW in Linux?"
+    answer: "UFW stands for <b>Uncomplicated Firewall</b>. It is a program that provides a simplified command-line interface for managing netfilter/iptables firewall rules on Ubuntu and Debian distributions."
+  - question: "What happens if I enable UFW without allowing SSH first?"
+    answer: "If you enable UFW with the default deny incoming policy without first adding a rule for your SSH port (default 22), your current SSH connection will be dropped, and you will be completely locked out of your server."
+  - question: "How do I check if UFW is currently running?"
+    answer: "You can check the status by running the command <code>sudo ufw status</code>. It will output either 'Status: active' along with the active rules list, or 'Status: inactive'."
+  - question: "How do I temporarily disable or reset the UFW firewall?"
+    answer: "You can turn off UFW by running <code>sudo ufw disable</code>. To completely reset all rules back to default factory settings, use the command <code>sudo ufw reset</code>."
+  - question: "Can I block a specific IP address using UFW?"
+    answer: "Yes. You can block any incoming traffic from a specific IP (e.g. 203.0.113.50) by running the command <code>sudo ufw deny from 203.0.113.50</code>."
 status: published
 locale: en
 author:

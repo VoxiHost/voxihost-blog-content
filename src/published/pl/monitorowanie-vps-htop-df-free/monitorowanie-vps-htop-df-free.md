@@ -35,6 +35,17 @@ howto:
     - name: Znajdź duże foldery
       text: Uruchom du -sh * aby zmierzyć rozmiar konkretnych katalogów aby znaleźć co zajmuje miejsce.
       url: krok-4-znajdz-co-zjada-miejsce-za-pomoca-du
+faq:
+  - question: "Dlaczego htop jest lepszy od klasycznego polecenia top?"
+    answer: "Narzędzie <code>htop</code> oferuje kolorowy, interaktywny i przewijany interfejs, umożliwia łatwe sortowanie i filtrowanie procesów, graficznie przedstawia obciążenie poszczególnych rdzeni CPU oraz pozwala na zabijanie procesów bezpośrednio z poziomu listy."
+  - question: "Dlaczego kolumna available w poleceniu free jest ważniejsza niż free?"
+    answer: "Linux wykorzystuje nieużywaną pamięć jako pamięć podręczną (cache). Kolumna <code>free</code> pokazuje tylko całkowicie pusty RAM, natomiast <code>available</code> szacuje, ile pamięci system może natychmiast odzyskać z pamięci podręcznej na potrzeby nowych aplikacji."
+  - question: "Co to jest przestrzeń Swap i kiedy jest używana?"
+    answer: "Swap to obszar na dysku twardym używany przez system operacyjny jako pamięć zapasowa, gdy fizyczna pamięć RAM ulegnie całkowitemu przepełnieniu. Swap zapobiega awariom systemu, ale działa znacznie wolniej niż fizyczny RAM."
+  - question: "Jak ubić proces obciążający serwer bezpośrednio w htop?"
+    answer: "Wskaż proces na liście za pomocą strzałek, naciśnij klawisz <code>F9</code> (lub <code>k</code>), wybierz sygnał zamknięcia (najczęściej <code>15</code> dla SIGTERM lub <code>9</code> dla natychmiastowego SIGKILL) i zatwierdź klawiszem <code>Enter</code>."
+  - question: "Jak sprawdzić zużycie i-węzłów (inodes) na serwerze?"
+    answer: "Możesz to zweryfikować za pomocą polecenia <code>df -i</code>. Jeśli zabraknie wolnych i-węzłów (unikalnych numerów identyfikacyjnych plików), nie będzie można utworzyć żadnego nowego pliku, nawet jeśli dysk ma wolne gigabajty."
 status: published
 locale: pl
 author:

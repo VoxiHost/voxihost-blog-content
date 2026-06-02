@@ -26,16 +26,27 @@ howto:
   steps:
     - name: Zaloguj się jako root
       text: Połącz się z serwerem przez SSH używając konta root.
-      url: krok-1-dodaj-nowego-uzytkownika
+      url: krok-1-zaloguj-sie-jako-root
     - name: Dodaj nowego użytkownika
       text: Uruchom adduser username i postępuj zgodnie z instrukcjami aby ustawić silne hasło.
-      url: krok-2-nadaj-uprawnienia-sudo
+      url: krok-2-dodaj-nowego-uzytkownika
     - name: Nadaj uprawnienia sudo
       text: Uruchom usermod -aG sudo username aby dodać nowego użytkownika do grupy sudo.
-      url: krok-3-przetestuj-nowego-uzytkownika-sudo
+      url: krok-3-nadaj-uprawnienia-sudo
     - name: Przetestuj nowe konto
       text: Przełącz się na nowego użytkownika za pomocą su - username i przetestuj dostęp sudo uruchamiając sudo whoami.
-      url: step-3-test-the-new-sudo-user
+      url: krok-4-przetestuj-nowe-konto
+faq:
+  - question: "Czym jest grupa sudo w systemach Ubuntu i Debian?"
+    answer: "Grupa <code>sudo</code> to systemowa grupa użytkowników, której członkowie mają uprawnienia do uruchamiania dowolnych komend jako administrator (root) poprzez dodanie przedrostka <code>sudo</code> przed komendą."
+  - question: "Czym różni się adduser od useradd w Debianie/Ubuntu?"
+    answer: "Komenda <code>adduser</code> to interaktywny i łatwy w użyciu skrypt, który automatycznie tworzy katalog domowy, pyta o hasło i kopiuje pliki konfiguracyjne. Z kolei <code>useradd</code> to niskopoziomowe narzędzie, które nie wykonuje tych czynności automatycznie bez dodatkowych flag."
+  - question: "Jak odebrać użytkownikowi uprawnienia sudo w Ubuntu?"
+    answer: "Możesz usunąć użytkownika z grupy administracyjnej za pomocą komendy <code>sudo deluser nazwa_użytkownika sudo</code>."
+  - question: "Jak całkowicie usunąć konto użytkownika wraz z jego katalogiem domowym?"
+    answer: "Aby usunąć konto oraz wyczyścić powiązany z nim folder domowy i pliki, uruchom polecenie <code>sudo deluser --remove-home nazwa_użytkownika</code>."
+  - question: "Dlaczego system pyta o hasło przy wywoływaniu poleceń z sudo?"
+    answer: "Jest to funkcja bezpieczeństwa potwierdzająca, że przy klawiaturze siedzi uprawniona osoba. System zapamiętuje autoryzację domyślnie na 15 minut od ostatniego wpisania hasła."
 status: published
 locale: pl
 author:
@@ -51,13 +62,15 @@ Logowanie bezpośrednio jako root jest powszechnie uważane za złą praktykę b
 
 Na Ubuntu i Debian, tworzenie nowego użytkownika sudo zajmuje około dwóch minut.
 
-## Krok 1: Dodaj nowego użytkownika
+## Krok 1: Zaloguj się jako root
 
 Najpierw połącz się z serwerem przez SSH jako użytkownik `root`:
 
 ```bash
 ssh root@your-server-ip
 ```
+
+## Krok 2: Dodaj nowego użytkownika
 
 Użyj polecenia `adduser` aby utworzyć nowe konto. Zastąp `yourusername` dowolną nazwą którą chcesz użyć (nie używaj spacji ani wielkich liter):
 
@@ -82,7 +95,7 @@ passwd: password updated successfully
 
 Po haśle zostaniesz poproszony o informacje o użytkowniku (Pełna nazwa, Numer pokoju, itp.). To relikt z wczesnych dni Uniksa. Nie musisz niczego wypełniać, po prostu naciśnij `ENTER` aby pominąć wszystkie, i naciśnij `Y` gdy zapytane czy informacje są poprawne.
 
-## Krok 2: Nadaj uprawnienia sudo
+## Krok 3: Nadaj uprawnienia sudo
 
 Domyślnie nowi użytkownicy na Ubuntu i Debian to standardowe, nieuprzywilejowane konta. Nie mogą instalować oprogramowania ani edytować konfiguracji systemu.
 
@@ -98,7 +111,7 @@ usermod -aG sudo yourusername
 
 Flagi `-aG` są ważne. `-a` oznacza "dołącz" i `-G` oznacza "grupy". Jeśli zapomnisz `-a`, użytkownik zostanie usunięty ze wszystkich swoich innych grup i dodany *tylko* do grupy sudo, co psuje rzeczy.
 
-## Krok 3: Przetestuj nowego użytkownika sudo
+## Krok 4: Przetestuj nowe konto
 
 Zanim wylogujesz się z sesji root, upewnij się że nowy użytkownik działa. Użyj polecenia `su` (switch user) aby natychmiast przełączyć się na nowe konto:
 

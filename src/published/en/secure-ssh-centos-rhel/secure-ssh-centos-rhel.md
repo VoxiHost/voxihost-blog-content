@@ -44,6 +44,17 @@ howto:
     - name: Restart SSH and verify
       text: Run sudo systemctl restart sshd and test your connection before closing the current session.
       url: restart-sshd-and-verify
+faq:
+  - question: "Why do I need to update SELinux when changing the SSH port?"
+    answer: "RHEL-based systems use SELinux to enforce security policies. By default, SELinux only allows SSH to bind to port 22. If you change the port to e.g. 2222, you must run <code>semanage port -a -t ssh_port_t -p tcp 2222</code> to allow it, or the SSH service will fail to start."
+  - question: "What is the difference between Ed25519 and RSA keys?"
+    answer: "Ed25519 is a modern, high-performance elliptic curve signature algorithm that is faster and more secure than RSA. Ed25519 keys are also much shorter (68 characters) compared to secure RSA keys (typically 4096 bits)."
+  - question: "What happens if I lose my SSH private key after disabling password authentication?"
+    answer: "If you lose your private key, you will be locked out of your server. You will need to access your server via the hosting provider's web console (VNC or IPMI) to restore password authentication or place a new public key in <code>~/.ssh/authorized_keys</code>."
+  - question: "Why is it important to keep the current SSH session open while testing changes?"
+    answer: "Keeping the current session open acts as a safety net. If you made a configuration error that prevents new logins, you can fix it and restart the service from the active session. If you close it, you risk being permanently locked out."
+  - question: "Does changing the default SSH port stop brute-force attacks?"
+    answer: "Changing the port from 22 to a custom port does not make the server completely secure, but it stops 99% of automated script scans and brute-force bots, significantly reducing system log noise and resource consumption."
 status: published
 locale: en
 author:

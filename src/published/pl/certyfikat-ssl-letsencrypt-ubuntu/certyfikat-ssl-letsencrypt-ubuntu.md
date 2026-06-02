@@ -39,6 +39,17 @@ howto:
     - name: Zweryfikuj automatyczne odnawianie
       text: Sprawdź czy timer certbot.timer jest aktywny, aby certyfikaty były odnawiane przed wygaśnięciem.
       url: krok-4-zweryfikuj-automatyczne-odnawianie
+faq:
+  - question: "Czym różni się certyfikat SSL od TLS?"
+    answer: "TLS (Transport Layer Security) to nowszy, bezpieczniejszy następca protokołu SSL (Secure Sockets Layer). Chociaż powszechnie wciąż używa się określenia 'SSL', w rzeczywistości dzisiejsze bezpieczne połączenia internetowe wykorzystują protokół TLS."
+  - question: "Dlaczego certyfikaty Let's Encrypt są ważne tylko przez 90 dni?"
+    answer: "Krótki czas ważności zachęca do automatyzacji procesów (przez co administratorzy nie zapominają o przedłużeniu certyfikatu). Ogranicza to również ryzyko związane z ewentualnym wyciekiem kluczy prywatnych i automatycznie wygasza certyfikaty dla porzuconych domen."
+  - question: "W jaki sposób Certbot udowadnia, że jestem właścicielem domeny?"
+    answer: "Certbot wykorzystuje protokół ACME do wykonania wyzwania (challenge). Dla wtyczek Nginx/Apache tymczasowo modyfikuje on konfigurację serwera lub umieszcza plik weryfikacyjny w katalogu publicznym, aby udowodnić serwerom Let's Encrypt, że domena wskazuje na Twój serwer."
+  - question: "Jak wymusić przekierowanie z HTTP na HTTPS za pomocą Certbota?"
+    answer: "Podczas pierwszego uruchomienia Certbot pyta, czy chcesz automatycznie przekierowywać cały ruch. Po wyrażeniu zgody narzędzie samo dodaje odpowiednie reguły przekierowania (np. kod statusu 301) do plików konfiguracyjnych serwera."
+  - question: "Czy mogę wygenerować certyfikat typu Wildcard (*.domena.pl) przez Let's Encrypt?"
+    answer: "Tak, jednak certyfikaty typu Wildcard wymagają weryfikacji przez wpisy DNS (DNS-01 challenge) zamiast weryfikacji HTTP. Wymaga to instalacji dodatkowej wtyczki Certbota dla Twojego dostawcy DNS (np. Cloudflare, Route53) w celu automatycznego dodawania wpisów TXT."
 status: published
 locale: pl
 author:
@@ -167,7 +178,7 @@ sudo certbot renew --dry-run
 
 Jeśli test przejdzie bez błędów, wszystko działa poprawnie!
 
-## Krok 4: Wymuś połączenia HTTPS
+## Krok 5: Wymuś połączenia HTTPS
 
 Twój serwer WWW jest teraz skonfigurowany tak aby obsługiwał bezpieczne połączenia HTTPS. Przeglądarki automatycznie przekierują ruch HTTP na HTTPS.
 

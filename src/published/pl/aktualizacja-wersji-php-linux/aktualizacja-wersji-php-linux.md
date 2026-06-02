@@ -36,6 +36,17 @@ howto:
     - name: Skonfiguruj swój serwer WWW
       text: Wskaż Nginx lub Apache do konkretnego gniazda PHP-FPM którego chcesz użyć dla swojej strony internetowej.
       url: krok-4-powiedz-swojemu-serwerowi-www-ktorej-wersji-uzyc
+faq:
+  - question: "Dlaczego powinienem dodać repozytorium Ondřeja Surégo?"
+    answer: "Domyślne repozytoria Ubuntu/Debiana zawierają tylko jedną, przestarzałą wersję PHP z dnia premiery systemu. Repozytorium Ondřeja Surégo (oficjalnego dewelopera Debiana) to standard branżowy, który umożliwia bezpieczne instalowanie wielu nowszych wersji PHP obok siebie."
+  - question: "Czy różne wersje PHP mogą działać na serwerze jednocześnie?"
+    answer: "Tak. Każda wersja PHP działa jako oddzielna usługa systemowa w tle (np. <code>php8.1-fpm</code> oraz <code>php8.3-fpm</code>) i nasłuchuje na osobnym gnieździe Unix socket, przez co nie wchodzą sobie w drogę."
+  - question: "Jak zainstalować rozszerzenie PHP dla konkretnej wersji?"
+    answer: "Musisz wskazać wersję PHP w nazwie pakietu rozszerzenia. Na przykład, aby zainstalować rozszerzenie curl dla PHP 8.3, należy uruchomić polecenie <code>sudo apt install php8.3-curl</code>."
+  - question: "Jak zmienić wersję PHP używaną przez serwer Nginx?"
+    answer: "Nginx komunikuje się z PHP za pomocą socketów FPM. Aby zmienić wersję, edytuj plik konfiguracyjny swojej strony i zmień ścieżkę w dyrektywie <code>fastcgi_pass</code> (np. z <code>/var/run/php/php8.1-fpm.sock</code> na <code>/var/run/php/php8.3-fpm.sock</code>), a potem przeładuj Nginx."
+  - question: "Dlaczego moje zmiany wprowadzone w php.ini nie działają?"
+    answer: "Po edycji pliku <code>/etc/php/VERSION/fpm/php.ini</code> musisz zrestartować właściwą usługę FPM (np. <code>sudo systemctl restart php8.3-fpm</code>). Upewnij się też, że edytujesz plik konfiguracyjny FPM, a nie CLI (wersji konsolowej)."
 status: published
 locale: pl
 author:

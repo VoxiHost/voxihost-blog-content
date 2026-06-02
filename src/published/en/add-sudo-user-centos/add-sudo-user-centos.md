@@ -41,6 +41,17 @@ howto:
     - name: Test the new account
       text: Switch to the new user with su - username and test sudo access by running sudo whoami.
       url: step-5-test-the-new-sudo-user
+faq:
+  - question: "What is the wheel group on RHEL-based systems?"
+    answer: "The <code>wheel</code> group is a special user group on RHEL, CentOS, Rocky Linux, and Fedora that grants full administrative privileges via the <code>sudo</code> command to its members."
+  - question: "Why is it recommended to use a sudo user instead of root?"
+    answer: "Using a <code>sudo</code> user prevents accidental command execution errors, provides audit trails (logs) of who ran what command, and allows disabling direct root SSH login to significantly improve server security."
+  - question: "How do I remove sudo access from a user?"
+    answer: "You can remove a user from the <code>wheel</code> group by running <code>sudo gpasswd -d username wheel</code>."
+  - question: "How can I delete a user account that I no longer need?"
+    answer: "You can delete a user and their home directory by running the command <code>sudo userdel -r username</code>."
+  - question: "What is the difference between useradd and adduser on RHEL?"
+    answer: "On CentOS and RHEL-based systems, <code>adduser</code> is simply a symbolic link to the <code>useradd</code> command, meaning they perform the exact same action, unlike Debian/Ubuntu where they are separate utilities."
 status: published
 locale: en
 author:

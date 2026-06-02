@@ -43,6 +43,17 @@ howto:
     - name: Professional Startup (Systemd)
       text: Set up a systemd service to ensure your server starts automatically on boot.
       url: step-7-configure-systemd-service
+faq:
+  - question: "Why is Java 16 required for Minecraft 1.17?"
+    answer: "Minecraft 1.17 was the first version to upgrade its Java requirement from Java 8 to Java 16. Running it on older versions (like Java 8) will prevent the server from starting."
+  - question: "Can I use Java 17 instead of Java 16?"
+    answer: "Yes, you can run Minecraft 1.17 servers on Java 17 as it is backwards compatible. Since Java 16 is deprecated, Java 17 is often the easiest alternative on modern Linux distributions."
+  - question: "What is the purpose of creating a dedicated 'minecraft' user?"
+    answer: "Running the server under a restricted, non-root user account prevents potential security vulnerabilities in Minecraft (or its plugins) from allowing attackers to gain full control of your operating system."
+  - question: "How do I allocate more RAM to the server?"
+    answer: "You can adjust the allocation by modifying the <code>-Xmx</code> (maximum) and <code>-Xms</code> (starting) memory flags in your launch script. For example, <code>-Xmx4G</code> allocates 4 gigabytes of RAM."
+  - question: "How do I make the Minecraft server run automatically when the system boots?"
+    answer: "You can create a systemd service file (e.g. <code>/etc/systemd/system/minecraft.service</code>) to manage the server daemon, then enable it using <code>sudo systemctl enable minecraft</code>."
 status: published
 author:
   name: VoxiHost Team

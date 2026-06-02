@@ -35,6 +35,17 @@ howto:
     - name: Find large folders
       text: Run du -sh * to measure the size of specific directories to find what is taking up space.
       url: step-4-find-what-is-eating-space-with-du
+faq:
+  - question: "Why is htop preferred over the top command?"
+    answer: "The <code>htop</code> command provides a colorful, interactive, scrollable interface, allows sorting and filtering of processes, shows individual CPU core utilization graphically, and supports killing processes directly without typing their PID."
+  - question: "Why is the available memory column in the free command more important than free memory?"
+    answer: "Linux uses unused memory as a buffer/cache to speed up operations. The <code>free</code> column only shows completely untouched memory, while <code>available</code> estimates how much memory can be immediately reclaimed from caches to start new applications."
+  - question: "What is Swap space and when is it used?"
+    answer: "Swap space is a designated area on your hard drive (disk) that Linux uses as overflow memory when physical RAM is fully saturated. While it prevents out-of-memory crashes, using Swap heavily slows down server performance significantly."
+  - question: "How do I kill a resource-heavy process directly inside htop?"
+    answer: "Navigate to the process using the arrow keys, press <code>F9</code> (or <code>k</code>), select the signal you want to send (usually <code>15</code> for SIGTERM or <code>9</code> for SIGKILL), and press <code>Enter</code>."
+  - question: "How do I check disk partition health and inodes usage?"
+    answer: "You can check inode usage by running the command <code>df -i</code>. If your server runs out of inodes (unique index numbers for files), you won't be able to create new files even if you have gigabytes of free disk space."
 status: published
 locale: en
 author:

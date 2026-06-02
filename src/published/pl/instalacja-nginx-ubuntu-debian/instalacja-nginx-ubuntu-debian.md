@@ -39,6 +39,17 @@ howto:
     - name: Skonfiguruj Blok Serwera (Wirtualny Host)
       text: Utwórz niestandardowy plik konfiguracyjny w /etc/nginx/sites-available/ aby hostować własną domenę.
       url: krok-5-skonfiguruj-blok-serwera-wirtualny-host
+faq:
+  - question: "Co to jest Nginx i dlaczego jest często wybierany zamiast Apache?"
+    answer: "Nginx korzysta z asynchronicznej, sterowanej zdarzeniami architektury, która znacznie lepiej radzi sobie z obsługą wielu jednoczesnych połączeń w porównaniu do procesowego modelu Apache. Jest idealny do serwowania statycznych treści oraz jako reverse proxy."
+  - question: "Jaka jest różnica między katalogami sites-available a sites-enabled?"
+    answer: "Katalog <code>sites-available</code> zawiera pliki konfiguracyjne wszystkich stworzonych bloków serwera (stron), natomiast <code>sites-enabled</code> zawiera dowiązania symboliczne (symlinki) do tych konfiguracji, które Nginx ma rzeczywiście załadować."
+  - question: "Jak sprawdzić poprawność składni plików konfiguracyjnych Nginx?"
+    answer: "Przed każdym przeładowaniem usługi Nginx należy uruchomić polecenie testowe <code>sudo nginx -t</code>, co pozwala uniknąć błędów składniowych mogących wyłączyć serwer."
+  - question: "Jak przekierować cały ruch HTTP na HTTPS w Nginx?"
+    answer: "W bloku serwera HTTP (nasłuchującym na porcie 80) dodaj dyrektywę przekierowania: <code>return 301 https://$host$request_uri;</code>, aby automatycznie kierować użytkowników na bezpieczny protokół HTTPS."
+  - question: "Gdzie znajdują się domyślne pliki dziennika (logi) serwera Nginx?"
+    answer: "Wszystkie zdarzenia i błędy są domyślnie zapisywane w katalogu <code>/var/log/nginx/</code>, w plikach <code>access.log</code> (logi dostępu) oraz <code>error.log</code> (logi błędów)."
 status: published
 locale: pl
 author:

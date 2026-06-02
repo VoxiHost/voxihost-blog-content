@@ -39,6 +39,17 @@ howto:
     - name: Włącz zaporę
       text: Uruchom sudo ufw enable aby aktywować zaporę i sudo ufw status aby zweryfikować.
       url: krok-5-wlacz-ufw
+faq:
+  - question: "Co to jest zapora UFW w systemie Linux?"
+    answer: "UFW to skrót od <b>Uncomplicated Firewall</b>. Jest to narzędzie wiersza poleceń, które upraszcza zarządzanie regułami zapory sieciowej netfilter/iptables na systemach Ubuntu i Debian."
+  - question: "Co się stanie, jeśli włączę UFW bez uprzedniego odblokowania SSH?"
+    answer: "Jeśli włączysz zaporę UFW (która domyślnie blokuje cały ruch przychodzący) przed dodaniem reguły zezwalającej na ruch na porcie SSH (domyślnie 22), Twoja sesja SSH zostanie zerwana i zostaniesz całkowicie odcięty od serwera."
+  - question: "Jak sprawdzić, czy zapora UFW jest aktualnie uruchomiona?"
+    answer: "Status zapory sprawdzisz wpisując polecenie <code>sudo ufw status</code>. Zwróci ono komunikat 'Status: active' (razem z listą reguł) lub 'Status: inactive'."
+  - question: "Jak tymczasowo wyłączyć lub całkowicie zresetować zaporę UFW?"
+    answer: "Aby wyłączyć zaporę, użyj komendy <code>sudo ufw disable</code>. Jeśli chcesz usunąć wszystkie reguły i przywrócić ustawienia domyślne, wpisz <code>sudo ufw reset</code>."
+  - question: "Czy mogę zablokować konkretny adres IP za pomocą UFW?"
+    answer: "Tak. Aby całkowicie zablokować ruch przychodzący z określonego adresu IP (np. 203.0.113.50), należy uruchomić polecenie: <code>sudo ufw deny from 203.0.113.50</code>."
 status: published
 locale: pl
 author:

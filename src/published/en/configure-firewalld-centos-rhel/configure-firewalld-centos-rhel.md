@@ -40,6 +40,17 @@ howto:
     - name: Reload the firewall
       text: Run sudo firewall-cmd --reload to apply all permanent rule changes.
       url: step-5-reload-and-verify
+faq:
+  - question: "What is firewalld and how is it different from UFW?"
+    answer: "Firewalld is a dynamic, zone-based firewall manager used primarily in the RHEL ecosystem (AlmaLinux, CentOS, Rocky Linux, Fedora). Unlike UFW which assumes a single connection, firewalld supports multiple security zones to apply different rules based on the network interface."
+  - question: "Why is the --permanent flag important in firewall-cmd?"
+    answer: "Without the <code>--permanent</code> flag, firewall-cmd rules are applied immediately to the running state but will be lost when the system reboots or the service restarts. Adding <code>--permanent</code> writes the rules to disk, requiring a reload to activate them."
+  - question: "How do I temporarily disable or stop firewalld?"
+    answer: "You can stop the firewall by running <code>sudo systemctl stop firewalld</code>. To ensure it doesn't start automatically on boot, run <code>sudo systemctl disable firewalld</code>."
+  - question: "How do I check which zone is currently the default?"
+    answer: "You can find the default zone name by executing the command <code>sudo firewall-cmd --get-default-zone</code>. By default, on fresh installations, this is set to the 'public' zone."
+  - question: "What is a Rich Rule in firewalld?"
+    answer: "A Rich Rule is an advanced configuration statement in firewalld that allows you to create highly granular rules, such as allowing access to a specific port only from a specific IP address or blocking particular traffic types."
 status: published
 locale: en
 author:

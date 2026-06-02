@@ -40,6 +40,17 @@ howto:
     - name: Enable automatic security updates
       text: Install and configure dnf-automatic to automatically apply security patches on a schedule.
       url: automating-patches-with-dnf-automatic
+faq:
+  - question: "What is the difference between dnf update and dnf upgrade?"
+    answer: "In the modern DNF package manager (used in AlmaLinux, Rocky Linux, and CentOS Stream), <code>dnf update</code> and <code>dnf upgrade</code> are identical alias commands that perform the exact same task of updating all installed packages."
+  - question: "How do I update only security patches on RHEL-based systems?"
+    answer: "You can update only package upgrades containing security-related fixes by running the command <code>sudo dnf upgrade --security</code>."
+  - question: "Is it safe to run dnf update on a live production server?"
+    answer: "Yes, generally it is safe, but it is highly recommended to perform updates during low-traffic periods, take a server backup or VM snapshot first, and check <code>needs-restarting -r</code> to see if a reboot is needed."
+  - question: "How do I check the DNF update history or rollback a transaction?"
+    answer: "You can view the history of updates by running <code>sudo dnf history</code>, and rollback a specific transaction by running <code>sudo dnf history rollback ID</code> where ID is the transaction number."
+  - question: "How do I enable daily automatic security updates?"
+    answer: "You can automate security patching by installing the dnf-automatic package via <code>sudo dnf install dnf-automatic -y</code> and setting <code>upgrade_type = security</code> in <code>/etc/dnf/automatic.conf</code>."
 status: published
 locale: en
 author:

@@ -31,6 +31,17 @@ howto:
     - name: Access the Dashboard
       text: Open your web browser and navigate to http://your_server_ip:19999.
       url: step-3-access-your-dashboard
+faq:
+  - question: "What port does Netdata use by default?"
+    answer: "By default, Netdata runs its internal web server on port <code>19999</code>. You must open this port in your system's firewall (like UFW or firewalld) to access the dashboard."
+  - question: "Does Netdata consume a lot of server resources?"
+    answer: "No. Netdata is highly optimized and written in C. It typically uses less than 1% CPU and a small, configurable amount of RAM to collect and visualize thousands of metrics in real-time."
+  - question: "How do I secure the Netdata dashboard from public access?"
+    answer: "To secure the dashboard, you can edit <code>/etc/netdata/netdata.conf</code> to bind the web server strictly to localhost (<code>127.0.0.1</code>) and set up a reverse proxy like Nginx with basic HTTP authentication."
+  - question: "Can Netdata monitor Docker containers?"
+    answer: "Yes. Netdata automatically detects running Docker containers and generates detailed real-time monitoring charts for CPU, memory, and network statistics per container without manual configuration."
+  - question: "How do I restart or stop the Netdata service?"
+    answer: "You can manage Netdata using systemctl. To stop the service, run <code>sudo systemctl stop netdata</code>. To start it, run <code>sudo systemctl start netdata</code>, and to restart it, run <code>sudo systemctl restart netdata</code>."
 status: published
 locale: en
 author:

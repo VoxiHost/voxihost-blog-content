@@ -14,6 +14,17 @@ tags:
   - archiwum
   - mojang
   - java
+faq:
+  - question: "Czy te linki do pobrania serwerów Minecraft są bezpieczne?"
+    answer: "Tak. Wszystkie linki prowadzą bezpośrednio do oficjalnych serwerów Mojang (<code>piston-data.mojang.com</code> lub <code>launcher.mojang.com</code>), czyli oficjalnej sieci dystrybucji plików gry."
+  - question: "Jaka wersja Javy jest wymagana dla serwera Minecraft 1.21?"
+    answer: "Minecraft od wersji 1.20.5 (w tym 1.21) wymaga do działania środowiska Java 21. Uruchomienie go na starszej wersji Javy spowoduje błąd startowy."
+  - question: "Ile pamięci RAM potrzebuje serwer Minecraft?"
+    answer: "Dla standardowej wersji vanilla dla kilku graczy wystarczy 2GB do 4GB pamięci RAM. Dla nowszych wersji (1.18+) lub serwerów z modami zaleca się minimum 6GB RAM."
+  - question: "Co to jest plik server.jar?"
+    answer: "Plik <code>server.jar</code> to oficjalny plik wykonywalny dostarczany przez Mojang do uruchomienia serwera Minecraft Vanilla. Zawiera on całą logikę gry, generator świata i ustawienia sieciowe."
+  - question: "Jak uruchomić pobrany plik server.jar?"
+    answer: "Możesz to zrobić w konsoli za pomocą polecenia: <code>java -Xmx2048M -Xms2048M -jar server.jar nogui</code>. Po pierwszym uruchomieniu musisz zaakceptować warunki licencyjne w pliku <code>eula.txt</code>."
 status: published
 author:
   name: VoxiHost Team

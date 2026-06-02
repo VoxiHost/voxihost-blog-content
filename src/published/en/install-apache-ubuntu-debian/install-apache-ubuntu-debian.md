@@ -40,6 +40,17 @@ howto:
     - name: Set up a Virtual Host
       text: Create a custom configuration file in /etc/apache2/sites-available/ to host your unique domains.
       url: step-5-set-up-virtual-hosts
+faq:
+  - question: "What is Apache2 and how does it compare to Nginx?"
+    answer: "Apache is a process-based web server that spawns new threads for each connection, making it highly customizable via modules and <code>.htaccess</code> files. Nginx, on the other hand, is event-driven and better suited for handling high-volume concurrent traffic."
+  - question: "What does the a2ensite command do?"
+    answer: "The <code>a2ensite</code> (Apache2 Enable Site) command creates a symbolic link in the <code>/etc/apache2/sites-enabled/</code> directory pointing to the original configuration file in <code>/etc/apache2/sites-available/</code>, enabling the virtual host."
+  - question: "How do I check my Apache configuration files for syntax errors?"
+    answer: "You can test all active Apache configuration files for syntax errors by running the command <code>sudo apache2ctl configtest</code>. A result of 'Syntax OK' means it is safe to reload the server."
+  - question: "What is a Virtual Host in Apache?"
+    answer: "A Virtual Host is a configuration directive in Apache that allows you to run multiple websites (with different domain names) on a single server, routing traffic based on the requested domain."
+  - question: "How do I enable the mod_rewrite module in Apache?"
+    answer: "You can enable the URL rewriting module by running the command <code>sudo a2enmod rewrite</code>, followed by restarting the Apache service with <code>sudo systemctl restart apache2</code>."
 status: published
 locale: en
 author:

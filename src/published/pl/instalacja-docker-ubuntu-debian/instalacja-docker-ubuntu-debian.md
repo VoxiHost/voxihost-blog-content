@@ -39,6 +39,17 @@ howto:
     - name: Zweryfikuj instalację
       text: Uruchom sudo docker run hello-world aby zweryfikować że silnik pomyślnie uruchamia kontenery.
       url: krok-5-zweryfikuj-instalacje
+faq:
+  - question: "Dlaczego oficjalne repozytorium Dockera jest lepsze niż domyślne systemowe?"
+    answer: "Domyślne repozytoria Ubuntu i Debiana często zawierają przestarzałe wersje silnika Docker. Dodanie oficjalnego źródła gwarantuje natychmiastowy dostęp do najnowszych wersji, poprawek bezpieczeństwa oraz Docker Compose."
+  - question: "Jaki jest cel dodawania klucza GPG podczas instalacji Dockera?"
+    answer: "Klucz GPG umożliwia menedżerowi pakietów (<code>apt</code>) weryfikację autentyczności i nienaruszalności pobieranego oprogramowania, chroniąc przed instalacją złośliwych pakietów."
+  - question: "Jak uruchamiać kontenery Docker bez używania uprawnień sudo?"
+    answer: "Aby uruchamiać polecenia Dockera jako zwykły użytkownik, dodaj swoje konto do grupy docker poleceniem: <code>sudo usermod -aG docker $USER</code>. Zmiany wejdą w życie po ponownym zalogowaniu."
+  - question: "Jak Docker wpływa na reguły zapory sieciowej UFW na Ubuntu?"
+    answer: "Docker modyfikuje bezpośrednio tabele iptables i całkowicie omija zaporę UFW. Oznacza to, że porty opublikowane za pomocą flagi <code>-p</code> będą publicznie dostępne bez względu na politykę UFW."
+  - question: "Jak zatrzymać, uruchomić lub zrestartować demona Dockera?"
+    answer: "Do zarządzania usługą służy narzędzie systemctl: wpisz <code>sudo systemctl stop docker</code> aby wyłączyć, <code>sudo systemctl start docker</code> aby włączyć lub <code>sudo systemctl restart docker</code> aby zrestartować usługę."
 status: published
 locale: pl
 author:

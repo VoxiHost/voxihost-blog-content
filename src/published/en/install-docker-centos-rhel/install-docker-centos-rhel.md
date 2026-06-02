@@ -41,6 +41,17 @@ howto:
     - name: Verify installation
       text: Run sudo docker run hello-world to confirm everything works.
       url: step-5-verify-the-installation
+faq:
+  - question: "Why should I remove old Docker versions before installation?"
+    answer: "Older packages (like <code>docker</code> or <code>docker-engine</code>) conflict with the official <code>docker-ce</code> (Community Edition) package, which is maintained by Docker. Removing them prevents dependency resolution issues."
+  - question: "What is docker-ce-cli and why is it installed separately?"
+    answer: "The <code>docker-ce-cli</code> is the command-line interface tool used to interact with the Docker daemon. Keeping the CLI package separate allows you to manage remote Docker daemons from a local machine without installing the engine itself."
+  - question: "How do I run Docker commands without using sudo?"
+    answer: "You can add your user to the docker group by running <code>sudo usermod -aG docker $USER</code>. You will need to log out and log back in for this change to take effect."
+  - question: "How do I check if the Docker daemon is currently running?"
+    answer: "You can check the status of the Docker service by running the systemctl command: <code>sudo systemctl status docker</code>."
+  - question: "What is the difference between Docker and podman on RHEL systems?"
+    answer: "Podman is a daemonless container engine developed by Red Hat as an alternative to Docker. While podman is the default on standard RHEL installations, Docker is still widely preferred due to its mature ecosystem and native Docker Compose plugin support."
 status: published
 locale: en
 author:

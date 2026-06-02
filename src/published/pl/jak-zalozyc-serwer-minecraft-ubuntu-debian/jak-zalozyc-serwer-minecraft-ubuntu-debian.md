@@ -14,6 +14,17 @@ tags:
   - ubuntu
   - debian
   - konfiguracja serwera
+faq:
+  - question: "Dlaczego wersja Javy ma znaczenie dla serwera Minecraft?"
+    answer: "Silnik gry Minecraft ewoluował na przestrzeni lat, a poszczególne wersje gry wymagają różnych wersji Javy. Użycie nieodpowiedniej wersji Javy (np. Java 8 do Minecrafta 1.21) to najczęstsza przyczyna błędów startowych."
+  - question: "Czym różni się pakiet openjdk od wersji openjdk-headless?"
+    answer: "Pakiet <code>-headless</code> nie zawiera bibliotek graficznych (GUI), które są zbędne na serwerze zarządzanym przez konsolę. Użycie tej wersji pozwala zaoszczędzić miejsce na dysku oraz pamięć RAM."
+  - question: "Czy mogę zainstalować kilka wersji Javy na jednym serwerze?"
+    answer: "Tak, na jednym serwerze można zainstalować wiele wersji Javy równolegle. Domyślną wersję systemową możesz przełączać za pomocą <code>sudo update-alternatives --config java</code>, lub podać bezpośrednią ścieżkę do wybranej wersji Javy w skrypcie startowym serwera."
+  - question: "Czy ten poradnik dotyczy wersji Minecraft Bedrock Edition?"
+    answer: "Nie. Ten poradnik jest przeznaczony wyłącznie dla Minecraft Java Edition. Bedrock Edition (konsole, urządzenia mobilne, Windows 10/11) opiera się na silniku C++ i nie wymaga środowiska Java."
+  - question: "Jak przejść z serwera Vanilla na Paper lub Spigot?"
+    answer: "Przejście jest bardzo proste: wystarczy podmienić plik <code>server.jar</code> na plik <code>paper.jar</code> lub <code>spigot.jar</code> i zaktualizować skrypt startowy. Pliki świata automatycznie dostosują się do nowego silnika."
 status: published
 author:
   name: VoxiHost Team
