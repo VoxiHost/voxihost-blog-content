@@ -24,30 +24,27 @@ howto:
     - Java 17 JRE
     - Klient SSH
   steps:
-    - name: Weryfikacja repozytorium
-      text: Upewnij się, że 'sudo dnf check-update' zostało uruchomione, aby znaleźć pakiety OpenJDK.
-      url: '#krok-1-instalacja-java-17-wariant-zapasowy'
     - name: Wdrożenie Javy
       text: Zainstaluj środowisko Java 17 wymagane dla stabilności wersji 1.17.
-      url: '#krok-1-instalacja-java-17-wariant-zapasowy'
+      url: krok-1-instalacja-java-17-wariant-zapasowy
     - name: Tworzenie użytkownika gry
       text: Skonfiguruj ograniczonego użytkownika 'minecraft' ze względów bezpieczeństwa za pomocą 'useradd'.
-      url: '#krok-2-tworzenie-dedykowanego-uzytkownika'
+      url: krok-2-tworzenie-dedykowanego-uzytkownika
     - name: Pobranie server.jar
       text: Pobierz oficjalny plik binarny 1.17.1 od Mojang.
-      url: '#krok-3-pobranie-1-17-1'
+      url: krok-3-pobranie-1-17-1
     - name: Akceptacja EULA
       text: Wygeneruj i zaakceptuj plik eula.txt, aby umożliwić uruchomienie serwera.
-      url: '#krok-4-akceptacja-eula'
+      url: krok-4-akceptacja-eula
     - name: Konfiguracja pamięci
       text: Wdróż skrypt 'start.sh' z optymalizowanymi flagami RAM od Aikara.
-      url: '#krok-5-tworzenie-skryptu-startowego'
+      url: krok-5-tworzenie-skryptu-startowego
     - name: Pierwsze uruchomienie i OP
       text: Uruchom serwer ręcznie, aby nadać sobie uprawnienia administratora.
-      url: '#krok-6-pierwsze-uruchomienie-i-konfiguracja-administratora'
+      url: krok-6-pierwsze-uruchomienie-i-konfiguracja-administratora
     - name: Profesjonalne uruchamianie (Systemd)
       text: Skonfiguruj usługę systemd, aby serwer uruchamiał się automatycznie po restarcie.
-      url: '#krok-7-konfiguracja-uslugi-systemd'
+      url: krok-7-konfiguracja-uslugi-systemd
 status: published
 author:
   name: VoxiHost Team

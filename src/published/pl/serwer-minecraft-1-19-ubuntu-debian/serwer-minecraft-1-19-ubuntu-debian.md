@@ -22,30 +22,27 @@ howto:
     - Java 17 JRE
     - Klient SSH
   steps:
-    - name: Aktualizacja systemu
-      text: Przygotuj serwer Ubuntu poleceniem 'sudo apt update' w terminalu.
-      url: '#krok-1-instalacja-java-17'
     - name: Instalacja Java 17
       text: Zainstaluj wymagany pakiet LTS Java 17 za pomocą 'sudo apt install openjdk-17-jre-headless'.
-      url: '#krok-1-instalacja-java-17'
+      url: krok-1-instalacja-java-17
     - name: Tworzenie użytkownika gry
       text: Skonfiguruj ograniczonego użytkownika 'minecraft' ze względów bezpieczeństwa za pomocą 'adduser'.
-      url: '#krok-2-tworzenie-dedykowanego-uzytkownika'
+      url: krok-2-tworzenie-dedykowanego-uzytkownika
     - name: Pobranie pliku JAR 1.19.2
       text: Pobierz oficjalny plik Vanilla 1.19.2 server.jar od Mojang.
-      url: '#krok-3-pobranie-minecraft-1-19-2'
+      url: krok-3-pobranie-minecraft-1-19-2
     - name: Akceptacja EULA
       text: Zainicjuj serwer i zaakceptuj EULA, edytując plik 'eula.txt'.
-      url: '#krok-4-akceptacja-eula'
+      url: krok-4-akceptacja-eula
     - name: Tworzenie skryptu startowego
       text: Utwórz skrypt 'start.sh' z optymalizowanymi flagami RAM od Aikara.
-      url: '#krok-5-tworzenie-skryptu-startowego'
+      url: krok-5-tworzenie-skryptu-startowego
     - name: Pierwsze uruchomienie i OP
       text: Uruchom serwer ręcznie, aby nadać sobie uprawnienia administratora.
-      url: '#krok-6-pierwsze-uruchomienie-i-konfiguracja-administratora'
+      url: krok-6-pierwsze-uruchomienie-i-konfiguracja-administratora
     - name: Profesjonalne uruchamianie (Systemd)
       text: Skonfiguruj usługę systemd, aby serwer uruchamiał się automatycznie po restarcie.
-      url: '#krok-7-konfiguracja-uslugi-systemd'
+      url: krok-7-konfiguracja-uslugi-systemd
 status: published
 author:
   name: VoxiHost Team

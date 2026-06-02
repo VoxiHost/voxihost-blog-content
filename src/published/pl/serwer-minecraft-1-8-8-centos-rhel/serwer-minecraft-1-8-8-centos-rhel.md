@@ -26,25 +26,25 @@ howto:
   steps:
     - name: Instalacja Java 8
       text: Zainstaluj klasyczne środowisko Java wymagane dla wersji od 1.8.8 do 1.16.5.
-      url: '#krok-1-instalacja-java-8'
+      url: krok-1-instalacja-java-8
     - name: Tworzenie użytkownika gry
       text: Skonfiguruj ograniczonego użytkownika 'minecraft' ze względów bezpieczeństwa za pomocą 'useradd'.
-      url: '#krok-2-tworzenie-dedykowanego-uzytkownika'
+      url: krok-2-tworzenie-dedykowanego-uzytkownika
     - name: Pobranie klasycznego pliku JAR
       text: Pobierz oficjalny plik binarny 1.8.8 bezpiecznie do folderu domowego użytkownika.
-      url: '#krok-3-pobranie-pliku-jar-1-8-8'
+      url: krok-3-pobranie-pliku-jar-1-8-8
     - name: Akceptacja regulaminu
       text: Edytuj plik 'eula.txt', ustawiając wartość true, aby zaakceptować warunki Mojang.
-      url: '#krok-4-akceptacja-eula'
+      url: krok-4-akceptacja-eula
     - name: Wdrożenie skryptu
       text: Utwórz plik 'start.sh' do uruchamiania serwera z minimum 2GB RAM.
-      url: '#krok-5-tworzenie-skryptu-startowego'
+      url: krok-5-tworzenie-skryptu-startowego
     - name: Pierwsze uruchomienie i OP
       text: Uruchom serwer ręcznie, aby nadać sobie uprawnienia administratora.
-      url: '#krok-6-pierwsze-uruchomienie-i-konfiguracja-administratora'
+      url: krok-6-pierwsze-uruchomienie-i-konfiguracja-administratora
     - name: Profesjonalne uruchamianie (Systemd)
       text: Skonfiguruj usługę systemd, aby serwer uruchamiał się automatycznie po restarcie.
-      url: '#krok-7-konfiguracja-uslugi-systemd'
+      url: krok-7-konfiguracja-uslugi-systemd
 status: published
 author:
   name: VoxiHost Team
