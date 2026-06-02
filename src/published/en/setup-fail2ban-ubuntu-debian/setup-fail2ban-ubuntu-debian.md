@@ -28,16 +28,16 @@ howto:
       url: installing-fail2ban
     - name: Create a local jail configuration
       text: 'Copy jail.conf to jail.local with: sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local'
-      url: configuring-fail2ban-jails
+      url: creating-a-local-jail-configuration
     - name: Configure the SSH jail
       text: Edit jail.local to enable and tune the sshd jail with your desired ban settings.
-      url: configuring-fail2ban-jails
+      url: ssh-jail
     - name: Enable and start fail2ban
       text: Run sudo systemctl enable --now fail2ban to start fail2ban and enable it at boot.
-      url: enabling-and-verifying-fail2ban
+      url: enabling-and-starting-fail2ban
     - name: Verify the SSH jail is active
       text: Run sudo fail2ban-client status sshd to confirm the jail is watching SSH and counting failed attempts.
-      url: enabling-and-verifying-fail2ban
+      url: verifying-fail2ban-status
 status: published
 locale: en
 author:
@@ -72,7 +72,7 @@ Once installed, the service starts automatically. Verify:
 sudo systemctl status fail2ban
 ```
 
-## Configuring fail2ban jails
+## Creating a local jail configuration
 
 fail2ban works through "jails", each jail monitors a specific log file for a specific failure pattern, and bans IPs that exceed the threshold.
 
@@ -142,13 +142,15 @@ banaction = ufw
 
 This inserts `ufw` deny rules for banned IPs, which plays nicely with your existing firewall config.
 
-## Enabling and verifying fail2ban
+## Enabling and starting fail2ban
 
 Reload fail2ban to apply your config changes:
 
 ```bash
 sudo systemctl restart fail2ban
 ```
+
+## Verifying fail2ban status
 
 Check the status of the SSH jail specifically:
 

@@ -28,10 +28,10 @@ howto:
   steps:
     - name: Generate an SSH key pair
       text: Run ssh-keygen -t ed25519 on your local machine to generate a modern SSH key pair.
-      url: set-up-ssh-key-authentication
+      url: generate-an-ssh-key-pair
     - name: Copy your public key to the server
       text: Run ssh-copy-id user@your-server-ip to install your public key on the server.
-      url: set-up-ssh-key-authentication
+      url: copy-your-public-key-to-the-server
     - name: Disable root login
       text: Set PermitRootLogin no in /etc/ssh/sshd_config to prevent direct root access.
       url: disable-root-login
@@ -59,7 +59,7 @@ Locking down SSH on AlmaLinux, CentOS Stream, Rocky Linux, and Fedora takes the 
 
 > **Prerequisite:** This guide disables root login. You **must** have a non-root user with `sudo` privileges ready **before** running any of these steps. If you haven't done that yet, follow our [How to Create a Sudo User on AlmaLinux, CentOS, Rocky Linux & Fedora](/blog/add-sudo-user-centos/) guide first, then come back here.
 
-## Set up SSH key authentication
+## Generate an SSH key pair
 
 Do keys before anything else. Password authentication is the main vector for SSH brute-force attacks, and switching to keys eliminates it entirely.
 
@@ -72,6 +72,8 @@ ssh-keygen -t ed25519 -C "your-server-label"
 ```
 
 Set a passphrase when prompted. It encrypts the private key on disk, if someone gets your local machine, they still can't use the key without the passphrase.
+
+## Copy your public key to the server
 
 Copy the public key to the server:
 

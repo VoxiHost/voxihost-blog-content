@@ -25,10 +25,10 @@ howto:
   steps:
     - name: Check for available updates
       text: Run sudo dnf5 check-upgrade to see what updates are available without installing anything.
-      url: the-basics-dnf5-upgrade
+      url: check-for-available-updates
     - name: Install all available updates
       text: Run sudo dnf5 upgrade -y to download and install all pending package updates.
-      url: the-basics-dnf5-upgrade
+      url: install-all-available-updates
     - name: Remove orphaned packages
       text: Run sudo dnf5 autoremove -y to clean up old libraries no longer needed by any package.
       url: cleaning-up-dnf5-autoremove
@@ -53,7 +53,7 @@ Starting with **Fedora 41**, the default package manager switched to **dnf5**, a
 
 Before we start: if you are deploying a fresh server with a premium provider like **<span class="text-white">Voxi</span><span class="text-amber-300">Host</span>**, the system automatically runs a full package update immediately after deployment on first boot. But as your server runs over time, you will still need to know how to maintain it yourself.
 
-## The basics: dnf5 upgrade
+## Install all available updates
 
 To update a Fedora 43 server, you run:
 
@@ -64,6 +64,8 @@ sudo dnf5 upgrade -y
 ```
 
 This checks for available updates, downloads them, and installs them in one pass. The **`-y` flag skips the confirmation**. That's it for routine updates.
+
+## Check for available updates
 
 If you want to see what would change before committing:
 
