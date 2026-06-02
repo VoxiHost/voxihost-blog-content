@@ -89,6 +89,15 @@ contributors:
 # OPTIONAL: Set to true only if this is an index/hub page, not a regular post.
 # isIndex: true
 # ─────────────────────────────────────────────────────────────────────────────
+# OPTIONAL: FAQ Accordion & Schema (only if article includes an FAQ section)
+# Automatically renders accordion UI and generates FAQPage JSON-LD schema.
+# ─────────────────────────────────────────────────────────────────────────────
+# faq:
+#   - question: "How to check PHP version?"
+#     answer: "You can check it by running <code>php -v</code> in the terminal."
+#   - question: "Can multiple PHP versions run side-by-side?"
+#     answer: "Yes, each version runs as an independent PHP-FPM service."
+# ─────────────────────────────────────────────────────────────────────────────
 ---
 
 <!-- ═══════════════════════════════════════════════════════════════════════════

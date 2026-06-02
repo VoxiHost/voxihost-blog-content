@@ -117,6 +117,29 @@ VoxiHost → Blog → [Article Title]
 
 This enables the **breadcrumb trail** displayed in Google search results under the page URL.
 
+### 3c. FAQPage (FAQ Accordion Schema)
+
+If you define a `faq` block in the frontmatter, the engine automatically generates and injects a `FAQPage` structured data block:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to check PHP version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can check it by running php -v in the terminal."
+      }
+    }
+  ]
+}
+```
+
+This structured data automatically qualifies the article for FAQ rich results in search engine result pages (SERPs).
+
 ---
 
 ## 4. The HowTo Schema (Google Rich Steps)
