@@ -25,25 +25,25 @@ howto:
   steps:
     - name: Install Java 8
       text: Install the classic Java environment needed for 1.8.8 through 1.16.5.
-      url: '#step-1-install-java-8'
+      url: step-1-install-java-8
     - name: Create a Game User
       text: Setup a restricted 'minecraft' user for security using 'adduser'.
-      url: '#step-2-create-a-dedicated-user'
+      url: step-2-create-a-dedicated-user
     - name: Fetch Classic JAR
       text: Download the official 1.8.8 binary safely into your user's home folder.
-      url: '#step-3-download-the-1-8-8-jar'
+      url: step-3-download-the-1-8-8-jar
     - name: Legal Terms Agreement
       text: Edit 'eula.txt' to true to signify agreement with Mojang's terms.
-      url: '#step-4-accept-eula'
+      url: step-4-accept-the-eula
     - name: Script Deployment
       text: Create a 'start.sh' file to launch your server with 2GB+ of RAM.
-      url: '#step-5-create-launch-script'
+      url: step-5-create-launch-script
     - name: First Launch & OP
       text: Start the server manually to grant yourself administrator privileges.
-      url: '#step-6-first-launch-administrator-setup'
+      url: step-6-first-launch-administrator-setup
     - name: Professional Startup (Systemd)
       text: Set up a systemd service to ensure your server starts automatically on boot.
-      url: '#step-7-configure-systemd-service'
+      url: step-7-configure-systemd-service
 status: published
 author:
   name: VoxiHost Team
