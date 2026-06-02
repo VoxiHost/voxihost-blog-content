@@ -23,30 +23,27 @@ howto:
     - Java 17 JRE
     - SSH Client
   steps:
-    - name: System Update
-      text: Prepare your server by running 'sudo dnf check-update' in the terminal.
-      url: '#step-1-install-java-17'
     - name: Java 17 Installation
       text: Install the required LTS Java 17 package via 'sudo dnf install java-17-openjdk-headless'.
-      url: '#step-1-install-java-17'
+      url: step-1-install-java-17
     - name: Create a Game User
       text: Setup a restricted 'minecraft' user for security using 'useradd'.
-      url: '#step-2-create-a-dedicated-user'
+      url: step-2-create-a-dedicated-user
     - name: Download 1.19.2 JAR
       text: Fetch the official Vanilla 1.19.2 server.jar from Mojang.
-      url: '#step-3-download-minecraft-1-19-2'
+      url: step-3-download-minecraft-1-19-2
     - name: EULA Validation
       text: Initialize the server and agree to the EULA by editing 'eula.txt'.
-      url: '#step-4-accept-the-eula'
+      url: step-4-accept-the-eula
     - name: Start Script Creation
       text: Create a 'start.sh' wrapper with Aikar's optimized RAM flags.
-      url: '#step-5-create-launch-script'
+      url: step-5-create-launch-script
     - name: First Launch & OP
       text: Start the server manually to grant yourself administrator privileges.
-      url: '#step-6-first-launch-administrator-setup'
+      url: step-6-first-launch-administrator-setup
     - name: Professional Startup (Systemd)
       text: Set up a systemd service to ensure your server starts automatically on boot.
-      url: '#step-7-configure-systemd-service'
+      url: step-7-configure-systemd-service
 status: published
 author:
   name: VoxiHost Team

@@ -23,30 +23,27 @@ howto:
     - Java 21 JRE
     - SSH Client
   steps:
-    - name: Environment Preparation
-      text: Refresh your package repositories using 'sudo dnf check-update' to prepare for Java installation.
-      url: '#step-1-install-java-21'
     - name: Install Java 21
       text: Install the modern Minecraft runtime with 'sudo dnf install java-21-openjdk-headless'.
-      url: '#step-1-install-java-21'
+      url: step-1-install-java-21
     - name: Create a Game User
       text: Setup a restricted 'minecraft' user for security using 'useradd'.
-      url: '#step-2-create-a-dedicated-user'
+      url: step-2-create-a-dedicated-user
     - name: Download Server Software
       text: Fetch the official Vanilla 1.21.1 server.jar from Mojang's storage.
-      url: '#step-3-download-the-server-jar'
+      url: step-3-download-the-server-jar
     - name: Accept the EULA
       text: Run the JAR once and edit 'eula.txt' to set 'eula=true'.
-      url: '#step-4-accept-the-eula'
+      url: step-4-accept-the-eula
     - name: Configure Startup
       text: Create a 'start.sh' script with Aikar's optimized RAM flags.
-      url: '#step-5-create-launch-script'
+      url: step-5-create-launch-script
     - name: First Launch & OP
       text: Start the server manually to grant yourself administrator privileges.
-      url: '#step-6-first-launch-administrator-setup'
+      url: step-6-first-launch-administrator-setup
     - name: Professional Startup (Systemd)
       text: Set up a systemd service to ensure your server starts automatically on boot.
-      url: '#step-7-configure-systemd-service'
+      url: step-7-configure-systemd-service
 status: published
 author:
   name: VoxiHost Team

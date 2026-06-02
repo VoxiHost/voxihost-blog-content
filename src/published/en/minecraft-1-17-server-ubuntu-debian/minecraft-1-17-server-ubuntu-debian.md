@@ -22,30 +22,27 @@ howto:
     - Java 16 JRE
     - SSH Client
   steps:
-    - name: Verify Repository
-      text: Ensure 'sudo apt update' is run to locate the OpenJDK 16 packages.
-      url: '#step-1-install-java-16'
     - name: Java 16 Deployment
       text: Install the Java 16 environment required for early 1.17 development.
-      url: '#step-1-install-java-16'
+      url: step-1-install-java-16
     - name: Create a Game User
       text: Setup a restricted 'minecraft' user for security using 'adduser'.
-      url: '#step-2-create-a-dedicated-user'
+      url: step-2-create-a-dedicated-user
     - name: Fetch server.jar
       text: Download the official 1.17.1 binary from Mojang.
-      url: '#step-3-download-1-17-1'
+      url: step-3-download-1-17-1
     - name: Approve EULA
       text: Generate and sign the eula.txt file to permit server startup.
-      url: '#step-4-run-and-configure'
+      url: step-4-accept-the-eula
     - name: Memory Configuration
       text: Deploy a 'start.sh' wrapper with Aikar's optimized RAM flags.
-      url: '#step-5-create-launch-script'
+      url: step-5-create-launch-script
     - name: First Launch & OP
       text: Start the server manually to grant yourself administrator privileges.
-      url: '#step-6-first-launch-administrator-setup'
+      url: step-6-first-launch-administrator-setup
     - name: Professional Startup (Systemd)
       text: Set up a systemd service to ensure your server starts automatically on boot.
-      url: '#step-7-configure-systemd-service'
+      url: step-7-configure-systemd-service
 status: published
 author:
   name: VoxiHost Team
