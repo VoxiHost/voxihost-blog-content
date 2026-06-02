@@ -26,19 +26,19 @@ howto:
   steps:
     - name: Zaktualizuj indeks pakietów i zainstaluj Nginx
       text: Uruchom sudo apt update a następnie sudo apt install nginx aby zainstalować serwer WWW.
-      url: step-1-install-nginx
+      url: krok-1-zainstaluj-nginx
     - name: Skonfiguruj zaporę
       text: Uruchom sudo ufw allow 'Nginx Full' aby otworzyć ruch HTTP (80) i HTTPS (443).
-      url: step-2-adjust-the-firewall
+      url: krok-2-dostosuj-zapore
     - name: Zweryfikuj że Nginx działa
       text: Sprawdź adres IP swojego serwera w przeglądarce aby zobaczyć domyślną stronę powitalną Nginx.
-      url: step-3-check-your-web-server
+      url: krok-3-sprawdz-swoj-serwer-www
     - name: Zarządzaj procesem Nginx
       text: Naucz się używać systemctl aby uruchamiać, zatrzymywać, restartować i przeładowywać Nginx.
-      url: step-4-manage-the-nginx-process
+      url: krok-4-zarzadzaj-procesem-nginx
     - name: Skonfiguruj Blok Serwera (Wirtualny Host)
       text: Utwórz niestandardowy plik konfiguracyjny w /etc/nginx/sites-available/ aby hostować własną domenę.
-      url: step-5-set-up-a-server-block-virtual-host
+      url: krok-5-skonfiguruj-blok-serwera-wirtualny-host
 status: published
 locale: pl
 author:

@@ -26,19 +26,19 @@ howto:
   steps:
     - name: Pobierz FileZilla
       text: Pobierz i zainstaluj bezpłatnego klienta FileZilla z oficjalnej strony internetowej.
-      url: step-1-download-filezilla
+      url: krok-1-pobierz-filezilla
     - name: Skonfiguruj Menedżera Witryn
       text: Otwórz Menedżera Witryn FileZilla i utwórz stałe, zapisane połączenie z serwerem.
-      url: step-2-configure-the-site-manager
+      url: krok-2-skonfiguruj-menedzera-witryn
     - name: Wybierz protokół SFTP
       text: Zmień protokół z FTP na SFTP - SSH File Transfer Protocol w ustawieniach FileZilla.
-      url: step-3-select-the-sftp-protocol
+      url: krok-3-wybierz-protokol-sftp
     - name: Dodaj dane logowania
       text: Wprowadź adres IP serwera, nazwę użytkownika i hasło lub wybierz plik klucza SSH.
-      url: step-4-add-your-credentials-or-ssh-key
+      url: krok-4-dodaj-dane-logowania
     - name: Połącz i transferuj
       text: Kliknij Połącz, zaakceptuj ostrzeżenie o kluczu hosta i przeciągnij pliki przeciągając i upuszczając je.
-      url: step-5-connect-and-transfer
+      url: krok-5-polacz-i-transferuj
 status: published
 locale: pl
 author:

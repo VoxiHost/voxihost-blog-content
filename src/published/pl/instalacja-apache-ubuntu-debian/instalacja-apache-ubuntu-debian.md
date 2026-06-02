@@ -27,19 +27,19 @@ howto:
   steps:
     - name: Zaktualizuj indeks pakietów i zainstaluj Apache
       text: Uruchom sudo apt update a następnie sudo apt install apache2 aby zainstalować serwer WWW.
-      url: step-1-install-apache
+      url: krok-1-zainstaluj-apache
     - name: Dostosuj zaporę
       text: Uruchom sudo ufw allow 'Apache Full' aby otworzyć ruch HTTP (80) i HTTPS (443).
-      url: step-2-adjust-the-firewall
+      url: krok-2-dostosuj-zapore
     - name: Sprawdź swój serwer WWW
       text: Nawiguj przeglądarką do adresu IP swojego serwera aby zobaczyć domyślną stronę Apache.
-      url: step-3-check-your-web-server
+      url: krok-3-sprawdz-swoj-serwer-www
     - name: Zarządzaj procesem Apache
       text: Użyj poleceń systemctl (start, stop, restart, reload) aby kontrolować usługę apache2.
-      url: step-4-manage-the-apache-process
+      url: krok-4-zarzadzaj-procesem-apache
     - name: Skonfiguruj Wirtualny Host
       text: Utwórz niestandardowy plik konfiguracyjny w /etc/apache2/sites-available/ aby hostować swoje unikalne domeny.
-      url: step-5-set-up-virtual-hosts
+      url: krok-5-skonfiguruj-wirtualne-hosty
 status: published
 locale: pl
 author:

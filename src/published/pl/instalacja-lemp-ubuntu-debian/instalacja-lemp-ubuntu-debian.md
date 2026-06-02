@@ -26,19 +26,19 @@ howto:
   steps:
     - name: Zainstaluj Nginx (serwer WWW)
       text: Uruchom sudo apt install nginx i zezwól na ruch przez swoją zaporę.
-      url: step-1-install-nginx-the-web-server
+      url: krok-1-zainstaluj-nginx-serwer-www
     - name: Zainstaluj MariaDB (baza danych)
       text: Uruchom sudo apt install mariadb-server i zabezpiecz ją używając wbudowany skrypt mysql_secure_installation.
-      url: step-2-install-mariadb-the-database
+      url: krok-2-zainstaluj-mariadb-baza-danych
     - name: Zainstaluj PHP (język przetwarzania)
       text: Uruchom sudo apt install php-fpm php-mysql aby zainstalować PHP8 z FPM i rozszerzenie MySQL.
-      url: step-3-install-php-the-processing-language
+      url: krok-3-zainstaluj-php-jezyk-przetwarzania
     - name: Skonfiguruj Nginx aby używał PHP
       text: Edytuj blok serwera Nginx aby przekazywać pliki .php do gniazda PHP-FPM.
-      url: step-4-configure-nginx-to-use-php
+      url: krok-4-skonfiguruj-nginx-aby-uzywal-php
     - name: Przetestuj stos LEMP
       text: Utwórz plik info.php aby zweryfikować że Nginx i PHP-FPM komunikują się poprawnie.
-      url: step-5-test-php-processing-on-nginx
+      url: krok-5-przetestuj-stos-lemp
 status: published
 locale: pl
 author:

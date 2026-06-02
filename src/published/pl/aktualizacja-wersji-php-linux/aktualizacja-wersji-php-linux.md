@@ -26,16 +26,16 @@ howto:
   steps:
     - name: Dodaj repozytorium PPA Ondřeja Surýego
       text: Uruchom sudo add-apt-repository ppa:ondrej/php aby uzyskać dostęp do wszystkich najnowszych wersji PHP.
-      url: step-1-add-the-trusted-php-repository
+      url: krok-1-dodaj-zaufane-repozytorium-php
     - name: Zainstaluj konkretną wersję PHP
       text: Uruchom sudo apt install php8.3 php8.3-fpm php8.3-mysql aby zainstalować dokładną wersję której potrzebujesz.
-      url: step-2-install-multiple-php-versions
+      url: krok-2-zainstaluj-wiele-wersji-php
     - name: Przełącz domyślną wersję CLI
       text: Uruchom sudo update-alternatives --config php aby wybrać która wersja PHP odpowiada na polecenie 'php' w terminalu.
-      url: step-3-switch-the-default-command-line-cli-version
+      url: krok-3-przelacz-domyslna-wersje-wiersza-polecen-cli
     - name: Skonfiguruj swój serwer WWW
       text: Wskaż Nginx lub Apache do konkretnego gniazda PHP-FPM którego chcesz użyć dla swojej strony internetowej.
-      url: step-4-tell-your-web-server-which-version-to-use
+      url: krok-4-powiedz-swojemu-serwerowi-www-ktorej-wersji-uzyc
 status: published
 locale: pl
 author:

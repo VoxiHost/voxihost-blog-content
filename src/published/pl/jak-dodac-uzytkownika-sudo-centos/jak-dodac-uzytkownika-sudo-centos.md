@@ -28,13 +28,13 @@ howto:
   steps:
     - name: Zaloguj się jako root
       text: Połącz się z serwerem przez SSH używając konta root.
-      url: step-1-add-the-new-user
+      url: krok-1-dodaj-nowego-uzytkownika
     - name: Dodaj nowego użytkownika
       text: Uruchom useradd username aby utworzyć strukturę konta.
-      url: step-1-add-the-new-user
+      url: krok-2-dodaj-uzytkownika-do-grupy-wheel
     - name: Ustaw hasło
       text: Uruchom passwd username aby przypisać hasło do nowego konta.
-      url: step-1-add-the-new-user
+      url: krok-3-przetestuj-nowego-uzytkownika-sudo
     - name: Nadaj uprawnienia sudo
       text: Uruchom usermod -aG wheel username aby dodać nowego użytkownika do grupy wheel.
       url: step-2-add-the-user-to-the-wheel-group

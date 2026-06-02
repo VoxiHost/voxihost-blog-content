@@ -1,7 +1,7 @@
 ---
 image: /assets/images/blog/pl/konfiguracja-nginx-proxy-manager-vps/og-image.png
-title: "Jak skonfigurować Nginx Proxy Manager na VPS"
-description: "Dowiedz się, jak łatwo hostować wiele stron, podpinać domeny i zarządzać certyfikatami SSL za pomocą Nginx Proxy Manager i Docker Compose na serwerze VPS."
+title: Jak skonfigurować Nginx Proxy Manager na VPS
+description: Dowiedz się, jak łatwo hostować wiele stron, podpinać domeny i zarządzać certyfikatami SSL za pomocą Nginx Proxy Manager i Docker Compose na serwerze VPS.
 date: '2026-06-02'
 translationKey: setup-nginx-proxy-manager-vps
 locale: pl
@@ -20,23 +20,23 @@ author:
 contributors:
   - sl0ikkk
 howto:
-  name: "Jak skonfigurować Nginx Proxy Manager na VPS"
-  totalTime: "PT15M"
-  yield: "Serwer VPS z działającym Nginx Proxy Manager i dostępem do webowego panelu zarządzania"
+  name: Jak skonfigurować Nginx Proxy Manager na VPS
+  totalTime: PT15M
+  yield: Serwer VPS z działającym Nginx Proxy Manager i dostępem do webowego panelu zarządzania
   tool:
-    - "Serwer VPS (np. Ubuntu lub Debian)"
-    - "Klient SSH (np. terminal, PuTTY)"
-    - "Zainstalowany Docker i Docker Compose"
+    - Serwer VPS (np. Ubuntu lub Debian)
+    - Klient SSH (np. terminal, PuTTY)
+    - Zainstalowany Docker i Docker Compose
   steps:
-    - name: "Czym jest Nginx Proxy Manager?"
-      text: "Zrozumienie reverse proxy."
-      url: "krok-1-czym-jest-nginx-proxy-manager"
-    - name: "Instalacja NPM"
-      text: "Uruchomienie przez Docker Compose."
-      url: "krok-2-instalacja-npm"
-    - name: "Dostęp do Panelu"
-      text: "Logowanie i pierwsza konfiguracja."
-      url: "krok-3-dostep-do-panelu"
+    - name: Czym jest Nginx Proxy Manager?
+      text: Zrozumienie reverse proxy.
+      url: krok-1-czym-jest-nginx-proxy-manager
+    - name: Instalacja NPM
+      text: Uruchomienie przez Docker Compose.
+      url: krok-2-instalacja-npm
+    - name: Dostęp do Panelu
+      text: Logowanie i pierwsza konfiguracja.
+      url: krok-3-dostep-do-panelu
 ---
 
 ## Wstęp

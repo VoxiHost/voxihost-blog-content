@@ -25,16 +25,16 @@ howto:
   steps:
     - name: Zainstaluj i uruchom htop
       text: Uruchom sudo apt install htop (lub dnf install htop) i wpisz htop aby zobaczyć na żywo użycie CPU i pamięci.
-      url: step-1-monitor-cpu-and-processes-with-htop
+      url: krok-1-monitoruj-cpu-i-procesy-za-pomoca-htop
     - name: Sprawdź systemową RAM
       text: Uruchom free -h aby zobaczyć dokładnie ile RAM jest użyte, wolne i buforowane.
-      url: step-2-understand-memory-usage-with-free
+      url: krok-2-zrozum-uzycie-pamieci-za-pomoca-free
     - name: Sprawdź całkowitą przestrzeń dyskową
       text: Uruchom df -h aby zobaczyć ile miejsca przechowywania jest dostępne na dyskach twojego serwera.
-      url: step-3-check-disk-space-with-df
+      url: krok-3-sprawdz-przestrzen-dyskowa-za-pomoca-df
     - name: Znajdź duże foldery
       text: Uruchom du -sh * aby zmierzyć rozmiar konkretnych katalogów aby znaleźć co zajmuje miejsce.
-      url: step-4-find-what-is-eating-space-with-du
+      url: krok-4-znajdz-co-zjada-miejsce-za-pomoca-du
 status: published
 locale: pl
 author:

@@ -27,22 +27,22 @@ howto:
   steps:
     - name: Zainstaluj fail2ban
       text: Uruchom sudo dnf install fail2ban -y aby zainstalować fail2ban z repozytorium EPEL.
-      url: installing-fail2ban
+      url: instalowanie-fail2ban
     - name: Utwórz lokalną konfigurację więzienia
       text: 'Skopiuj jail.conf do jail.local za pomocą: sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local'
-      url: configuring-fail2ban-jails
+      url: utworzenie-lokalnej-konfiguracji-wiezienia
     - name: Skonfiguruj dla backendu firewalld
       text: Ustaw banaction = firewallcmd-ipset w jail.local aby zintegrować fail2ban z firewalld.
-      url: firewalld-integration
+      url: integracja-firewalld
     - name: Skonfiguruj więzienie SSH
       text: Włącz i dostroś więzienie sshd w jail.local z pożądanymi ustawieniami banowania.
-      url: configuring-fail2ban-jails
+      url: wiezienie-ssh
     - name: Włącz i uruchom fail2ban
       text: Uruchom sudo systemctl enable --now fail2ban aby uruchomić fail2ban i włączyć go przy starcie.
-      url: enabling-and-verifying-fail2ban
+      url: wlaczenie-i-uruchomienie-fail2ban
     - name: Zweryfikuj że więzienie SSH jest aktywne
       text: Uruchom sudo fail2ban-client status sshd aby potwierdzić aktywne monitorowanie i banowanie.
-      url: enabling-and-verifying-fail2ban
+      url: weryfikacja-dzialania-i-aktywnego-wiezienia
 status: published
 locale: pl
 author:
@@ -83,7 +83,7 @@ Włącz i uruchom go:
 sudo systemctl enable --now fail2ban
 ```
 
-## Konfigurowanie więzień fail2ban
+## Utworzenie lokalnej konfiguracji więzienia
 
 Zachowanie fail2ban jest kontrolowane przez "więzienia", każdy z nich obserwuje konkretny log pod kątem wzorców niepowodzeń i banuje obciążające IP.
 
@@ -143,13 +143,15 @@ bantime = 86400
 
 Trzy uderzenia i jesteś na 24 godzin to rozsądna polityka dla SSH.
 
-## Włączanie i weryfikowanie fail2ban
+## Włączenie i uruchomienie fail2ban
 
 Zastosuj konfigurację:
 
 ```bash
 sudo systemctl restart fail2ban
 ```
+
+## Weryfikacja działania i aktywnego więzienia
 
 Sprawdź status więzienia SSH:
 

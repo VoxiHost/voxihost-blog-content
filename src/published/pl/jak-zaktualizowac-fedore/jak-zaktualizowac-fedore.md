@@ -25,19 +25,19 @@ howto:
   steps:
     - name: Sprawdź dostępne aktualizacje
       text: Uruchom sudo dnf5 check-upgrade aby zobaczyć jakie aktualizacje są dostępne bez instalowania czegokolwiek.
-      url: the-basics-dnf5-upgrade
+      url: sprawdzenie-dostepnych-aktualizacji
     - name: Zainstaluj wszystkie dostępne aktualizacje
       text: Uruchom sudo dnf5 upgrade -y aby pobrać i zainstalować wszystkie oczekujące aktualizacje pakietów.
-      url: the-basics-dnf5-upgrade
+      url: instalacja-wszystkich-dostepnych-aktualizacji
     - name: Usuń osierocone pakiety
       text: Uruchom sudo dnf5 autoremove -y aby wyczyścić stare biblioteki i zależności które nie są już potrzebne.
-      url: cleaning-up-dnf5-autoremove
+      url: czyszczenie-dnf5-autoremove
     - name: Sprawdź czy wymagany jest restart
       text: Uruchom sudo needs-restarting -r aby zweryfikować czy aktualizacja jądra wymaga restartu systemu.
-      url: do-you-need-a-reboot-needs-restarting
+      url: czy-potrzebujesz-restartu-needs-restarting
     - name: Włącz automatyczne aktualizacje bezpieczeństwa
       text: Zainstaluj i skonfiguruj dnf-automatic aby automatycznie stosować poprawki bezpieczeństwa.
-      url: automating-patches-with-dnf-automatic
+      url: automatyzacja-poprawek-z-dnf-automatic
 status: published
 locale: pl
 author:
@@ -51,7 +51,7 @@ Fedora porusza się szybko. To dystrybucja która dostarcza to co RHEL będzie u
 
 Zaczynając od **Fedory 41**, domyślny menedżer pakietów zmienił się na **dnf5**, pełne przepisanie `dnf` które jest szybsze, używa mniej pamięci i ma czystsze API. Jeśli używasz Fedory 43 lub nowszą, używasz `dnf5`, chociaż `dnf` wciąż działa jako alias wskazujący na ten sam plik binarny.
 
-## Podstawy: dnf5 upgrade
+## Instalacja wszystkich dostępnych aktualizacji
 
 Aby zaktualizować serwer Fedora 43, uruchom:
 
@@ -62,6 +62,8 @@ sudo dnf5 upgrade -y
 ```
 
 To polecenie sprawdza dostępne aktualizacje, pobiera je i instaluje w jednym przejściu. Flaga `-y` pomija potwierdzenia.
+
+## Sprawdzenie dostępnych aktualizacji
 
 Jeśli chcesz zobaczyć co by się zmieniło przed zatwierdzeniem:
 
