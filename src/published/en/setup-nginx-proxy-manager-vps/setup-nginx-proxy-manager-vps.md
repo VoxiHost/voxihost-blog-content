@@ -13,7 +13,7 @@ tags:
   - docker-compose
   - vps
   - ssl
-status: draft
+status: published
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
