@@ -24,13 +24,13 @@ howto:
   steps:
     - name: Zainstaluj Netdata
       text: 'Uruchom oficjalny skrypt kickstart: wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /tmp/netdata-kickstart.sh.'
-      url: step-1-install-netdata-using-the-kickstart-script
+      url: krok-1-zainstaluj-netdata-uzywajac-skrypt-kickstart
     - name: Skonfiguruj zaporę
       text: Zezwól na port 19999 przez swoją zaporę (np., sudo ufw allow 19999/tcp).
-      url: step-2-configure-the-firewall
+      url: krok-2-skonfiguruj-zapore
     - name: Dostęp do panelu
       text: Otwórz przeglądarkę i nawiguj do http://your_server_ip:19999.
-      url: step-3-access-your-dashboard
+      url: krok-3-dostep-do-panelu
 status: published
 locale: pl
 author:

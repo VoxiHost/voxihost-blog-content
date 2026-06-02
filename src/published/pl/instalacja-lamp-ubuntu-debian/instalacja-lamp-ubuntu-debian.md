@@ -26,19 +26,19 @@ howto:
   steps:
     - name: Zainstaluj Apache (serwer WWW)
       text: Uruchom sudo apt install apache2 i skonfiguruj UFW aby zezwolić na ruch Apache Full.
-      url: step-1-install-apache-the-web-server
+      url: krok-1-zainstaluj-apache-serwer-www
     - name: Zainstaluj MySQL (baza danych)
       text: Uruchom sudo apt install mysql-server i zabezpiecz go używając wbudowanego skryptu bezpieczeństwa MySQL.
-      url: step-2-install-mysql-the-database
+      url: krok-2-zainstaluj-mysql-baza-danych
     - name: Zainstaluj PHP
       text: Uruchom sudo apt install php libapache2-mod-php php-mysql aby zainstalować PHP i powiązać go bezpośrednio z Apache.
-      url: step-3-install-php
+      url: krok-3-zainstaluj-php
     - name: Skonfiguruj indeks katalogów Apache
       text: Edytuj dir.conf aby priorytetyzować index.php nad standardowymi plikami index.html.
-      url: step-4-configure-apache-index-priorities
+      url: krok-4-skonfiguruj-priorytetow-indeksu-apache
     - name: Przetestuj przetwarzanie PHP
       text: Utwórz plik info.php w /var/www/html aby zweryfikować swoją konfigurację.
-      url: step-5-test-the-lamp-stack
+      url: krok-5-przetestuj-stos-lamp
 status: published
 locale: pl
 author:

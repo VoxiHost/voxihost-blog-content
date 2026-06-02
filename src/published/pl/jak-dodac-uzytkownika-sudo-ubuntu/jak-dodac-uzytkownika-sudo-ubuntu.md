@@ -26,13 +26,13 @@ howto:
   steps:
     - name: Zaloguj się jako root
       text: Połącz się z serwerem przez SSH używając konta root.
-      url: step-1-add-the-new-user
+      url: krok-1-dodaj-nowego-uzytkownika
     - name: Dodaj nowego użytkownika
       text: Uruchom adduser username i postępuj zgodnie z instrukcjami aby ustawić silne hasło.
-      url: step-1-add-the-new-user
+      url: krok-2-nadaj-uprawnienia-sudo
     - name: Nadaj uprawnienia sudo
       text: Uruchom usermod -aG sudo username aby dodać nowego użytkownika do grupy sudo.
-      url: step-2-grant-sudo-privileges
+      url: krok-3-przetestuj-nowego-uzytkownika-sudo
     - name: Przetestuj nowe konto
       text: Przełącz się na nowego użytkownika za pomocą su - username i przetestuj dostęp sudo uruchamiając sudo whoami.
       url: step-3-test-the-new-sudo-user

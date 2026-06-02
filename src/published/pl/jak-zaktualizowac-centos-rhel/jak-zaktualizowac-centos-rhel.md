@@ -26,19 +26,19 @@ howto:
   steps:
     - name: Sprawdź dostępne aktualizacje
       text: Uruchom sudo dnf check-update aby zobaczyć jakie aktualizacje są dostępne bez instalowania czegokolwiek.
-      url: the-basics-dnf-update-and-dnf-upgrade
+      url: sprawdzenie-dostepnych-aktualizacji
     - name: Zainstaluj wszystkie dostępne aktualizacje
       text: Uruchom sudo dnf update -y aby pobrać i zainstalować wszystkie oczekujące aktualizacje pakietów.
-      url: the-basics-dnf-update-and-dnf-upgrade
+      url: instalacja-wszystkich-dostepnych-aktualizacji
     - name: Usuń osierocone pakiety
       text: Uruchom sudo dnf autoremove -y aby wyczyścić stare biblioteki i zależności które nie są już potrzebne.
-      url: cleaning-up-dnf-autoremove
+      url: czyszczenie-starych-pakietow
     - name: Sprawdź czy wymagany jest restart
       text: Uruchom sudo needs-restarting -r aby sprawdzić czy aktualizacja jądra wymaga restartu systemu.
-      url: do-you-need-a-reboot-needs-restarting
+      url: sprawdzanie-czy-wymagany-jest-restart
     - name: Włącz automatyczne aktualizacje bezpieczeństwa
       text: Zainstaluj i skonfiguruj dnf-automatic aby automatycznie stosować poprawki bezpieczeństwa.
-      url: automating-patches-with-dnf-automatic
+      url: wlaczanie-automatycznych-aktualizacji-bezpieczenstwa
 status: published
 locale: pl
 author:
@@ -52,7 +52,7 @@ Podczas gdy wynajmujesz nowy serwer Linux VPS, rzadko kiedy myślisz o stabilno�
 
 Wszystkie trzy dystrybucje (AlmaLinux 9, CentOS Stream 9/10 i Rocky Linux 9/10) używają tego samego menedżera pakietów: **`dnf`**.
 
-## Podstawy: dnf update i dnf upgrade
+## Sprawdzenie dostępnych aktualizacji
 
 W przeciwieństwie do `apt` z systemów Debian/Ubuntu, `dnf` łączy operacje "sprawdzania aktualizacje" i "aktualizowanie pakietów" w jedno polecenie.
 
@@ -63,6 +63,8 @@ sudo dnf check-update
 ```
 
 To polecenie wyświetli listę dostępnych aktualizacji bez instalowania czegokolwiek.
+
+## Instalacja wszystkich dostępnych aktualizacji
 
 Zainstaluj wszystkie dostępne aktualizacje:
 

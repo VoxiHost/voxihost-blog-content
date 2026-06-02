@@ -26,19 +26,19 @@ howto:
   steps:
     - name: Zweryfikuj że wtyczka Docker Compose jest zainstalowana
       text: Uruchom docker compose version aby upewnić że V2 jest aktywnie działające w twoim systemie.
-      url: step-1-verify-docker-compose-is-installed
+      url: krok-1-zweryfikuj-ze-docker-compose-jest-zainstalowany
     - name: Utwórz katalog projektu
       text: Użyj mkdir my-project i cd do niego aby utrzymać swoje wdrożenie zorganizowane.
-      url: step-2-set-up-a-project-directory
+      url: krok-2-skonfiguruj-katalog-projektu
     - name: Napisz swój plik docker-compose.yml
       text: Utwórz konfigurację YAML opisującą swoją usługę WWW, bazę danych i porty.
-      url: step-3-create-the-docker-compose-yml-file
+      url: krok-3-utworz-plik-docker-compose-yml
     - name: Wdróż swój stos
       text: Uruchom docker compose up -d aby uruchomić kontenery w tle.
-      url: step-4-spin-it-up
+      url: krok-4-uruchom-to
     - name: Zarządzaj swoim stosem
       text: Użyj docker compose logs, pause, stop lub down aby zarządzać działającymi środowiskami.
-      url: step-5-manage-your-environment
+      url: krok-5-zarzadzaj-swoim-srodowiskiem
 status: published
 locale: pl
 author:

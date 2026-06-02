@@ -26,19 +26,19 @@ howto:
   steps:
     - name: Pobierz skrypt instalacyjny VPN
       text: 'Pobierz zaufany skrypt WireGuard autorstwa Angristan za pomocą polecenia: curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh'
-      url: step-1-pobierz-zaufany-skrypt-instalacyjny
+      url: krok-1-pobierz-zaufany-skrypt-instalacyjny
     - name: Uruchom auto-instalator
       text: Nadaj skryptowi uprawnienia do wykonywania (chmod +x) i uruchom go za pomocą sudo ./wireguard-install.sh.
-      url: step-2-uruchom-auto-instalator
+      url: krok-2-uruchom-auto-instalator
     - name: Odpowiedz na pytania konfiguracyjne
       text: Zaakceptuj domyślne ustawienia sieciowe automatycznie wykryte przez skrypt.
-      url: step-3-pytania-konfiguracyjne
+      url: krok-3-pytania-konfiguracyjne
     - name: Wygeneruj pierwszy profil klienta
       text: Podaj nazwę dla swojego pierwszego urządzenia (np. MojaKomorka), aby wygenerować plik .conf i kod QR.
-      url: step-4-wygeneruj-pierwszy-klucz-klienta
+      url: krok-4-wygeneruj-pierwszy-profil-klienta
     - name: Połącz swoje urządzenia
       text: Pobierz aplikację WireGuard na telefon lub PC i zeskanuj kod QR, aby połączyć się bezpiecznie.
-      url: step-5-polacz-swoje-urzadzenia
+      url: krok-5-polacz-swoje-urzadzenia
 status: published
 author:
   name: VoxiHost Team

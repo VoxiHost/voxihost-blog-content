@@ -27,19 +27,19 @@ howto:
   steps:
     - name: Uruchom usługę firewalld
       text: Uruchom sudo systemctl enable --now firewalld aby aktywować zaporę sieciową w swoim systemie.
-      url: step-1-start-and-enable-firewalld
+      url: krok-1-uruchom-i-wlacz-firewalld
     - name: Sprawdź aktywne strefy
       text: Uruchom sudo firewall-cmd --get-active-zones aby zobaczyć które interfejsy sieciowe należą do strefy publicznej.
-      url: step-2-understanding-zones
+      url: krok-2-zrozumienie-stref
     - name: Wyświetl aktualne reguły zapory
       text: Uruchom sudo firewall-cmd --list-all aby przejrzeć aktualnie otwarte porty i usługi.
-      url: step-3-check-your-current-rules
+      url: krok-3-sprawdz-swoje-aktualne-reguly
     - name: Otwórz porty i usługi
       text: Użyj sudo firewall-cmd --permanent --add-service=http aby trwale zezwolić na ruch.
-      url: step-4-allow-services-and-ports
+      url: krok-4-zezwol-na-uslugi-i-porty
     - name: Przeładuj zaporę
       text: Uruchom sudo firewall-cmd --reload aby zastosować wszystkie trwałe zmiany reguł.
-      url: step-5-reload-and-verify
+      url: krok-5-przeladuj-i-zweryfikuj
 status: published
 locale: pl
 author:

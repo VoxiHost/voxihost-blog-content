@@ -29,16 +29,16 @@ howto:
   steps:
     - name: Zainstaluj Certbot
       text: Uruchom sudo apt install certbot i albo python3-certbot-nginx lub python3-certbot-apache.
-      url: step-1-install-certbot
+      url: krok-1-zainstaluj-certbot
     - name: Potwierdź ustawienia zapory
       text: Zapewnij że Twoja zapora zezwala na ruch HTTPS (port 443) używając ufw allow 'Nginx Full' lub 'Apache Full'.
-      url: step-2-confirm-firewall-settings
+      url: krok-2-potwierdz-ustawienia-zapory
     - name: Uzyskaj i zainstaluj certyfikat SSL
       text: Uruchom sudo certbot --nginx -d twoja_domena.com lub sudo certbot --apache -d twoja_domena.com, aby uzyskać i zainstalować certyfikaty SSL.
-      url: step-3-obtain-and-install-the-ssl-certificate
+      url: krok-3-uzyskaj-i-zainstaluj-certyfikaty-ssl
     - name: Zweryfikuj automatyczne odnawianie
       text: Sprawdź czy timer certbot.timer jest aktywny, aby certyfikaty były odnawiane przed wygaśnięciem.
-      url: step-4-verify-auto-renewal
+      url: krok-4-zweryfikuj-automatyczne-odnawianie
 status: published
 locale: pl
 author:

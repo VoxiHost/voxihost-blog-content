@@ -28,22 +28,22 @@ howto:
   steps:
     - name: Wygeneruj parę kluczy SSH
       text: Uruchom ssh-keygen -t ed25519 na swojej lokalnej maszynie aby wygenerować nowoczesną parę kluczy SSH.
-      url: set-up-ssh-key-authentication
+      url: skonfiguruj-uwierzytelnianie-oparte-na-kluczach-ssh
     - name: Skopiuj swój klucz publiczny na serwer
       text: Uruchom ssh-copy-id user@your-server-ip aby zainstalować swój klucz publiczny na serwerze.
-      url: set-up-ssh-key-authentication
+      url: wylacz-logowanie-root
     - name: Wyłącz logowanie root
       text: Ustaw PermitRootLogin no w /etc/ssh/sshd_config aby zapobiec bezpośredniemu dostępowi root.
-      url: disable-root-login
+      url: wylacz-uwierzytelnianie-haslem
     - name: Wyłącz uwierzytelnianie hasłem
       text: Ustaw PasswordAuthentication no w /etc/ssh/sshd_config aby wymagać tylko logowania opartego na kluczach.
-      url: disable-password-authentication
+      url: zaostrz-kilka-dodatkowych-ustawien
     - name: Zmień domyślny port SSH
       text: Ustaw Port 2222 w sshd_config, zaktualizuj etykiety portów SELinux i skonfiguruj firewalld odpowiednio.
-      url: change-the-default-port
+      url: zmien-domyslny-port
     - name: Zrestartuj SSH i zweryfikuj
       text: Uruchom sudo systemctl restart sshd i przetestuj swoje połączenie przed zamknięciem obecnej sesji.
-      url: restart-sshd-and-verify
+      url: zrestartuj-sshd-i-zweryfikuj
 status: published
 locale: pl
 author:

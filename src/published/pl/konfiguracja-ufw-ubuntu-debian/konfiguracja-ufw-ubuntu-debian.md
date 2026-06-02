@@ -26,19 +26,19 @@ howto:
   steps:
     - name: Zainstaluj UFW (jeśli potrzebne)
       text: Uruchom sudo apt install ufw aby zainstalować Uncomplicated Firewall.
-      url: step-1-install-ufw-if-necessary
+      url: krok-1-zainstaluj-ufw-jesli-konieczne
     - name: Ustaw domyślne polityki
       text: Uruchom sudo ufw default deny incoming i sudo ufw default allow outgoing.
-      url: step-2-set-default-policies
+      url: krok-2-ustaw-domyslne-polityki
     - name: Zezwól na połączenia SSH
       text: Uruchom sudo ufw allow ssh lub sudo ufw allow 2222/tcp jeśli zmieniłeś port.
-      url: step-3-allow-ssh-crucial
+      url: krok-3-zezwol-na-ssh-kluczowe
     - name: Zezwól na HTTP i HTTPS
       text: Uruchom sudo ufw allow http i sudo ufw allow https aby otworzyć porty WWW.
-      url: step-4-allow-other-necessary-services
+      url: krok-4-zezwol-na-inne-niezbedne-uslugi
     - name: Włącz zaporę
       text: Uruchom sudo ufw enable aby aktywować zaporę i sudo ufw status aby zweryfikować.
-      url: step-5-enable-ufw
+      url: krok-5-wlacz-ufw
 status: published
 locale: pl
 author:

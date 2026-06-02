@@ -26,19 +26,19 @@ howto:
   steps:
     - name: Zaktualizuj serwer i zainstaluj pakiety wymagane
       text: Uruchom sudo apt update i zainstaluj curl, ca-certificates, i gnupg.
-      url: step-1-update-system-and-install-dependencies
+      url: krok-1-zaktualizuj-system-i-zainstaluj-zaleznosci
     - name: Dodaj oficjalny klucz GPG Docker
       text: Pobierz klucz szyfrowania Docker i zapisz go do /etc/apt/keyrings aby weryfikować pakiety.
-      url: step-2-add-dockers-official-gpg-key
+      url: krok-2-dodaj-oficjalny-klucz-gpg-docker
     - name: Skonfiguruj repozytorium Docker
       text: Dodaj oficjalne repozytorium do swojej listy źródeł apt i uruchom apt update.
-      url: step-3-set-up-the-docker-repository
+      url: krok-3-skonfiguruj-repozytorium-docker
     - name: Zainstaluj Docker Engine
       text: Uruchom sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin.
-      url: step-4-install-docker-engine-and-compose
+      url: krok-4-zainstaluj-docker-engine-i-compose
     - name: Zweryfikuj instalację
       text: Uruchom sudo docker run hello-world aby zweryfikować że silnik pomyślnie uruchamia kontenery.
-      url: step-5-verify-the-installation
+      url: krok-5-zweryfikuj-instalacje
 status: published
 locale: pl
 author:

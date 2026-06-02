@@ -25,19 +25,19 @@ howto:
   steps:
     - name: Zainstaluj fail2ban
       text: Uruchom sudo apt install fail2ban -y aby zainstalować fail2ban z domyślnego repozytorium.
-      url: installing-fail2ban
+      url: instalowanie-fail2ban
     - name: Utwórz lokalną konfigurację więzienia
       text: 'Skopiuj jail.conf do jail.local za pomocą: sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local'
-      url: configuring-fail2ban-jails
+      url: utworzenie-lokalnej-konfiguracji-wiezienia
     - name: Skonfiguruj więzienie SSH
       text: Edytuj jail.local aby włączyć i dostroić więzienie sshd z pożądanymi ustawieniami banowania.
-      url: configuring-fail2ban-jails
+      url: wiezienie-ssh
     - name: Włącz i uruchom fail2ban
       text: Uruchom sudo systemctl enable --now fail2ban aby uruchomić fail2ban i włączyć go przy starcie.
-      url: enabling-and-verifying-fail2ban
+      url: wlaczenie-i-uruchomienie-fail2ban
     - name: Zweryfikuj że więzienie SSH jest aktywne
       text: Uruchom sudo fail2ban-client status sshd aby potwierdzić że więzienie monitoruje SSH i liczy nieudane próby.
-      url: enabling-and-verifying-fail2ban
+      url: weryfikacja-dzialania-i-aktywnego-wiezienia
 status: published
 locale: pl
 author:
@@ -72,7 +72,7 @@ Po zainstalowaniu, usługa uruchamia się automatycznie. Zweryfikuj:
 sudo systemctl status fail2ban
 ```
 
-## Konfigurowanie więzień fail2ban
+## Utworzenie lokalnej konfiguracji więzienia
 
 fail2ban działa przez "więzienia", każdy z nich obserwuje konkretny plik logów pod kątem wzorców niepowodzeń i banuje obciążające IP.
 
@@ -139,13 +139,15 @@ bantime = 86400
 
 Krótszy `maxretry` i dłuższy `bantime` niż ustawienia globalne są rozsądne dla SSH, trzy nieudane próby w oknie banują na cały dzień.
 
-## Włączanie i weryfikowanie fail2ban
+## Włączenie i uruchomienie fail2ban
 
 Zastosuj konfigurację:
 
 ```bash
 sudo systemctl restart fail2ban
 ```
+
+## Weryfikacja działania i aktywnego więzienia
 
 Sprawdź status więzienia SSH:
 

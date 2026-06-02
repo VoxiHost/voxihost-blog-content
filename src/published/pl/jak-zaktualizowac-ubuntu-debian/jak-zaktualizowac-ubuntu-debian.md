@@ -26,22 +26,22 @@ howto:
   steps:
     - name: Odśwież indeks pakietów
       text: Uruchom sudo apt update aby zsynchronizować lokalny indeks pakietów z repozytoriami.
-      url: the-basics-apt-update-and-apt-upgrade
+      url: odswiezenie-indeksu-pakietow
     - name: Zainstaluj dostępne aktualizacje
       text: Uruchom sudo apt upgrade -y aby zainstalować wszystkie oczekujące aktualizacje pakietów.
-      url: the-basics-apt-update-and-apt-upgrade
+      url: instalacja-dostepnych-aktualizacji
     - name: Obsłuż zatrzymane pakiety
       text: Jeśli apt upgrade zgłasza zatrzymane pakiety, użyj sudo apt full-upgrade -y aby rozwiązać zmiany zależności.
-      url: handling-kept-back-packages-full-upgrade
+      url: obsluga-zatrzymanych-pakietow
     - name: Usuń stare pakiety
       text: Uruchom sudo apt autoremove -y aby wyczyścić stare biblioteki i zależności które nie są już potrzebne.
-      url: cleaning-up-old-packages-autoremove
+      url: czyszczenie-starych-pakietow
     - name: Sprawdź czy wymagany jest restart
       text: Uruchom cat /var/run/reboot-required aby sprawdzić czy aktualizacja jądra wymaga restartu systemu.
-      url: do-you-need-a-reboot-reboot-required
+      url: sprawdzanie-czy-wymagany-jest-restart
     - name: Włącz automatyczne aktualizacje bezpieczeństwa
       text: Zainstaluj i skonfiguruj unattended-upgrades aby automatycznie stosować poprawki bezpieczeństwa.
-      url: automating-patches-with-unattended-upgrades
+      url: automatyczne-aktualizacje-bezpieczenstwa
 status: published
 locale: pl
 author:
@@ -57,7 +57,7 @@ Ubuntu i Debian dostarczają solidne domyślne ustawienia, ale "solidne" nie zna
 
 Zanim zaczniemy: jeśli wdrażasz świeży serwer z premium dostawcą jak **<span class="text-white">Voxi</span><span class="text-amber-300">Host</span>**, system automatycznie uruchamia pełną aktualizację pakietów natychmiast po wdrożeniu przy pierwszym uruchomieniu. Ale gdy twój serwer działa przez jakiś czas, nadal będziesz musiał wiedzieć jak sam go utrzymywać.
 
-## Podstawy: apt update i apt upgrade
+## Odświeżenie indeksu pakietów
 
 Zanim zaktualizujesz cokolwiek, odśwież lokalny indeks pakietów. To nie instaluje nic, tylko sprawdza jakie aktualizacje są faktycznie dostępne:
 
@@ -66,6 +66,8 @@ Zanim zaktualizujesz cokolwiek, odśwież lokalny indeks pakietów. To nie insta
 ```bash
 sudo apt update
 ```
+
+## Instalacja dostępnych aktualizacji
 
 Następnie zainstaluj je:
 

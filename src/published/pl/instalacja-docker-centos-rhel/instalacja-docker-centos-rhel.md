@@ -28,19 +28,19 @@ howto:
   steps:
     - name: Usuń stare konfliktujące pakiety
       text: Uruchom sudo dnf remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine aby wyczyścić konflikty.
-      url: step-1-remove-old-versions
+      url: krok-1-usun-stare-wersje
     - name: Skonfiguruj repozytorium Docker
       text: Zainstaluj yum-utils i użyj yum-config-manager aby dodać oficjalne repozytorium Docker.
-      url: step-2-set-up-the-docker-repository
+      url: krok-2-skonfiguruj-repozytorium-docker
     - name: Zainstaluj Docker Engine
       text: Uruchom sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y.
-      url: step-3-install-docker-engine
+      url: krok-3-zainstaluj-docker-engine
     - name: Uruchom i włącz usługę
       text: Uruchom sudo systemctl enable --now docker aby uruchomić demona.
-      url: step-4-start-and-enable-docker
+      url: krok-4-uruchom-i-wlacz-docker
     - name: Zweryfikuj instalację
       text: Uruchom sudo docker run hello-world aby potwierdzić że wszystko działa.
-      url: step-5-verify-the-installation
+      url: krok-5-zweryfikuj-instalacje
 status: published
 locale: pl
 author:
