@@ -11,13 +11,24 @@ tags:
   - openvpn
   - security
   - performance
-status: draft
+status: published
 locale: pl
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
 contributors:
   - danielmarszalkowski
+faq:
+  - question: "Czy WireGuard jest legalny?"
+    answer: "Tak, WireGuard jest w pełni legalnym, otwartym protokołem kryptograficznym, który można swobodnie stosować do zabezpieczania połączeń sieciowych — tak samo jak HTTPS czy SSH. Legalność korzystania z VPN jako takiego zależy jednak od przepisów obowiązujących w Twoim kraju."
+  - question: "Czy mogę używać WireGuarda na telefonie?"
+    answer: "Tak. WireGuard posiada oficjalne, bezpłatne i zoptymalizowane aplikacje na systemy Android oraz iOS. Ponieważ nie zużywa energii w trybie bezczynności, jest to obecnie najlepszy pod względem oszczędności baterii protokół VPN dostępny na rynku mobilnym."
+  - question: "Który protokół VPN jest trudniejszy do zablokowania?"
+    answer: "OpenVPN. Może działać na porcie TCP 443, przez co jego ruch jest nie do odróżnienia od standardowego, szyfrowanego ruchu stron HTTPS. WireGuard działa wyłącznie przez UDP na niestandardowych portach, co administratorzy sieci w szkołach czy firmach mogą łatwo zablokować."
+  - question: "Czy WireGuard zapewnia pełną anonimowość?"
+    answer: "Żaden VPN nie gwarantuje całkowitej anonimowości. Sterownik WireGuarda w jądrze systemu przechowuje ostatni aktywny adres IP klienta w pamięci RAM, aby umożliwić błyskawiczne wznawianie sesji. Przy polityce zero-logs konieczne są dodatkowe skrypty czyszczące lub rozwiązanie takie jak Tailscale."
+  - question: "Czy mogę uruchomić oba protokoły jednocześnie na jednym serwerze VPS?"
+    answer: "Tak. Oba serwery działają współbieżnie, ponieważ używają innych interfejsów wirtualnych (tun0 dla OpenVPN i wg0 dla WireGuard) i różnych portów. Pozwala to korzystać na co dzień z WireGuarda i automatycznie przełączać się na OpenVPN w sieciach blokujących UDP."
 ---
 
 Uruchomienie prywatnej wirtualnej sieci prywatnej (VPN) na własnym serwerze wirtualnym (VPS) to najlepszy sposób na zabezpieczenie ruchu internetowego, uzyskanie dostępu do odległych zasobów sieciowych i ochronę prywatności podczas korzystania z publicznych sieci Wi-Fi.
@@ -172,26 +183,6 @@ Do najprostszej instalacji polecamy skorzystanie ze sprawdzonego skryptu instala
 | **Kryptografia** | Elastyczna (ryzyko błędów) | Stała, nowoczesna (brak ryzyka) |
 | **Wpływ na baterię (mobile)** | Średni (stałe podtrzymanie) | Znakomity (tryb uśpienia) |
 
----
-
-## 7. Często zadawane pytania (FAQ)
-
-### Czy WireGuard jest legalny?
-Tak, WireGuard jest w pełni legalnym, otwartym protokołem kryptograficznym. Może być używany bez ograniczeń do zabezpieczania połączeń, tak samo jak HTTPS czy SSH. Oczywiście legalność samego korzystania z VPN zależy od kraju, w którym się znajdujesz.
-
-### Czy mogę używać WireGuarda na telefonie?
-Tak. WireGuard posiada oficjalne, darmowe i świetnie zoptymalizowane aplikacje na systemy Android oraz iOS. Dzięki działaniu w tle bez ciągłego poboru prądu, jest to obecnie najbardziej przyjazny dla baterii protokół VPN na rynku.
-
-### Który VPN jest trudniejszy do zablokowania?
-OpenVPN. Ponieważ może działać na porcie TCP 443, jego ruch jest trudny do odróżnienia od standardowego szyfrowanego ruchu stron internetowych (HTTPS). WireGuard korzysta wyłącznie z protokołu UDP na niestandardowych portach (np. 51820), co sprawia, że administratorzy sieciowi w szkołach, hotelach czy korporacjach mogą go bardzo łatwo zablokować jednym kliknięciem.
-
-### Czy WireGuard zapewnia 100% anonimowości?
-Żaden VPN nie daje magicznej anonimowości. Jak opisano w Sekcji 4, sterownik WireGuarda przechowuje w pamięci RAM ostatnie aktywne IP klienta, aby umożliwić błyskawiczne wznawianie sesji. Jeśli Twój projekt wymaga rygorystycznej polityki braku logów (zero-logs), konieczne jest wdrożenie dodatkowych skryptów czyszczących (np. usuwających adresy IP po okresie bezczynności) lub skorzystanie z rozwiązań typu Tailscale. Tailscale działa znakomicie na serwerach <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> VPS, umożliwiając błyskawiczne stworzenie bezpiecznej, prywatnej sieci mesh.
-
-### Czy mogę uruchomić oba protokoły na jednym serwerze VPS?
-Tak, jak najbardziej. Oba serwery mogą działać jednocześnie, ponieważ korzystają z zupełnie innych interfejsów sieciowych (np. `tun0` dla OpenVPN i `wg0` dla WireGuard) oraz innych portów. Pozwala to na wygodne korzystanie z szybkiego WireGuarda na co dzień i automatyczny fallback do OpenVPN w sieciach, które blokują ruch UDP.
-
----
 
 ## Podsumowanie: Który protokół wybrać?
 
