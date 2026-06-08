@@ -63,7 +63,7 @@ WireGuard został oficjalnie włączony do jądra systemu Linux w 2020 roku. Zos
 
 ## 3. Wydajność i wyniki testów (iperf3 & ping)
 
-Zamiast polegać na ogólnych deklaracjach producentów, przeprowadziliśmy własne testy wydajności obu protokołów na serwerze [Budget VPS](/pl/budget-vps/) w <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> (specyfikacja: 1 vCPU, 1 GB RAM, port 1 Gbps). 
+Zamiast polegać na ogólnych deklaracjach producentów, przeprowadziliśmy własne testy wydajności obu protokołów na serwerze <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> VPS. 
 
 Pomiarów dokonano za pomocą narzędzia `iperf3` (dla przepustowości) oraz klasycznego `ping` (dla opóźnień) z lokalnego komputera klienckiego podłączonego do światłowodu 1 Gbps.
 

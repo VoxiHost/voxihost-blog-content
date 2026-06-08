@@ -63,7 +63,7 @@ WireGuard was merged into the Linux kernel in 2020. It was designed from scratch
 
 ## 3. Performance & Benchmark Results (iperf3 & ping)
 
-Rather than relying on generic marketing claims, we conducted our own performance benchmarks comparing both protocols on a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Budget VPS](/budget-vps/) (1 vCPU, 1 GB RAM, 1 Gbps port). 
+Rather than relying on generic marketing claims, we conducted our own performance benchmarks comparing both protocols on a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> VPS. 
 
 Measurements were taken using `iperf3` (for throughput) and standard `ping` (for round-trip latency) from a local client machine connected to a 1 Gbps fiber connection.
 
