@@ -12,7 +12,7 @@ tags:
   - docker-compose
   - vps
   - mysql
-status: draft
+status: published
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
