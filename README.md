@@ -90,7 +90,6 @@ The following articles are currently in progress, awaiting approval, or schedule
 | :--- | :--- | :--- | :--- | :--- |
 | [install-wordpress-docker-compose (EN)](src/drafts/en/install-wordpress-docker-compose/install-wordpress-docker-compose.md) | EN | `draft` | VoxiHost Team | 09.06.2026 |
 | [instalacja-wordpress-docker-compose (PL)](src/drafts/pl/instalacja-wordpress-docker-compose/instalacja-wordpress-docker-compose.md) | PL | `draft` | VoxiHost Team | 09.06.2026 |
-
 | [install-nextcloud-vps-docker-compose (EN)](src/drafts/en/install-nextcloud-vps-docker-compose/install-nextcloud-vps-docker-compose.md) | EN | `draft` | VoxiHost Team | 15.06.2026 |
 | [instalacja-nextcloud-vps-docker-compose (PL)](src/drafts/pl/instalacja-nextcloud-vps-docker-compose/instalacja-nextcloud-vps-docker-compose.md) | PL | `draft` | VoxiHost Team | 15.06.2026 |
 
