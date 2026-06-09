@@ -147,8 +147,8 @@ Pojawi się słynny, 5-minutowy instalator WordPressa. Wybierz język, nadaj tyt
 
 ## Podsumowanie
 
-Twoja strona na WordPressie działa teraz w kontenerach Docker na Twoim VPS-ie. Cały stos — WordPress i MySQL — jest zdefiniowany w jednym pliku `docker-compose.yml`, co sprawia, że tworzenie kopii zapasowych, migracje i aktualizacje są banalnie proste.
+Twoja strona na WordPressie działa teraz w kontenerach Docker na Twoim VPS-ie. Cały stos składający się z WordPressa i bazy MySQL jest zdefiniowany w jednym pliku `docker-compose.yml`. Dzięki temu tworzenie kopii zapasowych, migracje i aktualizacje są banalnie proste.
 
 W następnym kroku zdecydowanie zalecamy umieszczenie strony za Nginx Proxy Manager, aby przypisać do niej własną domenę i włączyć bezpłatny HTTPS przez Let's Encrypt. Sprawdź nasz poradnik: [jak skonfigurować Nginx Proxy Manager na VPS](/pl/blog/konfiguracja-nginx-proxy-manager-vps/).
 
-Jeśli potrzebujesz niezawodnego serwera VPS dla swojej strony WordPress, sprawdź nasze [plany Premium VPS](/pl/premium-vps/) lub [Budget VPS](/pl/budget-vps/) — oba oferują szybkie dyski NVMe SSD i natychmiastowe wdrożenie.
+Jeśli potrzebujesz niezawodnego serwera VPS dla swojej strony WordPress, sprawdź nasze [plany Premium VPS](/pl/premium-vps/) lub [Budget VPS](/pl/budget-vps/), które oferują szybkie dyski NVMe SSD i natychmiastowe wdrożenie.
