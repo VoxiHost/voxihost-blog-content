@@ -30,7 +30,6 @@ To better serve our growing international user base, we are transitioning from v
 
 Along with this rebranding, we are proud to launch native **multi-currency support**. You can now select your preferred billing currency from **PLN, USD, or EUR**. By paying in your local currency, you can completely bypass bank conversion fees and enjoy a more transparent billing experience.
 
-{% image "/assets/images/blog/en/devblog-june-13-2026/og-image.png", "VoxiHost June 13, 2026 DevBlog banner announcing rebranding to Credits and multi-currency support", "(max-width: 768px) 100vw, 800px" %}
 
 ## 2. User-Friendly Credit Packages
 
