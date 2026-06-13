@@ -30,7 +30,6 @@ Aby lepiej służyć naszej rosnącej bazie międzynarodowych użytkowników, pr
 
 Wraz z tym rebrandingiem z dumą wprowadzamy natywną **obsługę wielu walut**. Możesz teraz wybrać preferowaną walutę rozliczeniową spośród **PLN, USD lub EUR**. Płacąc w lokalnej walucie, możesz całkowicie uniknąć opłat za przewalutowanie banku i cieszyć się bardziej przejrzystym procesem płatności.
 
-{% image "/assets/images/blog/pl/devblog-13-czerwca-2026/og-image.png", "Banner DevBloga VoxiHost z 13 czerwca 2026 r. ogłaszający rebranding na Kredyty i obsługę wielu walut", "(max-width: 768px) 100vw, 800px" %}
 
 ## 2. Przyjazne dla użytkownika pakiety kredytów
 
