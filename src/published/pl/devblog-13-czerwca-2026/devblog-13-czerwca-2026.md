@@ -76,8 +76,7 @@ Użyj kodu rabatowego **`CREDITS`** podczas składania zamówienia na dowolny mi
 
 {% image "/assets/images/blog/pl/devblog-13-czerwca-2026/promo-code.png", "Banner promocyjny VoxiHost prezentujący kod rabatowy CREDITS z 45-procentową zniżką", "(max-width: 768px) 100vw, 800px" %}
 
-> [!WARNING]
-> Promocja jest ograniczona czasowo i wygasa **15 czerwca 2026 r.** o godzinie 23:59. Nie zwlekaj!
+> **Ważna informacja:** Promocja jest ograniczona czasowo i wygasa **15 czerwca 2026 r.** o godzinie 23:59. Nie zwlekaj!
 
 ## 4. Przeprojektowany i uproszczony panel płatności
 
