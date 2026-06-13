@@ -76,8 +76,7 @@ Use the promo code **`CREDITS`** when ordering any monthly VPS plan to get a mas
 
 {% image "/assets/images/blog/en/devblog-june-13-2026/promo-code.png", "VoxiHost launch promotion banner showcasing the CREDITS promo code for 45% discount", "(max-width: 768px) 100vw, 800px" %}
 
-> [!WARNING]
-> This promotion is time-limited and expires on **June 15, 2026** at 23:59 CET. Don't miss out!
+> **Important Notice:** This promotion is time-limited and expires on **June 15, 2026** at 23:59 CET. Don't miss out!
 
 ## 4. Rebuilt & Simplified Billing Page
 
