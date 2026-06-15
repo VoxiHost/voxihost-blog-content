@@ -33,6 +33,7 @@ This table lists all published blog posts, their raw Markdown source files, and 
 | How to Install Apache on Ubuntu & Debian: The Complete Server Guide | [Source](src/published/en/install-apache-ubuntu-debian/install-apache-ubuntu-debian.md) | [ZIP](dist/en/install-apache-ubuntu-debian-package.zip) | [Source](src/published/pl/instalacja-apache-ubuntu-debian/instalacja-apache-ubuntu-debian.md) | [ZIP](dist/pl/instalacja-apache-ubuntu-debian-package.zip) |
 | How to Install Docker on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide | [Source](src/published/en/install-docker-centos-rhel/install-docker-centos-rhel.md) | [ZIP](dist/en/install-docker-centos-rhel-package.zip) | [Source](src/published/pl/instalacja-docker-centos-rhel/instalacja-docker-centos-rhel.md) | [ZIP](dist/pl/instalacja-docker-centos-rhel-package.zip) |
 | How to Install Docker on Ubuntu & Debian: The Complete Server Guide | [Source](src/published/en/install-docker-ubuntu-debian/install-docker-ubuntu-debian.md) | [ZIP](dist/en/install-docker-ubuntu-debian-package.zip) | [Source](src/published/pl/instalacja-docker-ubuntu-debian/instalacja-docker-ubuntu-debian.md) | [ZIP](dist/pl/instalacja-docker-ubuntu-debian-package.zip) |
+| How to Install Nextcloud on a VPS using Docker Compose | [Source](src/published/en/install-nextcloud-vps-docker-compose/install-nextcloud-vps-docker-compose.md) | [ZIP](dist/en/install-nextcloud-vps-docker-compose-package.zip) | [Source](src/published/pl/instalacja-nextcloud-vps-docker-compose/instalacja-nextcloud-vps-docker-compose.md) | [ZIP](dist/pl/instalacja-nextcloud-vps-docker-compose-package.zip) |
 | How to Install Nginx on Ubuntu & Debian: The Complete Server Guide | [Source](src/published/en/install-nginx-ubuntu-debian/install-nginx-ubuntu-debian.md) | [ZIP](dist/en/install-nginx-ubuntu-debian-package.zip) | [Source](src/published/pl/instalacja-nginx-ubuntu-debian/instalacja-nginx-ubuntu-debian.md) | [ZIP](dist/pl/instalacja-nginx-ubuntu-debian-package.zip) |
 | June 13, 2026: VoxiHost DevBlog | [Source](src/published/en/devblog-june-13-2026/devblog-june-13-2026.md) | [ZIP](dist/en/devblog-june-13-2026-package.zip) | [Source](src/published/pl/devblog-13-czerwca-2026/devblog-13-czerwca-2026.md) | [ZIP](dist/pl/devblog-13-czerwca-2026-package.zip) |
 | How to Manage and Update PHP Versions on Linux (Ubuntu & Debian) | [Source](src/published/en/update-php-versions-linux/update-php-versions-linux.md) | [ZIP](dist/en/update-php-versions-linux-package.zip) | [Source](src/published/pl/aktualizacja-wersji-php-linux/aktualizacja-wersji-php-linux.md) | [ZIP](dist/pl/aktualizacja-wersji-php-linux-package.zip) |
@@ -90,9 +91,7 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| [install-nextcloud-vps-docker-compose (EN)](src/drafts/en/install-nextcloud-vps-docker-compose/install-nextcloud-vps-docker-compose.md) | EN | `draft` | VoxiHost Team | 15.06.2026 |
-| [instalacja-nextcloud-vps-docker-compose (PL)](src/drafts/pl/instalacja-nextcloud-vps-docker-compose/instalacja-nextcloud-vps-docker-compose.md) | PL | `draft` | VoxiHost Team | 15.06.2026 |
-
+| *No drafts currently active.* | — | — | — | — |
 <!-- END_DRAFTS -->
 
 ---

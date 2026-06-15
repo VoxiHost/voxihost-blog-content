@@ -12,12 +12,13 @@ tags:
   - docker-compose
   - vps
   - cloud-storage
-status: draft
+status: published
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
 contributors:
   - sl0ikkk
+  - danielmarszalkowski
 howto:
   name: "How to Install Nextcloud on a VPS using Docker Compose"
   totalTime: "PT10M"
@@ -36,6 +37,17 @@ howto:
     - name: "Deploy Nextcloud"
       text: "Spin up the stack and access the web interface."
       url: "step-3-deploy-nextcloud"
+faq:
+  - question: "What are the system requirements for running Nextcloud in Docker?"
+    answer: "You need a VPS with at least 1 GB of RAM (2 GB is recommended for optimal MariaDB database performance) and Docker installed."
+  - question: "How do I secure my Nextcloud instance with HTTPS?"
+    answer: 'We recommend setting up a reverse proxy like <a href="/blog/setup-nginx-proxy-manager-vps/">Nginx Proxy Manager</a> to point a custom domain with SSL certificates to port 8080.'
+  - question: "Can I use PostgreSQL instead of MariaDB?"
+    answer: 'Yes, you can modify the <code>docker-compose.yml</code> file to use the official PostgreSQL image instead of MariaDB.'
+  - question: "How can I increase the maximum file upload size in Nextcloud?"
+    answer: "You can increase it by setting the <code>PHP_UPLOAD_LIMIT</code> and <code>PHP_MEMORY_LIMIT</code> environment variables in your <code>docker-compose.yml</code> file."
+  - question: "How do I perform a backup of my self-hosted Nextcloud data?"
+    answer: "You should back up both the database volume (using <code>mysqldump</code>) and the persistent <code>nextcloud_data</code> volume where your actual files are stored."
 ---
 
 ## Introduction
