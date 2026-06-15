@@ -151,8 +151,8 @@ Pojawi się instalator Nextcloud. Utwórz konto administratora. Nextcloud automa
 
 ## Podsumowanie
 
-Gratulacje! Twoja prywatna chmura Nextcloud działa teraz bezpiecznie w kontenerach Docker na Twoim serwerze VPS. Pliki przechowywane są wyłącznie na Twoim sprzęcie — bez abonamentów i bez dostępu osób trzecich do Twoich danych.
+Gratulacje! Twoja prywatna chmura Nextcloud działa teraz bezpiecznie w kontenerach Docker na Twoim serwerze VPS. Pliki przechowywane są wyłącznie na Twoim sprzęcie, całkowicie bez abonamentów i bez dostępu osób trzecich do Twoich danych.
 
 W następnym kroku zalecamy umieszczenie Nextcloud za własną domeną z bezpłatnym certyfikatem HTTPS, używając [Nginx Proxy Manager](/pl/blog/konfiguracja-nginx-proxy-manager-vps/), dzięki czemu Twoja chmura będzie dostępna z każdego miejsca po szyfrowanym adresie.
 
-Jeśli potrzebujesz niezawodnego serwera do hostowania swojej prywatnej chmury, sprawdź nasze [plany Premium VPS](/pl/premium-vps/) lub [Budget VPS](/pl/budget-vps/) — oba oferują szybkie dyski NVMe SSD i wysoką przepustowość sieci.
+Jeśli potrzebujesz niezawodnego serwera do hostowania swojej prywatnej chmury, sprawdź nasze [plany Premium VPS](/pl/premium-vps/) lub [Budget VPS](/pl/budget-vps/), które oferują szybkie dyski NVMe SSD i wysoką przepustowość sieci.
