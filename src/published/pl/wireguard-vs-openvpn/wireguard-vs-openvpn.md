@@ -20,7 +20,7 @@ contributors:
   - danielmarszalkowski
 faq:
   - question: "Czy WireGuard jest legalny?"
-    answer: "Tak, WireGuard jest w pełni legalnym, otwartym protokołem kryptograficznym, który można swobodnie stosować do zabezpieczania połączeń sieciowych — tak samo jak HTTPS czy SSH. Legalność korzystania z VPN jako takiego zależy jednak od przepisów obowiązujących w Twoim kraju."
+    answer: "Tak, WireGuard jest w pełni legalnym, otwartym protokołem kryptograficznym, który można swobodnie stosować do zabezpieczania połączeń sieciowych, tak samo jak HTTPS czy SSH. Legalność korzystania z VPN jako takiego zależy jednak od przepisów obowiązujących w Twoim kraju."
   - question: "Czy mogę używać WireGuarda na telefonie?"
     answer: "Tak. WireGuard posiada oficjalne, bezpłatne i zoptymalizowane aplikacje na systemy Android oraz iOS. Ponieważ nie zużywa energii w trybie bezczynności, jest to obecnie najlepszy pod względem oszczędności baterii protokół VPN dostępny na rynku mobilnym."
   - question: "Który protokół VPN jest trudniejszy do zablokowania?"
@@ -33,7 +33,7 @@ faq:
 
 Uruchomienie prywatnej wirtualnej sieci prywatnej (VPN) na własnym serwerze wirtualnym (VPS) to najlepszy sposób na zabezpieczenie ruchu internetowego, uzyskanie dostępu do odległych zasobów sieciowych i ochronę prywatności podczas korzystania z publicznych sieci Wi-Fi.
 
-Przez wiele lat niekwestionowanym standardem szyfrowania tuneli VPN był **OpenVPN**. Jednak na rynku pojawił się **WireGuard** — lekki, nowoczesny protokół, który reklamuje się jako szybszy, bezpieczniejszy i znacznie prostszy w konfiguracji.
+Przez wiele lat niekwestionowanym standardem szyfrowania tuneli VPN był **OpenVPN**. Jednak na rynku pojawił się **WireGuard**, lekki i nowoczesny protokół, który reklamuje się jako szybszy, bezpieczniejszy i znacznie prostszy w konfiguracji.
 
 W tym przewodniku porównamy WireGuard i OpenVPN pod kątem kluczowych parametrów: prędkości transmisji, opóźnień (pingu), bezpieczeństwa, zużycia baterii oraz łatwości wdrożenia na serwerze w <span class="text-white">Voxi</span><span class="text-amber-300">Host</span>.
 
@@ -95,7 +95,7 @@ Różnica w sposobie nawiązywania połączenia jest kolosalna:
 ### Zużycie baterii na telefonach
 
 Dla użytkowników urządzeń mobilnych (smartfony, tablety) WireGuard to ogromna oszczędność. 
-OpenVPN stale wysyła pakiety podtrzymujące (keep-alive) w tle, aby zapobiec zamknięciu tunelu przez routery pośredniczące, co nie pozwala procesorowi telefonu przejść w stan głębokiego uśpienia. WireGuard działa w trybie **bezpołączeniowym** — nie wysyła żadnych danych, gdy nic nie przesyłasz, a przy przełączeniu sieci (np. z Wi-Fi na dane komórkowe LTE/5G) natychmiast wznawia tunel bez rozłączania i bez konieczności ponownego uwierzytelniania.
+OpenVPN stale wysyła pakiety podtrzymujące (keep-alive) w tle, aby zapobiec zamknięciu tunelu przez routery pośredniczące, co nie pozwala procesorowi telefonu przejść w stan głębokiego uśpienia. WireGuard działa w trybie **bezpołączeniowym**, co oznacza, że nie wysyła żadnych danych, gdy nic nie przesyłasz. Przy przełączeniu sieci (np. z Wi-Fi na dane komórkowe LTE/5G) natychmiast wznawia tunel bez rozłączania i bez konieczności ponownego uwierzytelniania.
 
 ---
 
@@ -113,7 +113,7 @@ Te dwa protokoły reprezentują zupełnie inne podejście do wyboru zabezpiecze�
 
 ## 5. Konfiguracja i wdrożenie
 
-Ręczna konfiguracja OpenVPN jest skomplikowana — wymaga generowania urzędów certyfikacji (CA), certyfikatów serwera i klientów oraz pisania długich plików konfiguracyjnych.
+Ręczna konfiguracja OpenVPN jest skomplikowana, ponieważ wymaga generowania urzędów certyfikacji (CA), certyfikatów serwera i klientów oraz pisania długich plików konfiguracyjnych.
 
 WireGuard działa podobnie do protokołu SSH. Opiera się na prostej wymianie kluczy prywatnych i publicznych pomiędzy klientem a serwerem. Ten mechanizm uwierzytelniania działa identycznie jak zabezpieczanie dostępu do serwera za pomocą kluczy (więcej o zarządzaniu kluczami dowiesz się z naszego poradnika [jak zabezpieczyć SSH na Ubuntu i Debianie](/pl/blog/jak-zabezpieczyc-ssh-ubuntu-debian/)).
 

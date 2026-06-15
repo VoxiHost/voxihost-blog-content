@@ -40,19 +40,19 @@ Oto pakiety dostępne dla każdej waluty (z wyłączeniem dodatkowych bonusów p
 ### Pakiety PLN
 | Cena | Kredyty bazowe | Bonusowe kredyty | Kredyty łącznie |
 | :--- | :---: | :---: | :---: |
-| 15.00 PLN | 15.00 | — | 15.00 |
-| 30.00 PLN | 30.00 | — | 30.00 |
-| 50.00 PLN | 50.00 | — | 50.00 |
-| 100.00 PLN | 100.00 | — | 100.00 |
+| 15.00 PLN | 15.00 | - | 15.00 |
+| 30.00 PLN | 30.00 | - | 30.00 |
+| 50.00 PLN | 50.00 | - | 50.00 |
+| 100.00 PLN | 100.00 | - | 100.00 |
 | 250.00 PLN | 250.00 | 5.00 | 255.00 |
 | 500.00 PLN | 500.00 | 20.00 | 520.00 |
 
 ### Pakiety EUR
 | Cena | Kredyty bazowe | Bonusowe kredyty | Kredyty łącznie |
 | :--- | :---: | :---: | :---: |
-| 5.00 EUR | 20.00 | — | 20.00 |
-| 10.00 EUR | 42.00 | — | 42.00 |
-| 20.00 EUR | 85.00 | — | 85.00 |
+| 5.00 EUR | 20.00 | - | 20.00 |
+| 10.00 EUR | 42.00 | - | 42.00 |
+| 20.00 EUR | 85.00 | - | 85.00 |
 | 50.00 EUR | 210.00 | 5.00 | 215.00 |
 | 100.00 EUR | 420.00 | 20.00 | 440.00 |
 | 250.00 EUR | 1050.00 | 50.00 | 1100.00 |
@@ -60,9 +60,9 @@ Oto pakiety dostępne dla każdej waluty (z wyłączeniem dodatkowych bonusów p
 ### Pakiety USD
 | Cena | Kredyty bazowe | Bonusowe kredyty | Kredyty łącznie |
 | :--- | :---: | :---: | :---: |
-| 5.00 USD | 20.00 | — | 20.00 |
-| 10.00 USD | 40.00 | — | 40.00 |
-| 20.00 USD | 80.00 | — | 80.00 |
+| 5.00 USD | 20.00 | - | 20.00 |
+| 10.00 USD | 40.00 | - | 40.00 |
+| 20.00 USD | 80.00 | - | 80.00 |
 | 50.00 USD | 200.00 | 5.00 | 205.00 |
 | 100.00 USD | 400.00 | 20.00 | 420.00 |
 | 250.00 USD | 1000.00 | 50.00 | 1050.00 |
