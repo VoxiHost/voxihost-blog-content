@@ -151,8 +151,8 @@ You will be greeted by the Nextcloud setup wizard. Create your admin account, an
 
 ## Conclusion
 
-Congratulations! You now have your own self-hosted Nextcloud instance running securely inside Docker containers on your VPS. Your files are stored privately on hardware you control — with no subscription fees and no third-party access to your data.
+Congratulations! You now have your own self-hosted Nextcloud instance running securely inside Docker containers on your VPS. Your files are stored privately on hardware you control, with no subscription fees or third-party access to your data.
 
 As a next step, we strongly recommend placing Nextcloud behind a custom domain with free HTTPS using [Nginx Proxy Manager](/blog/setup-nginx-proxy-manager-vps/), so your cloud is accessible from anywhere via a clean, encrypted URL.
 
-If you need a reliable server to host your self-managed cloud, check out our [Premium VPS plans](/premium-vps/) or [Budget VPS options](/budget-vps/) — both come with fast NVMe SSD storage and high-bandwidth connectivity.
+If you need a reliable server to host your self-managed cloud, check out our [Premium VPS plans](/premium-vps/) or [Budget VPS options](/budget-vps/), which both come with fast NVMe SSD storage and high-bandwidth connectivity.
