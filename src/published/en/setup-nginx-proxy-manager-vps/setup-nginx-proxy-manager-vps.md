@@ -131,8 +131,8 @@ You can now click **"Proxy Hosts"** -> **"Add Proxy Host"** to seamlessly connec
 
 ## Conclusion
 
-You now have Nginx Proxy Manager running on your VPS and fully accessible through its web dashboard. You can route any number of services to clean domain names and issue free Let's Encrypt SSL certificates in just a few clicks — no manual Nginx configuration required.
+You now have Nginx Proxy Manager running on your VPS and fully accessible through its web dashboard. You can route any number of services to clean domain names and issue free Let's Encrypt SSL certificates in just a few clicks, with no manual Nginx configuration required.
 
 Pair NPM with other self-hosted services running on the same VPS, such as WordPress or Nextcloud, to build a complete, production-ready self-hosted stack.
 
-If you need a reliable server for your self-hosted stack, check out our [Premium VPS plans](/premium-vps/) or [Budget VPS options](/budget-vps/) — both feature fast NVMe SSD storage and a high-bandwidth network port.
+If you need a reliable server for your self-hosted stack, check out our [Premium VPS plans](/premium-vps/) or [Budget VPS options](/budget-vps/), which both feature fast NVMe SSD storage and a high-bandwidth network port.
