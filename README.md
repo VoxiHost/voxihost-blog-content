@@ -91,7 +91,7 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| *No drafts currently active.* | — | — | — | — |
+| How to Set Up a TeamSpeak 3 Server on Ubuntu & Debian | EN / PL | Pending Review | VoxiHost Team | 16.06.2026 |
 <!-- END_DRAFTS -->
 
 ---
