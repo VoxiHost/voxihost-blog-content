@@ -62,6 +62,7 @@ This table lists all published blog posts, their raw Markdown source files, and 
 | How to Set Up Netdata for Real-Time VPS Monitoring | [Source](src/published/en/setup-netdata-vps/setup-netdata-vps.md) | [ZIP](dist/en/setup-netdata-vps-package.zip) | [Source](src/published/pl/konfiguracja-netdata-vps/konfiguracja-netdata-vps.md) | [ZIP](dist/pl/konfiguracja-netdata-vps-package.zip) |
 | How to Set Up SSL with Let's Encrypt & Certbot on Ubuntu & Debian: The Complete Guide | [Source](src/published/en/ssl-letsencrypt-certbot-ubuntu/ssl-letsencrypt-certbot-ubuntu.md) | [ZIP](dist/en/ssl-letsencrypt-certbot-ubuntu-package.zip) | [Source](src/published/pl/certyfikat-ssl-letsencrypt-ubuntu/certyfikat-ssl-letsencrypt-ubuntu.md) | [ZIP](dist/pl/certyfikat-ssl-letsencrypt-ubuntu-package.zip) |
 | How to Setup Nginx Proxy Manager on a VPS | [Source](src/published/en/setup-nginx-proxy-manager-vps/setup-nginx-proxy-manager-vps.md) | [ZIP](dist/en/setup-nginx-proxy-manager-vps-package.zip) | [Source](src/published/pl/konfiguracja-nginx-proxy-manager-vps/konfiguracja-nginx-proxy-manager-vps.md) | [ZIP](dist/pl/konfiguracja-nginx-proxy-manager-vps-package.zip) |
+| How to Set Up a TeamSpeak 3 Server on Ubuntu & Debian | [Source](src/published/en/setup-teamspeak-3-server-ubuntu-debian/setup-teamspeak-3-server-ubuntu-debian.md) | [ZIP](dist/en/setup-teamspeak-3-server-ubuntu-debian-package.zip) | [Source](src/published/pl/jak-zalozyc-serwer-teamspeak-3-ubuntu-debian/jak-zalozyc-serwer-teamspeak-3-ubuntu-debian.md) | [ZIP](dist/pl/jak-zalozyc-serwer-teamspeak-3-ubuntu-debian-package.zip) |
 | How to Set Up a WireGuard VPN Server on Ubuntu & Debian | [Source](src/published/en/setup-wireguard-vpn-ubuntu/setup-wireguard-vpn-ubuntu.md) | [ZIP](dist/en/setup-wireguard-vpn-ubuntu-package.zip) | [Source](src/published/pl/konfiguracja-wireguard-vpn-ubuntu/konfiguracja-wireguard-vpn-ubuntu.md) | [ZIP](dist/pl/konfiguracja-wireguard-vpn-ubuntu-package.zip) |
 | WireGuard vs OpenVPN: VPN Protocols Performance & Security Comparison | [Source](src/published/en/wireguard-vs-openvpn/wireguard-vs-openvpn.md) | [ZIP](dist/en/wireguard-vs-openvpn-package.zip) | [Source](src/published/pl/wireguard-vs-openvpn/wireguard-vs-openvpn.md) | [ZIP](dist/pl/wireguard-vs-openvpn-package.zip) |
 | How to Transfer Files to Your VPS using SFTP & FileZilla | [Source](src/published/en/transfer-files-vps-sftp-filezilla/transfer-files-vps-sftp-filezilla.md) | [ZIP](dist/en/transfer-files-vps-sftp-filezilla-package.zip) | [Source](src/published/pl/przesylanie-plikow-vps-sftp-filezilla/przesylanie-plikow-vps-sftp-filezilla.md) | [ZIP](dist/pl/przesylanie-plikow-vps-sftp-filezilla-package.zip) |
@@ -91,7 +92,7 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| How to Set Up a TeamSpeak 3 Server on Ubuntu & Debian | EN / PL | Pending Review | VoxiHost Team | 16.06.2026 |
+| *No drafts currently active.* | — | — | — | — |
 <!-- END_DRAFTS -->
 
 ---

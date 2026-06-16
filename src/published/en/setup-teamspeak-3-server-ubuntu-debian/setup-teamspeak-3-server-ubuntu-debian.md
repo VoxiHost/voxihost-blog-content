@@ -7,7 +7,7 @@ translationKey: "setup-teamspeak-3-server-ubuntu-debian"
 locale: en
 category: "Tutorials"
 tags: ["teamspeak", "voice server", "ubuntu", "debian"]
-status: draft
+status: published
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
