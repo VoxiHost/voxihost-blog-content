@@ -34,24 +34,24 @@ howto:
     - "SSH Client"
     - "A user with sudo privileges"
   steps:
-    - name: "Step 1 — Update the System"
+    - name: "Step 1: Update the System"
       text: "Ensure all packages are up to date and install required tools like wget and bzip2."
-      url: "step-1--update-the-system"
-    - name: "Step 2 — Create a Dedicated User"
+      url: "step-1-update-the-system"
+    - name: "Step 2: Create a Dedicated User"
       text: "Create a secure, isolated user for running the TeamSpeak 3 server."
-      url: "step-2--create-a-dedicated-user"
-    - name: "Step 3 — Download and Extract"
+      url: "step-2-create-a-dedicated-user"
+    - name: "Step 3: Download and Extract"
       text: "Download the latest TeamSpeak 3 server files and extract them."
-      url: "step-3--download-and-extract-teamspeak-3"
-    - name: "Step 4 — Accept the License"
+      url: "step-3-download-and-extract-teamspeak-3"
+    - name: "Step 4: Accept the License"
       text: "Accept the TeamSpeak 3 license agreement to allow the server to run."
-      url: "step-4--accept-the-license-agreement"
-    - name: "Step 5 — First Run & Privilege Key"
+      url: "step-4-accept-the-license-agreement"
+    - name: "Step 5: First Run & Privilege Key"
       text: "Start the server manually to capture the crucial admin privilege key."
-      url: "step-5--first-run-and-privilege-key"
-    - name: "Step 6 — Systemd Service"
+      url: "step-5-first-run-and-privilege-key"
+    - name: "Step 6: Systemd Service"
       text: "Create a systemd service to run TeamSpeak automatically in the background."
-      url: "step-6--configure-a-systemd-service"
+      url: "step-6-configure-a-systemd-service"
 ---
 
 TeamSpeak 3 remains one of the most reliable, low-latency, and resource-efficient voice communication platforms for gamers and communities. Self-hosting your own TeamSpeak server gives you ultimate privacy, full control over permissions, and zero reliance on third-party voice chat providers.
@@ -60,7 +60,7 @@ In this guide, you will learn how to properly install and secure a TeamSpeak 3 s
 
 > **Prerequisites:** Before starting, ensure you have [a VPS running Ubuntu or Debian](/premium-vps/) with SSH access and a user account with `sudo` privileges.
 
-## Step 1 — Update the System
+## Step 1: Update the System
 
 First, ensure your package index is updated and install the necessary utilities (`wget` for downloading and `bzip2` for extracting the archive):
 
@@ -71,7 +71,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install wget bzip2 -y
 ```
 
-## Step 2 — Create a Dedicated User
+## Step 2: Create a Dedicated User
 
 Running any public-facing service as the `root` user is a major security risk. Let's create a dedicated system user specifically for TeamSpeak:
 
@@ -87,7 +87,7 @@ Now, switch to this new user to perform the installation:
 sudo su - teamspeak
 ```
 
-## Step 3 — Download and Extract TeamSpeak 3
+## Step 3: Download and Extract TeamSpeak 3
 
 Fetch the latest TeamSpeak 3 server files. You can always find the newest version on the [official TeamSpeak downloads page](https://teamspeak.com/en/downloads/#server).
 
@@ -105,7 +105,7 @@ mv teamspeak3-server_linux_amd64/* .
 rm -rf teamspeak3-server_linux_amd64 teamspeak3-server_linux_amd64-3.13.8.tar.bz2
 ```
 
-## Step 4 — Accept the License Agreement
+## Step 4: Accept the License Agreement
 
 TeamSpeak requires you to accept their End User License Agreement (EULA) before the server will start. You can do this by creating an empty file named `.ts3server_license_accepted`:
 
@@ -115,7 +115,7 @@ TeamSpeak requires you to accept their End User License Agreement (EULA) before 
 touch .ts3server_license_accepted
 ```
 
-## Step 5 — First Run and Privilege Key
+## Step 5: First Run and Privilege Key
 
 Now, start the server manually for the first time. **This step is critical** because the server will display your `ServerAdmin` privilege key, which you need to claim admin rights in your TeamSpeak client.
 
@@ -133,7 +133,7 @@ Once you have saved the key, stop the server so we can configure it to run as a 
 ./ts3server_startscript.sh stop
 ```
 
-## Step 6 — Configure a Systemd Service
+## Step 6: Configure a Systemd Service
 
 To ensure your TeamSpeak server starts automatically if your VPS reboots, we need to create a systemd service. First, exit back to your sudo user:
 

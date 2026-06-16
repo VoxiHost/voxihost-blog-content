@@ -34,24 +34,24 @@ howto:
     - "Klient SSH"
     - "Konto użytkownika z uprawnieniami sudo"
   steps:
-    - name: "Krok 1 — Aktualizacja systemu"
+    - name: "Krok 1: Aktualizacja systemu"
       text: "Zaktualizuj pakiety i zainstaluj wymagane narzędzia, takie jak wget i bzip2."
-      url: "krok-1--aktualizacja-systemu"
-    - name: "Krok 2 — Tworzenie dedykowanego użytkownika"
+      url: "krok-1-aktualizacja-systemu"
+    - name: "Krok 2: Tworzenie dedykowanego użytkownika"
       text: "Utwórz bezpiecznego, odizolowanego użytkownika do obsługi serwera TeamSpeak."
-      url: "krok-2--tworzenie-dedykowanego-uzytkownika"
-    - name: "Krok 3 — Pobieranie i rozpakowywanie"
+      url: "krok-2-tworzenie-dedykowanego-uzytkownika"
+    - name: "Krok 3: Pobieranie i rozpakowywanie"
       text: "Pobierz najnowsze pliki serwera TeamSpeak 3 i rozpakuj archiwum."
-      url: "krok-3--pobieranie-i-rozpakowywanie-teamspeak-3"
-    - name: "Krok 4 — Akceptacja licencji"
+      url: "krok-3-pobieranie-i-rozpakowywanie-teamspeak-3"
+    - name: "Krok 4: Akceptacja licencji"
       text: "Zaakceptuj licencję użytkownika TeamSpeak, co pozwoli na uruchomienie serwera."
-      url: "krok-4--akceptacja-licencji-eula"
-    - name: "Krok 5 — Pierwsze uruchomienie i Privilege Key"
+      url: "krok-4-akceptacja-licencji-eula"
+    - name: "Krok 5: Pierwsze uruchomienie i Privilege Key"
       text: "Uruchom serwer ręcznie, aby przechwycić klucz administratora (Privilege Key)."
-      url: "krok-5--pierwsze-uruchomienie-i-privilege-key"
-    - name: "Krok 6 — Usługa Systemd"
+      url: "krok-5-pierwsze-uruchomienie-i-privilege-key"
+    - name: "Krok 6: Usługa Systemd"
       text: "Utwórz usługę systemd, aby serwer działał automatycznie w tle."
-      url: "krok-6--konfiguracja-uslugi-systemd"
+      url: "krok-6-konfiguracja-uslugi-systemd"
 ---
 
 TeamSpeak 3 to od wielu lat jeden z najbardziej niezawodnych i stabilnych komunikatorów głosowych dla graczy oraz społeczności internetowych. Stawiając własny serwer na VPS zyskujesz pełną kontrolę, prywatność oraz niezależność od zewnętrznych dostawców.
@@ -60,7 +60,7 @@ Z tego poradnika dowiesz się, jak prawidłowo zainstalować i zabezpieczyć wł
 
 > **Wymagania wstępne:** Przed rozpoczęciem upewnij się, że posiadasz [serwer VPS z systemem Ubuntu lub Debian](/pl/premium-vps/), dostęp SSH oraz użytkownika z uprawnieniami `sudo`.
 
-## Krok 1 — Aktualizacja systemu
+## Krok 1: Aktualizacja systemu
 
 Zacznijmy od odświeżenia listy pakietów oraz instalacji niezbędnych narzędzi (`wget` do pobierania plików, `bzip2` do rozpakowywania archiwum):
 
@@ -71,7 +71,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install wget bzip2 -y
 ```
 
-## Krok 2 — Tworzenie dedykowanego użytkownika
+## Krok 2: Tworzenie dedykowanego użytkownika
 
 Ze względów bezpieczeństwa żadna usługa dostępna publicznie nie powinna być uruchamiana z konta `root`. Stwórzmy nowego użytkownika dedykowanego specjalnie dla serwera TeamSpeak:
 
@@ -87,7 +87,7 @@ Zaloguj się teraz na to nowo utworzone konto:
 sudo su - teamspeak
 ```
 
-## Krok 3 — Pobieranie i rozpakowywanie TeamSpeak 3
+## Krok 3: Pobieranie i rozpakowywanie TeamSpeak 3
 
 Kolejnym krokiem jest pobranie plików serwerowych. Najnowszą wersję znajdziesz zawsze na [oficjalnej stronie pobierania TeamSpeak](https://teamspeak.com/en/downloads/#server).
 
@@ -105,7 +105,7 @@ mv teamspeak3-server_linux_amd64/* .
 rm -rf teamspeak3-server_linux_amd64 teamspeak3-server_linux_amd64-3.13.8.tar.bz2
 ```
 
-## Krok 4 — Akceptacja licencji (EULA)
+## Krok 4: Akceptacja licencji (EULA)
 
 Serwer TeamSpeak 3 nie uruchomi się, dopóki nie zaakceptujesz warunków umowy EULA. Robi się to w bardzo prosty sposób, tworząc pusty plik o nazwie `.ts3server_license_accepted`:
 
@@ -115,7 +115,7 @@ Serwer TeamSpeak 3 nie uruchomi się, dopóki nie zaakceptujesz warunków umowy 
 touch .ts3server_license_accepted
 ```
 
-## Krok 5 — Pierwsze uruchomienie i Privilege Key
+## Krok 5: Pierwsze uruchomienie i Privilege Key
 
 To **niezwykle ważny** krok. Musimy uruchomić serwer ręcznie, ponieważ przy pierwszym starcie konsola wygeneruje klucz uprawnień (**Privilege Key**) oraz dane do ServerQuery. Klucz ten będzie Ci potrzebny, aby zdobyć uprawnienia administratora w swoim kliencie TS3.
 
@@ -133,7 +133,7 @@ Kiedy już to zrobisz, wyłącz serwer, ponieważ za chwilę skonfigurujemy go t
 ./ts3server_startscript.sh stop
 ```
 
-## Krok 6 — Konfiguracja usługi Systemd
+## Krok 6: Konfiguracja usługi Systemd
 
 Profesjonalnie postawiony serwer powinien uruchamiać się automatycznie w tle i wstawać samodzielnie po restarcie maszyny. Wyloguj się z konta `teamspeak`, powracając na swoje główne konto (`sudo`):
 
