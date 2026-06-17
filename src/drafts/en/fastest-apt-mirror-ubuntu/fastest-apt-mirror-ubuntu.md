@@ -42,8 +42,6 @@ When you deploy a new Ubuntu server, the default APT package manager configurati
 
 To maximize your server's efficiency, you should configure APT to use the fastest mirror available in your region. In this guide, we'll provide a simple script that automatically benchmarks dozens of global mirrors, finds the one with the lowest latency to your server, and updates your configuration (supporting both the traditional `sources.list` and the modern `ubuntu.sources` formats).
 
-{% image "/assets/images/blog/en/fastest-apt-mirror-ubuntu/hero.png", "Terminal showing APT mirror speed test", "(max-width: 768px) 100vw, 800px" %}
-
 ---
 
 ## Step 1 — Create the Mirror Selection Script

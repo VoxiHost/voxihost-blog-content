@@ -42,15 +42,7 @@ howto:
       url: step-5--automated-security-updates
 ---
 
-## Introduction
-
-Setting up a new server from a provider like <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> is just the beginning. Often, default images don't follow all security best practices out of the box. To ensure your data is safe and your services run smoothly, you need to perform several critical hardening and optimization steps.
-
-In this guide, we will walk you through the essential process of securing your new [Premium VPS](/premium-vps/) or [Budget VPS](/budget-vps/) from the ground up.
-
-{% image "/assets/images/blog/en/secure-optimize-linux-vps/hero.png", "A secure Linux terminal representing server hardening", "(max-width: 768px) 100vw, 800px" %}
-
-> **Prerequisites:** Before you start, ensure you have access to your server's IP address and root password provided in your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> dashboard.
+## Introduction Before you start, ensure you have access to your server's IP address and root password provided in your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> dashboard.
 
 ---
 

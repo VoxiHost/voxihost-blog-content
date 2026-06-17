@@ -38,8 +38,6 @@ howto:
 
 When setting up a new [Budget VPS](/budget-vps/) or local Linux machine, two of the most basic tasks are enabling remote access and securing the network. In this guide, we will show you how to quickly set up the OpenSSH server and the Uncomplicated Firewall (UFW) on Ubuntu.
 
-{% image "/assets/images/blog/en/enable-ssh-firewall-ubuntu/hero.png", "Lock icon next to a terminal prompt", "(max-width: 768px) 100vw, 800px" %}
-
 ---
 
 ## Step 1 — Install and Enable SSH

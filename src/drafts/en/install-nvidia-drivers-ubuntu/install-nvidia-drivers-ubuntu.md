@@ -44,8 +44,6 @@ Getting the best performance out of your NVIDIA GPU on Linux requires the propri
 
 In this guide, we will cover the three main ways to install NVIDIA drivers on Ubuntu-based systems, ranging from the safest automatic method to the most advanced manual installation.
 
-{% image "/assets/images/blog/en/install-nvidia-drivers-ubuntu/hero.png", "NVIDIA logo with a Linux terminal background", "(max-width: 768px) 100vw, 800px" %}
-
 > **Prerequisites:** Ensure your system is up to date and you have a compatible NVIDIA GPU. Always [backup your system](/premium-vps/) before making major driver changes.
 
 ---
