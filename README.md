@@ -92,7 +92,8 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| *No drafts currently active.* | — | — | — | — |
+| [Docker vs Podman: Container Engines Comparison for Linux Systems](src/drafts/en/docker-vs-podman/docker-vs-podman.md) / [Porównanie silników kontenerów dla systemów Linux](src/drafts/pl/docker-vs-podman/docker-vs-podman.md) | EN / PL | Draft | VoxiHost Team | 22.06.2026 |
+| [LiteSpeed vs Caddy: The Battle of Modern Web Servers](src/drafts/en/litespeed-vs-caddy/litespeed-vs-caddy.md) / [Starcie nowoczesnych serwerów WWW](src/drafts/pl/litespeed-vs-caddy/litespeed-vs-caddy.md) | EN / PL | Draft | VoxiHost Team | 23.06.2026 |
 <!-- END_DRAFTS -->
 
 ---
