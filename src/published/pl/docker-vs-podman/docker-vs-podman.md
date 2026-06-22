@@ -12,7 +12,7 @@ tags:
   - devops
   - security
   - linux
-status: draft
+status: published
 locale: pl
 author:
   name: VoxiHost Team
