@@ -11,7 +11,7 @@ tags:
   - caddy
   - performance
   - wordpress
-status: draft
+status: published
 locale: pl
 author:
   name: VoxiHost Team
