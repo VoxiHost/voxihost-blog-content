@@ -25,6 +25,8 @@ This table lists all published blog posts, their raw Markdown source files, and 
 <!-- START_PUBLISHED_POSTS -->
 | Article | 🇬🇧 EN Source | 🇬🇧 EN ZIP | 🇵🇱 PL Source | 🇵🇱 PL ZIP |
 | :--- | :---: | :---: | :---: | :---: |
+| Docker vs Podman: Container Engines Comparison for Linux Systems | [Source](src/published/en/docker-vs-podman/docker-vs-podman.md) | [ZIP](dist/en/docker-vs-podman-package.zip) | [Source](src/published/pl/docker-vs-podman/docker-vs-podman.md) | [ZIP](dist/pl/docker-vs-podman-package.zip) |
+| LiteSpeed vs Caddy: The Battle of Modern Web Servers | [Source](src/published/en/litespeed-vs-caddy/litespeed-vs-caddy.md) | [ZIP](dist/en/litespeed-vs-caddy-package.zip) | [Source](src/published/pl/litespeed-vs-caddy/litespeed-vs-caddy.md) | [ZIP](dist/pl/litespeed-vs-caddy-package.zip) |
 | How to Configure firewalld on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide | [Source](src/published/en/configure-firewalld-centos-rhel/configure-firewalld-centos-rhel.md) | [ZIP](dist/en/configure-firewalld-centos-rhel-package.zip) | [Source](src/published/pl/konfiguracja-firewalld-centos-rhel/konfiguracja-firewalld-centos-rhel.md) | [ZIP](dist/pl/konfiguracja-firewalld-centos-rhel-package.zip) |
 | How to Configure UFW Firewall on Ubuntu & Debian: The Complete Server Guide | [Source](src/published/en/configure-ufw-ubuntu-debian/configure-ufw-ubuntu-debian.md) | [ZIP](dist/en/configure-ufw-ubuntu-debian-package.zip) | [Source](src/published/pl/konfiguracja-ufw-ubuntu-debian/konfiguracja-ufw-ubuntu-debian.md) | [ZIP](dist/pl/konfiguracja-ufw-ubuntu-debian-package.zip) |
 | How to Create a Sudo User on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide | [Source](src/published/en/add-sudo-user-centos/add-sudo-user-centos.md) | [ZIP](dist/en/add-sudo-user-centos-package.zip) | [Source](src/published/pl/jak-dodac-uzytkownika-sudo-centos/jak-dodac-uzytkownika-sudo-centos.md) | [ZIP](dist/pl/jak-dodac-uzytkownika-sudo-centos-package.zip) |
@@ -92,8 +94,7 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| [Docker vs Podman: Container Engines Comparison for Linux Systems](src/drafts/en/docker-vs-podman/docker-vs-podman.md) / [Porównanie silników kontenerów dla systemów Linux](src/drafts/pl/docker-vs-podman/docker-vs-podman.md) | EN / PL | Draft | VoxiHost Team | 22.06.2026 |
-| [LiteSpeed vs Caddy: The Battle of Modern Web Servers](src/drafts/en/litespeed-vs-caddy/litespeed-vs-caddy.md) / [Starcie nowoczesnych serwerów WWW](src/drafts/pl/litespeed-vs-caddy/litespeed-vs-caddy.md) | EN / PL | Draft | VoxiHost Team | 23.06.2026 |
+| *No drafts currently active.* | — | — | — | — |
 <!-- END_DRAFTS -->
 
 ---
