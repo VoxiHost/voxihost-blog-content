@@ -14,10 +14,11 @@ tags:
   - gpu
 status: draft
 author:
-  name: VoxiHost Team
-  link: https://voxihost.pl/
+  name: Anduin
+  link: https://github.com/Anduin2017
 contributors:
-  - your-github-username
+  - Anduin2017
+  - danielmarszalkowski
 howto:
   name: Install NVIDIA Drivers on Ubuntu
   totalTime: PT25M
@@ -27,50 +28,59 @@ howto:
     - Ubuntu or an Ubuntu-based distribution (like AnduinOS)
     - Internet connection
   steps:
-    - name: Step 1 — Automatic Installation
+    - name: "Step 1: Automatic Installation"
       text: Use the built-in ubuntu-drivers tool to install the recommended version.
-      url: step-1--automatic-installation
-    - name: Step 2 — (Optional) PPA Installation
+      url: step-1-automatic-installation
+    - name: "Step 2: (Optional) PPA Installation"
       text: Add the graphics-drivers PPA to get the latest stable versions.
-      url: step-2--optional-ppa-installation
-    - name: Step 3 — Manual Installation with Secure Boot
+      url: step-2-optional-ppa-installation
+    - name: "Step 3: Manual Installation with Secure Boot"
       text: Sign the kernel module if Secure Boot is enabled on your system.
-      url: step-3--manual-installation-with-secure-boot
+      url: step-3-manual-installation-with-secure-boot
+faq:
+  - question: "Why does nvidia-smi fail after installing the driver?"
+    answer: "This is usually because the system hasn't been rebooted yet to load the new kernel modules, or because UEFI Secure Boot is active and has blocked the unsigned NVIDIA driver from loading."
+  - question: "How do I switch back to the open-source Nouveau driver?"
+    answer: "You can restore the default Nouveau drivers by purging the proprietary NVIDIA packages: run <code>sudo apt purge nvidia-*</code> and then install the Nouveau driver package with <code>sudo apt install xserver-xorg-video-nouveau</code>."
+  - question: "Can I use nvidia-smi on any VPS instance?"
+    answer: "No, NVIDIA GPU tools require a physical graphics card attached to the machine. You can only use them if your VPS plan supports dedicated GPU passthrough or you use dedicated GPU bare-metal servers."
 ---
 
 ## Introduction
 
-Getting the best performance out of your NVIDIA GPU on Linux requires the proprietary drivers. While the open-source Nouveau driver is useful for basic display tasks, it lacks the optimizations needed for gaming, video editing, and AI workloads on your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> workstation or server.
+For optimal performance from an NVIDIA GPU on Linux, you must use the proprietary drivers. Although the open-source Nouveau driver suffices for basic display tasks, it lacks the optimizations necessary for gaming, GPU acceleration, and AI workloads on your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> workstation or server.
 
-In this guide, we will cover the three main ways to install NVIDIA drivers on Ubuntu-based systems, ranging from the safest automatic method to the most advanced manual installation.
+This guide covers the three main installation methods for NVIDIA drivers on Ubuntu-based systems, starting with the recommended automated tools and ending with a detailed manual installation procedure.
 
 > **Prerequisites:** Ensure your system is up to date and you have a compatible NVIDIA GPU. Always [backup your system](/premium-vps/) before making major driver changes.
 
 ---
 
-## Step 1 — Automatic Installation
+## Step 1: Automatic Installation
 
-The simplest way to install drivers is to let the system detect your hardware and choose the best version for you.
+The recommended approach is to let the system detect the hardware automatically and install the appropriate driver version:
 
 ```bash
 sudo apt update
 sudo ubuntu-drivers install
 ```
 
-After the installation finishes, simply **reboot** your system. This method is highly recommended for most users as it handles dependencies and DKMS automatically.
+Reboot your system once the installation completes. This method is ideal for most setups since it manages system updates and DKMS (Dynamic Kernel Module Support) automatically.
+
+{% image "/assets/images/blog/en/install-nvidia-drivers-ubuntu/H1.png", "Terminal showing system hardware detection and recommended proprietary NVIDIA drivers", "(max-width: 768px) 100vw, 800px" %}
 
 ---
 
-## Step 2 — (Optional) PPA Installation
+## Step 2: (Optional) PPA Installation
 
-If you need a newer driver than what is available in the default repositories (e.g., for a brand new RTX 40-series card), use the official Graphics Drivers PPA.
+If your hardware requires a newer driver version than the default repositories provide (such as for recent graphics card architectures), use the official graphics drivers PPA:
 
 ```bash
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 ```
 
-Now you can list and install specific versions:
+You can then query the available versions and install the required one:
 
 ```bash
 ubuntu-drivers list
@@ -79,9 +89,9 @@ sudo apt install nvidia-driver-550 # Replace with the desired version
 
 ---
 
-## Step 3 — Manual Installation with Secure Boot
+## Step 3: Manual Installation with Secure Boot
 
-If you are using the `.run` installer from NVIDIA's website and have **Secure Boot** enabled, you must sign the kernel module.
+If you prefer the official manual `.run` installer and have UEFI Secure Boot enabled, you must sign the kernel module before the system will load it.
 
 ### Generate a Signing Key
 
@@ -98,11 +108,11 @@ openssl x509 -in MOK.crt -outform DER -out MOK.der
 sudo mokutil --import MOK.der
 ```
 
-Set a password, then **reboot**. During boot, select "Enroll MOK" in the blue MokManager screen and enter your password.
+Set a secure one-time password and reboot. During system boot, the blue MokManager utility will appear: choose "Enroll MOK", confirm, and enter the password.
 
 ### Run the Installer
 
-Once back in Ubuntu, stop the display manager and run the installer, providing the path to your keys when prompted:
+After boot, stop your display manager (if active) and launch the installer, passing the key paths as arguments:
 
 ```bash
 sudo ./NVIDIA-Linux-x86_64-xxx.xx.run --module-signing-secret-key=/home/your-user/mok-keys/MOK.key --module-signing-public-key=/home/your-user/mok-keys/MOK.crt
@@ -112,11 +122,13 @@ sudo ./NVIDIA-Linux-x86_64-xxx.xx.run --module-signing-secret-key=/home/your-use
 
 ## Conclusion
 
-Whether you chose the automatic method or the manual one, you should now have fully functional NVIDIA drivers. You can verify the installation by running:
+Once the installation completes, verify the GPU status by running:
 
 ```bash
 nvidia-smi
 ```
+
+{% image "/assets/images/blog/en/install-nvidia-drivers-ubuntu/H2.png", "Terminal display of the nvidia-smi tool showing GPU details and driver version", "(max-width: 768px) 100vw, 800px" %}
 
 If you see a table with your GPU details, you are ready to go! For those running GPU-accelerated containers, don't forget to check out the [NVIDIA Container Toolkit](/blog/docker-nvidia-container-toolkit/).
 

@@ -1,7 +1,7 @@
 ---
 image: /assets/images/blog/en/fastest-apt-mirror-ubuntu/og-image.png
 title: 'How to Find and Use the Fastest APT Mirror for Your Ubuntu Server'
-description: Speed up your system updates and software installations by configuring Ubuntu to automatically find and use the fastest APT mirror based on your server's location.
+description: Speed up system updates and software installations by configuring Ubuntu to automatically find and use the fastest regional APT mirror.
 date: '2026-06-17'
 translationKey: fastest-apt-mirror-ubuntu
 locale: en
@@ -13,10 +13,11 @@ tags:
   - performance
 status: draft
 author:
-  name: VoxiHost Team
-  link: https://voxihost.pl/
+  name: Anduin
+  link: https://github.com/Anduin2017
 contributors:
-  - your-github-username
+  - Anduin2017
+  - danielmarszalkowski
 howto:
   name: Find and Set the Fastest APT Mirror on Ubuntu
   totalTime: PT10M
@@ -25,26 +26,33 @@ howto:
     - A VPS running Ubuntu
     - SSH access with sudo privileges
   steps:
-    - name: Step 1 — Create the Mirror Selection Script
+    - name: "Step 1: Create the Mirror Selection Script"
       text: Create a bash script that tests multiple global mirrors for response time.
-      url: step-1--create-the-mirror-selection-script
-    - name: Step 2 — Make the Script Executable
+      url: step-1-create-the-mirror-selection-script
+    - name: "Step 2: Make the Script Executable"
       text: Give the script execution permissions.
-      url: step-2--make-the-script-executable
-    - name: Step 3 — Run the Script
+      url: step-2-make-the-script-executable
+    - name: "Step 3: Run the Script"
       text: Execute the script to automatically test mirrors and update your sources list.
-      url: step-3--run-the-script
+      url: step-3-run-the-script
+faq:
+  - question: "How does the script determine the fastest mirror?"
+    answer: "The script uses <code>curl</code> to measure the round-trip response time to download the <code>Release</code> file from each mirror. The mirror with the lowest download latency is chosen."
+  - question: "What is the modern APT sources format (ubuntu.sources)?"
+    answer: "Starting in Ubuntu 24.04 LTS, Ubuntu uses the DEB822 format in <code>/etc/apt/sources.list.d/ubuntu.sources</code>, replacing the traditional multi-line entries in <code>/etc/apt/sources.list</code>."
+  - question: "Does the script back up my old APT sources list?"
+    answer: "Yes, the script automatically backs up your existing configuration to <code>/etc/apt/sources.list.bak</code> before applying any changes, ensuring you can restore it if needed."
 ---
 
 ## Introduction
 
-When you deploy a new Ubuntu server, the default APT package manager configuration often points to the main global mirrors. Depending on the physical location of your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server, this can result in slow download speeds during `apt update` and `apt install` operations.
+When deploying a new Ubuntu server, the default APT package manager configuration typically points to global mirrors. Depending on your VoxiHost server's physical location, this may cause slower download speeds during package installations and system updates.
 
-To maximize your server's efficiency, you should configure APT to use the fastest mirror available in your region. In this guide, we'll provide a simple script that automatically benchmarks dozens of global mirrors, finds the one with the lowest latency to your server, and updates your configuration (supporting both the traditional `sources.list` and the modern `ubuntu.sources` formats).
+To maximize throughput, you should configure APT to use the fastest regional mirror. This guide provides a simple script that benchmarks mirror speeds, selects the lowest-latency option, and updates your configuration (supporting both the legacy `sources.list` and modern `ubuntu.sources` formats).
 
 ---
 
-## Step 1 — Create the Mirror Selection Script
+## Step 1: Create the Mirror Selection Script
 
 We will use a bash script that tests the response time of various global mirrors using `curl`. 
 
@@ -195,13 +203,15 @@ main() {
 main
 ```
 
-> **Note:** We've shortened the mirror list in this script for brevity, focusing on major European and US mirrors (ideal for [Premium VPS](/premium-vps/) locations). You can easily add more regional URLs to the `mirrors` array if your server is located elsewhere.
+> **Note:** The mirror list in this script is focused on major European and US mirrors (ideal for [Premium VPS](/premium-vps/) locations). You can easily add more regional URLs to the `mirrors` array if your server is located elsewhere.
+
+{% image "/assets/images/blog/en/fastest-apt-mirror-ubuntu/H1.png", "Terminal output showing the execution of the mirror selection script benchmarking latency", "(max-width: 768px) 100vw, 800px" %}
 
 ---
 
-## Step 2 — Make the Script Executable
+## Step 2: Make the Script Executable
 
-Save the file (`Ctrl+O`, `Enter`, `Ctrl+X`) and grant the script execute permissions:
+Save and close the file, then grant the script execute permissions:
 
 ```bash
 chmod +x fastest-mirror.sh
@@ -209,9 +219,9 @@ chmod +x fastest-mirror.sh
 
 ---
 
-## Step 3 — Run the Script
+## Step 3: Run the Script
 
-Execute the script. It will automatically install `curl` and `lsb-release` if they are missing, test the latency of the provided mirrors, select the fastest one, and rewrite your APT sources list using the correct format for your Ubuntu version.
+Run the script to test the mirrors. It will install `curl` and `lsb-release` if necessary, analyze latencies, and write the new config in the appropriate format for your Ubuntu version.
 
 ```bash
 ./fastest-mirror.sh
@@ -230,10 +240,12 @@ Hit:1 https://mirroronet.pl/pub/mirrors/ubuntu noble InRelease
 APT source optimization completed!
 ```
 
+{% image "/assets/images/blog/en/fastest-apt-mirror-ubuntu/H2.png", "Terminal displaying updated ubuntu.sources file configured with the fastest mirror", "(max-width: 768px) 100vw, 800px" %}
+
 ---
 
 ## Conclusion
 
 Your server is now configured to fetch packages from the fastest available regional mirror, drastically reducing the time it takes to install software and apply security updates.
 
-Looking for high-performance hosting in Europe? Deploy a [VoxiHost Budget VPS](/budget-vps/) today and experience the speed of NVMe storage combined with optimal network routing.
+Looking for high-performance hosting in Europe? Deploy a [<span class="text-white">Voxi</span><span class="text-amber-300">Host</span> Budget VPS](/budget-vps/) today and experience the speed of NVMe storage combined with optimal network routing.
