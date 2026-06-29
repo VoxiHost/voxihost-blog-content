@@ -27,6 +27,7 @@ This table lists all published blog posts, their raw Markdown source files, and 
 | :--- | :---: | :---: | :---: | :---: |
 | Docker vs Podman: Container Engines Comparison for Linux Systems | [Source](src/published/en/docker-vs-podman/docker-vs-podman.md) | [ZIP](dist/en/docker-vs-podman-package.zip) | [Source](src/published/pl/docker-vs-podman/docker-vs-podman.md) | [ZIP](dist/pl/docker-vs-podman-package.zip) |
 | LiteSpeed vs Caddy: The Battle of Modern Web Servers | [Source](src/published/en/litespeed-vs-caddy/litespeed-vs-caddy.md) | [ZIP](dist/en/litespeed-vs-caddy-package.zip) | [Source](src/published/pl/litespeed-vs-caddy/litespeed-vs-caddy.md) | [ZIP](dist/pl/litespeed-vs-caddy-package.zip) |
+| How to Find and Use the Fastest APT Mirror for Your Ubuntu Server | [Source](src/published/en/fastest-apt-mirror-ubuntu/fastest-apt-mirror-ubuntu.md) | [ZIP](dist/en/fastest-apt-mirror-ubuntu-package.zip) | [Source](src/published/pl/najszybszy-serwer-lustrzany-apt-ubuntu/najszybszy-serwer-lustrzany-apt-ubuntu.md) | [ZIP](dist/pl/najszybszy-serwer-lustrzany-apt-ubuntu-package.zip) |
 | How to Configure firewalld on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide | [Source](src/published/en/configure-firewalld-centos-rhel/configure-firewalld-centos-rhel.md) | [ZIP](dist/en/configure-firewalld-centos-rhel-package.zip) | [Source](src/published/pl/konfiguracja-firewalld-centos-rhel/konfiguracja-firewalld-centos-rhel.md) | [ZIP](dist/pl/konfiguracja-firewalld-centos-rhel-package.zip) |
 | How to Configure UFW Firewall on Ubuntu & Debian: The Complete Server Guide | [Source](src/published/en/configure-ufw-ubuntu-debian/configure-ufw-ubuntu-debian.md) | [ZIP](dist/en/configure-ufw-ubuntu-debian-package.zip) | [Source](src/published/pl/konfiguracja-ufw-ubuntu-debian/konfiguracja-ufw-ubuntu-debian.md) | [ZIP](dist/pl/konfiguracja-ufw-ubuntu-debian-package.zip) |
 | How to Create a Sudo User on AlmaLinux, CentOS, Rocky Linux & Fedora: The Complete Server Guide | [Source](src/published/en/add-sudo-user-centos/add-sudo-user-centos.md) | [ZIP](dist/en/add-sudo-user-centos-package.zip) | [Source](src/published/pl/jak-dodac-uzytkownika-sudo-centos/jak-dodac-uzytkownika-sudo-centos.md) | [ZIP](dist/pl/jak-dodac-uzytkownika-sudo-centos-package.zip) |
@@ -94,7 +95,7 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| *No drafts currently active.* | — | — | — | — |
+| Complete Guide: Installing NVIDIA Drivers on Ubuntu and AnduinOS | EN / PL | Draft (Awaiting Images) | Anduin | 30.06 |
 <!-- END_DRAFTS -->
 
 ---
@@ -106,6 +107,7 @@ Thanks to all the amazing developers and writers who help keep the VoxiHost know
 <!-- START_CONTRIBUTORS -->
 * [@danielmarszalkowski](https://github.com/danielmarszalkowski)
 * [@sl0ikkk](https://github.com/sl0ikkk)
+* [@Anduin2017](https://github.com/Anduin2017)
 <!-- END_CONTRIBUTORS -->
 
 ---
