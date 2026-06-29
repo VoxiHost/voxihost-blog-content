@@ -248,4 +248,4 @@ APT source optimization completed!
 
 Your server is now configured to fetch packages from the fastest available regional mirror, drastically reducing the time it takes to install software and apply security updates.
 
-Looking for high-performance hosting in Europe? Deploy a [<span class="text-white">Voxi</span><span class="text-amber-300">Host</span> Budget VPS](/budget-vps/) today and experience the speed of NVMe storage combined with optimal network routing.
+Looking for high-performance hosting in Europe? Deploy a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Budget VPS](/budget-vps/) today and experience the speed of NVMe storage combined with optimal network routing.

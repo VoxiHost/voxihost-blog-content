@@ -248,4 +248,4 @@ Optymalizacja źródeł APT zakończona pomyślnie!
 
 Twój serwer pobiera teraz pakiety z najszybszego regionalnego serwera lustrzanego, co znacząco przyspieszy instalowanie programów oraz codzienne aktualizacje bezpieczeństwa.
 
-Szukasz wydajnego hostingu w Europie? Uruchom serwer [<span class="text-white">Voxi</span><span class="text-amber-300">Host</span> Budget VPS](/pl/budget-vps/) już dzisiaj i przekonaj się, jak szybko działa połączenie pamięci NVMe z optymalną ścieżką routingu sieciowego.
+Szukasz wydajnego hostingu w Europie? Uruchom serwer <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Budget VPS](/pl/budget-vps/) już dzisiaj i przekonaj się, jak szybko działa połączenie pamięci NVMe z optymalną ścieżką routingu sieciowego.
