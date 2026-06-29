@@ -2,7 +2,7 @@
 image: /assets/images/blog/pl/instalacja-sterownikow-nvidia-ubuntu/og-image.png
 title: 'Kompletny przewodnik: Instalacja sterowników NVIDIA na Ubuntu i AnduinOS'
 description: Instrukcja instalacji własnościowych sterowników NVIDIA na Ubuntu, w tym podpisywanie modułu dla Secure Boot oraz instalacja ręczna.
-date: '2026-06-29'
+date: '2026-06-30'
 translationKey: install-nvidia-drivers-ubuntu
 locale: pl
 category: Poradniki

@@ -94,7 +94,8 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| *No drafts currently active.* | — | — | — | — |
+| How to Find and Use the Fastest APT Mirror for Your Ubuntu Server | EN / PL | Draft (Awaiting Images) | Anduin | 29.06 |
+| Complete Guide: Installing NVIDIA Drivers on Ubuntu and AnduinOS | EN / PL | Draft (Awaiting Images) | Anduin | 30.06 |
 <!-- END_DRAFTS -->
 
 ---
@@ -106,6 +107,7 @@ Thanks to all the amazing developers and writers who help keep the VoxiHost know
 <!-- START_CONTRIBUTORS -->
 * [@danielmarszalkowski](https://github.com/danielmarszalkowski)
 * [@sl0ikkk](https://github.com/sl0ikkk)
+* [@Anduin2017](https://github.com/Anduin2017)
 <!-- END_CONTRIBUTORS -->
 
 ---

@@ -2,7 +2,7 @@
 image: /assets/images/blog/en/install-nvidia-drivers-ubuntu/og-image.png
 title: 'Complete Guide: Installing NVIDIA Drivers on Ubuntu and AnduinOS'
 description: Install proprietary NVIDIA drivers on Ubuntu-based systems, including Secure Boot module signing and manual installer methods.
-date: '2026-06-29'
+date: '2026-06-30'
 translationKey: install-nvidia-drivers-ubuntu
 locale: en
 category: Tutorials
