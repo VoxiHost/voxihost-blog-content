@@ -1,8 +1,8 @@
 ---
 image: /assets/images/blog/en/install-nvidia-drivers-ubuntu/og-image.png
 title: 'Complete Guide: Installing NVIDIA Drivers on Ubuntu and AnduinOS'
-description: Step-by-step instructions for installing proprietary NVIDIA drivers on Ubuntu-based systems, including Secure Boot signing and manual installation methods.
-date: '2026-06-17'
+description: Install proprietary NVIDIA drivers on Ubuntu-based systems, including Secure Boot module signing and manual installer methods.
+date: '2026-06-29'
 translationKey: install-nvidia-drivers-ubuntu
 locale: en
 category: Tutorials
@@ -130,6 +130,6 @@ nvidia-smi
 
 {% image "/assets/images/blog/en/install-nvidia-drivers-ubuntu/H2.png", "Terminal display of the nvidia-smi tool showing GPU details and driver version", "(max-width: 768px) 100vw, 800px" %}
 
-If you see a table with your GPU details, you are ready to go! For those running GPU-accelerated containers, don't forget to check out the [NVIDIA Container Toolkit](/blog/docker-nvidia-container-toolkit/).
+If you see a table with your GPU details, you are ready to go! For those running GPU-accelerated containers, don't forget to check out the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
 
 Looking for a high-performance environment for your AI projects? Check out <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS plans](/premium-vps/) with dedicated resources.

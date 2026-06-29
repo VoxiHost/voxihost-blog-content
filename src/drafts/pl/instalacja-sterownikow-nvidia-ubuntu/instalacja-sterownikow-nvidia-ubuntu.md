@@ -1,8 +1,8 @@
 ---
 image: /assets/images/blog/pl/instalacja-sterownikow-nvidia-ubuntu/og-image.png
 title: 'Kompletny przewodnik: Instalacja sterowników NVIDIA na Ubuntu i AnduinOS'
-description: Instrukcja krok po kroku instalacji własnościowych sterowników NVIDIA na systemach opartych na Ubuntu, w tym podpisywanie kluczy dla Secure Boot i ręczna instalacja.
-date: '2026-06-17'
+description: Instrukcja instalacji własnościowych sterowników NVIDIA na Ubuntu, w tym podpisywanie modułu dla Secure Boot oraz instalacja ręczna.
+date: '2026-06-29'
 translationKey: install-nvidia-drivers-ubuntu
 locale: pl
 category: Poradniki
@@ -130,6 +130,6 @@ nvidia-smi
 
 {% image "/assets/images/blog/pl/instalacja-sterownikow-nvidia-ubuntu/H2.png", "Ekran terminala z uruchomionym poleceniem nvidia-smi prezentującym szczegóły karty graficznej", "(max-width: 768px) 100vw, 800px" %}
 
-Jeśli na ekranie zobaczysz tabelę ze szczegółami o swojej karcie GPU, wszystko działa prawidłowo! Jeśli uruchamiasz kontenery korzystające z akceleracji graficznej, pamiętaj o zapoznaniu się z naszym przewodnikiem po [NVIDIA Container Toolkit](/blog/docker-nvidia-container-toolkit/).
+Jeśli na ekranie zobaczysz tabelę ze szczegółami o swojej karcie GPU, wszystko działa prawidłowo! Jeśli uruchamiasz kontenery korzystające z akceleracji graficznej, pamiętaj o zapoznaniu się z dokumentacją [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
 
 Szukasz wydajnego środowiska do realizacji swoich projektów sztucznej inteligencji? Sprawdź plany [Premium VPS](/pl/premium-vps/) od <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> z dedykowanymi zasobami sprzętowymi.

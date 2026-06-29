@@ -2,7 +2,7 @@
 image: /assets/images/blog/en/fastest-apt-mirror-ubuntu/og-image.png
 title: 'How to Find and Use the Fastest APT Mirror for Your Ubuntu Server'
 description: Speed up system updates and software installations by configuring Ubuntu to automatically find and use the fastest regional APT mirror.
-date: '2026-06-17'
+date: '2026-06-29'
 translationKey: fastest-apt-mirror-ubuntu
 locale: en
 category: Tutorials
@@ -46,7 +46,7 @@ faq:
 
 ## Introduction
 
-When deploying a new Ubuntu server, the default APT package manager configuration typically points to global mirrors. Depending on your VoxiHost server's physical location, this may cause slower download speeds during package installations and system updates.
+When deploying a new Ubuntu server, the default APT package manager configuration typically points to global mirrors. Depending on your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server's physical location, this may cause slower download speeds during package installations and system updates.
 
 To maximize throughput, you should configure APT to use the fastest regional mirror. This guide provides a simple script that benchmarks mirror speeds, selects the lowest-latency option, and updates your configuration (supporting both the legacy `sources.list` and modern `ubuntu.sources` formats).
 

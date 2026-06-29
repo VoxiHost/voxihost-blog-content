@@ -1,8 +1,8 @@
 ---
 image: /assets/images/blog/pl/najszybszy-serwer-lustrzany-apt-ubuntu/og-image.png
 title: 'Jak znaleźć i używać najszybszego serwera lustrzanego APT dla Ubuntu'
-description: Przeprowadzaj aktualizacje systemu i instalacje oprogramowania szybciej, konfigurując serwer Ubuntu do automatycznego korzystania z najszybszego regionalnego serwera lustrzanego APT.
-date: '2026-06-17'
+description: Przyśpiesz aktualizacje i instalację pakietów na Ubuntu, konfigurując system do automatycznego korzystania z najszybszego mirrora APT.
+date: '2026-06-29'
 translationKey: fastest-apt-mirror-ubuntu
 locale: pl
 category: Poradniki
