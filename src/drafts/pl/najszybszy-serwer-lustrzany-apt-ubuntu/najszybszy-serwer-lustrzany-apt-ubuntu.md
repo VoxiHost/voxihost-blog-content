@@ -58,6 +58,8 @@ Do przetestowania czasów odpowiedzi poszczególnych serwerów lustrzanych za po
 
 Utwórz nowy plik o nazwie `fastest-mirror.sh` za pomocą wybranego edytora tekstu:
 
+{% image "/assets/images/blog/pl/najszybszy-serwer-lustrzany-apt-ubuntu/H1.png", "Proces tworzenia skryptu", "(max-width: 768px) 100vw, 800px" %}
+
 ```bash
 nano fastest-mirror.sh
 ```
@@ -213,6 +215,8 @@ main
 
 Zapisz i zamknij plik, a następnie nadaj skryptowi uprawnienia do uruchamiania:
 
+{% image "/assets/images/blog/pl/najszybszy-serwer-lustrzany-apt-ubuntu/H2.png", "Proces nadawania uprawnień do wykonania skryptu", "(max-width: 768px) 100vw, 800px" %}
+
 ```bash
 chmod +x fastest-mirror.sh
 ```
@@ -222,6 +226,8 @@ chmod +x fastest-mirror.sh
 ## Krok 3: Uruchomienie skryptu
 
 Uruchom przygotowany skrypt. Automatycznie zainstaluje on narzędzia `curl` i `lsb-release` (jeśli nie są jeszcze obecne w systemie), przetestuje czasy odpowiedzi serwerów, wybierze najszybszy z nich i nadpisze pliki konfiguracyjne APT w formacie odpowiednim dla używanej wersji Ubuntu.
+
+{% image "/assets/images/blog/pl/najszybszy-serwer-lustrzany-apt-ubuntu/H3.png", "Proces uruchomienia skryptu", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ./fastest-mirror.sh
@@ -240,7 +246,7 @@ Hit:1 https://mirroronet.pl/pub/mirrors/ubuntu noble InRelease
 Optymalizacja źródeł APT zakończona pomyślnie!
 ```
 
-{% image "/assets/images/blog/pl/najszybszy-serwer-lustrzany-apt-ubuntu/H2.png", "Konsola przedstawiająca zaktualizowany plik ubuntu.sources wskazujący na najszybszy mirror", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/najszybszy-serwer-lustrzany-apt-ubuntu/H4.png", "Pokazanie pliku sources.list.d/ubuntu.sources", "(max-width: 768px) 100vw, 800px" %}
 
 ---
 

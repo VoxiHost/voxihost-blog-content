@@ -58,6 +58,8 @@ We will use a bash script that tests the response time of various global mirrors
 
 Create a new file named `fastest-mirror.sh` using your preferred text editor:
 
+{% image "/assets/images/blog/en/fastest-apt-mirror-ubuntu/H1.png", "Process of creating the script", "(max-width: 768px) 100vw, 800px" %}
+
 ```bash
 nano fastest-mirror.sh
 ```
@@ -213,6 +215,8 @@ main
 
 Save and close the file, then grant the script execute permissions:
 
+{% image "/assets/images/blog/en/fastest-apt-mirror-ubuntu/H2.png", "Process of making the script executable", "(max-width: 768px) 100vw, 800px" %}
+
 ```bash
 chmod +x fastest-mirror.sh
 ```
@@ -222,6 +226,8 @@ chmod +x fastest-mirror.sh
 ## Step 3: Run the Script
 
 Run the script to test the mirrors. It will install `curl` and `lsb-release` if necessary, analyze latencies, and write the new config in the appropriate format for your Ubuntu version.
+
+{% image "/assets/images/blog/en/fastest-apt-mirror-ubuntu/H3.png", "Process of running the script", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 ./fastest-mirror.sh
@@ -240,7 +246,7 @@ Hit:1 https://mirroronet.pl/pub/mirrors/ubuntu noble InRelease
 APT source optimization completed!
 ```
 
-{% image "/assets/images/blog/en/fastest-apt-mirror-ubuntu/H2.png", "Terminal displaying updated ubuntu.sources file configured with the fastest mirror", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/fastest-apt-mirror-ubuntu/H4.png", "Displaying the sources.list.d/ubuntu.sources file", "(max-width: 768px) 100vw, 800px" %}
 
 ---
 
