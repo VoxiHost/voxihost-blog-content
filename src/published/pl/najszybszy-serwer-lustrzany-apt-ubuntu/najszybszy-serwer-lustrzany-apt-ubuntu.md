@@ -11,7 +11,7 @@ tags:
   - linux
   - apt
   - performance
-status: draft
+status: published
 author:
   name: Anduin
   link: https://github.com/Anduin2017
