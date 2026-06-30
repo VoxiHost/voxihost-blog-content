@@ -1,6 +1,6 @@
 ---
 image: /assets/images/blog/en/install-nvidia-drivers-ubuntu/og-image.png
-title: 'Complete Guide: Installing NVIDIA Drivers on Ubuntu and AnduinOS'
+title: 'How to Install NVIDIA Drivers on Ubuntu and AnduinOS'
 description: Install proprietary NVIDIA drivers on Ubuntu-based systems, including Secure Boot module signing and manual installer methods.
 date: '2026-06-30'
 translationKey: install-nvidia-drivers-ubuntu
@@ -12,7 +12,7 @@ tags:
   - ubuntu
   - linux
   - gpu
-status: draft
+status: published
 author:
   name: Anduin
   link: https://github.com/Anduin2017
@@ -52,7 +52,7 @@ For optimal performance from an NVIDIA GPU on Linux, you must use the proprietar
 
 This guide covers the three main installation methods for NVIDIA drivers on Ubuntu-based systems, starting with the recommended automated tools and ending with a detailed manual installation procedure.
 
-> **Prerequisites:** Ensure your system is up to date and you have a compatible NVIDIA GPU. Always [backup your system](/premium-vps/) before making major driver changes.
+> **Prerequisites:** Ensure your system is up to date and you have a compatible NVIDIA GPU. Always back up your system before making major driver changes.
 
 ---
 
@@ -66,8 +66,6 @@ sudo ubuntu-drivers install
 ```
 
 Reboot your system once the installation completes. This method is ideal for most setups since it manages system updates and DKMS (Dynamic Kernel Module Support) automatically.
-
-{% image "/assets/images/blog/en/install-nvidia-drivers-ubuntu/H1.png", "Terminal showing system hardware detection and recommended proprietary NVIDIA drivers", "(max-width: 768px) 100vw, 800px" %}
 
 ---
 
@@ -128,7 +126,6 @@ Once the installation completes, verify the GPU status by running:
 nvidia-smi
 ```
 
-{% image "/assets/images/blog/en/install-nvidia-drivers-ubuntu/H2.png", "Terminal display of the nvidia-smi tool showing GPU details and driver version", "(max-width: 768px) 100vw, 800px" %}
 
 If you see a table with your GPU details, you are ready to go! For those running GPU-accelerated containers, don't forget to check out the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
 

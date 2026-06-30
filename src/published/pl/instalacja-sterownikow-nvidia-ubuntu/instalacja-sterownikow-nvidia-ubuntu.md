@@ -1,6 +1,6 @@
 ---
 image: /assets/images/blog/pl/instalacja-sterownikow-nvidia-ubuntu/og-image.png
-title: 'Kompletny przewodnik: Instalacja sterowników NVIDIA na Ubuntu i AnduinOS'
+title: 'Jak zainstalować sterowniki NVIDIA na Ubuntu i AnduinOS'
 description: Instrukcja instalacji własnościowych sterowników NVIDIA na Ubuntu, w tym podpisywanie modułu dla Secure Boot oraz instalacja ręczna.
 date: '2026-06-30'
 translationKey: install-nvidia-drivers-ubuntu
@@ -12,7 +12,7 @@ tags:
   - ubuntu
   - linux
   - gpu
-status: draft
+status: published
 author:
   name: Anduin
   link: https://github.com/Anduin2017
@@ -52,7 +52,7 @@ Wydajna praca karty graficznej NVIDIA pod systemem Linux wymaga instalacji włas
 
 W tym przewodniku przedstawiamy trzy główne metody instalacji sterowników NVIDIA na systemach opartych na Ubuntu, od zautomatyzowanego wdrożenia po zaawansowaną instalację ręczną.
 
-> **Wymagania wstępne:** Upewnij się, że Twój system jest zaktualizowany, a komputer posiada kompatybilną kartę NVIDIA. Zawsze [wykonaj kopię zapasową systemu](/pl/premium-vps/) przed modyfikacją sterowników graficznych.
+> **Wymagania wstępne:** Upewnij się, że Twój system jest zaktualizowany, a komputer posiada kompatybilną kartę NVIDIA. Zawsze wykonaj kopię zapasową systemu przed modyfikacją sterowników graficznych.
 
 ---
 
@@ -66,8 +66,6 @@ sudo ubuntu-drivers install
 ```
 
 Po zakończeniu procesu uruchom ponownie system. Metoda ta jest rekomendowana w większości przypadków, ponieważ automatycznie konfiguruje zależności oraz mechanizm DKMS (Dynamic Kernel Module Support).
-
-{% image "/assets/images/blog/pl/instalacja-sterownikow-nvidia-ubuntu/H1.png", "Terminal pokazujący wykrywanie sprzętu i zalecane własnościowe sterowniki NVIDIA", "(max-width: 768px) 100vw, 800px" %}
 
 ---
 
@@ -128,8 +126,6 @@ Po zakończeniu instalacji możesz zweryfikować status karty graficznej, wpisuj
 nvidia-smi
 ```
 
-{% image "/assets/images/blog/pl/instalacja-sterownikow-nvidia-ubuntu/H2.png", "Ekran terminala z uruchomionym poleceniem nvidia-smi prezentującym szczegóły karty graficznej", "(max-width: 768px) 100vw, 800px" %}
-
-Jeśli na ekranie zobaczysz tabelę ze szczegółami o swojej karcie GPU, wszystko działa prawidłowo! Jeśli uruchamiasz kontenery korzystające z akceleracji graficznej, pamiętaj o zapoznaniu się z dokumentacją [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+Jeśli na ekranie zobaczysz tabelę ze szczegółami swojej karty GPU, wszystko działa prawidłowo! Jeśli uruchamiasz kontenery korzystające z akceleracji graficznej, pamiętaj o zapoznaniu się z dokumentacją [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
 
 Szukasz wydajnego środowiska do realizacji swoich projektów sztucznej inteligencji? Sprawdź plany [Premium VPS](/pl/premium-vps/) od <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> z dedykowanymi zasobami sprzętowymi.
