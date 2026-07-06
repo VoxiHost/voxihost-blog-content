@@ -25,6 +25,7 @@ This table lists all published blog posts, their raw Markdown source files, and 
 <!-- START_PUBLISHED_POSTS -->
 | Article | 🇬🇧 EN Source | 🇬🇧 EN ZIP | 🇵🇱 PL Source | 🇵🇱 PL ZIP |
 | :--- | :---: | :---: | :---: | :---: |
+| VoxiShield Smart Firewall Dashboard Controls Released | [Source](src/published/en/introducing-voxishield-smart-firewall/introducing-voxishield-smart-firewall.md) | [ZIP](dist/en/introducing-voxishield-smart-firewall-package.zip) | [Source](src/published/pl/wprowadzenie-voxishield-smart-firewall/wprowadzenie-voxishield-smart-firewall.md) | [ZIP](dist/pl/wprowadzenie-voxishield-smart-firewall-package.zip) |
 | Docker vs Podman: Container Engines Comparison for Linux Systems | [Source](src/published/en/docker-vs-podman/docker-vs-podman.md) | [ZIP](dist/en/docker-vs-podman-package.zip) | [Source](src/published/pl/docker-vs-podman/docker-vs-podman.md) | [ZIP](dist/pl/docker-vs-podman-package.zip) |
 | LiteSpeed vs Caddy: The Battle of Modern Web Servers | [Source](src/published/en/litespeed-vs-caddy/litespeed-vs-caddy.md) | [ZIP](dist/en/litespeed-vs-caddy-package.zip) | [Source](src/published/pl/litespeed-vs-caddy/litespeed-vs-caddy.md) | [ZIP](dist/pl/litespeed-vs-caddy-package.zip) |
 | How to Find and Use the Fastest APT Mirror for Your Ubuntu Server | [Source](src/published/en/fastest-apt-mirror-ubuntu/fastest-apt-mirror-ubuntu.md) | [ZIP](dist/en/fastest-apt-mirror-ubuntu-package.zip) | [Source](src/published/pl/najszybszy-serwer-lustrzany-apt-ubuntu/najszybszy-serwer-lustrzany-apt-ubuntu.md) | [ZIP](dist/pl/najszybszy-serwer-lustrzany-apt-ubuntu-package.zip) |
@@ -96,6 +97,7 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
+
 
 <!-- END_DRAFTS -->
 
