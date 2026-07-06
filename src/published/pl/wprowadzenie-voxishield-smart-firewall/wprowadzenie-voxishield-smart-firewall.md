@@ -20,9 +20,9 @@ contributors:
   - danielmarszalkowski
 faq:
   - question: "Czy VoxiShield jest wliczony w cenę mojej usługi?"
-    answer: "Tak! VoxiShield jest bezpłatnie dołączony do wszystkich usług VoxiHost. Każdy serwer wirtualny posiada włączone pełne filtrowanie brzegowe oraz niestandardowe sterowanie firewallem od pierwszego dnia bez żadnych dodatkowych opłat. Nie płacisz ekstra za ochronę DDoS, czyszczenie ruchu czy konfigurację reguł – to wbudowany standard każdego planu."
+    answer: "Tak! VoxiShield jest bezpłatnie dołączony do wszystkich usług VoxiHost. Każdy serwer wirtualny posiada włączone pełne filtrowanie brzegowe oraz niestandardowe sterowanie firewallem od pierwszego dnia bez żadnych dodatkowych opłat. Nie płacisz ekstra za ochronę DDoS, czyszczenie ruchu czy konfigurację reguł, ponieważ stanowią one wbudowany standard każdego planu."
   - question: "Jak działa dwuwarstwowa ochrona?"
-    answer: "Ruch jest analizowany i filtrowany stopniowo przez dwie odrębne warstwy ochrony:<br><br><b>Warstwa 1: Filtrowanie brzegowe (Edge Scrubbing)</b> – Nasza globalna sieć brzegowa o przepustowości ponad 4+ Tbit/s pochłania masowe ataki wolumetryczne (takie jak flood UDP/SYN), zanim dotrą one do rdzenia naszej sieci.<br><br><b>Warstwa 2: Core Firewall</b> – Oczyszczony ruch docierający do naszych hiperwizorów jest sprawdzany przez inteligentną zaporę Core Firewall. To tam Twoje własne reguły, dostęp do portów, filtry GeoIP i limity pakietów są wdrażane w czasie poniżej sekundy."
+    answer: "Ruch jest analizowany i filtrowany stopniowo przez dwie odrębne warstwy ochrony:<br><br><b>Warstwa 1: Filtrowanie brzegowe (Edge Scrubbing)</b>: Nasza globalna sieć brzegowa o przepustowości ponad 4+ Tbit/s pochłania masowe ataki wolumetryczne (takie jak flood UDP/SYN), zanim dotrą one do rdzenia naszej sieci.<br><br><b>Warstwa 2: Core Firewall</b>: Oczyszczony ruch docierający do naszych hiperwizorów jest sprawdzany przez inteligentną zaporę Core Firewall. To tam Twoje własne reguły, dostęp do portów, filtry GeoIP i limity pakietów są wdrażane w czasie poniżej sekundy."
   - question: "Przed jakimi typami ataków chroni VoxiShield?"
     answer: "VoxiShield chroni przed szeroką gamą wektorów zagrożeń: wolumetrycznymi floodami UDP/TCP, amplifikacjami NTP/DNS, nieprawidłowymi pakietami protokołów (np. exploitami zapytań dla gier Minecraft, Rust i FiveM), atakami w warstwie aplikacji (L7) HTTP flood, próbami brute-force oraz skanowaniem portów. Nasze szablony automatycznie dopasowują się do ruchu gier i sieci WWW, odrzucając złośliwe pakiety i wpuszczając prawdziwych użytkowników."
   - question: "Czy mogę samodzielnie konfigurować reguły zapory?"
@@ -33,7 +33,7 @@ faq:
     answer: "Nie. W przeciwieństwie do tradycyjnych rozwiązań tunelowych, które kierują ruch przez odległe centra filtrowania, nasza sieć brzegowa Layer 1 jest zlokalizowana przy głównych węzłach tranzytowych, a filtrowanie Layer 2 odbywa się na poziomie hiperwizora. Oznacza to, że ochrona działa bezpośrednio na ścieżce pakietu, nie wprowadzając pętli routingu ani nie zwiększając pingu, co pozwala zachować optymalny tickrate gier i szybki czas odpowiedzi API."
 ---
 
-W **<span class="text-white">Voxi</span><span class="text-amber-300">Host</span>** uważamy, że bezpieczeństwo to nie luksusowa usługa premium – to absolutny standard. Dzisiaj z ogromną radością ogłaszamy oficjalne wdrożenie panelu zarządzania **VoxiShield DDoS Protection & Smart Firewall**, który daje Ci pełną kontrolę nad ruchem sieciowym Twojego serwera bezpośrednio z poziomu dashboardu VoxiHost.
+W **<span class="text-white">Voxi</span><span class="text-amber-300">Host</span>** uważamy, że bezpieczeństwo to nie luksusowa usługa premium, lecz absolutny standard. Dzisiaj z ogromną radością ogłaszamy oficjalne wdrożenie panelu zarządzania **VoxiShield DDoS Protection & Smart Firewall**, który daje Ci pełną kontrolę nad ruchem sieciowym Twojego serwera bezpośrednio z poziomu dashboardu VoxiHost.
 
 Dzięki infrastrukturze filtrującej o przepustowości ponad 4+ Tbit/s, VoxiShield skutecznie neutralizuje nawet najbardziej intensywne ataki sieciowe, dbając o ciągłe działanie Twoich aplikacji, stron WWW i serwerów gier. Co najważniejsze: cały system otrzymujesz **całkowicie za darmo** w pakiecie z każdą naszą usługą.
 
@@ -43,7 +43,7 @@ Dzięki infrastrukturze filtrującej o przepustowości ponad 4+ Tbit/s, VoxiShie
 
 ## Dwuwarstwowy system filtrowania ruchu (Mitigation Pipeline)
 
-Tradycyjne oprogramowanie zapory sieciowej (firewalla) działa bezpośrednio w systemie operacyjnym Twojego serwera, co podczas ataku zużywa cenne zasoby procesora i pamięci RAM. VoxiShield działa zupełnie inaczej – filtruje złośliwy ruch poza Twoim VPS, zanim pakiety w ogóle dotrą do Twojej wirtualnej maszyny.
+Tradycyjne oprogramowanie zapory sieciowej (firewalla) działa bezpośrednio w systemie operacyjnym Twojego serwera, co podczas ataku zużywa cenne zasoby procesora i pamięci RAM. VoxiShield działa zupełnie inaczej, filtrując złośliwy ruch poza Twoim VPS, zanim pakiety w ogóle dotrą do Twojej wirtualnej maszyny.
 
 ### Layer 01: PletX Edge (Automatyczne filtrowanie wolumetryczne)
 Cały ruch przychodzący trafia najpierw do **globalnych węzłów filtrujących PletX Edge**. Ta warstwa działa w 100% automatycznie i bezobsługowo. Neutralizuje ataki wolumetryczne (np. DNS/NTP amplification lub zalewy UDP) o sile do 4+ Tbit/s, gwarantując, że łącze Twojego serwera nie zostanie przeciążone.
