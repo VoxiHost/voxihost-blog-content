@@ -2,7 +2,7 @@
 image: /assets/images/blog/pl/wprowadzenie-voxishield-smart-firewall/og-image.png
 title: 'Panel zarządzania VoxiShield Smart Firewall już dostępny'
 description: Zarządzaj bezpieczeństwem VPS dzięki VoxiShield! Konfiguruj reguły wejściowe, limity PPS, filtry egress i blokady GeoIP bezpośrednio z panelu klienta.
-date: '2026-07-10'
+date: '2026-07-06'
 translationKey: introducing-voxishield-smart-firewall
 locale: pl
 category: Nowości
