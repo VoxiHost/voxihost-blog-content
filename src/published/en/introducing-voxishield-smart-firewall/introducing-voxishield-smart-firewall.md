@@ -2,7 +2,7 @@
 image: /assets/images/blog/en/introducing-voxishield-smart-firewall/og-image.png
 title: 'VoxiShield Smart Firewall Dashboard Controls Released'
 description: Manage your VPS network security with VoxiShield! Configure inbound rules, rate limiting, egress filters, and GeoIP blocks directly from the dashboard.
-date: '2026-07-10'
+date: '2026-07-06'
 translationKey: introducing-voxishield-smart-firewall
 locale: en
 category: Updates
