@@ -6,6 +6,11 @@ date: 2026-07-12
 translationKey: "private-cloud-filebrowser-docker"
 locale: en
 tags: ["docker", "filebrowser", "cloud", "vps", "linux", "storage"]
+author:
+  name: VoxiHost Team
+  link: https://voxihost.pl/
+contributors:
+  - sl0ikkk
 howto:
   name: "Installing FileBrowser in Docker"
   totalTime: "PT5M"

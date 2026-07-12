@@ -6,6 +6,11 @@ date: 2026-07-12
 translationKey: "setup-portainer-ubuntu-debian"
 locale: en
 tags: ["docker", "portainer", "vps", "linux", "ubuntu", "debian", "containers"]
+author:
+  name: VoxiHost Team
+  link: https://voxihost.pl/
+contributors:
+  - sl0ikkk
 howto:
   name: "How to install Portainer on VPS"
   totalTime: "PT10M"
