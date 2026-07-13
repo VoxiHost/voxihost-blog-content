@@ -1,12 +1,13 @@
 ---
 image: /assets/images/blog/pl/prywatny-dysk-filebrowser-docker/og-image.png
-title: "Własny dysk w chmurze bez limitów – instalacja FileBrowser na VPS"
+title: "Jak zainstalować FileBrowser na VPS z Dockerem"
 description: "Dowiedz się, jak w 5 minut zainstalować FileBrowser za pomocą Dockera i zamienić swój serwer VPS w prywatny dysk w chmurze z dostępem przez przeglądarkę."
-date: 2026-07-12
+date: 2026-07-13
 translationKey: "private-cloud-filebrowser-docker"
 locale: pl
-category: "Poradniki"
+category: Poradniki
 tags: ["docker", "filebrowser", "chmura", "vps", "linux", "storage"]
+status: published
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
@@ -32,6 +33,15 @@ howto:
     - name: "Krok 4"
       text: "Zarządzanie plikami"
       url: "krok-4-wgrywanie-i-udostepnianie-plikow"
+faq:
+  - question: "Czy potrzebuję domeny, żeby używać FileBrowsera?"
+    answer: "Nie, FileBrowser działa bezpośrednio przez adres IP serwera i numer portu (np. <code>http://ADRES_IP:8080</code>). Domena jest opcjonalna."
+  - question: "Czy bezpiecznie jest udostępniać FileBrowser na publicznym IP?"
+    answer: "Po wykonaniu kroków z tego poradnika Twoje konto będzie chronione silnym hasłem. Dla większego bezpieczeństwa rozważ umieszczenie FileBrowsera za reverse proxy z HTTPS (np. Nginx + Let's Encrypt) lub ograniczenie dostępu przez firewall."
+  - question: "Jak FileBrowser uruchamia się po restarcie serwera?"
+    answer: "Flaga <code>--restart always</code> w poleceniu Docker run sprawia, że kontener uruchamia się automatycznie po każdym restarcie serwera."
+  - question: "Czy mogę ograniczyć FileBrowser tylko do wybranego folderu?"
+    answer: "Tak. Zastąp <code>-v /:/srv</code> konkretną ścieżką, np. <code>-v /home/user/pliki:/srv</code>, aby ograniczyć dostęp wyłącznie do tego katalogu."
 ---
 
 ## Wstęp
@@ -46,7 +56,7 @@ Pomoże w tym **FileBrowser** – niesamowicie lekki menedżer plików. Działa 
 
 Zaloguj się na swój serwer przez terminal. Uruchomienie FileBrowsera sprowadza się do jednej, prostej komendy. Wklej poniższy kod i wciśnij ENTER:
 
-{% image "/assets/images/blog/private-cloud-filebrowser-docker/H1.png", "Terminal podczas uruchamiania kontenera FileBrowser", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/prywatny-dysk-filebrowser-docker/H1.png", "Terminal podczas uruchamiania kontenera FileBrowser", "(max-width: 768px) 100vw, 800px" %}
 
 ```bash
 docker run -d --name filebrowser -v /:/srv -p 8080:80 --restart always filebrowser/filebrowser
@@ -64,11 +74,11 @@ Instalacja na serwerze to już wszystko! Teraz otwórz przeglądarkę internetow
 
 `http://ADRES_IP_SERWERA:8080`
 
-Zobaczysz schludny, minimalistyczny ekran logowania. 
+Zobaczysz schludny, minimalistyczny ekran logowania.
 
-{% image "/assets/images/blog/private-cloud-filebrowser-docker/H2.png", "Ekran logowania do panelu FileBrowser", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/prywatny-dysk-filebrowser-docker/H2.png", "Ekran logowania do panelu FileBrowser", "(max-width: 768px) 100vw, 800px" %}
 
-Aby się zalogować, jako login wpisz **`admin`**. W najnowszych wersjach FileBrowsera zrezygnowano ze stałego domyślnego hasła ze względów bezpieczeństwa. 
+Aby się zalogować, jako login wpisz **`admin`**. W najnowszych wersjach FileBrowsera zrezygnowano ze stałego domyślnego hasła ze względów bezpieczeństwa.
 Twoje **jednorazowe hasło startowe** zostało wygenerowane automatycznie. Aby je poznać, wróć do konsoli i wpisz:
 
 ```bash
@@ -83,7 +93,7 @@ W logach znajdziesz linijkę z nowym, wygenerowanym hasłem. Skopiuj je i użyj 
 
 Zaraz po zalogowaniu musisz zadbać o swoje bezpieczeństwo, aby nikt obcy nie wszedł na Twój dysk. Kliknij w zakładkę **Settings** (Ustawienia) w panelu po lewej stronie, a następnie przejdź do sekcji **Profile Settings** (Ustawienia profilu).
 
-{% image "/assets/images/blog/private-cloud-filebrowser-docker/H3.png", "Zakładka zmiany hasła w ustawieniach profilu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/prywatny-dysk-filebrowser-docker/H3.png", "Zakładka zmiany hasła w ustawieniach profilu", "(max-width: 768px) 100vw, 800px" %}
 
 Wpisz nowe, trudne do odgadnięcia hasło, zatwierdź je i kliknij przycisk "Update". Od teraz Twój prywatny dysk jest w pełni bezpieczny.
 
@@ -95,7 +105,7 @@ Teraz możesz robić ze swoim dyskiem co tylko zechcesz. W prawym górnym rogu z
 
 Zaznaczając dowolny plik, możesz kliknąć ikonkę udostępniania (Share), aby wygenerować specjalny link. Możesz wysłać ten link znajomemu, aby pobrał plik z Twojego serwera bez konieczności logowania.
 
-{% image "/assets/images/blog/private-cloud-filebrowser-docker/H4.png", "Interfejs FileBrowser podczas udostępniania pliku", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/prywatny-dysk-filebrowser-docker/H4.png", "Interfejs FileBrowser podczas udostępniania pliku", "(max-width: 768px) 100vw, 800px" %}
 
 ---
 

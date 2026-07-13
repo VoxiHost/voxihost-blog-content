@@ -2,7 +2,7 @@
 image: /assets/images/blog/en/setup-portainer-ubuntu-debian/og-image.png
 title: "Managing Docker via Browser – Installing Portainer on VPS (Ubuntu/Debian)"
 description: "Learn how to install Portainer CE on an Ubuntu or Debian server to easily manage Docker containers from a graphical user interface (GUI) in your browser."
-date: 2026-07-12
+date: 2026-07-14
 translationKey: "setup-portainer-ubuntu-debian"
 locale: en
 tags: ["docker", "portainer", "vps", "linux", "ubuntu", "debian", "containers"]
