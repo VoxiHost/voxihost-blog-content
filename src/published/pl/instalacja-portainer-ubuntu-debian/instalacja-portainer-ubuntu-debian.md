@@ -46,7 +46,7 @@ howto:
       url: krok-5-zarzadzanie-kontenerami
 faq:
   - question: "Czym różni się Portainer CE od Portainer Business Edition?"
-    answer: "Portainer CE (Community Edition) jest darmowy i open-source — obejmuje wszystkie podstawowe funkcje zarządzania Dockerem. Portainer Business Edition (BE) dodaje funkcje korporacyjne, takie jak kontrola dostępu oparta na rolach (RBAC), integracja OAuth/LDAP i rozszerzony support."
+    answer: "Portainer CE (Community Edition) jest darmowy i open-source - obejmuje wszystkie podstawowe funkcje zarządzania Dockerem. Portainer Business Edition (BE) dodaje funkcje korporacyjne, takie jak kontrola dostępu oparta na rolach (RBAC), integracja OAuth/LDAP i rozszerzony support."
   - question: "Czy bezpiecznie jest wystawiać port 9443 na internet?"
     answer: "Portainer używa HTTPS na porcie 9443, ale publiczne wystawianie go bez dodatkowej ochrony nie jest zalecane. Rozważ umieszczenie go za odwrotnym proxy (np. <code>Nginx Proxy Manager</code>) z uwierzytelnianiem lub ograniczenie dostępu do zaufanych adresów IP przez zaporę sieciową."
   - question: "Jak zaktualizować Portainer do nowszej wersji?"
@@ -59,9 +59,9 @@ faq:
 
 ## Wstęp
 
-Docker to wspaniałe narzędzie, ale wpisywanie komend w czarnej konsoli może być przytłaczające dla początkujących. Z pomocą przychodzi **Portainer** — panel z graficznym interfejsem (GUI), który pozwala zarządzać wszystkim z poziomu przeglądarki internetowej.
+Docker to wspaniałe narzędzie, ale wpisywanie komend w czarnej konsoli może być przytłaczające dla początkujących. Z pomocą przychodzi **Portainer** - panel z graficznym interfejsem (GUI), który pozwala zarządzać wszystkim z poziomu przeglądarki internetowej.
 
-W tym poradniku pokażemy Ci, krok po kroku, jak zainstalować Portainera na Twoim serwerze w zaledwie kilka minut. Nie musisz być ekspertem od Linuxa — wystarczy, że będziesz kopiować i wklejać poniższe komendy!
+W tym poradniku pokażemy Ci, krok po kroku, jak zainstalować Portainera na Twoim serwerze w zaledwie kilka minut. Nie musisz być ekspertem od Linuxa - wystarczy, że będziesz kopiować i wklejać poniższe komendy!
 
 > **Wymagania wstępne:** Będziesz potrzebować serwera [Premium VPS](/pl/premium-vps/) z systemem Ubuntu lub Debian oraz klienta SSH (np. PuTTY lub systemowy Terminal). Jeśli jeszcze nie masz serwera, <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> oferuje [Premium VPS](/pl/premium-vps/) i [Budget VPS](/pl/budget-vps/) z preinstalowanym Ubuntu i Debianem.
 
@@ -130,7 +130,7 @@ Na ekranie zobaczysz kreator początkowy. Wymyśl dla siebie bezpieczne hasło, 
 
 Po zalogowaniu kliknij przycisk **"Get Started"**, a na kolejnym ekranie wybierz środowisko z ikonką wieloryba podpisane jako **"Local"** (czyli serwer, na którym właśnie jesteśmy).
 
-Gotowe! Teraz widzisz pełny panel kontrolny. Od teraz nie musisz używać komend w czarnej konsoli — możesz zarządzać swoimi aplikacjami klikając myszką.
+Gotowe! Teraz widzisz pełny panel kontrolny. Od teraz nie musisz używać komend w czarnej konsoli - możesz zarządzać swoimi aplikacjami klikając myszką.
 
 {% image "/assets/images/blog/pl/instalacja-portainer-ubuntu-debian/H5.png", "Panel główny Portainer pokazujący listę aktywnych kontenerów Docker", "(max-width: 768px) 100vw, 800px" %}
 
