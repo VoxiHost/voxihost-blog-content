@@ -25,6 +25,7 @@ This table lists all published blog posts, their raw Markdown source files, and 
 <!-- START_PUBLISHED_POSTS -->
 | Article | 🇬🇧 EN Source | 🇬🇧 EN ZIP | 🇵🇱 PL Source | 🇵🇱 PL ZIP |
 | :--- | :---: | :---: | :---: | :---: |
+| How to Install Portainer on Ubuntu & Debian VPS | [Source](src/published/en/setup-portainer-ubuntu-debian/setup-portainer-ubuntu-debian.md) | [ZIP](dist/en/setup-portainer-ubuntu-debian-package.zip) | [Source](src/published/pl/instalacja-portainer-ubuntu-debian/instalacja-portainer-ubuntu-debian.md) | [ZIP](dist/pl/instalacja-portainer-ubuntu-debian-package.zip) |
 | Install FileBrowser with Docker on Your VPS | [Source](src/published/en/private-cloud-filebrowser-docker/private-cloud-filebrowser-docker.md) | [ZIP](dist/en/private-cloud-filebrowser-docker-package.zip) | [Source](src/published/pl/prywatny-dysk-filebrowser-docker/prywatny-dysk-filebrowser-docker.md) | [ZIP](dist/pl/prywatny-dysk-filebrowser-docker-package.zip) |
 | Install Uptime Kuma with Docker: Self-Hosted Monitoring | [Source](src/published/en/setup-uptime-kuma-docker/setup-uptime-kuma-docker.md) | [ZIP](dist/en/setup-uptime-kuma-docker-package.zip) | [Source](src/published/pl/jak-zainstalowac-uptime-kuma-docker/jak-zainstalowac-uptime-kuma-docker.md) | [ZIP](dist/pl/jak-zainstalowac-uptime-kuma-docker-package.zip) |
 | VoxiShield Smart Firewall Dashboard Controls Released | [Source](src/published/en/introducing-voxishield-smart-firewall/introducing-voxishield-smart-firewall.md) | [ZIP](dist/en/introducing-voxishield-smart-firewall-package.zip) | [Source](src/published/pl/wprowadzenie-voxishield-smart-firewall/wprowadzenie-voxishield-smart-firewall.md) | [ZIP](dist/pl/wprowadzenie-voxishield-smart-firewall-package.zip) |
@@ -99,7 +100,7 @@ The following articles are currently in progress, awaiting approval, or schedule
 <!-- START_DRAFTS -->
 | Article | Language | Status | Author | Target Date |
 | :--- | :--- | :--- | :--- | :--- |
-| Managing Docker via Browser: Install Portainer on VPS | EN + PL | Draft | @sl0ikkk | 2026-07-14 |
+| *No articles currently in draft.* | — | — | — | — |
 <!-- END_DRAFTS -->
 
 ---
