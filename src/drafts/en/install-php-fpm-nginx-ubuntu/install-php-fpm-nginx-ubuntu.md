@@ -11,7 +11,7 @@ tags:
   - ubuntu
   - vps
   - server
-date: '2026-07-24'
+date: '2026-07-20'
 locale: en
 translationKey: install-php-fpm-nginx-ubuntu
 author:
