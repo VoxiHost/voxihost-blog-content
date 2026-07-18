@@ -10,7 +10,7 @@ tags:
   - linux
   - server
   - vps
-date: '2026-07-24'
+date: '2026-07-21'
 locale: en
 translationKey: install-python-venv-ubuntu
 author:
