@@ -2,43 +2,26 @@
 image: /assets/images/blog/en/install-python-venv-ubuntu/og-image.png
 title: "How to Setup Python Venv on Ubuntu"
 description: "Learn how to configure isolated Python virtual environments on Ubuntu using the native venv module. Avoid dependency conflicts and manage your projects."
-status: draft
-category: Tutorials
-tags:
-  - python
-  - ubuntu
-  - linux
-  - server
-  - vps
-date: '2026-07-21'
+date: 2026-07-21
+translationKey: "install-python-venv-ubuntu"
 locale: en
-translationKey: install-python-venv-ubuntu
-author:
-  name: VoxiHost Team
-  link: https://voxihost.pl/
-contributors: []
+tags: ["python", "ubuntu", "linux", "server", "vps"]
 howto:
   name: "How to Setup Python Venv on Ubuntu"
+  totalTime: "PT15M"
   steps:
     - name: "Step 1: Install the Python Venv Module"
+      text: ""
       url: "step-1-install-the-python-venv-module"
     - name: "Step 2: Create a Project Directory"
+      text: ""
       url: "step-2-create-a-project-directory"
     - name: "Step 3: Create and Activate the Virtual Environment"
+      text: ""
       url: "step-3-create-and-activate-the-virtual-environment"
     - name: "Step 4: Manage Packages Within the Environment"
+      text: ""
       url: "step-4-manage-packages-within-the-environment"
-faq:
-  - question: "Why does Ubuntu block global pip installs via PEP 668?"
-    answer: "Ubuntu enforces <strong>PEP 668</strong> to prevent <code>pip</code> from overwriting system-managed packages, which could break critical OS services on your VoxiHost VPS."
-  - question: "Do I need sudo to manage my virtual environment?"
-    answer: "No. You should never use <code>sudo</code> when creating or managing a virtual environment, as it changes file ownership and causes permission errors."
-  - question: "How can I tell if my virtual environment is currently active?"
-    answer: "When active, your shell prompt will typically be prefixed with the name of your environment directory, such as <code>(venv) user@hostname:~$</code>."
-  - question: "What should I do if pip is missing after creating the venv?"
-    answer: "If <code>pip</code> is not available, run <code>python3 -m ensurepip --upgrade</code> to install it directly into your active virtual environment."
-  - question: "How do I deactivate the virtual environment when I am finished?"
-    answer: "Simply run the <code>deactivate</code> command in your terminal to return your shell to the system default Python environment."
 ---
 
 Managing Python dependencies on a production server often leads to conflicts. When you install packages globally using `pip`, you risk breaking system-level tools that rely on specific library versions. On modern Ubuntu distributions, this issue is further addressed by PEP 668, which restricts global package installations to ensure system stability.
@@ -46,8 +29,6 @@ Managing Python dependencies on a production server often leads to conflicts. Wh
 The industry-standard solution is the virtual environment, or `venv`. By isolating your project dependencies into a local directory, you ensure that your application has exactly what it needs without interfering with the underlying operating system or other projects hosted on your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/premium-vps/). 
 
 This guide provides a direct, no-nonsense approach to setting up isolated Python environments. We will walk through installing the necessary module, creating a clean workspace, and activating your environment to start installing packages safely. Whether you are running a lightweight microservice on a [Budget VPS](/budget-vps/) or managing complex data pipelines, this setup is the foundation of professional Python development on Linux.
-
-{% image "/assets/images/blog/en/install-python-venv-ubuntu/H1.png", "A terminal window showing a successful Python virtual environment activation on an Ubuntu server", "(max-width: 768px) 100vw, 800px" %}
 
 ## Prerequisites
 
@@ -59,7 +40,7 @@ Additionally, confirm that your system clock is synchronized to avoid SSL errors
 
 Finally, check that you have enough disk space available in your project directory to accommodate the virtual environment structure, which typically consumes a few megabytes for the core files plus the size of any project-specific dependencies you intend to install later.
 
-{% image "/assets/images/blog/en/install-python-venv-ubuntu/H2.png", "A terminal session displaying system resource checks and user validation before starting the Python venv installation", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/install-python-venv-ubuntu/H1.png", "A terminal session displaying system resource checks and user validation before starting the Python venv installation", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 1: Install the Python Venv Module
 
@@ -82,7 +63,7 @@ python3 --version
 
 If you are using a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/premium-vps/), this operation will complete in seconds. You are now prepared to initialize your first virtual environment within a dedicated project directory.
 
-{% image "/assets/images/blog/en/install-python-venv-ubuntu/H3.png", "Terminal output showing the successful installation of the python3-venv package via apt", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/install-python-venv-ubuntu/H2.png", "Terminal output showing the successful installation of the python3-venv package via apt", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 2: Create a Project Directory
 
@@ -96,7 +77,7 @@ mkdir -p ~/my_python_project
 cd ~/my_python_project
 ```
 
-{% image "/assets/images/blog/en/install-python-venv-ubuntu/H4.png", "Terminal showing the creation of the project directory", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/install-python-venv-ubuntu/H3.png", "Terminal showing the creation of the project directory", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 3: Create and Activate the Virtual Environment
 
@@ -120,7 +101,7 @@ Once activated, you will notice that your terminal prompt changes to include `(v
 
 At this point, your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server is correctly configured for local development. You can now safely install project-specific libraries using `pip install <package_name>`. Because you are using a virtual environment, these packages will remain contained within your `~/my_python_project/venv` directory, keeping your system clean and avoiding conflicts with other applications.
 
-{% image "/assets/images/blog/en/install-python-venv-ubuntu/H5.png", "Terminal showing the activated virtual environment with (venv) prefix in the command prompt", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/install-python-venv-ubuntu/H4.png", "Terminal showing the activated virtual environment with (venv) prefix in the command prompt", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 4: Manage Packages Within the Environment
 
@@ -151,7 +132,7 @@ This `requirements.txt` file is the industry standard for maintaining consistent
 
 > **Warning:** Never use `sudo` when running `pip` inside your virtual environment. Using `sudo` can cause file permission errors and may inadvertently install packages to the system-wide Python directory, which violates the isolation you have just established.
 
-{% image "/assets/images/blog/en/install-python-venv-ubuntu/H6.png", "Terminal showing pip install output and a generated requirements.txt file within the active venv", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/install-python-venv-ubuntu/H5.png", "Terminal showing pip install output and a generated requirements.txt file within the active venv", "(max-width: 768px) 100vw, 800px" %}
 
 ## Conclusion
 
@@ -160,5 +141,3 @@ You have successfully established a robust, isolated Python environment on your 
 Remember that virtual environments are ephemeral. If you ever need to update your dependencies, simply reactivate the environment using the `source venv/bin/activate` command and run your updates. If you find your project requirements have changed significantly, it is often cleaner to delete the `venv` directory and recreate it from your `requirements.txt` file rather than manually uninstalling dozens of individual packages.
 
 As your projects grow, you might consider containerizing them with Docker or implementing automated deployment scripts to handle these environment setups. For now, you have a solid foundation for local development and production deployment. Keep your server secure, keep your dependencies pinned, and continue building on your infrastructure with confidence.
-
-{% image "/assets/images/blog/en/install-python-venv-ubuntu/H7.png", "A terminal screen showing a deactivated virtual environment and a return to the standard user shell", "(max-width: 768px) 100vw, 800px" %}
