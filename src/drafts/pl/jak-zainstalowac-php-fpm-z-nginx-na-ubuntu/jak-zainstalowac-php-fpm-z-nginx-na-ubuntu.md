@@ -1,5 +1,5 @@
 ---
-image: "/assets/images/blog/pl/jak-zainstalować-php-fpm-z-nginx-na-ubuntu/og-image.png"
+image: "/assets/images/blog/pl/jak-zainstalowac-php-fpm-z-nginx-na-ubuntu/og-image.png"
 title: "Jak zainstalować PHP-FPM z Nginx na Ubuntu"
 description: "Dowiedz się jak zainstalować i skonfigurować PHP-FPM z Nginx na Ubuntu. Przewodnik obejmuje instalację, konfigurację serwera oraz testy na serwerze VoxiHost."
 status: draft
@@ -60,7 +60,7 @@ Konieczne jest posiadanie dostępu do konta root lub użytkownika z uprawnieniam
 
 Należy zweryfikować, czy lista pakietów jest aktualna, a system w pełni zaktualizowany, aby uniknąć konfliktów zależności podczas procesu instalacji. Mimo że w kolejnych krokach zainstalujemy określone pakiety, posiadanie czystego i zaktualizowanego środowiska pozwala zapobiec typowym błędom niezgodności bibliotek. Upewnij się, że jesteś zalogowany na serwerze przez SSH oraz masz przygotowaną domenę lub adres IP serwera w celu przetestowania finalnej konfiguracji.
 
-{% image "/assets/images/blog/pl/jak-zainstalować-php-fpm-z-nginx-na-ubuntu/H2.png", "Sesja terminala pokazująca aktualizację systemu i podstawowe sprawdzenie środowiska", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zainstalowac-php-fpm-z-nginx-na-ubuntu/H2.png", "Sesja terminala pokazująca aktualizację systemu i podstawowe sprawdzenie środowiska", "(max-width: 768px) 100vw, 800px" %}
 
 ## Krok 1: Instalacja Nginx i PHP-FPM
 
@@ -88,7 +88,7 @@ sudo systemctl status php8.3-fpm
 
 Jeśli w danych wyjściowych statusu widzisz "active (running)" w zielonym kolorze, oznacza to, że podstawowe usługi zostały skonfigurowane poprawnie. Nginx nasłuchuje teraz na domyślnym porcie HTTP, a gniazdo PHP-FPM jest gotowe do obsługi żądań. Możesz przejść do połączenia tych dwóch komponentów, aby umożliwić przetwarzanie dynamicznych plików PHP.
 
-{% image "/assets/images/blog/pl/jak-zainstalować-php-fpm-z-nginx-na-ubuntu/H3.png", "Dane wyjściowe terminala pokazujące pomyślną instalację oraz aktywny status usług Nginx i PHP-FPM", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zainstalowac-php-fpm-z-nginx-na-ubuntu/H3.png", "Dane wyjściowe terminala pokazujące pomyślną instalację oraz aktywny status usług Nginx i PHP-FPM", "(max-width: 768px) 100vw, 800px" %}
 
 ## Krok 2: Konfiguracja bloku serwera Nginx
 
@@ -195,7 +195,7 @@ sudo systemctl reload nginx
 
 Te kroki zapewniają, że stos technologiczny jest nie tylko funkcjonalny, ale również odporny na drobne błędy konfiguracyjne. Jeśli obsługujesz wiele witryn, rozważ okresowe sprawdzanie logów błędów znajdujących się w `/var/log/nginx/error.log`. Pomaga to wyłapać problemy z uprawnieniami lub brakującymi rozszerzeniami PHP, zanim wpłyną one na użytkowników końcowych.
 
-{% image "/assets/images/blog/pl/jak-zainstalować-php-fpm-z-nginx-na-ubuntu/H6.png", "Dane wyjściowe terminala pokazujące aktywny status usług Nginx oraz PHP-FPM", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-zainstalowac-php-fpm-z-nginx-na-ubuntu/H6.png", "Dane wyjściowe terminala pokazujące aktywny status usług Nginx oraz PHP-FPM", "(max-width: 768px) 100vw, 800px" %}
 
 ## Podsumowanie
 
