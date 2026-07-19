@@ -1,5 +1,5 @@
 ---
-image: /assets/images/blog/pl/jak-skonfigurować-python-venv-na-ubuntu/og-image.png
+image: /assets/images/blog/pl/jak-skonfigurowac-python-venv-na-ubuntu/og-image.png
 title: "Jak skonfigurować Python Venv na Ubuntu"
 description: "Dowiedz się jak poprawnie skonfigurować izolowane środowiska wirtualne Python na Ubuntu przy użyciu modułu venv, unikając konfliktów zależności systemowych."
 status: draft
@@ -59,7 +59,7 @@ Dodatkowo potwierdź, że zegar systemowy jest zsynchronizowany, aby uniknąć b
 
 Na koniec sprawdź, czy masz wystarczającą ilość miejsca na dysku w katalogu projektu, aby pomieścić strukturę środowiska wirtualnego, która zazwyczaj zajmuje kilka megabajtów na pliki podstawowe oraz rozmiar wszelkich zależności specyficznych dla projektu, które zamierzasz zainstalować później.
 
-{% image "/assets/images/blog/pl/jak-skonfigurować-python-venv-na-ubuntu/H2.png", "Sesja terminala wyświetlająca sprawdzenie zasobów systemowych i walidację użytkownika przed rozpoczęciem instalacji Python venv", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-python-venv-na-ubuntu/H2.png", "Sesja terminala wyświetlająca sprawdzenie zasobów systemowych i walidację użytkownika przed rozpoczęciem instalacji Python venv", "(max-width: 768px) 100vw, 800px" %}
 
 ## Krok 1: Instalacja modułu Python Venv
 
@@ -82,7 +82,7 @@ python3 --version
 
 W przypadku korzystania z <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/pl/premium-vps/), operacja ta zakończy się w kilka sekund. Jesteś teraz gotowy do zainicjowania swojego pierwszego wirtualnego środowiska wewnątrz dedykowanego katalogu projektu.
 
-{% image "/assets/images/blog/pl/jak-skonfigurować-python-venv-na-ubuntu/H3.png", "Wyjście terminala pokazujące pomyślną instalację pakietu python3-venv za pomocą apt", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-python-venv-na-ubuntu/H3.png", "Wyjście terminala pokazujące pomyślną instalację pakietu python3-venv za pomocą apt", "(max-width: 768px) 100vw, 800px" %}
 
 ## Krok 2: Utworzenie katalogu projektu
 
@@ -96,7 +96,7 @@ mkdir -p ~/my_python_project
 cd ~/my_python_project
 ```
 
-{% image "/assets/images/blog/pl/jak-skonfigurować-python-venv-na-ubuntu/H4.png", "Terminal pokazujący tworzenie katalogu projektu", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-python-venv-na-ubuntu/H4.png", "Terminal pokazujący tworzenie katalogu projektu", "(max-width: 768px) 100vw, 800px" %}
 
 ## Krok 3: Tworzenie i aktywacja środowiska wirtualnego
 
@@ -120,7 +120,7 @@ Po aktywacji zauważysz, że znak zachęty terminala zmienił się i zawiera ter
 
 W tym momencie serwer <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> jest poprawnie skonfigurowany do lokalnego programowania. Możesz teraz bezpiecznie instalować biblioteki specyficzne dla projektu za pomocą `pip install <nazwa_pakietu>`. Ponieważ korzystasz ze środowiska wirtualnego, pakiety te pozostaną zamknięte wewnątrz katalogu `~/my_python_project/venv`, utrzymując system w czystości i unikając konfliktów z innymi aplikacjami.
 
-{% image "/assets/images/blog/pl/jak-skonfigurować-python-venv-na-ubuntu/H5.png", "Terminal pokazujący aktywowane środowisko wirtualne z prefiksem (venv) w znaku zachęty", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-python-venv-na-ubuntu/H5.png", "Terminal pokazujący aktywowane środowisko wirtualne z prefiksem (venv) w znaku zachęty", "(max-width: 768px) 100vw, 800px" %}
 
 ## Krok 4: Zarządzanie pakietami wewnątrz środowiska
 
@@ -151,7 +151,7 @@ Plik `requirements.txt` jest standardem w branży, służącym do utrzymywania s
 
 > **Warning:** Nigdy nie używaj `sudo` podczas uruchamiania `pip` wewnątrz wirtualnego środowiska. Użycie `sudo` może spowodować błędy uprawnień do plików i nieumyślnie zainstalować pakiety w systemowym katalogu Pythona, co narusza izolację, którą właśnie ustanowiłeś.
 
-{% image "/assets/images/blog/pl/jak-skonfigurować-python-venv-na-ubuntu/H6.png", "Terminal pokazujący wynik instalacji pip oraz wygenerowany plik requirements.txt wewnątrz aktywnego venv", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-python-venv-na-ubuntu/H6.png", "Terminal pokazujący wynik instalacji pip oraz wygenerowany plik requirements.txt wewnątrz aktywnego venv", "(max-width: 768px) 100vw, 800px" %}
 
 ## Podsumowanie
 
@@ -161,4 +161,4 @@ Pamiętaj, że środowiska wirtualne są tymczasowe. Jeśli zajdzie potrzeba akt
 
 W miarę rozwoju projektów warto rozważyć ich konteneryzację przy użyciu Docker lub wdrożenie automatycznych skryptów, które zajmą się konfiguracją środowisk. Na ten moment dysponujesz solidnym fundamentem do lokalnego programowania oraz wdrażania na produkcję. Dbaj o bezpieczeństwo serwera, blokuj wersje zależności i rozwijaj swoją infrastrukturę z pewnością siebie.
 
-{% image "/assets/images/blog/pl/jak-skonfigurować-python-venv-na-ubuntu/H7.png", "Ekran terminala pokazujący dezaktywowane środowisko wirtualne i powrót do standardowej powłoki użytkownika", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/pl/jak-skonfigurowac-python-venv-na-ubuntu/H7.png", "Ekran terminala pokazujący dezaktywowane środowisko wirtualne i powrót do standardowej powłoki użytkownika", "(max-width: 768px) 100vw, 800px" %}
