@@ -52,7 +52,7 @@ We prioritize a clean, minimal installation. We avoid bloated bundles in favor o
 
 Before beginning the installation, ensure your server meets the baseline requirements for a stable production environment. We recommend a minimum of 1GB of RAM and at least one dedicated CPU core to handle the overhead of Nginx and the PHP-FPM worker processes without performance degradation. This guide assumes you are running a fresh installation of Ubuntu 26.04 LTS.
 
-You must have root access or a user account with `sudo` privileges to execute administrative commands. If you are using a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Budget VPS](/budget-vps/), ensure your firewall is correctly configured to allow incoming traffic on ports 80 and 443. If you have not yet set up your firewall, follow our guide on [securing-ubuntu-server-with-ufw](/securing-ubuntu-server-with-ufw/) to prevent unauthorized access to your management ports.
+You must have root access or a user account with `sudo` privileges to execute administrative commands. If you are using a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Budget VPS](/budget-vps/), ensure your firewall is correctly configured to allow incoming traffic on ports 80 and 443. If you have not yet set up your firewall, follow our guide on [securing-ubuntu-server-with-ufw](/blog/configure-ufw-ubuntu-debian/) to prevent unauthorized access to your management ports.
 
 Verify that your package list is current and that your system is fully updated to avoid dependency conflicts during the installation process. Although we will install specific packages in the following steps, having a clean, updated environment prevents common library mismatch errors. Ensure you are logged into your server via SSH and have your domain or server IP address ready for testing the final configuration.
 
@@ -193,4 +193,4 @@ sudo systemctl start php8.x-fpm
 
 For those managing critical workloads, monitoring is the next logical step. Keep an eye on system resource usage through your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> dashboard, especially if you are scaling your [Premium VPS](/premium-vps/) or [Budget VPS](/budget-vps/) environments. Regularly checking your logs and keeping your packages current will ensure that your web server remains both fast and secure against emerging vulnerabilities. 
 
-If you decide to expand your infrastructure further, consider looking into [How to Set Up SSL with Let's Encrypt & Certbot on Ubuntu & Debian: The Complete Guide](/ssl-letsencrypt-certbot-ubuntu/) to encrypt your traffic and improve your search engine rankings.
+If you decide to expand your infrastructure further, consider looking into [How to Set Up SSL with Let's Encrypt & Certbot on Ubuntu & Debian: The Complete Guide](/blog/ssl-letsencrypt-certbot-ubuntu/) to encrypt your traffic and improve your search engine rankings.
