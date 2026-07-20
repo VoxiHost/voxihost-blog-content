@@ -16,7 +16,7 @@ translationKey: install-python-venv-ubuntu
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
-contributors: []
+contributors: ["danielmarszalkowski", "sl0ikkk"]
 howto:
   name: "How to Setup Python Venv on Ubuntu"
   steps:
@@ -40,6 +40,8 @@ faq:
   - question: "How do I deactivate the virtual environment when I am finished?"
     answer: "Simply run the <code>deactivate</code> command in your terminal to return your shell to the system default Python environment."
 ---
+
+## Introduction
 
 Managing Python dependencies on a production server often leads to conflicts. When you install packages globally using `pip`, you risk breaking system-level tools that rely on specific library versions. On modern Ubuntu distributions, this issue is further addressed by PEP 668, which restricts global package installations to ensure system stability.
 

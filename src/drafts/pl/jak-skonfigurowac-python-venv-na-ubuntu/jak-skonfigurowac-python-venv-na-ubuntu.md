@@ -16,7 +16,7 @@ translationKey: install-python-venv-ubuntu
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
-contributors: []
+contributors: [ "danielmarszalkowski", "sl0ikkk" ]
 howto:
   name: "Jak skonfigurować Python Venv na Ubuntu"
   steps:
@@ -40,6 +40,8 @@ faq:
   - question: "Jak wyłączyć środowisko wirtualne po zakończeniu pracy?"
     answer: "Wystarczy wpisać polecenie <code>deactivate</code> w terminalu, aby przywrócić powłokę do domyślnego środowiska systemowego Python."
 ---
+
+## Wprowadzenie
 
 Zarządzanie zależnościami języka Python na serwerze produkcyjnym często prowadzi do konfliktów. Instalowanie pakietów globalnie za pomocą `pip` niesie ze sobą ryzyko uszkodzenia narzędzi systemowych, które polegają na konkretnych wersjach bibliotek. W nowoczesnych dystrybucjach Ubuntu problem ten został dodatkowo rozwiązany przez PEP 668, który ogranicza globalną instalację pakietów w celu zapewnienia stabilności systemu.
 
