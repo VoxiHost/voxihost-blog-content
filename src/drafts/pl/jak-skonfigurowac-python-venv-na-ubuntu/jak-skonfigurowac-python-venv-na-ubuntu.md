@@ -21,13 +21,13 @@ howto:
   name: "Jak skonfigurować Python Venv na Ubuntu"
   steps:
     - name: "Krok 1: Instalacja modułu Python Venv"
-      url: "krok-1-instalacja-modułu-python-venv"
+      url: "krok-1-instalacja-modulu-python-venv"
     - name: "Krok 2: Utworzenie katalogu projektu"
       url: "krok-2-utworzenie-katalogu-projektu"
     - name: "Krok 3: Tworzenie i aktywacja środowiska wirtualnego"
-      url: "krok-3-tworzenie-i-aktywacja-środowiska-wirtualnego"
+      url: "krok-3-tworzenie-i-aktywacja-srodowiska-wirtualnego"
     - name: "Krok 4: Zarządzanie pakietami wewnątrz środowiska"
-      url: "krok-4-zarządzanie-pakietami-wewnątrz-środowiska"
+      url: "krok-4-zarzadzanie-pakietami-wewnatrz-srodowiska"
 faq:
   - question: "Dlaczego Ubuntu blokuje globalne instalacje pip przez PEP 668?"
     answer: "Ubuntu wymusza standard <strong>PEP 668</strong>, aby zapobiec nadpisywaniu pakietów systemowych przez <code>pip</code>, co mogłoby uszkodzić kluczowe usługi na Twoim serwerze VoxiHost."
@@ -149,7 +149,7 @@ pip freeze > requirements.txt
 
 Plik `requirements.txt` jest standardem w branży, służącym do utrzymywania spójnych środowisk na różnych maszynach. Jeśli kiedykolwiek zajdzie potrzeba odtworzenia tego środowiska na innym serwerze, możesz zainstalować wszystkie zależności jednocześnie, używając polecenia `pip install -r requirements.txt`.
 
-> **Warning:** Nigdy nie używaj `sudo` podczas uruchamiania `pip` wewnątrz wirtualnego środowiska. Użycie `sudo` może spowodować błędy uprawnień do plików i nieumyślnie zainstalować pakiety w systemowym katalogu Pythona, co narusza izolację, którą właśnie ustanowiłeś.
+> **Uwaga:** Nigdy nie używaj `sudo` podczas uruchamiania `pip` wewnątrz wirtualnego środowiska. Użycie `sudo` może spowodować błędy uprawnień do plików i nieumyślnie zainstalować pakiety w systemowym katalogu Pythona, co narusza izolację, którą właśnie ustanowiłeś.
 
 {% image "/assets/images/blog/pl/jak-skonfigurowac-python-venv-na-ubuntu/H5.png", "Terminal pokazujący wynik instalacji pip oraz wygenerowany plik requirements.txt wewnątrz aktywnego venv", "(max-width: 768px) 100vw, 800px" %}
 
