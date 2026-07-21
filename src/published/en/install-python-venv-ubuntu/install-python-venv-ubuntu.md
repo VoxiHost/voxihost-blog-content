@@ -53,7 +53,7 @@ This guide provides a direct, no-nonsense approach to setting up isolated Python
 
 Before beginning, ensure your server meets the minimum requirements for a stable development environment. We recommend a minimum of 512MB of RAM and 1 CPU core, which is standard for our [Budget VPS](/budget-vps/) and [Premium VPS](/premium-vps/) instances. 
 
-You should have access to an Ubuntu 22.04 LTS or newer server with a non-root user that has `sudo` privileges. If you have not yet set up your administrative user, refer to our guide on [How to Create a Sudo User on Ubuntu & Debian: The Complete Server Guide](/add-sudo-user-ubuntu/) to ensure you are not running development tasks as the root user. 
+You should have access to an Ubuntu 22.04 LTS or newer server with a non-root user that has `sudo` privileges. If you have not yet set up your administrative user, refer to our guide on [How to Create a Sudo User on Ubuntu & Debian: The Complete Server Guide](/blog/add-sudo-user-ubuntu/) to ensure you are not running development tasks as the root user. 
 
 Additionally, confirm that your system clock is synchronized to avoid SSL errors when fetching packages. You should also ensure that your APT package list is current to avoid dependency resolution issues. While no specific Python code is required at this stage, having basic familiarity with the command line is expected. 
 

@@ -53,7 +53,7 @@ Ten przewodnik przedstawia bezpośrednie i konkretne podejście do konfiguracji 
 
 Przed rozpoczęciem upewnij się, że Twój serwer spełnia minimalne wymagania dla stabilnego środowiska programistycznego. Zalecamy posiadanie co najmniej 512 MB pamięci RAM oraz 1 rdzenia procesora, co stanowi standard dla naszych instancji [Budget VPS](/pl/budget-vps/) oraz [Premium VPS](/pl/premium-vps/).
 
-Powinieneś posiadać dostęp do serwera z systemem Ubuntu 22.04 LTS lub nowszym oraz użytkownika innego niż root, który posiada uprawnienia `sudo`. Jeśli nie skonfigurowałeś jeszcze swojego konta administracyjnego, zapoznaj się z naszym przewodnikiem [Jak dodać użytkownika sudo na Ubuntu](/pl/jak-dodac-uzytkownika-sudo-ubuntu/), aby upewnić się, że nie uruchamiasz zadań programistycznych jako użytkownik root.
+Powinieneś posiadać dostęp do serwera z systemem Ubuntu 22.04 LTS lub nowszym oraz użytkownika innego niż root, który posiada uprawnienia `sudo`. Jeśli nie skonfigurowałeś jeszcze swojego konta administracyjnego, zapoznaj się z naszym przewodnikiem [Jak dodać użytkownika sudo na Ubuntu](/pl/blog/jak-dodac-uzytkownika-sudo-ubuntu/), aby upewnić się, że nie uruchamiasz zadań programistycznych jako użytkownik root.
 
 Dodatkowo potwierdź, że zegar systemowy jest zsynchronizowany, aby uniknąć błędów SSL podczas pobierania pakietów. Powinieneś również upewnić się, że lista pakietów APT jest aktualna, aby uniknąć problemów z rozwiązaniem zależności. Choć na tym etapie nie jest wymagany żaden konkretny kod w języku Python, oczekuje się podstawowej znajomości wiersza poleceń.
 
