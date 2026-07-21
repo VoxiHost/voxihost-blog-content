@@ -2,7 +2,7 @@
 image: /assets/images/blog/pl/jak-skonfigurowac-python-venv-na-ubuntu/og-image.png
 title: "Jak skonfigurować Python Venv na Ubuntu"
 description: "Dowiedz się jak poprawnie skonfigurować izolowane środowiska wirtualne Python na Ubuntu przy użyciu modułu venv, unikając konfliktów zależności systemowych."
-status: draft
+status: published
 category: Poradniki
 tags:
   - python

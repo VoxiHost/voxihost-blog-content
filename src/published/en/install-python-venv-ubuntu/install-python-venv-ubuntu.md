@@ -2,7 +2,7 @@
 image: /assets/images/blog/en/install-python-venv-ubuntu/og-image.png
 title: "How to Setup Python Venv on Ubuntu"
 description: "Learn how to configure isolated Python virtual environments on Ubuntu using the native venv module. Avoid dependency conflicts and manage your projects."
-status: draft
+status: published
 category: Tutorials
 tags:
   - python
