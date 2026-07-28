@@ -43,7 +43,7 @@ faq:
 
 ## Introduction
 
-Running JavaScript on the server side requires a reliable and up-to-date runtime environment. While many Linux distributions include Node.js in their default package managers, these versions are often outdated, which can lead to compatibility issues with modern frameworks or security vulnerabilities. For developers deploying applications on a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/premium-vps/), maintaining a current environment is essential for performance and stability.
+Running JavaScript on the server side requires a reliable and up-to-date runtime environment. While many Linux distributions include Node.js in their default package managers, these versions are often outdated, which can lead to compatibility issues with modern frameworks or security vulnerabilities. For developers deploying applications on a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/vps/premium/), maintaining a current environment is essential for performance and stability.
 
 The most effective way to manage your runtime is by using the official NodeSource binary distribution repositories. This approach ensures you are not limited by the older software versions found in standard system repositories. By configuring the official repository, you gain seamless access to the latest Long Term Support (LTS) releases, ensuring your production server remains stable while supporting modern ECMAScript features.
 
@@ -53,7 +53,7 @@ This guide focuses on a clean, professional setup on Ubuntu and Debian systems. 
 
 ## Prerequisites
 
-Before beginning the installation, ensure your server meets the baseline requirements for a smooth deployment. We recommend a minimum of 1GB of RAM. If you are running on a [Budget VPS](/budget-vps/), verify that your instance has sufficient memory, as the build process for some Node.js modules can be resource-intensive.
+Before beginning the installation, ensure your server meets the baseline requirements for a smooth deployment. We recommend a minimum of 1GB of RAM. If you are running on a [Budget VPS](/vps/budget/), verify that your instance has sufficient memory, as the build process for some Node.js modules can be resource-intensive.
 
 You must have root or sudo access to the server. Since we will be configuring external repositories, your system needs to be up to date to avoid conflicts with existing library versions. If you have not performed a system update recently, consider running `sudo apt update && sudo apt upgrade -y` before proceeding.
 
@@ -133,13 +133,13 @@ The `node -v` command should return a version string starting with `v20` or high
 
 > **Note:** If you encounter a "command not found" error, it usually indicates that the shell path was not updated. Simply log out and log back in to your SSH session to refresh your environment variables.
 
-Everything is now set up for your development environment. You have successfully bypassed outdated system repositories and secured a stable foundation for your JavaScript applications on your [Premium VPS](/premium-vps/) or [Budget VPS](/budget-vps/).
+Everything is now set up for your development environment. You have successfully bypassed outdated system repositories and secured a stable foundation for your JavaScript applications on your [Premium VPS](/vps/premium/) or [Budget VPS](/vps/budget/).
 
 {% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H6.png", "Terminal showing the output of node -v and npm -v confirming successful installation", "(max-width: 768px) 100vw, 800px" %}
 
 ## Conclusion
 
-You have successfully configured a reliable Node.js environment on your Linux server. By utilizing the official NodeSource repository instead of default distribution packages, you ensure that your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server receives timely security patches and access to modern JavaScript features. This setup provides the stability required for production workloads, whether you are running a lightweight API on a [Budget VPS](/budget-vps/) or a high-traffic application on a [Premium VPS](/premium-vps/).
+You have successfully configured a reliable Node.js environment on your Linux server. By utilizing the official NodeSource repository instead of default distribution packages, you ensure that your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server receives timely security patches and access to modern JavaScript features. This setup provides the stability required for production workloads, whether you are running a lightweight API on a [Budget VPS](/vps/budget/) or a high-traffic application on a [Premium VPS](/vps/premium/).
 
 Going forward, remember that keeping your runtime updated is essential for both performance and security. When a new LTS version is released, you can keep your environment current by updating your package lists and upgrading the binary:
 
@@ -151,6 +151,6 @@ sudo apt update
 sudo apt upgrade -y nodejs
 ```
 
-If you plan to deploy complex applications, consider using a process manager like PM2 to keep your services running after a reboot. You may also want to explore our guides on [How to Install Nginx on Ubuntu & Debian: The Complete Server Guide](/install-nginx-ubuntu-debian/) if you intend to set up a reverse proxy for your Node.js application. Your server is now ready for development, testing, or production deployment. Happy coding.
+If you plan to deploy complex applications, consider using a process manager like PM2 to keep your services running after a reboot. You may also want to explore our guides on [How to Install Nginx on Ubuntu & Debian: The Complete Server Guide](/blog/install-nginx-ubuntu-debian/) if you intend to set up a reverse proxy for your Node.js application. Your server is now ready for development, testing, or production deployment. Happy coding.
 
 {% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H7.png", "A terminal screen showing successful node package upgrades", "(max-width: 768px) 100vw, 800px" %}

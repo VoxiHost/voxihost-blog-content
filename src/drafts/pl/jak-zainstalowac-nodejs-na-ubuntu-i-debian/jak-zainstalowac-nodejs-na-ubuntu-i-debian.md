@@ -21,7 +21,7 @@ howto:
   name: "Jak zainstalować Node.js na Ubuntu i Debian"
   steps:
     - name: "Krok 1: Aktualizacja pakietów systemowych i instalacja zależności"
-      url: "krok-1-aktualizacja-pakietów-systemowych-i-instalacja-zależności"
+      url: "krok-1-aktualizacja-pakietow-systemowych-i-instalacja-zaleznosci"
     - name: "Krok 2: Dodanie repozytorium NodeSource"
       url: "krok-2-dodanie-repozytorium-nodesource"
     - name: "Krok 3: Instalacja Node.js oraz NPM"
@@ -43,7 +43,7 @@ faq:
 
 ## Wprowadzenie
 
-Uruchamianie języka JavaScript po stronie serwera wymaga niezawodnego i aktualnego środowiska uruchomieniowego. Chociaż wiele dystrybucji systemu Linux zawiera Node.js w swoich domyślnych menedżerach pakietów, wersje te są często przestarzałe, co może prowadzić do problemów z kompatybilnością nowoczesnych frameworków lub luk w zabezpieczeniach. Dla programistów wdrażających aplikacje na serwerach <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/pl/premium-vps/), utrzymanie aktualnego środowiska jest kluczowe dla wydajności i stabilności.
+Uruchamianie języka JavaScript po stronie serwera wymaga niezawodnego i aktualnego środowiska uruchomieniowego. Chociaż wiele dystrybucji systemu Linux zawiera Node.js w swoich domyślnych menedżerach pakietów, wersje te są często przestarzałe, co może prowadzić do problemów z kompatybilnością nowoczesnych frameworków lub luk w zabezpieczeniach. Dla programistów wdrażających aplikacje na serwerach <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/pl/vps/premium/), utrzymanie aktualnego środowiska jest kluczowe dla wydajności i stabilności.
 
 Najskuteczniejszym sposobem zarządzania środowiskiem uruchomieniowym jest korzystanie z oficjalnych repozytoriów binarnych NodeSource. Takie podejście gwarantuje, że nie ogranicza Cię starsze oprogramowanie dostępne w standardowych repozytoriach systemowych. Dzięki konfiguracji oficjalnego repozytorium zyskujesz płynny dostęp do najnowszych wydań o długoterminowym wsparciu (LTS), co zapewnia stabilność serwera produkcyjnego przy jednoczesnym wsparciu dla nowoczesnych funkcji standardu ECMAScript.
 
@@ -53,7 +53,7 @@ Ten poradnik koncentruje się na czystej, profesjonalnej konfiguracji w systemac
 
 ## Wymagania wstępne
 
-Przed rozpoczęciem instalacji upewnij się, że Twój serwer spełnia podstawowe wymagania, co pozwoli na bezproblemowe wdrożenie. Zalecamy posiadanie co najmniej 1 GB pamięci RAM. Jeśli korzystasz z <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Budget VPS](/pl/budget-vps/), zweryfikuj, czy Twoja instancja posiada wystarczającą ilość pamięci, ponieważ proces budowania niektórych modułów Node.js może być wymagający pod kątem zasobów.
+Przed rozpoczęciem instalacji upewnij się, że Twój serwer spełnia podstawowe wymagania, co pozwoli na bezproblemowe wdrożenie. Zalecamy posiadanie co najmniej 1 GB pamięci RAM. Jeśli korzystasz z <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Budget VPS](/pl/vps/budget/), zweryfikuj, czy Twoja instancja posiada wystarczającą ilość pamięci, ponieważ proces budowania niektórych modułów Node.js może być wymagający pod kątem zasobów.
 
 Musisz posiadać dostęp do konta root lub użytkownika z uprawnieniami sudo. Ponieważ będziemy konfigurować zewnętrzne repozytoria, system musi być aktualny, aby uniknąć konfliktów z istniejącymi wersjami bibliotek. Jeśli nie przeprowadzałeś ostatnio aktualizacji systemu, rozważ wykonanie polecenia `sudo apt update && sudo apt upgrade -y` przed przejściem dalej.
 
@@ -133,13 +133,13 @@ Polecenie `node -v` powinno zwrócić ciąg znaków wersji zaczynający się od 
 
 > **Uwaga:** Jeśli napotkasz błąd "command not found", zazwyczaj oznacza to, że ścieżka powłoki nie została zaktualizowana. Wystarczy wylogować się i zalogować ponownie do sesji SSH, aby odświeżyć zmienne środowiskowe.
 
-Wszystko jest teraz skonfigurowane dla Twojego środowiska programistycznego. Z powodzeniem ominąłeś przestarzałe repozytoria systemowe i zabezpieczyłeś stabilny fundament dla swoich aplikacji JavaScript na swoim [Premium VPS](/pl/premium-vps/) lub [Budget VPS](/pl/budget-vps/).
+Wszystko jest teraz skonfigurowane dla Twojego środowiska programistycznego. Z powodzeniem ominąłeś przestarzałe repozytoria systemowe i zabezpieczyłeś stabilny fundament dla swoich aplikacji JavaScript na swoim [Premium VPS](/pl/vps/premium/) lub [Budget VPS](/pl/vps/budget/).
 
 {% image "/assets/images/blog/pl/jak-zainstalowac-nodejs-na-ubuntu-i-debian/H6.png", "Terminal pokazujący wynik poleceń node -v oraz npm -v potwierdzający poprawną instalację", "(max-width: 768px) 100vw, 800px" %}
 
 ## Podsumowanie
 
-Pomyślnie skonfigurowałeś stabilne środowisko Node.js na swoim serwerze z systemem Linux. Korzystając z oficjalnego repozytorium NodeSource zamiast domyślnych pakietów dystrybucyjnych, zapewniasz swojemu serwerowi <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> dostęp do terminowych poprawek bezpieczeństwa oraz nowoczesnych funkcji języka JavaScript. Taka konfiguracja gwarantuje stabilność wymaganą w środowiskach produkcyjnych, niezależnie od tego, czy uruchamiasz lekkie API na [Budget VPS](/pl/budget-vps/), czy aplikację o dużym natężeniu ruchu na [Premium VPS](/pl/premium-vps/).
+Pomyślnie skonfigurowałeś stabilne środowisko Node.js na swoim serwerze z systemem Linux. Korzystając z oficjalnego repozytorium NodeSource zamiast domyślnych pakietów dystrybucyjnych, zapewniasz swojemu serwerowi <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> dostęp do terminowych poprawek bezpieczeństwa oraz nowoczesnych funkcji języka JavaScript. Taka konfiguracja gwarantuje stabilność wymaganą w środowiskach produkcyjnych, niezależnie od tego, czy uruchamiasz lekkie API na [Budget VPS](/pl/vps/budget/), czy aplikację o dużym natężeniu ruchu na [Premium VPS](/pl/vps/premium/).
 
 Pamiętaj, że aktualizacja środowiska wykonawczego jest kluczowa zarówno dla wydajności, jak i bezpieczeństwa. Gdy pojawi się nowa wersja LTS, możesz zaktualizować swoje środowisko, odświeżając listy pakietów i aktualizując plik binarny:
 
@@ -151,6 +151,6 @@ sudo apt update
 sudo apt upgrade -y nodejs
 ```
 
-Jeśli planujesz wdrożenie złożonych aplikacji, rozważ użycie menedżera procesów, takiego jak PM2, aby zapewnić działanie swoich usług po ponownym uruchomieniu serwera. Możesz również zapoznać się z naszym przewodnikiem [Instalacja Nginx na Ubuntu i Debian: kompletny przewodnik po serwerze](/pl/instalacja-nginx-ubuntu-debian/), jeśli zamierzasz skonfigurować odwrotne proxy dla swojej aplikacji Node.js. Twój serwer jest teraz gotowy do pracy, testów lub wdrożenia produkcyjnego. Powodzenia w kodowaniu.
+Jeśli planujesz wdrożenie złożonych aplikacji, rozważ użycie menedżera procesów, takiego jak PM2, aby zapewnić działanie swoich usług po ponownym uruchomieniu serwera. Możesz również zapoznać się z naszym przewodnikiem [Instalacja Nginx na Ubuntu i Debian: kompletny przewodnik po serwerze](/pl/blog/instalacja-nginx-ubuntu-debian/), jeśli zamierzasz skonfigurować odwrotne proxy dla swojej aplikacji Node.js. Twój serwer jest teraz gotowy do pracy, testów lub wdrożenia produkcyjnego. Powodzenia w kodowaniu.
 
 {% image "/assets/images/blog/pl/jak-zainstalowac-nodejs-na-ubuntu-i-debian/H7.png", "Ekran terminala pokazujący pomyślną aktualizację pakietów node", "(max-width: 768px) 100vw, 800px" %}
