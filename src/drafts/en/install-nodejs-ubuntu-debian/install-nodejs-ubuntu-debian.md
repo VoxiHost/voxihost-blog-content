@@ -2,7 +2,7 @@
 image: /assets/images/blog/en/install-nodejs-ubuntu-debian/og-image.png
 title: "How to Install Node.js on Ubuntu & Debian"
 description: "Learn how to install the latest stable Node.js on Ubuntu and Debian using the official NodeSource repository to ensure optimal performance and security."
-status: draft
+status: published
 category: Tutorials
 tags:
   - nodejs
@@ -16,7 +16,7 @@ translationKey: install-nodejs-ubuntu-debian
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
-contributors: []
+contributors: [ 'danielmarszalkowski' ]
 howto:
   name: "How to Install Node.js on Ubuntu & Debian"
   steps:
@@ -43,25 +43,21 @@ faq:
 
 ## Introduction
 
-Running JavaScript on the server side requires a reliable and up-to-date runtime environment. While many Linux distributions include Node.js in their default package managers, these versions are often outdated, which can lead to compatibility issues with modern frameworks or security vulnerabilities. For developers deploying applications on a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/vps/premium/), maintaining a current environment is essential for performance and stability.
+Running JavaScript on the server side requires a reliable and up-to-date runtime environment. While many Linux distributions include Node.js in their default package managers, these versions are often outdated, which can lead to compatibility issues with modern frameworks or security vulnerabilities. For developers deploying applications on a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [VPS](/vps/), maintaining a current environment is essential for performance and stability.
 
 The most effective way to manage your runtime is by using the official NodeSource binary distribution repositories. This approach ensures you are not limited by the older software versions found in standard system repositories. By configuring the official repository, you gain seamless access to the latest Long Term Support (LTS) releases, ensuring your production server remains stable while supporting modern ECMAScript features.
 
 This guide focuses on a clean, professional setup on Ubuntu and Debian systems. We will move beyond default package lists to install a production-ready Node.js environment. Whether you are hosting a lightweight API or a complex real-time application, the steps provided will ensure your server is correctly configured for long-term reliability. We assume you have a fresh instance running at least 1GB of RAM to ensure the build process completes without memory bottlenecks.
 
-{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H1.png", "Terminal output showing successful Node.js installation verification on an Ubuntu server", "(max-width: 768px) 100vw, 800px" %}
-
 ## Prerequisites
-
-Before beginning the installation, ensure your server meets the baseline requirements for a smooth deployment. We recommend a minimum of 1GB of RAM. If you are running on a [Budget VPS](/vps/budget/), verify that your instance has sufficient memory, as the build process for some Node.js modules can be resource-intensive.
 
 You must have root or sudo access to the server. Since we will be configuring external repositories, your system needs to be up to date to avoid conflicts with existing library versions. If you have not performed a system update recently, consider running `sudo apt update && sudo apt upgrade -y` before proceeding.
 
-Additionally, this guide assumes you are working with a clean installation of Ubuntu 20.04 or later, or Debian 10 or later. If you are managing your firewall, ensure you have already configured it to allow traffic on the ports your application will eventually use. 
+Additionally, this guide assumes you are working with a clean installation of Ubuntu 24.04 or later, or Debian 12 or later. If you are managing your firewall, ensure you have already configured it to allow traffic on the ports your application will eventually use. 
 
-Finally, ensure that you have access to a terminal or SSH client. We will be using `curl` to fetch the setup scripts, so verify that your environment is ready to handle these network requests. If you plan to manage multiple server instances or need enhanced protection for your applications, you might also consider our [Shield](/shield/) DDoS protection to secure your traffic at the network edge.
+Finally, ensure that you have access to a terminal or SSH client. We will be using `curl` to fetch the setup scripts, so verify that your environment is ready to handle these network requests. If you plan to manage multiple server instances or need enhanced protection for your applications, you might also consider our [Shield DDoS protection](/shield/) to secure your traffic at the network edge.
 
-{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H2.png", "A terminal screen showing a freshly updated Ubuntu instance ready for software installation", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H1.png", "A terminal screen showing a freshly updated Ubuntu instance ready for software installation", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 1: Update System Packages and Install Dependencies
 
@@ -76,7 +72,7 @@ sudo apt update && sudo apt install -y curl
 
 Once the installation finishes, your system is ready to communicate with the NodeSource servers. Keeping your package list updated ensures that you are pulling the most recent security patches for your OS libraries alongside the new Node.js environment. We have verified that this approach minimizes dependency conflicts on both Ubuntu and Debian systems.
 
-{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H3.png", "Terminal output showing the successful installation of the curl package after an apt update", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H2.png", "Terminal output showing the successful installation of the curl package after an apt update", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 2: Add the NodeSource Repository
 
@@ -96,7 +92,7 @@ sudo -E bash nodesource_setup.sh
 
 The script will automatically update your local package lists once the repository is added. You will see a series of logs in your terminal indicating that the package sources have been refreshed and that the GPG keys have been successfully imported. If you encounter any warnings regarding missing keys, verify that your internet connection is stable and that no firewall is blocking outbound traffic to `deb.nodesource.com`. Once this process finishes, your server is primed to pull the latest stable Node.js binaries.
 
-{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H4.png", "Terminal output showing the NodeSource setup script configuring the repository and updating the package list", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H3.png", "Terminal output showing the NodeSource setup script configuring the repository and updating the package list", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 3: Install Node.js and NPM
 
@@ -111,13 +107,13 @@ sudo apt install -y nodejs
 
 The `nodejs` package includes both the binary for running your applications and the `npm` tool for managing your project dependencies. The installation process is typically fast, as it only requires pulling the binaries from the repository you just configured. 
 
-Once the command finishes, you have successfully set up the core environment. You are now ready to verify that everything is correctly linked and identify the specific version of the runtime active on your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server.
+Once the command finishes, you have successfully set up the core environment. You are now ready to verify that everything is correctly linked and identify the specific version of the runtime active on your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [VPS](/vps/) server.
 
-{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H5.png", "Terminal output showing the successful installation of the nodejs package via apt", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H4.png", "Terminal output showing the successful installation of the nodejs package via apt", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 4: Verify the Installation
 
-Now that the binaries are installed, you need to confirm that the system is correctly pointing to the NodeSource versions. This is a critical check to ensure your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server is not accidentally using an older, cached, or system-default version of the runtime.
+Now that the binaries are installed, you need to confirm that the system is correctly pointing to the NodeSource versions. This is a critical check to ensure your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [VPS](/vps/) server is not accidentally using an older, cached, or system-default version of the runtime.
 
 Run the following commands to output the currently active versions:
 
@@ -129,17 +125,17 @@ node -v
 npm -v
 ```
 
-The `node -v` command should return a version string starting with `v20` or higher, depending on the current LTS release. If you see an output like `v22.x.x`, your server is correctly configured to use the latest long-term support release. The `npm -v` command will return the version of the package manager, confirming that it is also ready for use.
+The `node -v` command should return a version string starting with `v20` or higher, depending on the current LTS release. If you see an output like `v26.x.x`, your server is correctly configured to use the latest long-term support release. The `npm -v` command will return the version of the package manager, confirming that it is also ready for use.
 
 > **Note:** If you encounter a "command not found" error, it usually indicates that the shell path was not updated. Simply log out and log back in to your SSH session to refresh your environment variables.
 
-Everything is now set up for your development environment. You have successfully bypassed outdated system repositories and secured a stable foundation for your JavaScript applications on your [Premium VPS](/vps/premium/) or [Budget VPS](/vps/budget/).
+Everything is now set up for your development environment. You have successfully bypassed outdated system repositories and secured a stable foundation for your JavaScript applications on your [VPS](/vps/).
 
-{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H6.png", "Terminal showing the output of node -v and npm -v confirming successful installation", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H5.png", "Terminal showing the output of node -v and npm -v confirming successful installation", "(max-width: 768px) 100vw, 800px" %}
 
 ## Conclusion
 
-You have successfully configured a reliable Node.js environment on your Linux server. By utilizing the official NodeSource repository instead of default distribution packages, you ensure that your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server receives timely security patches and access to modern JavaScript features. This setup provides the stability required for production workloads, whether you are running a lightweight API on a [Budget VPS](/vps/budget/) or a high-traffic application on a [Premium VPS](/vps/premium/).
+You have successfully configured a reliable Node.js environment on your Linux server. By utilizing the official NodeSource repository instead of default distribution packages, you ensure that your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [VPS](/vps/) server receives timely security patches and access to modern JavaScript features. This setup provides the stability required for production workloads, whether you are running a lightweight API on a [Budget VPS](/vps/budget/) or a high-traffic application on a [Premium VPS](/vps/premium/).
 
 Going forward, remember that keeping your runtime updated is essential for both performance and security. When a new LTS version is released, you can keep your environment current by updating your package lists and upgrading the binary:
 
@@ -152,5 +148,3 @@ sudo apt upgrade -y nodejs
 ```
 
 If you plan to deploy complex applications, consider using a process manager like PM2 to keep your services running after a reboot. You may also want to explore our guides on [How to Install Nginx on Ubuntu & Debian: The Complete Server Guide](/blog/install-nginx-ubuntu-debian/) if you intend to set up a reverse proxy for your Node.js application. Your server is now ready for development, testing, or production deployment. Happy coding.
-
-{% image "/assets/images/blog/en/install-nodejs-ubuntu-debian/H7.png", "A terminal screen showing successful node package upgrades", "(max-width: 768px) 100vw, 800px" %}
