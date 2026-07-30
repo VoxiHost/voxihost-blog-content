@@ -18,7 +18,7 @@ translationKey: secure-nginx-with-fail2ban
 author:
   name: VoxiHost Team
   link: https://voxihost.pl/
-contributors: []
+contributors: [ "danielmarszalkowski" ]
 howto:
   name: "How to Secure Nginx with Fail2Ban"
   steps:
@@ -45,26 +45,22 @@ faq:
 
 ## Introduction
 
-Exposing an Nginx web server to the public internet invites a constant stream of automated probes. Bots hunt for vulnerabilities, attempt credential stuffing, and flood your logs with malformed requests. If you are running your services on a [Premium VPS](/premium-vps/) or [Budget VPS](/budget-vps/), you need a proactive defense mechanism that works without constant manual intervention.
+Exposing an Nginx web server to the public internet invites a constant stream of automated probes. Bots hunt for vulnerabilities, attempt credential stuffing, and flood your logs with malformed requests. If you are running your services on a [VPS](/vps/), you need a proactive defense mechanism that works without constant manual intervention.
 
 Fail2Ban is the industry standard for this task. It monitors your server logs in real-time, identifies suspicious patterns-such as repeated 404 errors or failed login attempts-and automatically updates your firewall to block offending IP addresses. While Nginx handles your traffic, Fail2Ban acts as your automated gatekeeper.
 
 This guide focuses on a clean, maintainable installation on Ubuntu. We avoid the common trap of editing default configuration files directly, which ensures your security rules survive system updates. By the end of this tutorial, you will have a hardened Nginx environment configured to use the systemd backend for optimal performance and minimal resource overhead. We assume you have a base Ubuntu installation with root or sudo access. If you are starting from scratch, ensure your system is patched and your firewall is enabled before proceeding.
 
-{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H1.png", "Fail2Ban service status showing active protection for Nginx logs", "(max-width: 768px) 100vw, 800px" %}
-
 ## Prerequisites
 
-Before beginning, ensure your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server meets the following requirements. Running these services requires a minimum of 1GB RAM and 1 CPU core to maintain stable performance during log parsing operations.
+Before beginning, ensure your [VPS](/vps/) server meets the following requirements. Running these services requires a minimum of 1GB RAM and 1 CPU core to maintain stable performance during log parsing operations.
 
-- Access to a terminal with `sudo` privileges on an Ubuntu 22.04 LTS or newer distribution.
-- An active firewall, such as UFW, to manage network traffic effectively. If you have not yet set up your firewall, check out our guide: [How to Configure UFW Firewall on Ubuntu & Debian: The Complete Server Guide](/configure-ufw-ubuntu-debian/).
-- Nginx installed and running. If you need to perform a fresh install, refer to [How to Install Nginx on Ubuntu & Debian: The Complete Server Guide](/install-nginx-ubuntu-debian/).
+- Access to a terminal with `sudo` privileges on an Ubuntu 24.04 LTS or newer distribution.
+- An active firewall, such as UFW, to manage network traffic effectively. If you have not yet set up your firewall, check out our guide: [How to Configure UFW Firewall on Ubuntu & Debian: The Complete Server Guide](/blog/configure-ufw-ubuntu-debian/).
+- Nginx installed and running. If you need to perform a fresh install, refer to [How to Install Nginx on Ubuntu & Debian: The Complete Server Guide](/blog/install-nginx-ubuntu-debian/).
 - Basic familiarity with text editors like `nano` or `vim` for modifying configuration files.
 
-Verify that your system clock is synchronized using NTP, as Fail2Ban relies on accurate timestamps to calculate the duration of bans. You can check this by running `timedatectl status`. Finally, ensure that your Nginx access logs are enabled and accessible, as Fail2Ban will need read permissions to monitor incoming traffic for malicious activity. If you are using a [Premium VPS](/premium-vps/) or [Budget VPS](/budget-vps/), these settings are often pre-configured, but a quick verification ensures your security stack operates without bottlenecks.
-
-{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H2.png", "Terminal showing system requirements check for Fail2Ban and Nginx", "(max-width: 768px) 100vw, 800px" %}
+Verify that your system clock is synchronized using NTP, as Fail2Ban relies on accurate timestamps to calculate the duration of bans. You can check this by running `timedatectl status`. Finally, ensure that your Nginx access logs are enabled and accessible, as Fail2Ban will need read permissions to monitor incoming traffic for malicious activity. 
 
 ## Step 1: Install Nginx and Fail2Ban
 
@@ -94,7 +90,7 @@ sudo sed -i 's/backend = auto/backend = systemd/g' /etc/fail2ban/jail.local
 
 With these settings applied, your environment is ready for specific Nginx protection rules. In the next steps, we will define the jails that monitor your web traffic.
 
-{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H3.png", "Terminal output showing successful installation of Nginx and Fail2Ban", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H1.png", "Terminal output showing successful installation of Nginx and Fail2Ban", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 2: Configure the Fail2Ban Jail
 
@@ -125,9 +121,9 @@ logpath = /var/log/nginx/access.log
 
 The `nginx-http-auth` jail protects your site against brute-force attacks on pages secured with Basic Auth, while `nginx-botsearch` blocks malicious scanners attempting to find hidden administrative directories. After adding these blocks, save the file by pressing `Ctrl + O`, followed by `Enter`, and exit with `Ctrl + X`.
 
-> **Note:** If you are running a [Premium VPS](/premium-vps/) or [Budget VPS](/budget-vps/) with a high volume of traffic, ensure your log paths match your actual Nginx configuration. If you have customized your log directory, update the `logpath` value accordingly to prevent the service from failing to start.
+> **Note:** If you are running a [VPS](/vps/) with a high volume of traffic, ensure your log paths match your actual Nginx configuration. If you have customized your log directory, update the `logpath` value accordingly to prevent the service from failing to start.
 
-{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H4.png", "Editing the jail.local configuration file in nano to enable Nginx jails", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H2.png", "Editing the jail.local configuration file in nano to enable Nginx jails", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 3: Enable the Nginx Jails
 
@@ -150,9 +146,9 @@ sudo fail2ban-client status nginx-http-auth
 sudo fail2ban-client status nginx-botsearch
 ```
 
-If the status returns "Currently failed: 0" and "Total failed: 0," your setup is ready. The service is now actively scanning your `/var/log/nginx/` files for patterns matching the default filters. If you notice any issues with log parsing, ensure that the permissions on your Nginx log files allow the Fail2Ban user to read them. For most standard installations on a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/premium-vps/), the default permissions are sufficient.
+If the status returns "Currently failed: 0" and "Total failed: 0," your setup is ready. The service is now actively scanning your `/var/log/nginx/` files for patterns matching the default filters. If you notice any issues with log parsing, ensure that the permissions on your Nginx log files allow the Fail2Ban user to read them. For most standard installations on a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [VPS](/vps/), the default permissions are sufficient.
 
-{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H5.png", "Verifying the status of active Fail2Ban jails for Nginx", "(max-width: 768px) 100vw, 800px" %}
+{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H3.png", "Verifying the status of active Fail2Ban jails for Nginx", "(max-width: 768px) 100vw, 800px" %}
 
 ## Step 4: Verify Fail2Ban Functionality
 
@@ -183,15 +179,14 @@ If the "Currently failed" count reflects your attempts, Fail2Ban is parsing your
 sudo tail -f /var/log/fail2ban.log
 ```
 
-You should see entries indicating that an IP has been banned. If you see these entries, your <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> server is now actively defending itself against automated brute-force attempts.
+You should see entries indicating that an IP has been banned.
 
-{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H6.png", "Terminal output showing Fail2Ban successfully detecting and banning a malicious IP", "(max-width: 768px) 100vw, 800px" %}
 
 ## Conclusion
 
 Securing your web server with Fail2Ban provides a critical layer of defense against automated attacks. By monitoring your Nginx logs in real-time and dynamically updating your firewall, you effectively neutralize brute-force attempts and malicious bot traffic before they can impact your system resources. 
 
-On a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [Premium VPS](/premium-vps/), this proactive security approach ensures that your services remain performant and available for legitimate users. Remember that security is not a one-time configuration. Periodically review your `jail.local` settings and monitor your logs to ensure your filters remain effective against evolving threats. 
+On a <span class="text-white">Voxi</span><span class="text-amber-300">Host</span> [VPS](/vps/), this proactive security approach ensures that your services remain performant and available for legitimate users. Remember that security is not a one-time configuration. Periodically review your `jail.local` settings and monitor your logs to ensure your filters remain effective against evolving threats. 
 
 If you decide to modify your security policies, always remember to check the syntax of your configuration files before restarting the service:
 
@@ -208,6 +203,4 @@ sudo systemctl stop fail2ban
 sudo systemctl start fail2ban
 ```
 
-With Fail2Ban operational, you have significantly reduced the attack surface of your Linux environment. For further hardening, consider pairing this with a properly configured UFW firewall, as detailed in our guide on how to [Configure UFW Firewall on Ubuntu & Debian: The Complete Server Guide](/configure-ufw-ubuntu-debian/). Staying vigilant and keeping your software updated remains the best way to maintain a secure and reliable server infrastructure.
-
-{% image "/assets/images/blog/en/secure-nginx-with-fail2ban/H7.png", "Final terminal view showing Fail2Ban service status as active and running", "(max-width: 768px) 100vw, 800px" %}
+With Fail2Ban operational, you have significantly reduced the attack surface of your Linux environment. For further hardening, consider pairing this with a properly configured UFW firewall, as detailed in our guide on how to [Configure UFW Firewall on Ubuntu & Debian: The Complete Server Guide](/blog/configure-ufw-ubuntu-debian/). Staying vigilant and keeping your software updated remains the best way to maintain a secure and reliable server infrastructure.
