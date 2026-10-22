@@ -44,7 +44,7 @@ faq:
   - question: "Jak wykonać kopię zapasową bazy danych i plików WordPressa w Dockerze?"
     answer: "Aby wykonać kopię zapasową bazy danych, uruchom polecenie <code>docker compose exec db mysqldump -u wp_user -ptwoje_silne_haslo_wp wordpress > kopia_zapasowa.sql</code>. Kopię zapasową plików strony wykonasz, kopiując zawartość wolumenów <code>wp_data</code> i <code>db_data</code> znajdujących się w folderze <code>/var/lib/docker/volumes/</code> na serwerze VPS."
   - question: "Czy mogę użyć własnej domeny zamiast adresu http://ip_serwera:8080?"
-    answer: "Tak. Rekomendujemy użycie serwera reverse proxy, takiego jak Nginx Proxy Manager. Skieruj swoją domenę na serwer proxy, który będzie bezpiecznie przekierowywał ruch z portów 80/443 na wewnętrzny port 8080 kontenera WordPress. Zobacz nasz <a href=\"/pl/blog/konfiguracja-nginx-proxy-manager-vps/\">poradnik Nginx Proxy Manager</a>, aby poznać pełną procedurę."
+    answer: "Tak. Rekomendujemy użycie serwera reverse proxy, takiego jak Nginx Proxy Manager. Skieruj swoją domenę na serwer proxy, który będzie bezpiecznie przekierowywał ruch z portów 80/443 na wewnętrzny port 8080 kontenera WordPress. Zobacz nasz <a href=\"/pl/guides/konfiguracja-nginx-proxy-manager-vps/\">poradnik Nginx Proxy Manager</a>, aby poznać pełną procedurę."
   - question: "Jak zaktualizować WordPressa i bazę MySQL do najnowszej wersji?"
     answer: "Ponieważ w pliku <code>docker-compose.yml</code> oba obrazy są ustawione jako <code>latest</code>, aktualizację przeprowadza się przez pobranie nowych obrazów za pomocą polecenia <code>docker compose pull</code>, a następnie ponowne uruchomienie kontenerów za pomocą polecenia <code>docker compose up -d</code>."
 ---

@@ -41,7 +41,7 @@ faq:
   - question: "Jakie są wymagania sprzętowe do uruchomienia Nextcloud w Dockerze?"
     answer: 'Wymagany jest serwer VPS z minimum 1 GB pamięci RAM (zalecamy 2 GB dla optymalnej wydajności bazy danych MariaDB) oraz zainstalowanym Dockerem.'
   - question: "Jak zabezpieczyć Nextcloud za pomocą certyfikatu HTTPS?"
-    answer: 'Zalecamy uruchomienie serwera proxy, takiego jak <a href="/pl/blog/konfiguracja-nginx-proxy-manager-vps/">Nginx Proxy Manager</a>, aby przekierować domenę z darmowym certyfikatem SSL na port 8080.'
+    answer: 'Zalecamy uruchomienie serwera proxy, takiego jak <a href="/pl/guides/konfiguracja-nginx-proxy-manager-vps/">Nginx Proxy Manager</a>, aby przekierować domenę z darmowym certyfikatem SSL na port 8080.'
   - question: "Czy mogę użyć innej bazy danych niż MariaDB?"
     answer: 'Tak, możesz zmodyfikować plik <code>docker-compose.yml</code>, aby korzystał z PostgreSQL lub PostgreSQL Alpine zamiast obrazu MariaDB.'
   - question: "Jak mogę zwiększyć maksymalny rozmiar przesyłanych plików w Nextcloud?"

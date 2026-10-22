@@ -44,7 +44,7 @@ faq:
   - question: "How do I back up my WordPress Docker container database and files?"
     answer: "To back up the database, run <code>docker compose exec db mysqldump -u wp_user -psecure_wp_password wordpress > backup.sql</code>. To back up files, copy the contents of the <code>wp_data</code> and <code>db_data</code> volumes located in <code>/var/lib/docker/volumes/</code> on your host system."
   - question: "Can I use a custom domain name instead of http://your_server_ip:8080?"
-    answer: "Yes. We strongly recommend using a reverse proxy such as Nginx Proxy Manager. You map your domain name to the proxy, which will then securely route traffic from port 80/443 to the WordPress container's port 8080. See our <a href=\"/blog/setup-nginx-proxy-manager-vps/\">Nginx Proxy Manager guide</a> for a complete walkthrough."
+    answer: "Yes. We strongly recommend using a reverse proxy such as Nginx Proxy Manager. You map your domain name to the proxy, which will then securely route traffic from port 80/443 to the WordPress container's port 8080. See our <a href=\"/guides/setup-nginx-proxy-manager-vps/\">Nginx Proxy Manager guide</a> for a complete walkthrough."
   - question: "How do I update WordPress and MySQL to the latest version?"
     answer: "Since both images are set to <code>latest</code> in your <code>docker-compose.yml</code> file, you can update them by running <code>docker compose pull</code> followed by <code>docker compose up -d</code> to recreate the containers with the latest official images."
 ---
