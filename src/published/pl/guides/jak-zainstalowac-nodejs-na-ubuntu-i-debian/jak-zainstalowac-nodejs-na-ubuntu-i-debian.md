@@ -147,4 +147,4 @@ sudo apt update
 sudo apt upgrade -y nodejs
 ```
 
-Jeśli planujesz wdrożenie bardziej złożonych aplikacji, rozważ użycie menedżera procesów, takiego jak PM2, aby zapewnić działanie usług po ponownym uruchomieniu serwera. Możesz też zapoznać się z naszym przewodnikiem [Jak zainstalować Nginx na Ubuntu i Debian: kompletny przewodnik po serwerze](/pl/guides/jak-zainstalowac-nginx-ubuntu-debian/), jeśli zamierzasz skonfigurować reverse proxy dla swojej aplikacji Node.js. Twój serwer jest teraz gotowy do pracy, testów lub wdrożenia produkcyjnego. Powodzenia w kodowaniu.
+Jeśli planujesz wdrożenie bardziej złożonych aplikacji, rozważ użycie menedżera procesów, takiego jak PM2, aby zapewnić działanie usług po ponownym uruchomieniu serwera. Możesz też zapoznać się z naszym przewodnikiem [Jak zainstalować Nginx na Ubuntu i Debian: kompletny przewodnik po serwerze](/pl/guides/instalacja-nginx-ubuntu-debian/), jeśli zamierzasz skonfigurować reverse proxy dla swojej aplikacji Node.js. Twój serwer jest teraz gotowy do pracy, testów lub wdrożenia produkcyjnego. Powodzenia w kodowaniu.
