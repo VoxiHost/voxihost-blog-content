@@ -16,6 +16,9 @@ This repository contains only **Markdown source files and images**. You don't ne
 > [!NOTE]
 > You will never need to touch `dist/`, run scripts, or install Node.js. Those are internal team operations managed outside this repository.
 
+> [!IMPORTANT]
+> Not sure whether your article is a guide or an update, or whether it duplicates something the docs already cover? Read **[CONTENT-IA.md](CONTENT-IA.md)** first — it defines what belongs in each section and how pages link to each other.
+
 ---
 
 ## 🚀 Published Guides & Updates

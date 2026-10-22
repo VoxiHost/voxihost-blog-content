@@ -98,6 +98,7 @@ Use this when you want to contribute an **original, complete guide** that does n
    - Whether you plan to write the PL version too (or if you'd like help with translation)
 
 ### Key rules for new articles
+- **Right section first.** Is it a guide or an update, and does it duplicate something the docs already cover? See [CONTENT-IA.md](CONTENT-IA.md).
 - **All commands must be tested.** No copy-pasting from ChatGPT or other sources without personal verification. See [AI-Assisted Writing Policy](#4-ai-assisted-writing-policy).
 - **One article per PR.** Do not submit multiple unrelated articles in a single PR.
 - **Article must be complete.** Do not submit an outline or half-finished draft — the article must be ready to publish from start to finish.
