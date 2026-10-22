@@ -21,7 +21,7 @@ Before submitting this PR, please verify all items below. Incomplete submissions
 - [ ] `date` is in `YYYY-MM-DD` format.
 - [ ] `translationKey` is set and matches the paired translation (if applicable).
 - [ ] `locale` is set to `en` or `pl`.
-- [ ] `category` uses one of the valid values (`Guides` / `Poradniki`, `Updates` / `Nowości`, etc.).
+- [ ] `category` uses one of the valid values (`Tutorials` / `Poradniki`, `Updates` / `Nowości`, `Comparisons` / `Porównania`). Tutorials and Comparisons publish under `/guides/`; Updates publish under `/blog/`.
 - [ ] `author` is formatted as an **object** with `name` and `link`, not a plain string.
 - [ ] `contributors` array contains my GitHub username.
 - [ ] `status` is set to `draft` (VoxiHost team will change it to `published` after approval).

@@ -1,8 +1,8 @@
-# 🤝 Contributing to voxihost-blog-content
+# 🤝 Contributing to voxihost-content
 
 We are excited that you want to help improve the VoxiHost knowledge base and blog articles! Your contributions keep our guides up-to-date, accurate, and helpful for the entire hosting and development community.
 
-By submitting corrections or new articles, you help other developers, system administrators, and tech enthusiasts. In return, we highlight your contributions on the official VoxiHost blog!
+By submitting corrections or new articles, you help other developers, system administrators, and tech enthusiasts. In return, we highlight your contributions on the official VoxiHost site!
 
 ---
 
@@ -12,7 +12,7 @@ There are two completely different workflows depending on what you want to do. R
 
 | I want to… | Path | Where to work |
 | :--- | :--- | :--- |
-| Fix a typo, broken command, or outdated info | **✏️ Edit an existing post** | `src/published/<locale>/<slug>/` |
+| Fix a typo, broken command, or outdated info | **✏️ Edit an existing post** | `src/published/<locale>/<guides\|blog>/<slug>/` |
 | Write a brand new guide or article | **📄 Write a new article** | `src/drafts/<locale>/<slug>/` |
 
 > [!IMPORTANT]
@@ -22,17 +22,20 @@ There are two completely different workflows depending on what you want to do. R
 
 ## ✏️ Path A: Editing an Existing Article
 
-Use this when you want to fix a typo, update a deprecated command, add a missing step, or correct outdated information in a post that is **already live on the blog**.
+Use this when you want to fix a typo, update a deprecated command, add a missing step, or correct outdated information in a post that is **already live on the site**.
 
 ### Step-by-step
 
 1. **Find the article** you want to edit in the published posts table in [`README.md`](README.md), or browse directly to:
    ```
    src/published/
-   ├── en/           ← English posts
-   │   └── <slug>/
-   │       └── <slug>.md   ← Edit this file
-   └── pl/           ← Polish posts
+   ├── en/                        ← English posts
+   │   ├── guides/                ← tutorials & comparisons → /guides/
+   │   │   └── <slug>/
+   │   │       └── <slug>.md      ← Edit this file
+   │   └── blog/                  ← release updates → /blog/
+   │       └── <slug>/
+   └── pl/                        ← Polish posts (same guides/ + blog/ split)
    ```
 2. **Open the `.md` file.** You can edit it:
    - **Directly on GitHub:** Click the pencil icon (✏️ **Edit this file**) in the top right corner of the file view. No local setup needed.
@@ -56,7 +59,7 @@ Use this when you want to fix a typo, update a deprecated command, add a missing
 
 ## 📄 Path B: Writing a New Article
 
-Use this when you want to contribute an **original, complete guide** that does not yet exist on the VoxiHost blog.
+Use this when you want to contribute an **original, complete guide** that does not yet exist on VoxiHost.
 
 ### Step-by-step
 
@@ -75,7 +78,7 @@ Use this when you want to contribute an **original, complete guide** that does n
            └── images/                       ← all screenshots/diagrams go here
    ```
    > [!IMPORTANT]
-   > The `.md` file name **must exactly match** the folder name. If your folder is `install-nodejs-ubuntu-24/`, the file inside must be `install-nodejs-ubuntu-24.md`. This is how the blog engine finds the article.
+   > The `.md` file name **must exactly match** the folder name. If your folder is `install-nodejs-ubuntu-24/`, the file inside must be `install-nodejs-ubuntu-24.md`. This is how the site engine finds the article.
 
 3. **Copy the article template.** Start from [ARTICLE_TEMPLATE.md](ARTICLE_TEMPLATE.md) in the root of the repository. It has all YAML fields pre-filled with inline comments. Do not start from scratch.
 
@@ -111,14 +114,14 @@ Regardless of which path you chose, the review process is the same:
 | 1. PR submitted | You | GitHub automatically shows the PR checklist from `.github/PULL_REQUEST_TEMPLATE.md` |
 | 2. Editorial review | VoxiHost Team | We review content accuracy, formatting, and brand standards (usually within a few days) |
 | 3. Feedback or merge | VoxiHost Team | We either merge your PR, or leave review comments requesting changes |
-| 4. Publishing (new articles only) | VoxiHost Team | We move the file from `drafts/` → `published/`, compile ZIP packages, and deploy |
+| 4. Publishing (new articles only) | VoxiHost Team | We move the file from `drafts/` → `published/<locale>/<section>/`, compile ZIP packages, and deploy |
 | 5. Attribution | Automatic | Your GitHub avatar and profile link appear on the article page immediately after deploy |
 
 ---
 
 ## 🛠️ Technical and Formatting Guidelines
 
-To ensure the articles compile and render correctly on the VoxiHost blog engine, please follow these rules. The blog is built with **Eleventy (11ty)**, processes articles from ZIP packages, and uses a custom Nunjucks image shortcode — so there are a few specific patterns you must follow.
+To ensure the articles compile and render correctly on the VoxiHost site engine, please follow these rules. The site is built with **Eleventy (11ty)**, processes articles from ZIP packages, and uses a custom Nunjucks image shortcode — so there are a few specific patterns you must follow.
 
 ### 1. Article Template
 
@@ -164,11 +167,11 @@ contributors:
 
 **Valid `category` values:**
 
-| EN value | PL value | Use for |
-| :--- | :--- | :--- |
-| `Tutorials` | `Poradniki` | Step-by-step technical how-to guides |
-| `Updates` | `Nowości` | VoxiHost product announcements and devblogs |
-| `Comparisons` | `Porównania` | Detailed side-by-side technology comparisons |
+| EN value | PL value | Use for | Published under |
+| :--- | :--- | :--- | :--- |
+| `Tutorials` | `Poradniki` | Step-by-step technical how-to guides | `/guides/` |
+| `Updates` | `Nowości` | VoxiHost product announcements and devblogs | `/blog/` |
+| `Comparisons` | `Porównania` | Detailed side-by-side technology comparisons | `/guides/` |
 
 > [!NOTE]
 > New categories may be added by the VoxiHost team in the future. If you believe your article doesn't fit any existing category, mention it in your PR description.

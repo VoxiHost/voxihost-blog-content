@@ -1,6 +1,6 @@
 ---
 # ─────────────────────────────────────────────────────────────────────────────
-# VOXIHOST BLOG ARTICLE TEMPLATE
+# VOXIHOST ARTICLE TEMPLATE
 # ─────────────────────────────────────────────────────────────────────────────
 # HOW TO USE:
 #   1. Copy this entire file into your article folder:
@@ -39,9 +39,11 @@ translationKey: your-article-slug
 # [REQUIRED] Language of this file. Use 'en' for English or 'pl' for Polish.
 locale: en
 
-# [REQUIRED] The primary topic category. Must match the blog's category taxonomy.
+# [REQUIRED] The primary topic category. Must match the site's category taxonomy.
 # EN categories: Tutorials, Updates, Comparisons
 # PL categories: Poradniki, Nowości, Porównania
+# Tutorials/Comparisons (Poradniki/Porównania) publish under /guides/;
+# Updates (Nowości) publish under /blog/.
 category: Tutorials
 
 # [OPTIONAL] Tags for search and filtering. Use lowercase kebab-case.
@@ -59,7 +61,7 @@ author:
   name: VoxiHost Team
   link: https://voxihost.pl/
 
-# [REQUIRED] Your GitHub username. The blog automatically fetches your avatar
+# [REQUIRED] Your GitHub username. The site automatically fetches your avatar
 # and displays a linked contributor card at the top of the article.
 contributors:
   - your-github-username

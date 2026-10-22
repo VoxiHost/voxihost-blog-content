@@ -69,7 +69,7 @@ To keep pages lightweight and fast-loading, **never use native Markdown image sy
 5.  **`eager`** *(Boolean, optional)*: Defaults to `false`. Set to `true` ONLY for above-the-fold hero images.
 
 ### Asset Storage & Path Mapping
-*   **Local Storage Path**: Save all image files inside the `images/` directory of the post (e.g. `src/published/pl/aktualizacja-wersji-php-linux/images/H1.png`).
+*   **Local Storage Path**: Save all image files inside the `images/` directory of the post (e.g. `src/published/pl/guides/aktualizacja-wersji-php-linux/images/H1.png`).
 *   **Markdown Reference**: Map this path to the web production prefix `/assets/images/blog/<lang>/<post-slug>/` as shown below:
     ```jinja
     {% image "/assets/images/blog/pl/aktualizacja-wersji-php-linux/H1.png", "Uruchamianie instalacji PHP", "(max-width: 768px) 100vw, 800px" %}
@@ -211,7 +211,7 @@ This is what powers the 🇬🇧 / 🇵🇱 language switcher button on the arti
 
 ❌ **Wrong** — `src/published/` is managed exclusively by the VoxiHost editorial team:
 ```
-src/published/en/my-new-article/   ← don't submit here
+src/published/en/guides/my-new-article/   ← don't submit here
 ```
 
 ✅ **Correct** — always submit new articles to the drafts folder:

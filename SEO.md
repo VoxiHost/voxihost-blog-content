@@ -224,9 +224,9 @@ Twitter/X additionally uses `summary_large_image` card — this shows the full `
 If your article has both an EN and PL version with matching `translationKey`, the engine automatically generates:
 
 ```html
-<link rel="alternate" hreflang="en" href="https://voxihost.pl/blog/secure-ssh-ubuntu-debian/" />
-<link rel="alternate" hreflang="pl" href="https://voxihost.pl/pl/blog/jak-zabezpieczyc-ssh-ubuntu-debian/" />
-<link rel="alternate" hreflang="x-default" href="https://voxihost.pl/blog/secure-ssh-ubuntu-debian/" />
+<link rel="alternate" hreflang="en" href="https://voxihost.pl/guides/secure-ssh-ubuntu-debian/" />
+<link rel="alternate" hreflang="pl" href="https://voxihost.pl/pl/guides/jak-zabezpieczyc-ssh-ubuntu-debian/" />
+<link rel="alternate" hreflang="x-default" href="https://voxihost.pl/guides/secure-ssh-ubuntu-debian/" />
 ```
 
 This tells Google that these two pages are translations of the same content, preventing duplicate content penalties and enabling the correct language to be shown to users in different countries.
@@ -278,7 +278,7 @@ Always link to related VoxiHost articles and product pages within your content. 
 
 ```markdown
 # Link to a related article:
-See our guide on [how to configure UFW](/blog/configure-ufw-ubuntu-debian/).
+See our guide on [how to configure UFW](/guides/configure-ufw-ubuntu-debian/).
 
 # Link to a product page (gets auto-colored amber):
 Get started with a [Premium VPS plan](/premium-vps/).
