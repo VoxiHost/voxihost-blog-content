@@ -8,9 +8,10 @@ This directory contains the raw Markdown source files and image assets for all V
   * Organized by locale: `en/` (English) and `pl/` (Polish), then by section:
     * `guides/` — tutorials and comparisons, published under `/guides/`.
     * `blog/` — release updates and devblogs, published under `/blog/`.
+    * `docs/` — product documentation pages, published under `/docs/`. Packaged as `dist/<locale>/docs-<slug>-package.zip`.
   * Inside each section, every post has its own folder named after its URL slug (e.g., `published/en/guides/install-nginx-ubuntu-debian/`).
   * Each post folder contains the main `.md` file and a subfolder named `images/` for any graphics, screenshots, or diagrams.
-  * The section is determined by the `category` frontmatter: `Tutorials` / `Comparisons` → `guides/`, `Updates` → `blog/` (and the Polish equivalents).
+  * The section is determined by the `category` frontmatter: `Tutorials` / `Comparisons` → `guides/`, `Updates` → `blog/` (and the Polish equivalents). Docs pages have no category: their folder under `docs/` is what routes them.
 * **`drafts/`**: In-progress drafts, guest article suggestions, and posts awaiting review or scheduled for release.
   * Organized similarly by locale (`en/`, `pl/`) and slug folder.
   * *Note:* Unlike published articles, drafts **do not** compile to ZIP files in the `dist/` directory.
